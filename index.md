@@ -5,3 +5,4 @@ tagline: Supporting tagline
 class: cover
 ---
 {% include JB/setup %}
+Some stuff
