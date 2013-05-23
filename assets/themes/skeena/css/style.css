@@ -7,13 +7,17 @@
   text-align: center;
   border-bottom: 0;
   width: 400px;
-  margin: 5% auto 0;
+  padding-top: 5%;
+  margin: 0 auto;
   height: 20%;
   color: white;
+  height: 100%;
 }
   .page-header h1 {
-    margin-top: 200px;
-    font-size: 48px;
+    text-transform: uppercase;
+    margin-top: 100px;
+    font-size: 72px;
+    line-height: 1;
   }
   .page-header hr { 
 
@@ -36,10 +40,23 @@
     color: yellow;
   }
 
-.cover body { 
+.container {
+  margin-top: -10px !important;
+
+}
+
+html, body,  .container, .content, .content-section {
+  padding: 0 !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  width: 100%;
+}
+.cover-section { 
+  height: 100%;
   background: url({{ ASSET_PATH }}skeena/img/cover.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  padding-bottom: 10px !important;
 }
