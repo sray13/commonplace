@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Hello World!
+title: Skeena
 tagline: Supporting tagline
 ---
 {% include JB/setup %}
