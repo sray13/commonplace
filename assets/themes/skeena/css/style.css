@@ -1,11 +1,20 @@
+---
+---
+{% include JB/setup %}
 /* cover */
 
 .page-header {
   text-align: center;
   border-bottom: 0;
   width: 400px;
-  margin: 20% auto 0;
+  margin: 5% auto 0;
+  height: 20%;
+  color: white;
 }
+  .page-header h1 {
+    margin-top: 200px;
+    font-size: 48px;
+  }
   .page-header hr { 
 
     display: block; height: 1px;
@@ -14,3 +23,23 @@
     margin: 1em 0;
     padding: 0; 
   }
+.page-footer {
+  position: absolute;
+  bottom: 30px;
+  height: 44px;
+  width: 44px;
+  left: 48%;
+}
+  .page-footer span {
+    text-align: center;
+    font-size: 48px;
+    color: yellow;
+  }
+
+.cover body { 
+  background: url({{ ASSET_PATH }}skeena/img/cover.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
