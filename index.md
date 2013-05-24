@@ -5,4 +5,6 @@ tagline: Supporting tagline
 class: cover
 ---
 {% include JB/setup %}
-Some stuff
+<div class="section">
+  Some stuff
+</div>
