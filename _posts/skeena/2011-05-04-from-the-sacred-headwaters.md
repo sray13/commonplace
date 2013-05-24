@@ -1,9 +1,9 @@
 ---
 layout: post
-category : Publisher's Letter
-tagline: "Supporting tagline"
-tags : [intro, beginner, jekyll, tutorial]
-author: Spencer B. Beebe
+category : Essay
+tags: []
+toc-img: http://lorempixel.com/150/150/nature/5
+author: Wade Davis
 ---
 {% include JB/setup %}
 

@@ -1,9 +1,8 @@
 ---
 layout: post
-category : Publisher's Letter
-tagline: "Supporting tagline"
-tags : [intro, beginner, jekyll, tutorial]
-author: Spencer B. Beebe
+category : Profile
+tags : []
+toc-img: http://lorempixel.com/150/150/nature/7
 ---
 {% include JB/setup %}
 

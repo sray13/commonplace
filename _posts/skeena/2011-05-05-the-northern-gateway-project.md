@@ -1,9 +1,9 @@
 ---
 layout: post
-category : Publisher's Letter
-tagline: "Supporting tagline"
-tags : [intro, beginner, jekyll, tutorial]
-author: Spencer B. Beebe
+category : Gallery
+tags: []
+toc-img: http://lorempixel.com/150/150/nature/6
+author: Neil Ever Osborne
 ---
 {% include JB/setup %}
 
