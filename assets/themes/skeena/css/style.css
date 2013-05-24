@@ -58,7 +58,7 @@ html, body,  .container, .content, .content-section {
   width: 100%;
 }
 .cover body { 
-  height: 100%;
+  height: 120%;
   background: url({{ ASSET_PATH }}skeena/img/cover.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -75,3 +75,24 @@ html, body,  .container, .content, .content-section {
   margin-left: -100px;
   width: 100px;
 }
+
+.masthead {
+  margin-top: 25px;
+
+}
+.masthead .navbar .nav>li>a {
+    color: white;
+    text-shadow: none;
+    border-right: 0;
+    border-left: 0;
+}
+.toc-section .popover {
+  max-width: 100%;
+  width: 100%;
+  height: 90%;
+  border-radius: 0;
+  opacity: .7;
+}
+  .toc-section .popover .arrow {
+    left: 15%;
+  }
