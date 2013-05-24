@@ -66,3 +66,12 @@ html, body,  .container, .content, .content-section {
   background-size: cover;
   padding-bottom: 10px !important;
 }
+
+
+.static-nav {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  margin-left: -100px;
+  width: 100px;
+}
