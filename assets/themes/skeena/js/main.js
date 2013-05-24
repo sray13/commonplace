@@ -7,13 +7,7 @@
             $toc = $("#toc"),
             $window = $(window);
 
-        $toc.popover({
-            placement: "bottom",
-            trigger: "manual",
-            container: ".toc-section"
-        });
-
-        $toc.on('click', function (e) {
+        var positionToc = function () {
             var delay = 1000, $popover, tocHeight;
             
             $toc.popover('toggle');
@@ -25,12 +19,25 @@
              });
             tocHeight = $popover.closest('.toc-section').height()
             $popover.height($popover.closest('.section').height() - tocHeight);
-            e.preventDefault();
-            
-            
-            $('html, body').stop().animate({
+             $('html, body').stop().animate({
                  scrollTop: $toc.offset().top - tocHeight + 25
              }, delay,'easeInOutExpo');
+        };
+
+        $toc.popover({
+            placement: "bottom",
+            trigger: "manual",
+            container: ".toc-section",
+            animation: "false",
+            html: true,
+            content: $('#toc-content').html()
+        });
+
+        $toc.on('click', function (e) {
+            e.preventDefault();
+            positionToc();
+
+           
             
             
         });

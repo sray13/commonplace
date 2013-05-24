@@ -1,8 +1,9 @@
 ---
 layout: post
-category : lessons
-tagline: "Supporting tagline"
-tags : [intro, beginner, jekyll, tutorial]
+category : Feature
+author: Terry Glavin
+tags: []
+toc-img: http://lorempixel.com/150/150/nature/3
 ---
 {% include JB/setup %}
 

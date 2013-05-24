@@ -11,7 +11,7 @@ class: cover
       <div>
         <div class="container">
           <ul class="nav">
-            <li><a href="javascript:void(0);" id="toc" data-placement="bottom" data-content="Test">01 Table of Contents</a></li>
+            <li><a href="javascript:void(0);" id="toc">01 Table of Contents</a></li>
             <li><a href="#">02 Map</a></li>
             <li></li>
             <li></li>
@@ -21,5 +21,26 @@ class: cover
         </div>
       </div>
     </div><!-- /.navbar -->
+  </div>
+</div>
+<div style="display: none" id="toc-content">
+  <div class="container">
+      {% for post in site.posts reversed %}
+      {% capture col %}{{ forloop.index |modulo:3 }}{% endcapture %}
+      {% if col == '1' %}
+      <div class="row">
+      {% endif %}
+        <div class="span4 story">
+          <a href="{{ post.url }}">
+            <img src="{{ post.toc-img }}" height="150" width="150" class="img-circle">
+            <h3 class="story-title">{{ post.title }}</h3>
+            <h4 class="story-category">{{ post.category }}</h4>
+            <p class="story-author">{{ post.author }}</p>
+          </a>
+        </div>
+      {% if col == '0' %}
+      </div>
+      {% endif %}
+      {% endfor %}
   </div>
 </div>
