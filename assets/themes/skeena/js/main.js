@@ -18,7 +18,7 @@
                at: 'bottom'
              });
             tocHeight = $popover.closest('.toc-section').height()
-            $popover.height($popover.closest('.section').height() - tocHeight);
+            //$popover.height($popover.closest('.section').height() - tocHeight);
              $('html, body').stop().animate({
                  scrollTop: $toc.offset().top - tocHeight + 25
              }, delay,'easeInOutExpo');

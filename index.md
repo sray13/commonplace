@@ -11,12 +11,12 @@ class: cover
       <div>
         <div class="container">
           <ul class="nav">
-            <li><a href="javascript:void(0);" id="toc">01 Table of Contents</a></li>
-            <li><a href="#">02 Map</a></li>
+            <li><a href="javascript:void(0);" id="toc"><em>01</em>Table of Contents</a></li>
+            <li><a href="#"><em>02</em> Map</a></li>
             <li></li>
             <li></li>
-            <li><a href="#">03 About</a></li>
-            <li><a href="#">04 Issues</a></li>
+            <li><a href="#"><em>03</em> About</a></li>
+            <li><a href="#"><em>04</em> Issues</a></li>
           </ul>
         </div>
       </div>
@@ -38,7 +38,7 @@ class: cover
             <p class="story-author">{{ post.author }}</p>
           </a>
         </div>
-      {% if col == '0' %}
+      {% if col == '0' or forloop.last %}
       </div>
       {% endif %}
       {% endfor %}
