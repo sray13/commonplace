@@ -10,7 +10,7 @@
             simulateTouch: true,
             mousewheelControl: true,
             grabCursor: true,
-            onSlideChangeStart: function (swiper) {
+            onSlideChangeEnd: function (swiper) {
                if (swiper.activeIndex !== 0) {
                     $masthead.removeClass('hidden');
                 } else {
