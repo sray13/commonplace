@@ -54,12 +54,5 @@
             //mySwiper.swipeTo(1);
         });
 
-        $(window).on('scroll', function () {
-            if ($window.scrollTop() > 64) {
-                $title.addClass('static-nav');
-            } else if ($window.scrollTop() < $title.offset().top) {
-                $title.removeClass('static-nav')
-            }
-        });    
     });
 })();
