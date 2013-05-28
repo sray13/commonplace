@@ -1,28 +1,32 @@
 
 (function () {
 'use strict';
+    var mySwiper;
+    window.onload = function() {
+        var $masthead = $('.masthead');
+        mySwiper = new Swiper('.swiper-container',{
+            mode:'vertical',
+            loop: true,
+            simulateTouch: true,
+            mousewheelControl: true,
+            grabCursor: true,
+            onSlideChangeStart: function (swiper) {
+               if (swiper.activeIndex !== 0) {
+                    $masthead.removeClass('hidden');
+                } else {
+                    $masthead.addClass('hidden');
+                }
+            }
+        });
+    };
+
+
+
     $(document).ready(function () {
 
         var $title = $(".page-header").find('.title-name'),
             $toc = $("#toc"),
             $window = $(window);
-
-        var positionToc = function () {
-            var delay = 1000, $popover, tocHeight;
-            
-            $toc.popover('toggle');
-            $popover = $('.toc-section').find('.popover');
-            $popover.find('.arrow').position({
-               of: $toc,
-               my: 'bottom center',
-               at: 'bottom'
-             });
-            tocHeight = $popover.closest('.toc-section').height()
-            //$popover.height($popover.closest('.section').height() - tocHeight);
-             $('html, body').stop().animate({
-                 scrollTop: $toc.offset().top - tocHeight + 25
-             }, delay,'easeInOutExpo');
-        };
 
         $toc.popover({
             placement: "bottom",
@@ -34,12 +38,20 @@
         });
 
         $toc.on('click', function (e) {
+            var $popover;
             e.preventDefault();
-            positionToc();
+            $toc.popover('toggle');
+            $popover = $('.toc-section').find('.popover');
+            $popover.find('.arrow').position({
+               of: $toc,
+               my: 'bottom center',
+               at: 'bottom'
+            });
+        });
 
-           
-            
-            
+        $('.page-footer').on('click', function () {
+            alert('?');
+            //mySwiper.swipeTo(1);
         });
 
         $(window).on('scroll', function () {

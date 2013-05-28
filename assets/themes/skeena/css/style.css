@@ -11,22 +11,14 @@ a {
 a:hover {
   color: inherit;
 }
-.cover-section {
-  position: relative;
-  height: 100%;
-}
-.section {
-  height: 100%;
-}
+
 .page-header {
   text-align: center;
   border-bottom: 0;
   width: 400px;
   padding-top: 5%;
   margin: 0 auto;
-  height: 20%;
   color: white;
-  height: 100%;
 }
   .page-header h1 {
     text-transform: uppercase;
@@ -42,6 +34,9 @@ a:hover {
     margin: 1em 0;
     padding: 0; 
   }
+.cover-slide {
+  position: relative;
+}
 .page-footer {
   position: absolute;
   bottom: 30px;
@@ -55,26 +50,6 @@ a:hover {
     color: yellow;
   }
 
-.container {
-  margin-top: -10px !important;
-
-}
-
-html, body,  .container, .content, .content-section {
-  padding: 0 !important;
-  height: 100% !important;
-  max-width: 100% !important;
-  width: 100%;
-}
-.cover body { 
-  height: 120%;
-  background: url({{ ASSET_PATH }}skeena/img/cover.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  padding-bottom: 10px !important;
-}
 
 
 .static-nav {
@@ -86,8 +61,18 @@ html, body,  .container, .content, .content-section {
 }
 
 .masthead {
-  margin-top: 25px;
+  top: 20px;
+  position: absolute;
+  z-index: 500;
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
 
+.hidden {
+  z-index: 0;
+  opacity: 0;
 }
 .masthead .navbar .nav>li>a {
     color: white;
@@ -138,3 +123,20 @@ html, body,  .container, .content, .content-section {
     top: -11px !important;
     opacity: 0.8;
   }
+
+html, body, .container, .content, .section {
+  height: 100%;
+  width: 100% !important;
+  max-width: none !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.swiper-container {
+  background: url({{ ASSET_PATH }}skeena/img/cover.jpg) no-repeat center;
+  background-size: 100%;
+}
+.swiper-container, .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
