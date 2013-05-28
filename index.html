@@ -83,7 +83,11 @@ tagline: Supporting tagline
       <div class="swiper-slide" data-img="{{ post.story-img }}">
         <div class="page">
           <div class="span12 page-wrapper">
+            {% if post_length < 750 %}
+            <div class="page-content short-post">
+            {% else %}
             <div class="page-content">
+            {% endif %}
               {{ post.content }}
             </div>
           </div>

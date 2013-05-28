@@ -6,24 +6,28 @@
         var $masthead = $('.masthead');
         mySwiper = new Swiper('.swiper-root',{
             mode:'vertical',
-            loop: true,
+            // loop: true,
             simulateTouch: true,
             // mousewheelControl: true,
             grabCursor: true,
             onSlideChangeEnd: function (swiper) {
                 var $slide = $(swiper.getSlide(swiper.realIndex)),
                     $shortPost = $slide.find('.short-post'),
+                    backgroundImage = $slide.data('img'),
+                    currentBackgroundPath = $('.swiper-root').css('background-image').split('/'),
+                    currentBackgroundImage = currentBackgroundPath[currentBackgroundPath.length-1].replace(')',''),
                     childSlider;
+
                 // show or hide the nav
                if (swiper.activeIndex !== 0) {
                     $masthead.removeClass('hidden');
                 } else {
                     $masthead.addClass('hidden');
                 }
-                console.log($slide.data('img'));
-                if ($slide.data('img')) {
-                    $('.swiper-root').css('background-image', 'url(/assets/themes/skeena/img/'+$slide.data('img') + ')');
-                } else {
+                console.log(currentBackgroundImage + ': ' + backgroundImage)
+                if (backgroundImage && currentBackgroundImage !== backgroundImage) {
+                    $('.swiper-root').css('background-image', 'url(/assets/themes/skeena/img/'+ backgroundImage + ')');
+                } else if (! backgroundImage) {
                     $('.swiper-root').css('background-image', 'url(/assets/themes/skeena/img/cover.jpg)');
                 }
                 // activate child swiper
