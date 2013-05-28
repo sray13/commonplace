@@ -41,7 +41,7 @@ tagline: Supporting tagline
       {% endfor %}
   </div>
 </div>
-<div class="swiper-container">
+<div class="swiper-container swiper-root">
 
  
   <div class="swiper-wrapper">
@@ -64,7 +64,7 @@ tagline: Supporting tagline
       </div>
       <!--Second Slide-->
       {% for post in site.posts reversed %}
-      <div class="swiper-slide">
+      <div class="swiper-slide" data-img="{{ post.story-img }}">
         <div class="story-header">
           {% if post.author %}
           <h3>{{ post.author }}</h3>      
@@ -79,14 +79,19 @@ tagline: Supporting tagline
         </div>
       </div>
       <!--Third Slide-->
-      <div class="swiper-slide">
+      {% assign post_length = post.content | number_of_words %}
+      <div class="swiper-slide" data-img="{{ post.story-img }}">
         <div class="page">
-          <div class="span12 page-content">
-            {{ post.content }}
+          <div class="span12 page-wrapper">
+            <div class="page-content">
+              {{ post.content }}
+            </div>
           </div>
         </div>
       </div>
+      
       {% endfor %}
+    </div{>
   </div>
 </div>
 

@@ -4,18 +4,43 @@
     var mySwiper;
     window.onload = function() {
         var $masthead = $('.masthead');
-        mySwiper = new Swiper('.swiper-container',{
+        mySwiper = new Swiper('.swiper-root',{
             mode:'vertical',
             loop: true,
             simulateTouch: true,
             // mousewheelControl: true,
             grabCursor: true,
             onSlideChangeEnd: function (swiper) {
+                var $slide = $(swiper.getSlide(swiper.realIndex)),
+                    $shortPost = $slide.find('.short-post'),
+                    childSlider;
+                // show or hide the nav
                if (swiper.activeIndex !== 0) {
                     $masthead.removeClass('hidden');
                 } else {
                     $masthead.addClass('hidden');
                 }
+                console.log($slide.data('img'));
+                if ($slide.data('img')) {
+                    $('.swiper-root').css('background-image', 'url(/assets/themes/skeena/img/'+$slide.data('img') + ')');
+                } else {
+                    $('.swiper-root').css('background-image', 'url(/assets/themes/skeena/img/cover.jpg)');
+                }
+                // activate child swiper
+
+                // if ($shortPost.length) {
+                //     console.log('short-post');
+                //     childSlider = $slide.find('.page-content').swiper({
+                //         mode:'vertical',
+                //         simulateTouch: true,
+                //         mousewheelControl: true,
+                //         scrollbar: {
+                //             container : '.swiper-scrollbar',
+                //             draggable : true,
+                //         }
+                //     });
+                // }
+
             }
         });
     };

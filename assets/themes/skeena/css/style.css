@@ -167,22 +167,59 @@ html, body, .container, .content, .section {
   padding-bottom: 0 !important;
 }
 
-.swiper-container {
-  background: url({{ ASSET_PATH }}skeena/img/cover.jpg) no-repeat center;
+.root-container {
+  /*background: url({{ ASSET_PATH }}skeena/img/cover.jpg) no-repeat center;*/
+  background-image: url({{ ASSET_PATH }}skeena/img/cover.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: 100%;
 }
-.swiper-container, .swiper-slide {
+.swiper-root {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  
+}
+
+.swiper-root, 
+.swiper-root>.swiper-wrapper > .swiper-slide {
   width: 100%;
   height: 100%;
 }
 
 .page {
   background-color: white;
-  width: 75%;
+  width: 65%;
   height: 80%;
   margin: 100px auto; 
-  overflow: auto;
+  overflow-y: hidden;
 }
-  .page-content {
-    padding: 25px;
+  .page-wrapper {
+    
+    
+    height: 100%;
   }
+  .page-content {
+    padding-top: 50px;
+    overflow: auto;
+    height: 90%;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+
+  }
+  .page-content blockquote {
+    border-left: 0px;
+  }
+    .page-content blockquote p {
+      color: rgb(51,150,243);
+      font-style: italic;
+    }
+    /*.page-content .short-post {
+      width: 100% !important;
+      height: 100% !important;
+    }
+      .page-content .short-post .swiper-slide {
+        width: 100% !important;
+        /*height: 100% !important;*/
+      }*/
