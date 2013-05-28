@@ -8,7 +8,7 @@
             mode:'vertical',
             loop: true,
             simulateTouch: true,
-            mousewheelControl: true,
+            // mousewheelControl: true,
             grabCursor: true,
             onSlideChangeEnd: function (swiper) {
                if (swiper.activeIndex !== 0) {
@@ -38,10 +38,13 @@
         });
 
         $toc.on('click', function (e) {
-            var $popover;
+            var $popover, tocHeight;
             e.preventDefault();
             $toc.popover('toggle');
             $popover = $('.toc-section').find('.popover');
+            tocHeight = $popover.closest('.toc-section').height();
+            $popover.find('.popover-content').height($popover.closest('.section').height() - tocHeight);
+            console.log($popover.closest('.section').height() - tocHeight);
             $popover.find('.arrow').position({
                of: $toc,
                my: 'bottom center',

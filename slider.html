@@ -12,7 +12,7 @@ tagline: Supporting tagline
         <ul class="nav">
           <li><a href="#" id="toc"><em>01</em>Table of Contents</a></li>
           <li><a href="#"><em>02</em> Map</a></li>
-          <li><a href="#"><h1>commonplace</h1></a></li>
+          <li><a href="#"><h2>commonplace</h2></a></li>
           <li><a href="#"><em>03</em> About</a></li>
           <li><a href="#"><em>04</em> Issues</a></li>
         </ul>
@@ -80,7 +80,11 @@ tagline: Supporting tagline
       </div>
       <!--Third Slide-->
       <div class="swiper-slide">
-        THREE
+        <div class="page">
+          <div class="span12 page-content">
+            {{ post.content }}
+          </div>
+        </div>
       </div>
       {% endfor %}
   </div>
