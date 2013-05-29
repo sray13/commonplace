@@ -13,6 +13,7 @@
             onSlideChangeEnd: function (swiper) {
                 var $slide = $(swiper.getSlide(swiper.realIndex)),
                     $shortPost = $slide.find('.short-post'),
+                    $longPost = $slide.find('.long-post'),
                     backgroundImage = $slide.data('img'),
                     currentBackgroundPath = $('.swiper-root').css('background-image').split('/'),
                     currentBackgroundImage = currentBackgroundPath[currentBackgroundPath.length-1].replace(')',''),
@@ -24,13 +25,26 @@
                 } else {
                     $masthead.addClass('hidden');
                 }
-                console.log(currentBackgroundImage + ': ' + backgroundImage)
+
+                // update the background image
                 if (backgroundImage && currentBackgroundImage !== backgroundImage) {
                     $('.swiper-root').css('background-image', 'url(/assets/themes/skeena/img/'+ backgroundImage + ')');
                 } else if (! backgroundImage) {
                     $('.swiper-root').css('background-image', 'url(/assets/themes/skeena/img/cover.jpg)');
                 }
+
+
                 // activate child swiper
+                if ($longPost.length && ! $longPost.find('.textify').length) {
+                    console.log($longPost.height());
+                    $longPost.textify({
+                        numberOfColumn: 1,
+                        width: "auto",
+                        height: $longPost.height()
+
+                    });
+                }
+
 
                 // if ($shortPost.length) {
                 //     console.log('short-post');
