@@ -100,7 +100,6 @@ a:hover {
 }
 
 .hidden {
-  z-index: 0;
   opacity: 0;
 }
 .masthead .navbar .nav>li>a {
@@ -206,13 +205,23 @@ html, body, .container, .content, .section {
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 50px;
-
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+  }
+   .gallery {
+    height: 100%;
+    width: 100%;
+  }
+  .galler img {
+    width: 100%;
   }
   .page-content img {
     float: left;
-    padding-right: 20px;
+    padding-right: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
+    max-width: 50%;
   }
   .page-content blockquote {
     border-left: 0px;

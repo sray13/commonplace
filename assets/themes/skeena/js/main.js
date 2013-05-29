@@ -14,6 +14,7 @@
                 var $slide = $(swiper.getSlide(swiper.realIndex)),
                     $shortPost = $slide.find('.short-post'),
                     $longPost = $slide.find('.long-post'),
+                    $gallery = $slide.find('.gallery'),
                     backgroundImage = $slide.data('img'),
                     currentBackgroundPath = $('.swiper-root').css('background-image').split('/'),
                     currentBackgroundImage = currentBackgroundPath[currentBackgroundPath.length-1].replace(')',''),
@@ -36,28 +37,21 @@
 
                 // activate child swiper
                 if ($longPost.length && ! $longPost.find('.textify').length) {
-                    console.log($longPost.height());
                     $longPost.textify({
                         numberOfColumn: 1,
                         width: "auto",
                         height: $longPost.height()
 
                     });
+                    $longPost.removeClass('hidden');
                 }
 
-
-                // if ($shortPost.length) {
-                //     console.log('short-post');
-                //     childSlider = $slide.find('.page-content').swiper({
-                //         mode:'vertical',
-                //         simulateTouch: true,
-                //         mousewheelControl: true,
-                //         scrollbar: {
-                //             container : '.swiper-scrollbar',
-                //             draggable : true,
-                //         }
-                //     });
-                // }
+                if ($gallery.length) {
+                
+                    $gallery.swiper({
+                        mode: 'horizontal'
+                    });
+                }
 
             }
         });

@@ -60,7 +60,6 @@ tagline: Supporting tagline
       </div>
     </div>
       <div class="swiper-slide">
-        <h1>Map</h1>
       </div>
       <!--Second Slide-->
       {% for post in site.posts reversed %}
@@ -83,6 +82,18 @@ tagline: Supporting tagline
       <div class="swiper-slide" data-img="{{ post.story-img }}">
         <div class="page">
           <div class="span12 page-wrapper">
+            {% if post.category == 'Gallery' %}
+              <div class="swiper-container gallery">
+                <div class="swiper-wrapper">
+                    
+                {% for image in post.slideshow %}
+                    <div class="swiper-slide">
+                      <img src="{{ ASSET_PATH }}skeena/img/slideshow/{{ image.img }}">
+                    </div>
+                {% endfor %}
+              </div>
+            </div>
+            {% else %}
             {% if post_length < 750 %}
             <div class="page-content short-post">
             {% else %}
@@ -90,6 +101,7 @@ tagline: Supporting tagline
             {% endif %}
               {{ post.content }}
             </div>
+            {% endif %}
           </div>
         </div>
       </div>
