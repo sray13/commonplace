@@ -3,7 +3,6 @@
 (function () {
 'use strict';
     var mySwiper;
-    alert('{{ASSET_PATH}}');
     window.onload = function() {
         var $masthead = $('.masthead');
         mySwiper = new Swiper('.swiper-root',{
