@@ -6,6 +6,7 @@
     var mySwiper;
     window.onload = function() {
         var $masthead = $('.masthead');
+        
         mySwiper = new Swiper('.swiper-root',{
             mode:'vertical',
             // loop: true,
@@ -31,9 +32,9 @@
 
                 // update the background image
                 if (backgroundImage && currentBackgroundImage !== backgroundImage) {
-                    $('.swiper-root').css('background-image', 'url({{ASSET_PATH}}skeena/img/'+ backgroundImage + ')');
+                    $('.swiper-root').css('background-image', 'url({{BASE_PATH}}/assets/themes/skeena/img/'+ backgroundImage + ')');
                 } else if (! backgroundImage) {
-                    $('.swiper-root').css('background-image', 'url({{ASSET_PATH}}skeena/img/cover.jpg)');
+                    $('.swiper-root').css('background-image', 'url({{BASE_PATH}}/assets/themes/skeena/img/cover.jpg)');
                 }
 
 
