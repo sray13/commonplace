@@ -19,4 +19,3 @@ slideshow:
 - img: Cassiar Cannery - towing boats.jpg
 - img: Cassiar Cannery-boats along the tracks 001(low).jpg
 ---
-{% include JB/setup %}
