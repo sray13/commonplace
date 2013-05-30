@@ -1,5 +1,6 @@
 ---
 ---
+{% include JB/setup %}
 (function () {
 'use strict';
     var mySwiper;
