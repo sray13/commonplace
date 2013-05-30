@@ -1,7 +1,11 @@
+---
 
+---
+{% include JB/setup %}
 (function () {
 'use strict';
     var mySwiper;
+    alert('{{ASSET_PATH}}');
     window.onload = function() {
         var $masthead = $('.masthead');
         mySwiper = new Swiper('.swiper-root',{
@@ -29,9 +33,9 @@
 
                 // update the background image
                 if (backgroundImage && currentBackgroundImage !== backgroundImage) {
-                    $('.swiper-root').css('background-image', 'url(/assets/themes/skeena/img/'+ backgroundImage + ')');
+                    $('.swiper-root').css('background-image', 'url({{ASSET_PATH}}skeena/img/'+ backgroundImage + ')');
                 } else if (! backgroundImage) {
-                    $('.swiper-root').css('background-image', 'url(/assets/themes/skeena/img/cover.jpg)');
+                    $('.swiper-root').css('background-image', 'url({{ASSET_PATH}}skeena/img/cover.jpg)');
                 }
 
 
