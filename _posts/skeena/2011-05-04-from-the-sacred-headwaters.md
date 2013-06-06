@@ -7,7 +7,7 @@ tags: []
 author: Wade Davis
 ---
 
-**From The Sacred Headwaters**
+**From _The Sacred Headwaters_**
 
 Wade Davis
 
