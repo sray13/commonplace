@@ -4,19 +4,29 @@
 (function () {
 'use strict';
     var mySwiper;
+
+    var layer = new MM.TemplatedLayer('http://tilestream.apps.ecotrust.org/v2/commonplace/{Z}/{X}/{Y}.png');
+
+    // Create a map
+    var map = mapbox.map('map', layer, null, []);
+    
+    // Zoom in to level 4
+    //map.setView([50, -122], 8);
+    map.centerzoom({ lat: 54, lon: -130 }, 8);
+
     window.onload = function() {
         var $masthead = $('.masthead');
-        
+
         mySwiper = new Swiper('.swiper-root',{
             mode:'vertical',
             // loop: true,
             simulateTouch: true,
-            // mousewheelControl: true,
+            mousewheelControl: true,
             grabCursor: true,
             onSlideChangeEnd: function (swiper) {
                 var $slide = $(swiper.getSlide(swiper.realIndex)),
                     $shortPost = $slide.find('.short-post'),
-                    $longPost = $slide.find('.long-post'),
+                    $longPost = $slide.find('.post'),
                     $gallery = $slide.find('.gallery'),
                     backgroundImage = $slide.data('img'),
                     currentBackgroundPath = $('.swiper-root').css('background-image').split('/'),
@@ -92,9 +102,19 @@
             });
         });
 
+        $toc.on('click', '.story', function (e) {
+            e.preventDefault();
+            debugger;
+        });
+
         $('.page-footer').on('click', function () {
-            alert('?');
-            //mySwiper.swipeTo(1);
+            var nextSlide = mySwiper.realIndex + 1;
+            if (nextSlide === mySwiper.slides.length) {
+                mySwiper.swipeTo(0);
+            } else {
+                mySwiper.swipeTo(mySwiper.realIndex + 1);    
+            }
+            
         });
 
     });

@@ -5,6 +5,7 @@ category: Essay
 tags: []
 "toc-img": "http://lorempixel.com/150/150/nature/5"
 author: Wade Davis
+issue: Skeena
 ---
 
 **From _The Sacred Headwaters_**

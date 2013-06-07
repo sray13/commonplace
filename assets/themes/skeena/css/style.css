@@ -73,6 +73,7 @@ a:hover {
   height: 44px;
   width: 44px;
   left: 48%;
+  z-index: 1000;
 }
   .page-footer a {
     text-align: center;
@@ -168,18 +169,21 @@ html, body, .container, .content, .section {
 
 .root-container {
   /*background: url({{ ASSET_PATH }}skeena/img/cover.jpg) no-repeat center;*/
-  background-image: url({{ ASSET_PATH }}skeena/img/cover.jpg);
+  /*background-image: url({{ ASSET_PATH }}skeena/img/cover.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
+  background-size: contain;*/
+  background-color: black;
 }
 .swiper-root {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
-  
+  z-index: 0;
 }
-
+.swiper-wrapper {
+  z-index: 10;
+}
 .swiper-root, 
 .swiper-root>.swiper-wrapper > .swiper-slide {
   width: 100%;

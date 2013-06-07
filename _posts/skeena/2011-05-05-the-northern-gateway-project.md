@@ -4,6 +4,7 @@ category : Gallery
 tags: []
 toc-img: http://lorempixel.com/150/150/nature/6
 author: Neil Ever Osborne
+issue: Skeena
 slideshow:
 - img: Cassiar Cannery - 1940 -Ed Eyford - fish cutter in the canne.jpg
 - img: Cassiar Cannery - Ewen _Mac_ and Kay Macmillan with their da.jpg
