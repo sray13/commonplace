@@ -102,9 +102,10 @@
             });
         });
 
-        $toc.on('click', '.story', function (e) {
+        $(document).on('click', '.story', function (e) {
             e.preventDefault();
-            debugger;
+            mySwiper.swipeTo($($(this).data('story')).index());
+            $toc.popover('hide');
         });
 
         $('.page-footer').on('click', function () {

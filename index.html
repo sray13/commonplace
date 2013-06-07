@@ -27,7 +27,7 @@ tagline: Supporting tagline
       {% if col == '1' %}
       <div class="row">
       {% endif %}
-        <div class="span4 story">
+        <div class="span4 story" data-story="#{{post.url | replace: '/', ''}}">
           <a href="{{ post.url }}">
             <img src="{{ post.toc-img }}" height="150" width="150" class="img-circle">
             <h3 class="story-title">{{ post.title }}</h3>
