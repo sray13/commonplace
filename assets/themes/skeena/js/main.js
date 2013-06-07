@@ -19,7 +19,7 @@
 
         mySwiper = new Swiper('.swiper-root',{
             mode:'vertical',
-            // loop: true,
+            loop: true,
             simulateTouch: true,
             mousewheelControl: true,
             grabCursor: true,
@@ -113,7 +113,7 @@
             if (nextSlide === mySwiper.slides.length) {
                 mySwiper.swipeTo(0);
             } else {
-                mySwiper.swipeTo(mySwiper.realIndex + 1);    
+                mySwiper.swipeTo(mySwiper.realIndex);    
             }
             
         });
