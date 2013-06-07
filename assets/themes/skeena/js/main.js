@@ -1,28 +1,40 @@
 ---
 ---
 {% include JB/setup %}
+
 (function () {
 'use strict';
     var mySwiper;
 
     var layer = new MM.TemplatedLayer('http://tilestream.apps.ecotrust.org/v2/commonplace/{Z}/{X}/{Y}.png');
 
+    var center = {
+        lat:54,
+        lon: -130
+    };
+    var zoom = 7;
+
     // Create a map
-    var map = mapbox.map('map', layer, null, []);
-    
-    // Zoom in to level 4
-    //map.setView([50, -122], 8);
-    map.centerzoom({ lat: 54, lon: -130 }, 8);
+    window.map = mapbox.map('map', layer, null, []);
+    map.centerzoom(center, zoom);
 
     window.onload = function() {
         var $masthead = $('.masthead');
 
         mySwiper = new Swiper('.swiper-root',{
             mode:'vertical',
-            loop: true,
+            // loop: true,
             simulateTouch: true,
             mousewheelControl: true,
             grabCursor: true,
+            onSlideChangeStart: function (swiper) {
+                var $slide = $(swiper.getSlide(swiper.realIndex));
+                if ($slide.data('zoom')) {
+                    map.zoom($slide.data('zoom'), true);
+                } else {
+                    map.zoom(zoom, true);
+                }
+            },
             onSlideChangeEnd: function (swiper) {
                 var $slide = $(swiper.getSlide(swiper.realIndex)),
                     $shortPost = $slide.find('.short-post'),
@@ -39,6 +51,8 @@
                 } else {
                     $masthead.addClass('hidden');
                 }
+
+                
 
                 // update the background image
                 if (backgroundImage && currentBackgroundImage !== backgroundImage) {

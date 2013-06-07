@@ -173,7 +173,7 @@ html, body, .container, .content, .section {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;*/
-  background-color: black;
+  background-color: rgb(52,72,52);
 }
 .swiper-root {
   background-repeat: no-repeat;
