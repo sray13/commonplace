@@ -25,7 +25,7 @@
             mode:'vertical',
             // loop: true,
             simulateTouch: true,
-            //mousewheelControl: true,
+            mousewheelControl: true,
             grabCursor: true,
             onSlideChangeStart: function (swiper) {
                 var $slide = $(swiper.getSlide(swiper.realIndex));

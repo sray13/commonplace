@@ -4,8 +4,7 @@ layout: post
 category: Feature
 author: Terry Glavin
 tags: []
-toc-img: http://lorempixel.com/150/150/nature/3
-issue: Skeena
+"toc-img": "http://lorempixel.com/150/150/nature/3"
 ---
 
  **Voices from the Skeena Country**
@@ -120,7 +119,7 @@ For the Gitga’at people of the Tsimshian community of Hartley Bay, the initiat
 
 The Holy City of Metlakatla was established at a time of apocalyptic upheaval, smallpox, spiritual malaise, and cultural collapse among the Tsimshians. Founded by the slightly mad English missionary William Duncan, Metlakatla came to an abrupt demise brought on by the provincial authorities’ nervousness about the community’s power and the Anglican church authorities’ absurd doctrinal disputes with Duncan. In 1887, almost the entire community set off in canoes and small sailboats to establish New Metlakatla in Alaska. By then, there wasn’t much left of the Gitga’at people, one of a dozen Tsimshian communities that had been swept up in Duncan’s utopian fervors.
 
- When Duncan and his followers left for Alaska, the Gitga’at returned to their home waters in the islands around the mouth of Douglas Channel, but by then there were only twenty-seven Gitga’at left to start anew. Instead of settling back down at the old village of Laxgal’tsap near the Quaal River, they chose a cove a few kilometers away, better protected from the winds, at Hartley Bay. About two hundred people live there now, out of a band membership of roughly seven hundred. It’s a pleasant place, distinctively riven with a network of boardwalks that lead from the dock to all the houses in the village.	[o9] 
+ When Duncan and his followers left for Alaska, the Gitga’at returned to their home waters in the islands around the mouth of Douglas Channel, but by then there were only twenty-seven Gitga’at left to start anew. Instead of settling back down at the old village of Laxgal’tsap near the Quaal River, they chose a cove a few kilometers away, better protected from the winds, at Hartley Bay. About two hundred people live there now, out of a band membership of roughly seven hundred. It’s a pleasant place, distinctively riven with a network of boardwalks that lead from the dock to all the houses in the village.  [o9] 
 
 While much of the story of Metlakatla has been disremembered in the salal and skunk cabbage of those strange times in the late nineteenth century, it is the memory of a much older city that lives on in the meaning of the name the Gitga’at give themselves: the People of the Cane. It is an antique translation into English that refers to the “canes,” or poles, by which the people once navigated their canoes. It’s a river-canoe method, for shallow water. It comes from the time the people lived up the Skeena River, at Dimlahamid.
 
