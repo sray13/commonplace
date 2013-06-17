@@ -22,22 +22,22 @@ tagline: Supporting tagline
 </div>
 <div style="display: none" id="toc-content">
   <div class="container">
-      {% for post in site.posts reversed %}
+      {% for post in site.tags.story reversed %}
       {% capture col %}{{ forloop.index |modulo:3 }}{% endcapture %}
-      {% if col == '1' %}
-      <div class="row">
-      {% endif %}
-        <div class="span4 story" data-story="#{{post.url | replace: '/', ''}}">
-          <a href="{{ post.url }}">
-            <img src="{{ post.toc-img }}" height="100" width="100" class="img-circle">
-            <h3 class="story-title">{{ post.title }}</h3>
-            <h4 class="story-category">{{ post.category }}</h4>
-            <p class="story-author">{{ post.author }}</p>
-          </a>
+        {% if col == '1' %}
+        <div class="row">
+        {% endif %}
+          <div class="span4 story" data-story="#{{post.url | replace: '/', ''}}">
+            <a href="{{ post.url }}">
+              <img src="{{ post.toc-img }}" height="100" width="100" class="img-circle">
+              <h3 class="story-title">{{ post.title }}</h3>
+              <h4 class="story-category">{{ post.category }}</h4>
+              <p class="story-author">{{ post.author }}</p>
+            </a>
+          </div>
+        {% if col == '0' or forloop.last %}
         </div>
-      {% if col == '0' or forloop.last %}
-      </div>
-      {% endif %}
+        {% endif %}
       {% endfor %}
   </div>
 </div>
@@ -63,59 +63,78 @@ tagline: Supporting tagline
       <div class="swiper-slide" data-zoom=9>
       </div>
       <!--Second Slide-->
-      {% for post in site.posts reversed %}
-      <div class="swiper-slide" data-img="{{ post.story-img }}" id="{{post.url | replace:'/',''}}">
-        <div class="story-header">
-          {% if post.author %}
-          <h3>{{ post.author }}</h3>      
-          <hr/>
-          {% endif %}
-          <h1>{{ post.title }}</h1>
-        </div>
-        <div class="page-footer">
-          <a href="#">
-            <i class="icon-chevron-down"></i>
-          </a>
-        </div>
-      </div>
-      <!--Third Slide-->
-      {% assign post_length = post.content | number_of_words %}
-      <div class="swiper-slide" data-img="{{ post.story-img }}">
-        <div class="page">
-          <div class="span12 page-wrapper">
-            <div class="story-header-small">
-            <p><strong>{{ post.title }}</strong></p>
+      {% for post in site.tags.story reversed %}
+        <div class="swiper-slide" data-img="{{ post.story-img }}" data-hash="{{post.url | replace:'/',''}}" id="{{post.url | replace:'/',''}}">
+          <div class="story-header">
             {% if post.author %}
-            <p>{{ post.author }}</p>
+            <h3>{{ post.author }}</h3>      
+            <hr/>
             {% endif %}
-            </div>
-            {% if post.category == 'Gallery' %}
-              <div class="swiper-container gallery">
-                <div class="swiper-wrapper">
-                    
-                {% for image in post.slideshow %}
-                    <div class="swiper-slide">
-                      <img src="{{ ASSET_PATH }}skeena/img/slideshow/{{ image.img }}">
-                    </div>
-                {% endfor %}
+            <h1>{{ post.title }}</h1>
+          </div>
+          <div class="page-footer">
+            <a href="#">
+              <i class="icon-chevron-down"></i>
+            </a>
+          </div>
+        </div>
+        <!--Third Slide-->
+        {% assign post_length = post.content | number_of_words %}
+        <div class="swiper-slide" data-img="{{ post.story-img }}" data-hash="{{post.url | replace:'/',''}}">
+          <div class="page">
+            <div class="span12 page-wrapper">
+              <div class="story-header-small">
+              <p><strong>{{ post.title }}</strong></p>
+              {% if post.author %}
+              <p>{{ post.author }}</p>
+              {% endif %}
               </div>
+              {% if post.category == 'Gallery' %}
+                <div class="swiper-container gallery">
+                  <div class="swiper-wrapper">
+                      
+                  {% for image in post.slideshow %}
+                      <div class="swiper-slide">
+                        <img src="{{ ASSET_PATH }}skeena/img/slideshow/{{ image.img }}">
+                      </div>
+                  {% endfor %}
+                </div>
+              </div>
+              {% else %}
+              {% if post_length < 750 %}
+              <div class="page-content short-post post">
+              {% else %}
+              <div class="page-content long-post post">
+              {% endif %}
+                {{ post.content }}
+              </div>
+              {% endif %}
             </div>
-            {% else %}
-            {% if post_length < 750 %}
-            <div class="page-content short-post post">
-            {% else %}
-            <div class="page-content long-post post">
-            {% endif %}
-
-              {{ post.content }}
+          </div>
+        </div>
+      {% endfor %}
+      <div class="swiper-slide" data-img="{{ post.story-img }}" id="voices" data-hash="voices">
+        <div class="page">
+            <div class="span12 page-wrapper">
+              <div class="story-header-small">
+              <p><strong>Voices</strong></p>
             </div>
-            {% endif %}
           </div>
         </div>
       </div>
-      
+      {% for post in site.tags.voices reversed %}
+      <div class="swiper-slide" data-img="{{ post.story-img }}" data-hash="{{post.url | replace: '/', ''}}">
+        <div class="page">
+              <div class="span12 page-wrapper">
+                <div class="story-header-small">
+                <p><strong>{{ post.title }}</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
       {% endfor %}
-    </div{>
+      </div>
+    </div>
   </div>
 </div>
 

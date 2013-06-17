@@ -3,7 +3,7 @@ published: true
 layout: post
 category: Feature
 author: Terry Glavin
-tags: []
+tags: ['story']
 "toc-img": "http://lorempixel.com/150/150/nature/3"
 ---
 
