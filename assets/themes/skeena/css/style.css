@@ -68,6 +68,10 @@ a:hover {
   top:200px;
 }
 
+.story-header-small strong {
+  font-family: Intro-Black-Caps
+}
+
 .page-header {
   text-align: center;
   border-bottom: 0;
