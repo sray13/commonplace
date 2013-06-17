@@ -63,13 +63,16 @@ a:hover {
   border-top:1px solid white;
   border-bottom:1px solid white;
   position: absolute;
-  max-width:150px;
+  width:120px;
   left:-150px;
   top:200px;
 }
 
 .story-header-small strong {
-  font-family: Intro-Black-Caps
+  font-size: 1.4em;
+  font-family: Intro-Black-Caps;
+  font-weight: normal;
+  letter-spacing: .1em;
 }
 
 .page-header {
