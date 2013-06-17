@@ -29,7 +29,7 @@ tagline: Supporting tagline
       {% endif %}
         <div class="span4 story" data-story="#{{post.url | replace: '/', ''}}">
           <a href="{{ post.url }}">
-            <img src="{{ post.toc-img }}" height="150" width="150" class="img-circle">
+            <img src="{{ post.toc-img }}" height="100" width="100" class="img-circle">
             <h3 class="story-title">{{ post.title }}</h3>
             <h4 class="story-category">{{ post.category }}</h4>
             <p class="story-author">{{ post.author }}</p>
@@ -41,6 +41,7 @@ tagline: Supporting tagline
       {% endfor %}
   </div>
 </div>
+<div id="bg-img"></div>
 <div class="swiper-container swiper-root" id="map">
 
  <div class="page-footer">
@@ -82,6 +83,12 @@ tagline: Supporting tagline
       <div class="swiper-slide" data-img="{{ post.story-img }}">
         <div class="page">
           <div class="span12 page-wrapper">
+            <div class="story-header-small">
+            <p><strong>{{ post.title }}</strong></p>
+            {% if post.author %}
+            <p>{{ post.author }}</p>
+            {% endif %}
+            </div>
             {% if post.category == 'Gallery' %}
               <div class="swiper-container gallery">
                 <div class="swiper-wrapper">

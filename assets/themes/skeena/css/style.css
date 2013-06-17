@@ -4,6 +4,20 @@
 /* cover */
 
 
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/273126");
+
+  
+@font-face {font-family: 'CenturySchoolbookBT-Roman';src: url('../webfonts/273126_0_0.eot');src: url('webfonts/273126_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/273126_0_0.woff') format('woff'),url('webfonts/273126_0_0.ttf') format('truetype');}
+@font-face {font-family: 'CenturySchoolbookBT-Italic';src: url('../webfonts/273126_1_0.eot');src: url('webfonts/273126_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/273126_1_0.woff') format('woff'),url('webfonts/273126_1_0.ttf') format('truetype');}
+@font-face {font-family: 'CenturySchoolbookBT-Bold';src: url('../webfonts/273126_2_0.eot');src: url('webfonts/273126_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/273126_2_0.woff') format('woff'),url('webfonts/273126_2_0.ttf') format('truetype');}
+@font-face {font-family: 'CenturySchoolbookBT-BoldItalic';src: url('../webfonts/273126_3_0.eot');src: url('webfonts/273126_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/273126_3_0.woff') format('woff'),url('webfonts/273126_3_0.ttf') format('truetype');}
+@font-face {font-family: 'CenturySchoolbookBT-BoldCond';src: url('../webfonts/273126_4_0.eot');src: url('webfonts/273126_4_0.eot?#iefix') format('embedded-opentype'),url('webfonts/273126_4_0.woff') format('woff'),url('webfonts/273126_4_0.ttf') format('truetype');}
+@font-face {font-family: 'CenturySchoolbookBT-Monospace';src: url('../webfonts/273126_5_0.eot');src: url('webfonts/273126_5_0.eot?#iefix') format('embedded-opentype'),url('webfonts/273126_5_0.woff') format('woff'),url('webfonts/273126_5_0.ttf') format('truetype');}
+ 
+@font-face {font-family: 'Intro-Black-Caps';src: url('../webfonts/273126_6_0.eot');src: url('webfonts/273126_6_0.eot?#iefix') format('embedded-opentype'),url('webfonts/273126_6_0.woff') format('woff'),url('webfonts/273126_6_0.ttf') format('truetype');}
+@font-face {font-family: 'Intro-Black-Inline-Caps';src: url('../webfonts/273126_7_0.eot');src: url('webfonts/273126_7_0.eot?#iefix') format('embedded-opentype'),url('webfonts/273126_7_0.woff') format('woff'),url('webfonts/273126_7_0.ttf') format('truetype');}
+
 a {
   text-decoration: none !important;
   color: inherit;
@@ -12,8 +26,7 @@ a:hover {
   color: inherit;
 }
 
-
-
+.popover-content h3 {line-height: 1.2em;}
 
 .story-header {
   text-align: center;
@@ -24,9 +37,12 @@ a:hover {
   color: white;
 }
   .story-header h1 {
+    font-family: Intro-Black-Inline-Caps; 
+    font-weight: normal; 
+    font-style: normal;
     text-transform: uppercase;
     margin-top: 100px;
-    font-size: 72px;
+    font-size: 120px;
     line-height: 1;
   }
   .story-header hr { 
@@ -41,6 +57,17 @@ a:hover {
     opacity: .7;
   }
 
+.story-header-small {
+  color:white;
+  padding:15px 5px;
+  border-top:1px solid white;
+  border-bottom:1px solid white;
+  position: absolute;
+  max-width:150px;
+  left:-150px;
+  top:200px;
+}
+
 .page-header {
   text-align: center;
   border-bottom: 0;
@@ -50,9 +77,12 @@ a:hover {
   color: white;
 }
   .page-header h1 {
+    font-family: Intro-Black-Inline-Caps; 
+    font-weight: normal; 
+    font-style: normal;
     text-transform: uppercase;
     margin-top: 100px;
-    font-size: 72px;
+    font-size: 120px;
     line-height: 1;
   }
   .page-header hr { 
@@ -132,7 +162,7 @@ a:hover {
     overflow: auto;
   }
   .toc-section .popover .container {
-    width: 75%;
+    width: 70% !important;
     margin: 0 auto;
   }
   .toc-section .popover .container .row {
@@ -192,53 +222,63 @@ html, body, .container, .content, .section {
 
 .page {
   background-color: white;
-  width: 85%;
+  width: 70%;
+  max-width: 900px;
   height: 80%;
   margin: 100px auto; 
   overflow-y: hidden;
+  overflow:visible;
+  position:relative;
 }
-  .page-wrapper {
-    
-    
-    height: 100%;
+.page-wrapper {
+  
+  
+  height: 100%;
+}
+.page-content {
+  font-family: CenturySchoolbookBT-Roman;
+  padding: 50px 12% 50px 6%;
+  overflow: auto;
+  height: 90%;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.page-content p {padding-left:6%;}
+.page-content hr {margin-left:6%;}
+.page-content strong {color:rgb(51,150,243); font-weight: bold;}
+
+.page-content img {
+  float: left;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  max-width: 50%;
+}
+.page-content blockquote {
+  border-left: 0px;
+  margin:20px 0;
+}
+  .page-content blockquote p {
+    color: rgb(51,150,243);
+    font-style: italic;
+    padding:0;
+}
+
+.gallery {
+  height: 100%;
+  width: 100%;
+}
+.galler img {
+  width: 100%;
+}
+
+  /*.page-content .short-post {
+    width: 100% !important;
+    height: 100% !important;
   }
-  .page-content {
-    padding-top: 50px;
-    overflow: auto;
-    height: 90%;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 50px;
-    -webkit-transition: opacity 0.5s ease-in-out;
-    -moz-transition: opacity 0.5s ease-in-out;
-    transition: opacity 0.5s ease-in-out;
-  }
-   .gallery {
-    height: 100%;
-    width: 100%;
-  }
-  .galler img {
-    width: 100%;
-  }
-  .page-content img {
-    float: left;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    max-width: 50%;
-  }
-  .page-content blockquote {
-    border-left: 0px;
-  }
-    .page-content blockquote p {
-      color: rgb(51,150,243);
-      font-style: italic;
-    }
-    /*.page-content .short-post {
+    .page-content .short-post .swiper-slide {
       width: 100% !important;
-      height: 100% !important;
-    }
-      .page-content .short-post .swiper-slide {
-        width: 100% !important;
-        /*height: 100% !important;*/
-      }*/
+      /*height: 100% !important;*/
+    }*/

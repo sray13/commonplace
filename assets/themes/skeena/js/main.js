@@ -114,6 +114,18 @@
                my: 'bottom center',
                at: 'bottom'
             });
+            // equalize the heights of titles in each row
+            $('.popover-content .row').each(function () {
+                var currentTallest = 0;
+                $('h3.story-title',$(this)).each(function () {                    
+                        if ($(this).height() > currentTallest) { currentTallest = $(this).height(); }
+                    });
+                    //if (!px && Number.prototype.pxToEm) currentTallest = currentTallest.pxToEm(); //use ems unless px is specified
+                    // for ie6, set height since min-height isn't supported
+                    if ($.browser.msie && $.browser.version == 6.0) { $(this).children().css({'height': currentTallest}); }
+                    $('h3.story-title',$(this)).css({'min-height': currentTallest});
+            });
+
         });
 
         $(document).on('click', '.story', function (e) {
@@ -131,6 +143,5 @@
             }
             
         });
-
     });
 })();
