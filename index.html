@@ -64,7 +64,7 @@ tagline: Supporting tagline
       </div>
       <!--Second Slide-->
       {% for post in site.posts reversed %}
-      <div class="swiper-slide" data-img="{{ post.story-img }}" id="{{post.url | replace:'/',''}}">
+      <div class="swiper-slide" data-img="{{ post.story-img }}" data-hash="{{post.url | replace:'/',''}}" id="{{post.url | replace:'/',''}}">
         <div class="story-header">
           {% if post.author %}
           <h3>{{ post.author }}</h3>      
@@ -80,7 +80,7 @@ tagline: Supporting tagline
       </div>
       <!--Third Slide-->
       {% assign post_length = post.content | number_of_words %}
-      <div class="swiper-slide" data-img="{{ post.story-img }}">
+      <div class="swiper-slide" data-img="{{ post.story-img }}" data-hash="{{post.url | replace:'/',''}}">
         <div class="page">
           <div class="span12 page-wrapper">
             <div class="story-header-small">
@@ -106,16 +106,14 @@ tagline: Supporting tagline
             {% else %}
             <div class="page-content long-post post">
             {% endif %}
-
               {{ post.content }}
             </div>
             {% endif %}
           </div>
         </div>
       </div>
-      
       {% endfor %}
-    </div{>
+    </div>
   </div>
 </div>
 

@@ -52,8 +52,8 @@ if (window.location.hash) {
                     childSlider;
 
                 // show or hide the nav
-                if ($slide.attr('id')) {
-                    window.location.hash = $slide.attr('id');
+                if ($slide.data('hash')) {
+                    window.location.hash = $slide.data('hash');
                 }
                if (swiper.activeIndex !== 0) {
                     $masthead.removeClass('hidden');
@@ -98,7 +98,8 @@ if (window.location.hash) {
                     });
                 }
 
-            }         });         
+            }        
+        });         
         window.swiper = mySwiper;
         mySwiper.swipeTo($(originalHash).index());
     };
