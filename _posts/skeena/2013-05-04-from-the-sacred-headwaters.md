@@ -2,7 +2,7 @@
 published: true
 layout: post
 category: Essay
-tags: []
+tags: ['story']
 "toc-img": "http://lorempixel.com/150/150/nature/5"
 author: Wade Davis
 issue: Skeena

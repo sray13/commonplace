@@ -13,6 +13,8 @@ if (window.location.hash) {
     if (typeof window.history.replaceState == 'function') {
       history.replaceState({}, '', window.location.href.slice(0, -1));
     }
+} else {
+    window.originalHash = false;
 }
 
 /*! Backstretch - v2.0.3 - 2012-11-30
@@ -100,8 +102,11 @@ if (window.location.hash) {
 
             }        
         });         
-        window.swiper = mySwiper;
-        mySwiper.swipeTo($(originalHash).index());
+        
+        if (originalHash) {
+            mySwiper.swipeTo($(originalHash).index());    
+        }
+        
     };
 
 
