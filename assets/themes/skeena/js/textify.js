@@ -273,7 +273,6 @@
                     y = 0
                     if ($column.height() <= columnHeight) {
                         while ($column.height() <= columnHeight) {
-                            debugger;
                             box.append(allPar[y] + '.')
                             $prefinish = $text.html()
                             var myRegExp = new RegExp("(?![^<>]*>)" + allPar[y] + '.')

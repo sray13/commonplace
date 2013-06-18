@@ -93,10 +93,9 @@ tagline: Supporting tagline
                 <div class="swiper-container gallery" id="{{post.url | replace:'/',''}}-gallery">
                   <div class="{{post.url | replace:'/',''}}-gallery-pagination general-pagination"></div>
                   <div class="swiper-wrapper">
-                      
                   {% for image in post.slideshow %}
                       <div class="swiper-slide">
-                        <img src="{{ ASSET_PATH }}skeena/img/slideshow/{{ image.img }}">
+                        <img src="{{ ASSET_PATH }}skeena/img/Cassiar slideshow/{{ image.img }}">
                       </div>
                   {% endfor %}
                 </div>
@@ -129,7 +128,6 @@ tagline: Supporting tagline
                     <div class="story-header-small">
                       <p><strong>Voices</strong></p>
                     </div>
-
                       <div class="sub-toc-wrapper span12 offset1">
                       {% for post in site.tags.voices reversed %}
                         <div class="sub-toc-item span2">
@@ -152,7 +150,6 @@ tagline: Supporting tagline
                     </div>
                   </div> 
                   {% endfor %}<!-- end horizontal voices gallery swiper slide -->
-
                 </div> <!-- end swiper wrapper -->
               </div> <!-- end swiper container -->
           </div>
