@@ -80,7 +80,7 @@ tagline: Supporting tagline
         </div>
         <!--Third Slide-->
         {% assign post_length = post.content | number_of_words %}
-        <div class="swiper-slide" data-img="{{ post.story-img }}" data-hash="{{post.url | replace:'/',''}}">
+        <div class="swiper-slide" data-img="{{ post.story-img }}" data-hash="{{post.url | replace:'/',''}}" >
           <div class="page">
             <div class="span12 page-wrapper">
               <div class="story-header-small">
@@ -90,7 +90,8 @@ tagline: Supporting tagline
               {% endif %}
               </div>
               {% if post.category == 'Gallery' %}
-                <div class="swiper-container gallery">
+                <div class="swiper-container gallery" id="{{post.url | replace:'/',''}}-gallery">
+                  <div class="{{post.url | replace:'/',''}}-gallery-pagination general-pagination"></div>
                   <div class="swiper-wrapper">
                       
                   {% for image in post.slideshow %}
@@ -113,16 +114,58 @@ tagline: Supporting tagline
           </div>
         </div>
       {% endfor %}
+      
+      <!-- Build the vertical slide to contain voices gallery -->
       <div class="swiper-slide" data-img="{{ post.story-img }}" id="voices" data-hash="voices">
-        <div class="page">
+        <div class="page full">
             <div class="span12 page-wrapper">
-              <div class="story-header-small">
-              <p><strong>Voices</strong></p>
-            </div>
+
+              <div class="swiper-container gallery" id="voices-gallery">
+               <div class="voices-gallery-pagination general-pagination"></div>
+                <div class="swiper-wrapper">
+                  
+
+                  <div class="swiper-slide">
+                    <div class="story-header-small">
+                      <p><strong>Voices</strong></p>
+                    </div>
+
+                      <div class="sub-toc-wrapper span12 offset1">
+                      {% for post in site.tags.voices reversed %}
+                        <div class="sub-toc-item span2">
+                          <img src="{{ post.toc-img}}">
+                          <p><strong>{{ post.title }}</strong></p>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum augue at ipsum imperdiet, quis dapibus elit rhoncus. Aliquam erat eros, rutrum eget dignissim lacinia, posuere a turpis. Mauris vel nisi arcu. Nulla facilisi. Vivamus in arcu rutrum, vehicula nisi sed, vestibulum diam.</p>
+                        </div>
+                      {% endfor %}
+                    </div>
+                  </div>
+
+                  <!-- horizontal slides for each voice post -->
+                  {% for post in site.tags.voices reversed %}
+                  <div class="swiper-slide" data-img="{{ post.story-img }}">
+                    <div class="story-header-small">
+                      <p><strong>{{ post.title }}</strong></p>
+                    </div>
+                    <div class="voice-content">
+                      {{ post.content }}
+                    </div>
+                  </div> 
+                  {% endfor %}<!-- end horizontal voices gallery swiper slide -->
+
+                </div> <!-- end swiper wrapper -->
+              </div> <!-- end swiper container -->
+
+
+
           </div>
         </div>
       </div>
-      {% for post in site.tags.voices reversed %}
+      <!-- End voices gallery slide -->
+
+
+
+      <!-- {% for post in site.tags.voices reversed %}
       <div class="swiper-slide" data-img="{{ post.story-img }}" data-hash="{{post.url | replace: '/', ''}}">
         <div class="page">
               <div class="span12 page-wrapper">
@@ -132,7 +175,8 @@ tagline: Supporting tagline
             </div>
           </div>
         </div>
-      {% endfor %}
+      {% endfor %} -->
+
       </div>
     </div>
   </div>
