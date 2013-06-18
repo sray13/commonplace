@@ -123,7 +123,7 @@ tagline: Supporting tagline
         </div>
       </div>
       {% for post in site.tags.voices reversed %}
-      <div class="swiper-slide" data-img="{{ post.story-img }}" data-hash="{{post.url | replace: '/', ''}}">
+      <div class="swiper-slide" data-img="{{ post.story-img }}" id="{{post.url | replace: '/', ''}}" data-hash="{{post.url | replace: '/', ''}}">
         <div class="page">
               <div class="span12 page-wrapper">
                 <div class="story-header-small">
