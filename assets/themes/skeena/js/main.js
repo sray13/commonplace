@@ -25,7 +25,8 @@ if (window.location.hash) {
     var mySwiper;
 
     window.onload = function() {
-        var $masthead = $('.masthead');
+        var $masthead = $('.masthead'),
+            hGalleryArray=new Array();
 
 
         mySwiper = new Swiper('.swiper-root',{
@@ -94,15 +95,33 @@ if (window.location.hash) {
                 }
 
                 if ($gallery.length) {
-                
-                    $gallery.swiper({
-                        mode: 'horizontal'
+
+                    var theID=$gallery.attr('id'),
+                        paginationClass='.'+theID+'-pagination';
+
+                    // Add this new gallery object into an array for
+                    // later access to the swiper methods
+                    hGalleryArray[theID]= $gallery.swiper({
+                        mode: 'horizontal',
+                        pagination : paginationClass,
+                        keyboardControl:true,
+                        createPagination: true
                     });
                 }
 
             }        
         });         
         
+        // Control the horizontal sliders with click functions
+        $('.gallery').on('click','.sub-toc-item,.swiper-pagination-switch',function(e){
+            e.preventDefault();            
+            var theID=$(this).parentsUntil('.page-wrapper','.swiper-container').attr('id'),
+                theIndex = $(this).hasClass('sub-toc-item') ? $(this).index()+1 : $(this).index();
+            hGalleryArray[theID].swipeTo(theIndex);
+        });        
+
+
+        // manage hash changes
         if (originalHash) {
             mySwiper.swipeTo($(originalHash).index());    
         }
@@ -160,12 +179,13 @@ if (window.location.hash) {
         });
 
         $('.page-footer').on('click', function () {
-            var nextSlide = mySwiper.realIndex + 1;
-            if (nextSlide === mySwiper.slides.length) {
-                mySwiper.swipeTo(0);
-            } else {
-                mySwiper.swipeTo(mySwiper.realIndex);    
-            }
+            // var nextSlide = mySwiper.realIndex + 1;
+            // if (nextSlide === mySwiper.slides.length) {
+            //     mySwiper.swipeTo(0);
+            // } else {
+            //     mySwiper.swipeTo(mySwiper.realIndex);    
+            // }
+            mySwiper.swipeNext();
             
         });
     });
