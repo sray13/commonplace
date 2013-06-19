@@ -7,7 +7,9 @@ tags: ['story']
 "toc-img": "http://lorempixel.com/150/150/nature/3"
 ---
 **Voices from the Skeena Country**
+
 *I. The Mountain Goats Invite the People to a Feast*
+
 You can tell you’ve been closing in on the epicenter of Dimlahamid by the gradual ubiquity of hemlock and cedar along the main Yellowhead Highway as it unfurls westward through British Columbia, and by the snowy peaks of the looming mountains and the fireweed on the hillsides. You will swear you can smell the scent of salt air even though you’ve still got another three and a half hours to go before you’re at the coast. Everything is immediately and strangely discernible. You’re suddenly in the very middle of something very old and quiet, and at the edge of something very big and loud.
 
 The roar of Hagwilget Canyon tells you that you are leaving the vast ranges of the Athapaskan language families, which reach all the way back to Hudson Bay, with linguistic cousins down among the Navajo and the Apache. These are the mountains and valleys of the people who call themselves Gitxsan, and they speak Gitxanimaax, which is the furthest upriver extent of several Tsimshian-related languages in a saltwater complex of tongues arising from Northern California and reaching all the way to Southeast Alaska. This is also where the old Roman Catholic influences of the continent begin to most noticeably bleed away into the Protestant missionary dominance of the coast that lies ahead. The Bulkley River boils through the canyon below you, emptying itself into the Skeena River just downstream, and up in the clouds above you is Mount Roche de Boule, which is Stegyawden.
