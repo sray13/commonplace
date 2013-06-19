@@ -3,9 +3,11 @@ published: true
 layout: post
 category: Feature
 author: Terry Glavin
-tags: ['story']
+tags: 
+  - story
 "toc-img": "http://lorempixel.com/150/150/nature/3"
 ---
+
 {% include JB/setup %}
 **Voices from the Skeena Country**
 
@@ -18,7 +20,7 @@ By the time you’ve reached the little constellation of communities the locals 
 
 Dimlahamid is where the story begins.
 
-![]({{ ASSET_PATH }}/skeena/img/Glavin/Roche%20de%20Boise20120801_018.jpg)
+![Mount Roche de Boule also known as Stegyawden. Photo by Gary Fieghan.]({{ ASSET_PATH }}/skeena/img/Glavin/Roche%20de%20Boise20120801_018.jpg)
 
 Up there in the peaks of Stegyawden, who knows how long ago, mountain goats once took the form of men. They invited the people of Dimlahamid to a great feast. It was a ruse to prepare for the avenging of an injustice that had been done to them by a group of young hunters years before. When everyone had settled down to the feast, a great one-horned goat appeared. The story ends with heaps of bodies at the foot of Stegyawden.
 
