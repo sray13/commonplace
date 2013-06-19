@@ -3,11 +3,12 @@ published: true
 layout: post
 category: Feature
 author: Terry Glavin
-tags: ['story']
+tags: 
+  - story
 "toc-img": "http://lorempixel.com/150/150/nature/3"
 ---
+
 {% include JB/setup %}
-**Voices from the Skeena Country**
 
 *I. The Mountain Goats Invite the People to a Feast*
 You can tell you’ve been closing in on the epicenter of Dimlahamid by the gradual ubiquity of hemlock and cedar along the main Yellowhead Highway as it unfurls westward through British Columbia, and by the snowy peaks of the looming mountains and the fireweed on the hillsides. You will swear you can smell the scent of salt air even though you’ve still got another three and a half hours to go before you’re at the coast. Everything is immediately and strangely discernible. You’re suddenly in the very middle of something very old and quiet, and at the edge of something very big and loud.
