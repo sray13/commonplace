@@ -81,7 +81,7 @@ tagline: Supporting tagline
         <!--Third Slide-->
         {% assign post_length = post.content | number_of_words %}
         <div class="swiper-slide" data-img="{{ post.story-img }}" data-hash="{{post.url | replace:'/',''}}" >
-          <div class="page">
+          <div class="page{% if post.category == 'Gallery' %} full light paper-bg{% endif %}">
             <div class="span12 page-wrapper">
               <div class="story-header-small">
               <p><strong>{{ post.title }}</strong></p>
@@ -116,7 +116,7 @@ tagline: Supporting tagline
       
       <!-- Build the vertical slide to contain voices gallery -->
       <div class="swiper-slide" data-img="{{ post.story-img }}" id="voices" data-hash="voices">
-        <div class="page full">
+        <div class="page full light ink-bg">
             <div class="span12 page-wrapper">
 
               <div class="swiper-container gallery" id="voices-gallery">
@@ -145,17 +145,33 @@ tagline: Supporting tagline
                     <div class="story-header-small">
                       <p><strong>{{ post.title }}</strong></p>
                     </div>
-                    <div class="voice-content">
+                    <div class="voice-content-wrapper">
+                      <div class="voice-player">
+                        <h3>{{ post.title }}</h3>
+                        <p>the player</p>
+                      </div>
+                      <div class="voice-content">
                       {{ post.content }}
+                    </div>
+                    <div class="voice-footer">
+                      <p>the footer</p>
+                    </div>
                     </div>
                   </div> 
                   {% endfor %}<!-- end horizontal voices gallery swiper slide -->
+
+
                 </div> <!-- end swiper wrapper -->
               </div> <!-- end swiper container -->
           </div>
-        </div>
-      </div>
-      {% for post in site.tags.voices reversed %}
+        </div> <!-- end full page container for styling -->
+      </div> <!-- end vertical slide for voices -->
+
+      <!-- this block below creates a single vertical slide for each voice.
+      voices should all be contained inside a horizontal slider
+      which is a single slide (like a photo essay) as implemented above -->
+
+      <!-- {% for post in site.tags.voices reversed %}
       <div class="swiper-slide" data-img="{{ post.story-img }}" id="{{post.url | replace: '/', ''}}" data-hash="{{post.url | replace: '/', ''}}">
         <div class="page">
               <div class="span12 page-wrapper">
@@ -165,7 +181,9 @@ tagline: Supporting tagline
             </div>
           </div>
         </div>
-      {% endfor %}
+      {% endfor %} -->
+
+
       </div>
     </div>
   </div>
