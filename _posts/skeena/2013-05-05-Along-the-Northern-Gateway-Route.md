@@ -42,17 +42,17 @@ slideshow:
   caption: Tyler Thomas of the Saik’uz nation scans his territory in central British Columbia, which the pipelines would bisect. The Saik’uz are one of more than 75 First Nation groups to speak out against the project. “Our nations are the wall this pipeline will not break through,” says Larry Nooski, Chief of the Nadleh Whut’en. 
 - img: 1106_NEO_Pipeline_269.jpg
 
-  caption: This is a caption
+  caption: Douglas Channel near Kitimat. Oil tankers would need to navigate these waters to reach the tanker terminal near Kitimat.
 - img: 1106_NEO_Pipeline_273.jpg
 
-  caption: This is a caption
+  caption: Douglas Channel near Kitimat. 
 - img: 1106_NEO_Pipeline_281.jpg
 
-  caption: This is a caption
+  caption: Shipping vessel on BC coast.
 - img: 1106_NEO_Pipeline_29.jpg
 
-  caption: This is a caption
+  caption: Road bisecting forest near Stuart River, south of Stuart Lake. 
 - img: 1106_NEO_Pipeline_66.jpg
 
-  caption: This is a caption
+  caption: Parsnip River and tributaries. According to GPS coorindates, the proposed Enbridge pipelines would be built less than 10 km north of this location. 
 ---
