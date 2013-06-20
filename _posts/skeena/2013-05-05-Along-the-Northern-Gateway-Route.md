@@ -12,34 +12,34 @@ slideshow:
   caption: Wetland south of Davie Lake. According to GPS coorindates, the proposed Enbridge pipelines would be built less than 0.5 km from this location.
 - img: 1106_NEO_Pipeline_120.jpg
 
-  caption: This is a caption
+  caption: Grizzly bear north of Frost Road and west of Stuart Lake Highway. According to GPS coorindates, the proposed Enbridge pipelines would be built less than 1 km from this location.
 - img: 1106_NEO_Pipeline_121.jpg
 
-  caption: This is a caption
+  caption: Intact forest west of Stuart Lake Highway River and South of Frost Road. According to GPS coorindates, the proposed Enbridge pipelines would be built less than 3–5 km from this location.
 - img: 1106_NEO_Pipeline_123.jpg
 
-  caption: This is a caption
+  caption: Island in Marie Lake. According to GPS coorindates, the proposed Enbridge pipelines would be built less than 2 km south of this location. 
 - img: 1106_NEO_Pipeline_125.jpg
 
-  caption: This is a caption
+  caption: Wetland near Marie Lake. According to GPS coorindates, the proposed Enbridge pipelines would be built less than 2 km south of this location. 
 - img: 1106_NEO_Pipeline_135.jpg
 
-  caption: This is a caption
+  caption: Female moose and calf in lake south of the Sutherland River Provincial Protected Area. According to GPS coorindates, the proposed Enbridge pipelines would be built less than 0.5 km from this location. 
 - img: 1106_NEO_Pipeline_161.jpg
 
-  caption: This is a caption
+  caption: According to GPS coorindates, the proposed Enbridge pipelines would need to tunnel through portions of the Canadian Rockies near here.
 - img: 1106_NEO_Pipeline_23.jpg
 
-  caption: This is a caption
+  caption: The proposed Enbridge pipelines would bisect Stuart Lake and Stuart River near here.
 - img: 1106_NEO_Pipeline_250.jpg
 
-  caption: This is a caption
+  caption: Wetland near Kitimat River. Kitimat-Stikine.
 - img: 1106_NEO_Pipeline_253.jpg
 
-  caption: This is a caption
+  caption: Kitimat River. Kitimat-Stikine.
 - img: 1106_NEO_Pipeline_26.jpg
 
-  caption: This is a caption
+  caption: Tyler Thomas of the Saik’uz nation scans his territory in central British Columbia, which the pipelines would bisect. The Saik’uz are one of more than 75 First Nation groups to speak out against the project. “Our nations are the wall this pipeline will not break through,” says Larry Nooski, Chief of the Nadleh Whut’en. 
 - img: 1106_NEO_Pipeline_269.jpg
 
   caption: This is a caption
