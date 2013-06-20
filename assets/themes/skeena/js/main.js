@@ -94,7 +94,8 @@ if (window.location.hash) {
                     $longPost.textify({
                         numberOfColumn: 1,
                         width: "auto",
-                        height: $longPost.height()
+                        padding:0,
+                        height: "auto"//$longPost.height()
 
                     });
                     $longPost.removeClass('hidden');

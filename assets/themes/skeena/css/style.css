@@ -293,7 +293,8 @@ html, body, .container, .content, .section {
 }
 .page-content {
   font-family: CenturySchoolbookBT-Roman;
-  padding: 50px 12% 50px 6%;
+  padding: 0px 12% 0px 6%;
+  margin-top:5%;
   overflow: auto;
   height: 90%;
   -webkit-transition: opacity 0.5s ease-in-out;
@@ -310,7 +311,7 @@ html, body, .container, .content, .section {
   padding-right: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
-  max-width: 50%;
+  /*max-width: 50%;*/
 }
 .page-content blockquote {
   border-left: 0px;
@@ -401,5 +402,5 @@ background:#fff;
   }
     .page-content .short-post .swiper-slide {
       width: 100% !important;
-      /*height: 100% !important;*/
+      /*height: 100% !important;
     }*/
