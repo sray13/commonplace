@@ -9,22 +9,22 @@ path: Neil slideshow
 slideshow:
 - img: 1106_NEO_Pipeline_101.jpg
 
-  caption: Wetland south of Davie Lake. According to GPS coorindates, the proposed Enbridge pipelines would be built less than 0.5 km from this location.
+  caption: Wetland south of Davie Lake. According to GPS coorindates, the proposed Enbridge pipelines would be built one-third of a mile from this location.
 - img: 1106_NEO_Pipeline_120.jpg
 
-  caption: Grizzly bear north of Frost Road and west of Stuart Lake Highway. According to GPS coorindates, the proposed Enbridge pipelines would be built less than 1 km from this location.
+  caption: Grizzly bear north of Frost Road and west of Stuart Lake Highway. According to GPS coorindates, the proposed Enbridge pipelines would be built less than half a mile from this location.
 - img: 1106_NEO_Pipeline_121.jpg
 
-  caption: Intact forest west of Stuart Lake Highway River and South of Frost Road. According to GPS coorindates, the proposed Enbridge pipelines would be built less than 3–5 km from this location.
+  caption: Intact forest west of Stuart Lake Highway River and South of Frost Road. According to GPS coorindates, the proposed Enbridge pipelines would be built less than three miles from this location.
 - img: 1106_NEO_Pipeline_123.jpg
 
-  caption: Island in Marie Lake. According to GPS coorindates, the proposed Enbridge pipelines would be built less than 2 km south of this location. 
+  caption: Island in Marie Lake. According to GPS coorindates, the proposed Enbridge pipelines would be built less than a mile and a half south of this location. 
 - img: 1106_NEO_Pipeline_125.jpg
 
-  caption: Wetland near Marie Lake. According to GPS coorindates, the proposed Enbridge pipelines would be built less than 2 km south of this location. 
+  caption: Wetland near Marie Lake. According to GPS coorindates, the proposed Enbridge pipelines would be built less than a mile and a half south of this location. 
 - img: 1106_NEO_Pipeline_135.jpg
 
-  caption: Female moose and calf in lake south of the Sutherland River Provincial Protected Area. According to GPS coorindates, the proposed Enbridge pipelines would be built less than 0.5 km from this location. 
+  caption: Female moose and calf in lake south of the Sutherland River Provincial Protected Area. According to GPS coorindates, the proposed Enbridge pipelines would be built less than one-third of a mile from this location. 
 - img: 1106_NEO_Pipeline_161.jpg
 
   caption: According to GPS coorindates, the proposed Enbridge pipelines would need to tunnel through portions of the Canadian Rockies near here.
@@ -54,5 +54,5 @@ slideshow:
   caption: Road bisecting forest near Stuart River, south of Stuart Lake. 
 - img: 1106_NEO_Pipeline_66.jpg
 
-  caption: Parsnip River and tributaries. According to GPS coorindates, the proposed Enbridge pipelines would be built less than 10 km north of this location. 
+  caption: Parsnip River and tributaries. According to GPS coorindates, the proposed Enbridge pipelines would be built less than 6 miles north of this location. 
 ---
