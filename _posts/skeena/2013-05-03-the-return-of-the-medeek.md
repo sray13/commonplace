@@ -34,7 +34,7 @@ More than anything else, the salmon connect everyone to one another as well as t
 
 Words like *ecosystem* might get you partway into understanding all this, but *wilderness* is where you’ll get lost. Every river confluence, every hillock, and every rock outcrop in the Skeena Country has its own story. 
 
-![]({{ ASSET_PATH }}/skeena/img/Glavin/Moricetown20120731_060.jpg)
+![Moricetown]({{ ASSET_PATH }}/skeena/img/Glavin/Moricetown20120731_060.jpg)
 
 Ancient forms of tenure and title radiate outward from Dimlahamid in every direction: rank, name, fishing station, goat-hunting mountain, hillside berry ground, crest. Hawilamax is The Place They Throw Away Turnips. Anwaris is Place of Digging. There is a place called Angudoon, which is the short form for a name that translates more fully as The Steep Place on the Riverbank Where a Man Is Pulled Up with the Right Hand of a Friend. Every cranny and back eddy is accounted for in the deepest antiquity by means of matrilineal clan systems of ownership and succession, all codified in what the Gitxsan call *ada’ox*, and what their Bulkley River neighbors among the Wet’suwet’en call *kungax*, and replicated in similarly distinct ways among the Kitselas, the Kitsumkalum, the Gitxaala, the Metlakatla, the Nisga’a, the Haisla, and all the way out to the Gitga’at of Hartley Bay.
 
