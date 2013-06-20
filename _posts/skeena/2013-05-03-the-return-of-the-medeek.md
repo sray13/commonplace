@@ -20,7 +20,7 @@ By the time you’ve reached the little constellation of communities the locals 
 
 Dimlahamid is where the story begins.
 
-![Mount Roche de Boule also known as Stegyawden. Photo by Gary Fieghan.]({{ ASSET_PATH }}/skeena/img/Glavin/Roche%20de%20Boise20120801_018.jpg)
+![Mount Roche de Boule, also known as Stegyawden. Photo by Gary Fieghan.]({{ ASSET_PATH }}/skeena/img/Glavin/Roche%20de%20Boise20120801_018.jpg)
 
 Up there in the peaks of Stegyawden, who knows how long ago, mountain goats once took the form of men. They invited the people of Dimlahamid to a great feast. It was a ruse to prepare for the avenging of an injustice that had been done to them by a group of young hunters years before. When everyone had settled down to the feast, a great one-horned goat appeared. The story ends with heaps of bodies at the foot of Stegyawden.
 
@@ -34,7 +34,7 @@ More than anything else, the salmon connect everyone to one another as well as t
 
 Words like *ecosystem* might get you partway into understanding all this, but *wilderness* is where you’ll get lost. Every river confluence, every hillock, and every rock outcrop in the Skeena Country has its own story. 
 
-![Moricetown]({{ ASSET_PATH }}/skeena/img/Glavin/Moricetown20120731_060.jpg)
+![A Wet’suwet’en dipnetter works the falls at Moricetown.Photo by Gary Fiegehen.]({{ ASSET_PATH }}/skeena/img/Glavin/Moricetown20120731_060.jpg)
 
 Ancient forms of tenure and title radiate outward from Dimlahamid in every direction: rank, name, fishing station, goat-hunting mountain, hillside berry ground, crest. Hawilamax is The Place They Throw Away Turnips. Anwaris is Place of Digging. There is a place called Angudoon, which is the short form for a name that translates more fully as The Steep Place on the Riverbank Where a Man Is Pulled Up with the Right Hand of a Friend. Every cranny and back eddy is accounted for in the deepest antiquity by means of matrilineal clan systems of ownership and succession, all codified in what the Gitxsan call *ada’ox*, and what their Bulkley River neighbors among the Wet’suwet’en call *kungax*, and replicated in similarly distinct ways among the Kitselas, the Kitsumkalum, the Gitxaala, the Metlakatla, the Nisga’a, the Haisla, and all the way out to the Gitga’at of Hartley Bay.
 
