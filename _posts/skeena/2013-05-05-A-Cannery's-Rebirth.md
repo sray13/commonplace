@@ -8,22 +8,23 @@ issue: Skeena
 path: Cassiar slideshow
 slideshow:
 - img: Cassiar Cannery - 1940 -Ed Eyford - fish cutter in the canne.jpg
-  caption: This is a caption
-  caption2: This could be a second
+  caption: *The fish cutter at the center of the old Cassiar Cannery, in 1940.  Photo by Ed Eyford
+  
 - img: Cassiar Cannery - Ewen _Mac_ and Kay Macmillan with their da.jpg
-  caption: This is a caption
-  caption2: This could be a second
+  caption: The beloved former owners of the cannery, Mac and Kay MacMillan, with their daughter, Ewen. 
+  
 - img: Cassiar Cannery - Herring everywhere.jpg
+  caption: *Herring spill out of the bins at the cannery at its peak. 
 - img: Cassiar Cannery - Mark Bell framing the cabin extension on t.JPG
-  caption: This is a caption
-  caption2: This could be a second
+  caption: Co-owner Mark Bell frames up a cabin extension in the shipyard, as part of one of Cassiar’s new businesses: boat refurbishment.
+  
 - img: Cassiar Cannery - cases of salmon.jpg
+- caption: *Cases of salmon in the cannery. Cassiar was the largest on the West Coast by volume, at its peak
 - img: Cassiar Cannery - cleaning the dock debris on a misty day in.JPG
-  caption: This is a caption
-  caption2: This could be a second
+  caption: Cleanup was the first order of business when Crawford and Bell arrived in 2006. 
 - img: Cassiar Cannery - houses in the winter 2012.JPG
-  caption: This is a caption
-  caption2: This could be a second
+  caption: In Cassiar’s new incarnation, snow dusts the roofs of the restored cannery’s manager houses in winter 2012.
+  
 - img: Cassiar Cannery - our friends have a great afternoon fishing.JPG
   caption: This is a caption
   caption2: This could be a second
