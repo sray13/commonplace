@@ -7,7 +7,7 @@ tags: []
 issue: Skeena
 tags: ['voices']
 "toc-img": "http://lorempixel.com/150/150/nature/1"
-"story-img": welcome.jpg
+"story-img": lorempixel.jpg
 ---
 With lineage that goes back four generations in the Kispiox Valley region, Shannon McPhail grew up on a working ranch within the Skeena watershed, raised on a diet of mountain goat meat, moose, wild sheep, and fish.
 She left for Calgary, seeking outlets for education and sports. But it was only a number of years before she and husband Steve left high-paying jobs in the city—she managed a fitness and nutrition center for women, and he worked as a welder—to move back to the Kispiox Valley, a place where the “community will rally together when needed.” 

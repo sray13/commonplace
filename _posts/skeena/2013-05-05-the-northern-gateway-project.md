@@ -5,6 +5,7 @@ tags: ['story']
 toc-img: http://lorempixel.com/150/150/nature/6
 author: Neil Ever Osborne
 issue: Skeena
+path: Cassiar slideshow
 slideshow:
 - img: Cassiar Cannery - 1940 -Ed Eyford - fish cutter in the canne.jpg
   caption: This is a caption

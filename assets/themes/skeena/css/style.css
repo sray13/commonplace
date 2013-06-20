@@ -73,9 +73,14 @@ a:hover {
 }
 
 .page.full .story-header-small {
-  position: relative;
+  position: absolute;
   left: 25px;
   top: 110px;
+}
+
+body.dark .story-header-small {
+  color:black;
+  border-color: black;
 }
 
 .story-header-small strong {
@@ -111,9 +116,10 @@ a:hover {
     padding: 0; 
     opacity: .7;
   }
-.cover-slide {
+.cover-slide, .swiper-slide {
   position: relative;
 }
+
 .page-footer {
   position: absolute;
   bottom: 30px;
@@ -145,24 +151,35 @@ a:hover {
   -webkit-transition: opacity 0.5s ease-in-out;
   -moz-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
+
+  -webkit-transition: color .3s ease;
+  -moz-transition: color .3s ease;
+  -ms-transition: color .3s ease;
+  -o-transition: color .3s ease;
+  transition: color .3s ease;
+
 }
 
 .hidden {
   opacity: 0;
 }
+
+.navbar .nav>li>a, .navbar .nav>li>a:hover {color:white;}
+.dark .navbar .nav>li>a, .dark .navbar .nav>li>a:hover {color:black;}
+
 .masthead .navbar .nav>li>a {
   font-family: Intro-Black-Caps;
   letter-spacing: .1em;
-  color: white;
   text-shadow: none;
   border-right: 0;
   border-left: 0;
-  padding-bottom: 20px;
+  padding-bottom: 0;
   text-transform: uppercase;
 }
 .masthead .navbar .nav>li>a>h2 {
   text-transform: none;
   font-family: CenturySchoolbookBT-Roman;
+  margin-bottom:0;
 }
 .masthead .navbar .nav>li>a>span{
   width: 25px;
@@ -252,12 +269,22 @@ html, body, .container, .content, .section {
 }
 
 .page.full {
-  background-color:gray;
+  background-color:white;
   width:100%;
   max-width: 100%;
   height:100%;
   margin-top:0;
-  padding-top: 75px;
+}
+
+.page.full .page-wrapper{
+    padding-top: 115px;
+}
+
+.ink-bg {
+  background: url(../img/ink.jpg) left top;
+}
+.paper-bg {
+  background: url(../img/paper.jpg) left top;
 }
 .page-wrapper {
   
@@ -266,7 +293,8 @@ html, body, .container, .content, .section {
 }
 .page-content {
   font-family: CenturySchoolbookBT-Roman;
-  padding: 50px 12% 50px 6%;
+  padding: 0px 12% 0px 6%;
+  margin-top:5%;
   overflow: auto;
   height: 90%;
   -webkit-transition: opacity 0.5s ease-in-out;
@@ -283,7 +311,7 @@ html, body, .container, .content, .section {
   padding-right: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
-  max-width: 50%;
+  /*max-width: 50%;*/
 }
 .page-content blockquote {
   border-left: 0px;
@@ -311,33 +339,46 @@ html, body, .container, .content, .section {
 
 .sub-toc-item:hover {
   background-color:#d9d9d9;
+  background-color: rgba(217,217,217,.7);
+  background: transparent\9; /* clear current background for ie */
+  zoom:1; /* required for the filters */  
+  /* For IE 5.5 - 7*/
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7Fd9d9d9, endColorstr=#7Fd9d9d9);
+  /* For IE 8*/
+  -ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#7Fd9d9d9, endColorstr=#7Fd9d9d9)";
   cursor: pointer;
 }
-.voice-content{
-  overflow-y: scroll;
-  width: 310px;
-  float: right;
-  margin-right: 65px;
-  height: 60%;
-  overflow-x: hidden;
-  padding: 48px;
-  position: relative;
-  top: -30px;
-  background: white;
+.voice-content-wrapper{
+  position:absolute;
+  right:35px;
+  width: 395px;
+  height: 95%;
+  background: white url(../img/ink.jpg) left top;
+
 }
+.voice-player,.voice-content,.voice-footer{box-sizing:border-box;-moz-box-sizing:border-box;
+ padding:0 20px;}
+.voice-player {position:absolute; top:0px; left:0px; height:80px; right:0px;overflow:hidden;}
+.voice-content {position:absolute; top:100px; bottom:100px; left:0px; right:0px; overflow:auto;}
+.voice-footer {position:absolute; bottom:0px; height:80px; left:0px; right:0px; overflow:hidden;}
 
 .gallery {
   height: 100%;
   width: 100%;
 }
-.galler img {
-  width: 100%;
+.gallery .swiper-slide>img {
+ /* width: 100%;*/
+ display:block;
+ margin-left: auto;
+ margin-right:auto;
 }
 
 /*style pagination dots for horizontal sliders*/
 .general-pagination{
   text-align:center;
-  margin-top:55px;
+  width:100%;
+  position: absolute;
+  z-index:100;
 }
 .general-pagination .swiper-pagination-switch {
 display:inline-block;
@@ -361,5 +402,5 @@ background:#fff;
   }
     .page-content .short-post .swiper-slide {
       width: 100% !important;
-      /*height: 100% !important;*/
+      /*height: 100% !important;
     }*/

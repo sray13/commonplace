@@ -64,6 +64,12 @@ if (window.location.hash) {
                     $masthead.addClass('hidden');
                 }
 
+                if ($slide.find('div.page.light').length){
+                    $('body').addClass('dark');
+                } else {
+                    $('body').removeClass('dark');
+                }
+
                             
 
                 // update the background image
@@ -88,29 +94,43 @@ if (window.location.hash) {
                     $longPost.textify({
                         numberOfColumn: 1,
                         width: "auto",
-                        height: $longPost.height()
+                        padding:0,
+                        height: "auto"//$longPost.height()
 
                     });
                     $longPost.removeClass('hidden');
                 }
 
                 if ($gallery.length) {
-
                     var theID=$gallery.attr('id'),
                         paginationClass='.'+theID+'-pagination';
 
-                    // Add this new gallery object into an array for
-                    // later access to the swiper methods
+                // Add this new gallery object into an array for
+                // later access to the swiper methods
+                    if(!(theID in hGalleryArray)){
                     hGalleryArray[theID]= $gallery.swiper({
                         mode: 'horizontal',
                         pagination : paginationClass,
                         keyboardControl:true,
-                        createPagination: true
-                    });
-                }
+                        createPagination: true,                        
+                        onSlideChangeEnd: function (swiper) {
+                            var $slide = $(swiper.getSlide(swiper.realIndex)),
+                                $slideRoot = $slide.parentsUntil(".page.full",".page-wrapper"),
+                                backgroundImage = $slide.data('img');
 
-            }        
-        });         
+                            // update body class to change element colors + update the background image
+                            //(swiper.activeIndex==0 && $slideRoot.parent().hasClass("light")) ? $('body').addClass('dark') : $('body').removeClass('dark');
+                            if (backgroundImage) {
+                                $slideRoot.backstretch('{{BASE_PATH}}/assets/themes/skeena/img/'+ backgroundImage, {fade:450});
+                            } else {
+                                $('.backstretch',$slideRoot).remove();
+                            }
+                        } //end onSlideChangeEnd callback for horizontal slider
+                    }); // end init array for main-slide-contained horizontal gallery
+                    } // end if block checking for gallery object existance
+                } // end if block for gallery.length
+            } // end on slideChangeEnd callback for main vertical slider
+        });  //end init block for main vertical swiper         
         
         // Control the horizontal sliders with click functions
         $('.gallery').on('click','.sub-toc-item,.swiper-pagination-switch',function(e){
@@ -126,7 +146,7 @@ if (window.location.hash) {
             mySwiper.swipeTo($(originalHash).index());    
         }
         
-    };
+    }; //end window.onLoad event handler function
 
 
 
