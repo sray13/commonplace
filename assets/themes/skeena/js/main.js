@@ -111,12 +111,7 @@ if (window.location.hash) {
                         mode: 'horizontal',
                         pagination : paginationClass,
                         keyboardControl:true,
-                        createPagination: true,
-                        onSlideChangeStart: function (swiper) {
-                            console.log ('before');
-                            throw '';
-                            console.log ('after');
-                        },
+                        createPagination: true,                        
                         onSlideChangeEnd: function (swiper) {
                             var $slide = $(swiper.getSlide(swiper.realIndex)),
                                 $slideRoot = $slide.parentsUntil(".page.full",".page-wrapper"),
