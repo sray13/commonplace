@@ -9,7 +9,7 @@ path: Neil slideshow
 slideshow:
 - img: 1106_NEO_Pipeline_101.jpg
 
-  caption: This is a caption
+  caption: Wetland south of Davie Lake. According to GPS coorindates, the proposed Enbridge pipelines would be built less than 0.5 km from this location.
 - img: 1106_NEO_Pipeline_120.jpg
 
   caption: This is a caption
