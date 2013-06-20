@@ -26,21 +26,21 @@ slideshow:
   caption: In Cassiar’s new incarnation, snow dusts the roofs of the restored cannery’s manager houses in winter 2012.
   
 - img: Cassiar Cannery - our friends have a great afternoon fishing.JPG
-  caption: This is a caption
-  caption2: This could be a second
+  caption: Locals can still pull a good haul of fish during limited seasons. 
+  
 - img: Cassiar Cannery - pulling the beachcombed cedar logs from th.JPG
-  caption: This is a caption
-  caption2: This could be a second
+  caption: Cassiar has developed a milling business for salvage logs like this cedar found along the inlet. 
+  
 - img: Cassiar Cannery - some of the dock debris August 2006.JPG
-  caption: This is a caption
-  caption2: This could be a second
+  caption:  The dock as Mark Bell and Justine Crawford found it in 2006.
+  
 - img: Cassiar Cannery - starting to jack up House 1 to replace the.JPG
-  caption: This is a caption
-  caption2: This could be a second
+  caption: The managers’ houses needed retrofitting from top to bottom. 
+  
 - img: Cassiar Cannery - towing boats.jpg
-  caption: This is a caption
-  caption2: This could be a second
+  caption: *Towing purse seiners out to fish the Skeena's mouth, in the old days. 
+  
 - img: Cassiar Cannery-boats along the tracks 001(low).jpg
-  caption: This is a caption
-  caption2: This could be a second
+  caption: The Cassiar fleet up on dry land.
+  
 ---
