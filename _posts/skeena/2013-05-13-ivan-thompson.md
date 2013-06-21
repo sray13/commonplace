@@ -3,10 +3,17 @@ published: true
 layout: voices
 category: Voices
 author: Bruce Hill
-tags: []
+tags: 
+  - voices
 issue: Skeena
-tags: ['voices']
 "toc-img": "http://lorempixel.com/150/150/nature/1"
 "story-img": welcome.jpg
 ---
-A veteran of pretty well every major “environmentalist” battle in the Skeena Country over the past 30 years or so, Bruce Hill has had an eagle eye’s view of the struggles it took to bring the Skeena’s salmon runs back from the brink. He came into the country from the United States, mostly Michigan by way of Southern California, during the same northward hippie migration that brought Monty Bassett to the Bulkley Valley. He raised two kids with his wife Anne as a logger, small sawmill operator, and homesteader in the eastern reaches of the Wet’suwet’en territory. He came into his stride as a steelhead guide based mostly out of Terrace, quickly emerged as the loudest noise coming out of the Steelhead Society, and by the early 1990s he was heading up its Wild Steelhead Campaign, which was at the leading edge of the salmon wars that so transformed the Skeena fisheries for the better. He was also deeply involved in supporting the Haisla people in saving the Kitlope Valley from massive clearcut plans in the early 1990s.
+
+Ivan Thompson first saw the Skeena on a perfectly sunny fall day, coming up over Hungry Hill to take in the autumn colors of the Babine Mountains. He dropped into Smithers and browsed through a local bookstore, with its vast array of picture and history books. “I thought if a town this small has this many great publications about the place and the people that live here, there must be something cool going on,” he says. “It was a rare moment of clear decision in life—especially in my 20s.”
+
+He taught science at a local high school, and wasn’t looking to get into activism, but then he learned of plans to log up to the tree line in some of the valleys in the Babine. Thompson and a small group of citizens created a local organization called the Driftwood Foundation, then the Bulkley Valley Resources Board (a forum for community planning), and finally a land use plan for the Bulkley Forest District that, among other things, protected the Babine Mountains. That served as his introduction to the world of conservation. 
+
+After moving up to the college level to teach natural resource management and natural sciences he began work in 2002 as the Community Economic Advisor on the Great Bear Initiative, an international effort to responsibly manage 24 million acres of the lower Skeena country, coastal islands, and fjords stretching south along the coast of British Columbia. 
+
+Thompson has since joined the Moore Foundation, overseeing the work it supports throughout the Skeena region. “I’ve never lost my sense that the power to stop change, or keep change from happening too rapidly or randomly, comes from people with a passion for place,” Thompson says. “I’m not saying there aren’t other forms of power or they are less effective or important. I’m just saying this is the one I understand because, quite simply, that’s where I came from.”
