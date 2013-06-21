@@ -16,4 +16,4 @@ Beere studied zoology at the University of British Columbia, focusing on fisheri
 
 Looking at his map twenty-five years, Beere, still a fisheries biologist, wonders what this area will become in another twenty-five years.
 
-“Geographically, we’re nestled in this special place…it’s such a magical system, with its own rhythm—the annual cycles of oolichan pushing into the river, and then halibut coming in from the deep spawning grounds to their shallower foraging grounds, and the river’s flooding starts to recede and the big-bodied spring salmon arrive, followed by the other Pacific salmon species. As that pattern unfolds, the details are so far beyond comprehension. We just scratch the surface of the how and the why,” he says.
+“Geographically, we’re nestled in this special place…it’s such a magical system, with its own rhythm," he says. "As that pattern unfolds, the details are so far beyond comprehension. We just scratch the surface of the how and the why."
