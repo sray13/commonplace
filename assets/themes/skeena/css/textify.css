@@ -2,7 +2,7 @@
 	/*overflow:hidden;*/
 	/*font-family: Tahoma, Geneva, sans-serif;*/
 	font-size:14px;
-	font-size:1em;
+	font-size:.9em;
 	overflow:hidden;
 	position:relative;
 		
@@ -21,7 +21,7 @@
 	margin:0;
 	padding:0;
 }
-.textify_nav ul li:hover, .textify_nav  ul li.selected {
+.textify_nav ul li.selected {
 	/*background-position:0 -15px;*/
 	border-bottom:3px solid rgb(51,150,243);
 }

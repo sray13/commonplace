@@ -12,9 +12,9 @@
 @font-face {font-family: 'CenturySchoolbookBT-Italic';src: url('../webfonts/273126_1_0.eot');src: url('../webfonts/273126_1_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/273126_1_0.woff') format('woff'),url('../webfonts/273126_1_0.ttf') format('truetype');}
 @font-face {font-family: 'CenturySchoolbookBT-Bold';src: url('../webfonts/273126_2_0.eot');src: url('../webfonts/273126_2_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/273126_2_0.woff') format('woff'),url('../webfonts/273126_2_0.ttf') format('truetype');}
 @font-face {font-family: 'CenturySchoolbookBT-BoldItalic';src: url('../webfonts/273126_3_0.eot');src: url('../webfonts/273126_3_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/273126_3_0.woff') format('woff'),url('../webfonts/273126_3_0.ttf') format('truetype');}
-@font-face {font-family: 'CenturySchoolbookBT-BoldCond';src: url('../webfonts/273126_4_0.eot');src: url('../webfonts/273126_4_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/273126_4_0.woff') format('woff'),url('../webfonts/273126_4_0.ttf') format('truetype');}
+/*@font-face {font-family: 'CenturySchoolbookBT-BoldCond';src: url('../webfonts/273126_4_0.eot');src: url('../webfonts/273126_4_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/273126_4_0.woff') format('woff'),url('../webfonts/273126_4_0.ttf') format('truetype');}
 @font-face {font-family: 'CenturySchoolbookBT-Monospace';src: url('../webfonts/273126_5_0.eot');src: url('../webfonts/273126_5_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/273126_5_0.woff') format('woff'),url('../webfonts/273126_5_0.ttf') format('truetype');}
- 
+*/ 
 @font-face {font-family: 'Intro-Black-Caps';src: url('../webfonts/273126_6_0.eot');src: url('../webfonts/273126_6_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/273126_6_0.woff') format('woff'),url('../webfonts/273126_6_0.ttf') format('truetype');}
 @font-face {font-family: 'Intro-Black-Inline-Caps';src: url('../webfonts/273126_7_0.eot');src: url('../webfonts/273126_7_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/273126_7_0.woff') format('woff'),url('../webfonts/273126_7_0.ttf') format('truetype');}
 
@@ -24,6 +24,16 @@ a {
 }
 a:hover {
   color: inherit;
+}
+
+/*set hover opacity for main UI elements*/
+.page-footer a:hover,
+.textify_nav li:hover{
+  /* IE 8 */  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
+  /* IE 5-7 */  filter: alpha(opacity=65);
+  /* Netscape */  -moz-opacity: 0.65;
+  /* Safari 1.x */  -khtml-opacity: 0.65;
+  /* Good browsers */ opacity: 0.65;
 }
 
 .popover-content h3 {line-height: 1.2em;font-family:Intro-Black-Caps; }
@@ -58,7 +68,7 @@ a:hover {
   }
 
   .story-header h3 {
-    font-family: CenturySchoolbookBT-Roman;
+    font-family: Montserrat;
   }
 
 .story-header-small {
@@ -82,10 +92,13 @@ body.dark .story-header-small {
   color:black;
   border-color: black;
 }
-
+.story-header-small p {
+  font-family: Montserrat;
+  font-size:.8em;
+}
 .story-header-small strong {
   font-size: 1.4em;
-  font-family: CenturySchoolbookBT-Roman;
+  font-family: Intro-Black-Caps;
   font-weight: normal;
   letter-spacing: .1em;
 }
@@ -128,12 +141,16 @@ body.dark .story-header-small {
   left: 48%;
   z-index: 1000;
 }
-  .page-footer a {
-    text-align: center;
-    font-size: 48px;
-    color: yellow;
-  }
-
+.page-footer a {
+  display:inline-block;
+  width:30px;
+  height:34px;
+  text-indent: -10000px;
+  text-align: center;
+  font-size: 48px;
+  color: #FFC419;
+  background:url(../img/arrow-down.png) no-repeat left top;
+}
 
 
 .static-nav {
@@ -165,7 +182,7 @@ body.dark .story-header-small {
 }
 
 .navbar .nav>li>a, .navbar .nav>li>a:hover {color:white;}
-.dark .navbar .nav>li>a, .dark .navbar .nav>li>a:hover {color:black;}
+.dark .navbar .nav>li>a, .dark .navbar .nav>li>a:hover {color:#333333;}
 
 .masthead .navbar .nav>li>a {
   font-family: Intro-Black-Caps;
@@ -176,9 +193,14 @@ body.dark .story-header-small {
   padding-bottom: 0;
   text-transform: uppercase;
 }
-.masthead .navbar .nav>li>a>h2 {
+
+.masthead .navbar .nav>li>a em {
+  font-family: CenturySchoolbookBT-Italic;
+  padding-right:8px;
+}
+.masthead .navbar .nav>li>a>h2, h2.title-name {
   text-transform: none;
-  font-family: CenturySchoolbookBT-Roman;
+  font-family: Montserrat;
   margin-bottom:0;
 }
 .masthead .navbar .nav>li>a>span{
@@ -257,6 +279,26 @@ html, body, .container, .content, .section {
   height: 100%;
 }
 
+.swiper-scrollbar {
+  border-radius: 10px;
+position: absolute;
+right: 3px;
+top: 0;
+height: 100%;
+width: 5px;
+  background-color:#e5e5e5;
+  background: rgba(0,0,0,0.1);
+}
+
+.swiper-scrollbar-drag {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-color: #FFe18c;
+  background: rgba(255,196,25,0.5);
+  border-radius: 10px;
+}
+
 .page {
   background-color: white;
   width: 70%;
@@ -287,13 +329,12 @@ html, body, .container, .content, .section {
   background: url(../img/paper.jpg) left top;
 }
 .page-wrapper {
-  
-  
+  margin:0 !important;  
   height: 100%;
 }
 .page-content {
-  font-family: CenturySchoolbookBT-Roman;
-  padding: 0px 12% 0px 6%;
+  font-family: 'Montserrat';
+  padding: 0px 22% 0px 6%;
   margin-top:5%;
   overflow: auto;
   height: 90%;
@@ -302,8 +343,33 @@ html, body, .container, .content, .section {
   transition: opacity 0.5s ease-in-out;
 }
 
-.page-content p {padding-left:6%;}
-.page-content hr {margin-left:6%;}
+.page-content span.intro {
+    font-family: CenturySchoolbookBT-Bold;
+}
+
+.page-content p {
+  padding-left:28%;
+  padding-right: 3px;
+}
+
+/*
+this places the arrow at the end of each page, but it's unreliable where the arrow will appear.
+.contentText .column p:last-child:after{
+  display: inline-block;
+  content: "";
+  width: 19px;
+  height: 10px;
+  background: transparent url(../img/end-arrow.png) no-repeat right top;
+}*/
+
+.contentText div:last-child div.column>p:last-child:after {
+  display: inline-block;
+  content: "";
+  width: 19px;
+  height: 10px;
+  background: transparent url(../img/end-circle.png) no-repeat right top;
+}
+.page-content hr {margin-left:28%;}
 .page-content strong {color:rgb(51,150,243); font-weight: bold;}
 
 .page-content img {
@@ -311,16 +377,28 @@ html, body, .container, .content, .section {
   padding-right: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
-  /*max-width: 50%;*/
+  max-width: 250px !important;
+  height:auto !important;
+  margin-left:-12% !important;
 }
 .page-content blockquote {
-  border-left: 0px;
+  font-family: CenturySchoolbookBT-Roman;
+  border:none;
   margin:20px 0;
+  padding: 0 1% 0 12%;
 }
-  .page-content blockquote p {
+.page-content blockquote p {
     color: rgb(51,150,243);
+    font-size: 1.4em;
     font-style: italic;
     padding:0;
+}
+
+.page-content blockquote blockquote p {
+  font-weight: bold;
+  color: black;
+  font-size: 1em;
+  padding-left: 16%;
 }
 
 /*voices styling*/
@@ -356,10 +434,12 @@ html, body, .container, .content, .section {
   background: white url(../img/ink.jpg) left top;
 
 }
-.voice-player,.voice-content,.voice-footer{box-sizing:border-box;-moz-box-sizing:border-box;
- padding:0 20px;}
-.voice-player {position:absolute; top:0px; left:0px; height:80px; right:0px;overflow:hidden;}
-.voice-content {position:absolute; top:100px; bottom:100px; left:0px; right:0px; overflow:auto;}
+.voice-player,.voice-content,.voice-footer{
+  box-sizing:border-box;-moz-box-sizing:border-box;
+  padding:0 20px;
+}
+.voice-player {position:absolute; top:0px; left:0px; height:100px; right:0px;overflow:hidden;}
+.voice-content {position:absolute; top:120px; bottom:100px; left:0px; right:0px; overflow:auto;}
 .voice-footer {position:absolute; bottom:0px; height:80px; left:0px; right:0px; overflow:hidden;}
 
 .gallery {
@@ -373,7 +453,7 @@ html, body, .container, .content, .section {
  margin-right:auto;
 }
 
-/*style pagination dots for horizontal sliders*/
+/*style pagination and navigation for horizontal sliders*/
 .general-pagination{
   text-align:center;
   width:100%;
@@ -395,6 +475,52 @@ margin:0 3px;
 background:#fff;
 }
 
+.navarrows
+{
+  position: absolute;
+  top:45%;
+  height: 100px;
+  width: 100%;
+  z-index:100;
+}
+
+.navarrows a
+{
+  display: block;
+  width: 22px;
+  height: 64px;
+  background-repeat: no-repeat;
+  padding: 0;
+}
+
+.navarrows > div{
+  padding:15px;
+  cursor:pointer;
+}
+
+
+.navarrows a:hover
+{
+  background-position: right top;
+}
+
+.navarrows a:active
+{
+  background-position: left bottom;
+}
+
+
+.leftarrow
+{
+  background-image: url('../img/left-arrow.png');
+  background-position: left top;
+}
+
+.rightarrow
+{
+  background-image: url('../img/right-arrow.png');
+  background-position: left top;
+}
 
   /*.page-content .short-post {
     width: 100% !important;

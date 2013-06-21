@@ -41,14 +41,8 @@ tagline: Supporting tagline
       {% endfor %}
   </div>
 </div>
-<div id="bg-img"></div>
 <div class="swiper-container swiper-root" id="map">
 
- <div class="page-footer">
-   <a href="#">
-     <i class="icon-chevron-down"></i>
-   </a>
- </div>
   <div class="swiper-wrapper">
     <!--First Slide-->
     <div class="swiper-slide cover-slide">
@@ -58,6 +52,11 @@ tagline: Supporting tagline
         <h3>{{ site.tagline }}</h3>
         <h1>{{ page.title }}</h1>
       </div>
+       <div class="page-footer">
+         <a href="#">
+           <i class="icon-chevron-down"></i>
+         </a>
+       </div>
       
     </div>
       <div class="swiper-slide" data-zoom=9>
@@ -81,8 +80,14 @@ tagline: Supporting tagline
         <!--Third Slide-->
         {% assign post_length = post.content | number_of_words %}
         <div class="swiper-slide" data-img="{{ post.story-img }}" data-hash="{{post.url | replace:'/',''}}" >
-          <div class="page{% if post.category == 'Gallery' %} full light paper-bg{% endif %}">
-            <div class="span12 page-wrapper">
+          <div class="page{% if post.category == 'Gallery' %} full light ink-bg{% endif %}">
+
+            <div class="navarrows hidden-phone">
+              <div class="pull-left"><a href="#" class="leftarrow">&nbsp;</a></div>
+              <div class="pull-right"><a href="#" class="rightarrow">&nbsp;</a></div>
+            </div> <!-- end nav arrows container -->
+
+            <div class="span12 page-wrapper{% if post.category == 'Gallery' %} gallery-wrapper{% endif %}">
               <div class="story-header-small">
               <p><strong>{{ post.title }}</strong></p>
               {% if post.author %}
@@ -149,7 +154,7 @@ tagline: Supporting tagline
                     <div class="voice-content-wrapper">
                       <div class="voice-player">
                         <h3>{{ post.title }}</h3>
-                        <p>the player</p>
+                        <audio src="{{ASSET_PATH}}skeena/Audio/Cecil Paul FINAL MP3.mp3"  preload="none"></audio>
                       </div>
                       <div class="voice-content">
                       {{ post.content }}
@@ -186,7 +191,10 @@ tagline: Supporting tagline
 
 
       </div>
-    </div>
-  </div>
-</div>
+    </div> <!-- end swiper wrapper -->
+    <!-- Scrollbar: -->
+<div class="swiper-scrollbar"></div>
+
+  </div> <!-- end swiper container -->
+<!-- </div>  it appears that this div is an orpahn, but i left it here just in case LB-->
 
