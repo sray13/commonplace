@@ -71,32 +71,41 @@ a:hover {
     font-family: Montserrat;
   }
 
-.story-header-small {
+.story-sidebar {
+
+}
+
+.story-sidebar {
   color:white;
-  padding:15px 5px;
-  border-top:1px solid white;
-  border-bottom:1px solid white;
   position: absolute;
   width:120px;
   left:-150px;
   top:200px;
 }
 
-.page.full .story-header-small {
+.sidebar-header {
+  padding:15px 5px;
+  border-top:1px solid white;
+  border-bottom:1px solid white;
+
+}
+
+.page.full .story-sidebar {
   position: absolute;
   left: 25px;
   top: 110px;
 }
 
-body.dark .story-header-small {
+
+body.dark .sidebar-header {
   color:black;
   border-color: black;
 }
-.story-header-small p {
+.sidebar-header p {
   font-family: Montserrat;
   font-size:.8em;
 }
-.story-header-small strong {
+.sidebar-header strong {
   font-size: 1.4em;
   font-family: Intro-Black-Caps;
   font-weight: normal;
@@ -428,7 +437,7 @@ this places the arrow at the end of each page, but it's unreliable where the arr
 }
 .voice-content-wrapper{
   position:absolute;
-  right:35px;
+  right:80px;
   width: 395px;
   height: 95%;
   background: white url(../img/ink.jpg) left top;
@@ -453,13 +462,15 @@ this places the arrow at the end of each page, but it's unreliable where the arr
  margin-right:auto;
 }
 
-/*style pagination and navigation for horizontal sliders*/
+/*style pagination and navigation for horizontal gallery sliders*/
 .general-pagination{
-  text-align:center;
+  text-align:left;
   width:100%;
-  position: absolute;
+  position: relative;
+  margin-top:15px;
   z-index:100;
 }
+
 .general-pagination .swiper-pagination-switch {
 display:inline-block;
 width:10px;
@@ -478,7 +489,7 @@ background:#fff;
 .navarrows
 {
   position: absolute;
-  top:45%;
+  top:75%;
   height: 100px;
   width: 100%;
   z-index:100;
@@ -521,6 +532,33 @@ background:#fff;
   background-image: url('../img/right-arrow.png');
   background-position: left top;
 }
+
+/* audio player in voices */
+.audiojs {
+  width:100%%;
+  background:none;
+  -webkit-box-shadow:none;
+  -moz-box-shadow:none;
+  -o-box-shadow:none;
+  box-shadow:none;
+  color:#333333;
+}
+.audiojs .play-pause {
+  width:6%;
+  border:none;
+}
+.audiojs .scrubber {
+  width:60%;
+  border:none;
+  height:5px;
+  top:6px;
+}
+.audiojs .progress: {
+  height:2px;
+}
+.audiojs .time {width:12%;border:none;color:#333333;margin:0;padding:0;text-shadow:none;}
+.audiojs .time .played, .audiojs .time .of {display:none;}
+
 
   /*.page-content .short-post {
     width: 100% !important;
