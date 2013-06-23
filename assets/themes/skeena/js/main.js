@@ -54,7 +54,7 @@ if (window.location.hash) {
                     currentBackgroundPath = $('.swiper-root').css('background-image').split('/'),
                     currentBackgroundImage = currentBackgroundPath[currentBackgroundPath.length-1].replace(')',''),
                     childSliderID=$('.gallery',$slide).attr('id') || '',
-                    subSlideIsLight=false;
+                    subSlideIsLight=undefined;
 
                 //set this slide to be 'active' for purposes of applying global keypress events
                 $('.swiper-root>.swiper-wrapper>div.swiper-slide').removeClass('active');
@@ -74,7 +74,7 @@ if (window.location.hash) {
                     subSlideIsLight=$('.swiper-slide',$slide).eq(hGalleryArray[childSliderID].activeSlide).hasClass('light');
                 }
 
-                if (($slide.find('div.page.light').length) && (subSlideIsLight)) {
+                if ((($slide.find('div.page.light').length) && subSlideIsLight === undefined) || (subSlideIsLight)) {
                     $('body').addClass('dark');
                 } else {
                     $('body').removeClass('dark');
@@ -196,9 +196,9 @@ if (window.location.hash) {
         }); // end function for nav arrow click handling
 
         // Control the horizontal sliders with click functions
-        $('.gallery').on('click','.sub-toc-item,.swiper-pagination-switch',function(e){
-            e.preventDefault();            
-            var theID=$(this).parentsUntil('.page-wrapper','.swiper-container').attr('id'),
+        $('.gallery-wrapper').on('click','.sub-toc-item,.swiper-pagination-switch',function(e){
+            e.preventDefault();
+            var theID=$(this).parentsUntil('.page.full').find('.swiper-container').attr('id'),
                 theGalIndex = $(this).hasClass('sub-toc-item') ? $(this).index()+1 : $(this).index();
             hGalleryArray[theID].swipeTo(theGalIndex);
         });
@@ -262,7 +262,7 @@ if (window.location.hash) {
             content: $('#toc-content').html()
         });
 
-        $toc.on('click', function (e) {
+        $toc.on('click mouseenter', function (e) {
             var $popover, tocHeight;
             e.preventDefault();
             $toc.popover('toggle');

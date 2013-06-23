@@ -75,24 +75,25 @@ tagline: Supporting tagline
 
                 <div class="span12 page-wrapper gallery-wrapper">
 
-                  <div class="swiper-container gallery" id="voices-gallery">
-
-                    <div class="story-sidebar">
-                      <div class="sidebar-header voices">
-                        <p><strong>Voices</strong></p>
-                      </div>
-                      <div class="voices-gallery-pagination general-pagination"></div>
+                  <div class="story-sidebar">
+                    <div class="sidebar-header voices">
+                      <p class="title">Voices</p>
                     </div>
+                    <div class="voices-gallery-pagination general-pagination"></div>
+                  </div>
 
+                  <div class="swiper-container gallery" id="voices-gallery">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide light">
-                          <div class="sub-toc-wrapper span12 offset1">
+                          <div class="sub-toc-wrapper gallery-slide">
                           {% for post in site.tags.voices reversed %}
-                            <div class="sub-toc-item span2">
-                              <img src="{{ post.toc-img}}">
-                              <p><strong>{{ post.author }}</strong></p>
-                              <p><em>{{ post.title }}</em></p>
-                              <p>{{ post.intro }}</p>
+                            <div class="sub-toc-item" style="width:19%;">
+                              <div style="margin-left:auto;margin-right:auto;">
+                                <img src="{{ post.toc-img}}">
+                                <p><strong>{{ post.author }}</strong></p>
+                                <p><em>{{ post.title }}</em></p>
+                                <p>{{ post.intro }}</p>
+                              </div>
                             </div>
                           {% endfor %}
                         </div>
@@ -110,10 +111,10 @@ tagline: Supporting tagline
                             <audio src="{{ASSET_PATH}}skeena/Audio/Cecil Paul FINAL MP3.mp3"  preload="none"></audio>
                           </div>
                           <div class="voice-content">
-                          {{ post.content }}
-                        </div>
+                           {{ post.content }}
+                          </div>
                         <div class="voice-footer">
-                          <p>the footer</p>
+                          <span class="up"></span><span class="down"></span>
                         </div>
                         </div>
                       </div> 
@@ -153,20 +154,31 @@ tagline: Supporting tagline
               </div> <!-- end nav arrows container -->
 
               <div class="span12 page-wrapper{% if post.category == 'Gallery' %} gallery-wrapper{% else %} paper-bg{% endif %}">
+
                 <div class="story-sidebar">
                   <div class="sidebar-header">
-                    <p><strong>{{ post.title }}</strong></p>
+                    <p class="title">{{ post.title }}</p>
                     {% if post.author %}
-                    <p>{{ post.author }}</p>
+                    <p class="author">{{ post.author }}</p>
                     {% endif %}
                   </div>
                   <div class="{{post.url | replace:'/',''}}-gallery-pagination general-pagination"></div>
                 </div>
+
                 {% if post.category == 'Gallery' %}
                   <div class="swiper-container gallery" id="{{post.url | replace:'/',''}}-gallery">
                     <div class="swiper-wrapper">
+                        <div class="swiper-slide light gallery-slide">
+                          <div class="gallery-intro-slide-wrapper">
+                            <p class="title center">{{ post.title }}</p>
+                            {% if post.author %}
+                            <p class="author center">{{ post.author }}</p>
+                            {% endif %}
+                            {{ post.content }}
+                          </div>
+                        </div>
                     {% for image in post.slideshow %}
-                        <div class="swiper-slide light">
+                        <div class="swiper-slide light gallery-slide">
                           <img src="{{ ASSET_PATH }}skeena/img/{{ post.path }}/{{ image.img }}">
                         </div>
                     {% endfor %}

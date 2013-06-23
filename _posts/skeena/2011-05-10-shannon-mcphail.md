@@ -6,7 +6,7 @@ author: Shannon McPhail
 tags: []
 issue: Skeena
 tags: ['voices']
-"toc-img": "http://lorempixel.com/150/150/nature/1"
+"toc-img": "http://lorempixel.com/225/225/nature/1"
 "story-img": lorempixel.jpg
 ---
 With lineage that goes back four generations in the Kispiox Valley region, Shannon McPhail grew up on a working ranch within the Skeena watershed, raised on a diet of mountain goat meat, moose, wild sheep, and fish.
