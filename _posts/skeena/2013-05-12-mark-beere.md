@@ -10,6 +10,7 @@ issue: Skeena
 "story-img": welcome.jpg
 "title": Fisheries biologist
 "intro": “We’re nestled in this special place…it’s such a magical system, with its own rhythm."
+audio: markbeere.mp3
 ---
 
 Mark Beere has a map of northwestern British Columbia at his desk. He’s been looking at it almost his whole life. As a kid, it was a place for dreams and imagination: 100-pound salmon and 40-pound steelhead, the wilderness they lived in, and the people who spoke about them in whispers. Later, it was the place he escaped to in daydreams while sitting in a Vancouver classroom, until he could strap his bikes to a ’71 Datsun and start driving each summer. 
