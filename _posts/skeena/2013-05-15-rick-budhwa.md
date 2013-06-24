@@ -8,9 +8,11 @@ tags:
 issue: Skeena
 "toc-img": "http://lorempixel.com/150/150/nature/1"
 "story-img": welcome.jpg
+"title": Anthropologist, Wet'suwet'en 
+"intro": Budhwa argues that oral traditions are codes that inform ecology, technology, ethics, morality, and geneology.  
 ---
 
-Rick Budhwa came up the Skeena in the late ‘90s to work as an anthropologist for the office of the Wet’suwet’en, the First Nation group whose traditional territory ranges from Burns Lake in the east out to the coast range in the west. He was hired to look at how paleo-archaeological events—landslides, earthquakes, floods—are reflected in oral traditions. This work had implications in Canada’s legendary Delgamu’uk case–sixteen years of court proceedings that culminated in a landmark Supreme Court decision that gave First Nation oral traditions evidentiary weight in a court of law. 
+Rick Budhwa came up the Skeena in the late ‘90s to work as an anthropologist for the office of the Wet’suwet’en, the First Nations group whose traditional territory ranges from Burns Lake in the east out to the coast range in the west. He was hired to look at how paleo-archaeological events—landslides, earthquakes, floods—are reflected in oral traditions. This work had implications in Canada’s legendary Delgamu’uk case–sixteen years of court proceedings that culminated in a landmark Supreme Court decision that gave First Nation oral traditions evidentiary weight in a court of law. 
 
 Budhwa’s work supported the alignment of oral narratives with the geological and biological interpretation of ancient events. But it also affirmed that those traditions include include information about technology, ethics, morality, family histories, and protocols for how to live your life. 
 
