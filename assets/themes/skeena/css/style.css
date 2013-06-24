@@ -248,6 +248,14 @@ a:hover {
 /* Good browsers */ opacity: 0.8;  
 }
 
+.toc-section .popover .close {
+  position: absolute;
+  top:30px;
+  right:30px;
+  width: 17px;
+  height: 13px;
+  background: url(../img/close_x.png) no-repeat left top;
+}
 
 .root-container {
   /*background: url({{ ASSET_PATH }}skeena/img/cover.jpg) no-repeat center;*/
@@ -533,14 +541,14 @@ background: rgb(51,150,243);
 
 .leftarrow
 {
-  background-image: url('../img/left-arrow.png');
+  background-image: url('../img/arrow_left.png');
   background-position: left top;
   margin-left:15px;
 }
 
 .rightarrow
 {
-  background-image: url('../img/right-arrow.png');
+  background-image: url('../img/arrow_right.png');
   background-position: left top;
   margin-right:15px;
 }
@@ -639,11 +647,11 @@ background: rgb(51,150,243);
   -webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;
   padding:0 20px;
 }
-.voice-player {position:absolute; top:0px; left:0px; height:100px; right:0px;overflow:hidden;}
-.voice-player h3 {margin-bottom:0;}
-.voice-content {position:absolute; top:95px; bottom:0; left:0px; right:0px; padding-bottom:0; overflow:hidden;}
+.voice-player {position:absolute; top:0px; left:0px; height:110px; right:0px;overflow:hidden;}
+.voice-player h3, .voice-player p {margin-bottom:0;}
+.voice-content {position:absolute; top:105px; bottom:40px; left:0px; right:0px; padding-bottom:0; overflow:hidden;}
 .voice-content-text {padding-bottom:35px;}
-.voice-footer {position:absolute; bottom:0px; height:80px; left:0px; right:0px; overflow:hidden;}
+/*.voice-footer {position:absolute; bottom:0px; height:80px; left:0px; right:0px; overflow:hidden;}*/
 
 .voice-scroller {position:absolute;bottom:0;left:0;width:100%;height:35px;background:#CCC;z-index:10;
 /* IE 8 */  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
@@ -658,9 +666,11 @@ background: rgb(51,150,243);
   display: inline-block;
   width: 50%;
   cursor: pointer;
+  background: url(../img/arrow_down.png) no-repeat center center;
 }
 .voice-scroller span.up {
   border-right: 2px groove #cccccc;
+  background: url(../img/arrow_up.png) no-repeat center center;
 }
 
 

@@ -130,15 +130,6 @@ if (window.location.hash) {
                                 $voiceWrapper=$slide.find('.voice-content-wrapper');
 
 
-                            if ($voiceWrapper && (!($voiceWrapper.find('.voice-scroller')))) {                                    
-                                if(($('.voice-content-text',$voiceWrapper).height())>($('.voice-content',$voiceWrapper).height())) {
-                                    console.log($('.voice-content-text',$this).height());
-                                    console.log($('.voice-content',$this).height());
-                                    $voiceWrapper.prepend('<div class="voice-scroller"><span class="up"></span><span class="down"></span></div>');
-                                }
-                            }
-
-
                             // update body class to change element colors + update the background image
                             //(swiper.activeIndex==0 && $slideRoot.parent().hasClass("light")) ? $('body').addClass('dark') : $('body').removeClass('dark');
                             if (backgroundImage) {
@@ -152,6 +143,23 @@ if (window.location.hash) {
                             } else {
                                 $('body').removeClass('dark');
                             }
+
+
+
+
+                                //console.log($voiceWrapper);
+
+                                console.log($voiceWrapper.find('.voice-scroller').length);
+
+
+
+                            if ($voiceWrapper && (!($voiceWrapper.find('.voice-scroller').length))) {                                    
+                                if(($('.voice-content-text',$voiceWrapper).height())>($('.voice-content',$voiceWrapper).height())) {
+                                    $voiceWrapper.prepend('<div class="voice-scroller"><span class="up"></span><span class="down"></span></div>');
+                                }
+                            }
+
+
 
                         } //end onSlideChangeEnd callback for horizontal slider                        
                     }); // end init array for main-slide-contained horizontal gallery

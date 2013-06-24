@@ -21,6 +21,7 @@ tagline: Supporting tagline
   </div><!-- /.navbar -->
 </div>
 <div style="display: none" id="toc-content">
+  <div class="close"></div>
   <div class="container">
       {% for post in site.tags.story reversed %}
       {% capture col %}{{ forloop.index |modulo:3 }}{% endcapture %}
@@ -107,7 +108,8 @@ tagline: Supporting tagline
                         </div> -->
                         <div class="voice-content-wrapper">
                           <div class="voice-player">
-                            <h3>{{ post.title }}</h3>
+                            <h3>{{ post.author }}</h3>
+                            <p>{{ post.place }}</p>
                             <audio src="{{ASSET_PATH}}skeena/Audio/Cecil Paul FINAL MP3.mp3"  preload="none"></audio>
                           </div>
                           <div class="voice-content">
