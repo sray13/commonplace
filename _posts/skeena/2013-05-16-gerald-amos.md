@@ -9,6 +9,7 @@ tags: ['voices']
 "story-img": welcome.jpg
 "place": Kitamaat Village
 "intro": A double pipeline through Kitamaat could "wipe our what remains of our culture."
+audio: geraldamos.mp3
 ---
 A leading voice in conservation for his homeland, Gerald Amos was elected Chief Councilor for Kitamaat Village in 1980 and held this position for six consecutive two-year terms. In 1991 with the leadership of the Kitamaat Village Council and other community leaders, and together with Ecotrust, the Haisla launched a unique campaign to resist the onslaught of commercial logging activities in the Greater Kitlope Ecosystem. Since Gerald's tenure as chief, he has been an advisor to Chief and Council in Kitamaat, primarily on the issues of pollution and intergovernmental relations. 
 
