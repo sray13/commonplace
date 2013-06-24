@@ -65,7 +65,6 @@
                 }
                 if (options.height === 'auto') {
                     pageheight = $this.height()
-                    console.log(pageheight)
                 } else if (options.height === 'screen') {
                     pageheight = $(window)
                         .height()
@@ -101,7 +100,6 @@
                 touch()
                 if ($text.find('img')
                     .length > 0) {
-                    console.log ($text.find('img'));
                     $text.find('img')
                         .each(function (i) {
                         var srcImg = $(this)
@@ -148,7 +146,6 @@
                             'padding': 0,
                             'padding-right':'15px'
                         })
-                    console.log('after too tall resize, new height: '+thisImg.height() + 'and column height is '+columnHeight);                    
                     }
                 } else {
                     if (element.height >= columnHeight - 100) {
