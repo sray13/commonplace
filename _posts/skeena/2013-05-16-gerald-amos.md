@@ -7,5 +7,14 @@ issue: Skeena
 tags: ['voices']
 "toc-img": "http://lorempixel.com/150/150/nature/1"
 "story-img": welcome.jpg
+"place": Kitamaat Village
+"intro": A double pipeline through Kitamaat could "wipe our what remains of our culture."
 ---
-A veteran of pretty well every major “environmentalist” battle in the Skeena Country over the past 30 years or so, Bruce Hill has had an eagle eye’s view of the struggles it took to bring the Skeena’s salmon runs back from the brink. He came into the country from the United States, mostly Michigan by way of Southern California, during the same northward hippie migration that brought Monty Bassett to the Bulkley Valley. He raised two kids with his wife Anne as a logger, small sawmill operator, and homesteader in the eastern reaches of the Wet’suwet’en territory. He came into his stride as a steelhead guide based mostly out of Terrace, quickly emerged as the loudest noise coming out of the Steelhead Society, and by the early 1990s he was heading up its Wild Steelhead Campaign, which was at the leading edge of the salmon wars that so transformed the Skeena fisheries for the better. He was also deeply involved in supporting the Haisla people in saving the Kitlope Valley from massive clearcut plans in the early 1990s.
+A leading voice in conservation for his homeland, Gerald Amos was elected Chief Councilor for Kitamaat Village in 1980 and held this position for six consecutive two-year terms. In 1991 with the leadership of the Kitamaat Village Council and other community leaders, and together with Ecotrust, the Haisla launched a unique campaign to resist the onslaught of commercial logging activities in the Greater Kitlope Ecosystem. Since Gerald's tenure as chief, he has been an advisor to Chief and Council in Kitamaat, primarily on the issues of pollution and intergovernmental relations. 
+
+Gerald has a long history with advocacy and negotiations concerning fisheries and ocean resources both at the provincial and national levels. He’s served with the First Nations Summit Task Group, the NDP government's Parks Legacy Panel, and as Speaker for the BC Aboriginal Fisheries Commission.
+
+One of Gerald's main desires for the Haisla Nation has been to rejuvenate and preserve the memories of his ancestors. He has spoken out against industrial development like the Enbridge pipeline, pointing to environmental threats and the loss of access to ancestral foods like oolichans, abalone, and prawns.  
+
+Gerald’s other positions include: Chief Negotiator for the Haisla Treaty Negotiating Team, Ecotrust Canada founding board member, and Ecotrust board member. He’s carried out work for the Na na kila Institute, Northwest Tribal Treaties, and Coastal First Nations Great Bear Initiative.
+
