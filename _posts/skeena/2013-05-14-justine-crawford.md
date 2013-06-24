@@ -10,6 +10,7 @@ issue: Skeena
 "story-img": welcome.jpg
 "title": Redeveloper
 "intro": Crawford and her partner bought cannery left to rust for 20 years. 
+audio: justinecrawford.mp3
 ---
 
 It took fifteen seconds at the Cassiar Cannery for Mark Bell and Justine Crawford to get hooked. At what was once the largest cannery in British Columbia, situated on a channel right at the mouth of the Skeena, “we were running around like kids at recess, envisioning all the ways that the place could sustain us,” Crawford says. 
