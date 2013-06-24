@@ -39,11 +39,11 @@ if (window.location.hash) {
             grabCursor: true,
             onSlideChangeStart: function (swiper) {
                 var $slide = $(swiper.getSlide(swiper.realIndex));
-                if ($slide.data('zoom')) {
-                    map.zoom($slide.data('zoom'), true);
-                } else {
-                    map.zoom(zoom, true);
-                }
+                // if ($slide.data('zoom')) {
+                //     map.zoom($slide.data('zoom'), true);
+                // } else {
+                //     map.zoom(zoom, true);
+                // }
             },
             onSlideChangeEnd: function (swiper) {
                 var $slide = $(swiper.getSlide(swiper.realIndex)),
@@ -53,8 +53,9 @@ if (window.location.hash) {
                     backgroundImage = $slide.data('img'),
                     currentBackgroundPath = $('.swiper-root').css('background-image').split('/'),
                     currentBackgroundImage = currentBackgroundPath[currentBackgroundPath.length-1].replace(')',''),
-                    childSlider;
-                
+                    childSliderID=$('.gallery',$slide).attr('id') || '',
+                    subSlideIsLight=undefined;
+
                 //set this slide to be 'active' for purposes of applying global keypress events
                 $('.swiper-root>.swiper-wrapper>div.swiper-slide').removeClass('active');
                 $slide.addClass('active');
@@ -69,7 +70,11 @@ if (window.location.hash) {
                     $masthead.addClass('hidden');
                 }
 
-                if ($slide.find('div.page.light').length){
+                if (!(hGalleryArray[childSliderID]===undefined))     {          
+                    subSlideIsLight=$('.swiper-slide',$slide).eq(hGalleryArray[childSliderID].activeSlide).hasClass('light');
+                }
+
+                if ((($slide.find('div.page.light').length) && subSlideIsLight === undefined) || (subSlideIsLight)) {
                     $('body').addClass('dark');
                 } else {
                     $('body').removeClass('dark');
@@ -106,6 +111,10 @@ if (window.location.hash) {
                     $longPost.removeClass('hidden');
                 }
 
+                if ($slide.next().find('.gallery').length) {
+                    $slide.next().removeClass('hidden');
+                }
+
                 if ($gallery.length) {
                     var theID=$gallery.attr('id'),
                         paginationClass='.'+theID+'-pagination';
@@ -130,6 +139,13 @@ if (window.location.hash) {
                             } else {
                                 $('.backstretch',$slideRoot).remove();
                             }
+
+                            if ($slide.hasClass('light')){
+                                $('body').addClass('dark');
+                            } else {
+                                $('body').removeClass('dark');
+                            }
+
                         } //end onSlideChangeEnd callback for horizontal slider                        
                     }); // end init array for main-slide-contained horizontal gallery
                     } // end if block checking for gallery object existance
@@ -180,9 +196,9 @@ if (window.location.hash) {
         }); // end function for nav arrow click handling
 
         // Control the horizontal sliders with click functions
-        $('.gallery').on('click','.sub-toc-item,.swiper-pagination-switch',function(e){
-            e.preventDefault();            
-            var theID=$(this).parentsUntil('.page-wrapper','.swiper-container').attr('id'),
+        $('.gallery-wrapper').on('click','.sub-toc-item,.swiper-pagination-switch',function(e){
+            e.preventDefault();
+            var theID=$(this).parentsUntil('.page.full').find('.swiper-container').attr('id'),
                 theGalIndex = $(this).hasClass('sub-toc-item') ? $(this).index()+1 : $(this).index();
             hGalleryArray[theID].swipeTo(theGalIndex);
         });
@@ -246,14 +262,14 @@ if (window.location.hash) {
             content: $('#toc-content').html()
         });
 
-        $toc.on('click', function (e) {
+        $toc.on('click mouseenter', function (e) {
             var $popover, tocHeight;
             e.preventDefault();
             $toc.popover('toggle');
             $popover = $('.toc-section').find('.popover');
             tocHeight = $popover.closest('.toc-section').height();
             $popover.find('.popover-content').height($popover.closest('.section').height() - tocHeight);
-            console.log($popover.closest('.section').height() - tocHeight);
+            //console.log($popover.closest('.section').height() - tocHeight);
             $popover.find('.arrow').position({
                of: $toc,
                my: 'bottom center',
