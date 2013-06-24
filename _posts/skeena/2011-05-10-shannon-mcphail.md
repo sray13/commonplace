@@ -8,6 +8,8 @@ issue: Skeena
 tags: ['voices']
 "toc-img": "http://lorempixel.com/225/225/nature/1"
 "story-img": lorempixel.jpg
+"title": Community organizer, Hazelton
+"intro": Once suspicious of activists, Shannon McPhail has found good reason to join them, and lead them.
 ---
 With lineage that goes back four generations in the Kispiox Valley region, Shannon McPhail grew up on a working ranch within the Skeena watershed, raised on a diet of mountain goat meat, moose, wild sheep, and fish.
 She left for Calgary, seeking outlets for education and sports. But it was only a number of years before she and husband Steve left high-paying jobs in the city—she managed a fitness and nutrition center for women, and he worked as a welder—to move back to the Kispiox Valley, a place where the “community will rally together when needed.” 

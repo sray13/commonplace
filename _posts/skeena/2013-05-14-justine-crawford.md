@@ -3,10 +3,19 @@ published: true
 layout: voices
 category: Voices
 author: Bruce Hill
-tags: []
+tags: 
+  - voices
 issue: Skeena
-tags: ['voices']
 "toc-img": "http://lorempixel.com/150/150/nature/1"
 "story-img": welcome.jpg
+"title": Redeveloper
+"intro": Crawford and her partner bought cannery left to rust for 20 years. 
 ---
-A veteran of pretty well every major “environmentalist” battle in the Skeena Country over the past 30 years or so, Bruce Hill has had an eagle eye’s view of the struggles it took to bring the Skeena’s salmon runs back from the brink. He came into the country from the United States, mostly Michigan by way of Southern California, during the same northward hippie migration that brought Monty Bassett to the Bulkley Valley. He raised two kids with his wife Anne as a logger, small sawmill operator, and homesteader in the eastern reaches of the Wet’suwet’en territory. He came into his stride as a steelhead guide based mostly out of Terrace, quickly emerged as the loudest noise coming out of the Steelhead Society, and by the early 1990s he was heading up its Wild Steelhead Campaign, which was at the leading edge of the salmon wars that so transformed the Skeena fisheries for the better. He was also deeply involved in supporting the Haisla people in saving the Kitlope Valley from massive clearcut plans in the early 1990s.
+
+It took fifteen seconds at the Cassiar Cannery for Mark Bell and Justine Crawford to get hooked. At what was once the largest cannery in British Columbia, situated on a channel right at the mouth of the Skeena, “we were running around like kids at recess, envisioning all the ways that the place could sustain us,” Crawford says. 
+
+When the two returned title in hand, in August 2006, reality set in. “The whole thing—the actual site—was just a disaster,” Crawford says. “Cassiar stopped production in 1983, and it entered into twenty years of neglect.”  All of the buildings were crammed full of junk. The freezer building was foul with rust and dust and pigeon poop. Their first project was to clear the docks.  It took them eight or nine months, getting up every day, with a little help, mostly from family. They made a name for themselves by building a new cabin on a local’s 46-foot wooden troller. The owner, a guy named Jade Miner Steve, is well known around northern BC and lots of people looked at the cabin extension.  Their boat shop, Poseidon Marine, was born.
+
+Bell and Crawford have expanded into home renovations, restoring the old plant managers’ cottages into guesthouses. They would also like to put in greenhouses for a retail plant nursery and for growing food; that’s Crawford’s obsession. And they are salvaging logs from the Skeena, descended from all over the watershed, for furniture. They figure Cassiar’s next primary industry is a premium, sustainable drinking water business. Salmon processing used large quantities of water and there’s a local system of creeks fed by rain and meltwater. So instead of packaging fish, Cassiar is going to package water. Bell and Crawford hope it will provide an enduring, high value industry for the area.  
+
+“We think of Cassiar Cannery as more than a site. It is essentially a small town. At its peak there were 1,000 people that lived here with up to 600 workers. Cassiar Cannery wants to go back to work,” says Crawford.
