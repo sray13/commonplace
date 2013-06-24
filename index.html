@@ -41,14 +41,8 @@ tagline: Supporting tagline
       {% endfor %}
   </div>
 </div>
-<div id="bg-img"></div>
 <div class="swiper-container swiper-root" id="map">
 
- <div class="page-footer">
-   <a href="#">
-     <i class="icon-chevron-down"></i>
-   </a>
- </div>
   <div class="swiper-wrapper">
     <!--First Slide-->
     <div class="swiper-slide cover-slide">
@@ -58,116 +52,175 @@ tagline: Supporting tagline
         <h3>{{ site.tagline }}</h3>
         <h1>{{ page.title }}</h1>
       </div>
+       <div class="page-footer">
+         <a href="#">
+           <i class="icon-chevron-down"></i>
+         </a>
+       </div>
       
     </div>
       <div class="swiper-slide" data-zoom=9>
       </div>
       <!--Second Slide-->
       {% for post in site.tags.story reversed %}
-        <div class="swiper-slide" data-img="{{ post.story-img }}" data-hash="{{post.url | replace:'/',''}}" id="{{post.url | replace:'/',''}}">
-          <div class="story-header">
-            {% if post.author %}
-            <h3>{{ post.author }}</h3>      
-            <hr/>
-            {% endif %}
-            <h1>{{ post.title }}</h1>
-          </div>
-          <div class="page-footer">
-            <a href="#">
-              <i class="icon-chevron-down"></i>
-            </a>
-          </div>
-        </div>
-        <!--Third Slide-->
-        {% assign post_length = post.content | number_of_words %}
-        <div class="swiper-slide" data-img="{{ post.story-img }}" data-hash="{{post.url | replace:'/',''}}" >
-          <div class="page">
-            <div class="span12 page-wrapper">
-              <div class="story-header-small">
-              <p><strong>{{ post.title }}</strong></p>
-              {% if post.author %}
-              <p>{{ post.author }}</p>
-              {% endif %}
-              </div>
-              {% if post.category == 'Gallery' %}
-                <div class="swiper-container gallery" id="{{post.url | replace:'/',''}}-gallery">
-                  <div class="{{post.url | replace:'/',''}}-gallery-pagination general-pagination"></div>
-                  <div class="swiper-wrapper">
-                  {% for image in post.slideshow %}
-                      <div class="swiper-slide">
-                        <img src="{{ ASSET_PATH }}skeena/img/Cassiar slideshow/{{ image.img }}">
-                      </div>
-                  {% endfor %}
-                </div>
-              </div>
-              {% else %}
-              {% if post_length < 750 %}
-              <div class="page-content short-post post">
-              {% else %}
-              <div class="page-content long-post post">
-              {% endif %}
-                {{ post.content }}
-              </div>
-              {% endif %}
-            </div>
-          </div>
-        </div>
-      {% endfor %}
-      
-      <!-- Build the vertical slide to contain voices gallery -->
-      <div class="swiper-slide" data-img="{{ post.story-img }}" id="voices" data-hash="voices">
-        <div class="page full">
-            <div class="span12 page-wrapper">
+        {% if forloop.index == 3 %}
+          <!-- Build the vertical slide to contain voices gallery -->
+          <div class="swiper-slide" data-img="{{ post.story-img }}" id="voices" data-hash="voices">
+            <div class="page full light ink-bg">
 
-              <div class="swiper-container gallery" id="voices-gallery">
-               <div class="voices-gallery-pagination general-pagination"></div>
-                <div class="swiper-wrapper">
-                  
+              <div class="navarrows hidden-phone">
+                <div class="pull-left"><a href="#" class="leftarrow">&nbsp;</a></div>
+                <div class="pull-right"><a href="#" class="rightarrow">&nbsp;</a></div>
+              </div> <!-- end nav arrows container -->
 
-                  <div class="swiper-slide">
-                    <div class="story-header-small">
-                      <p><strong>Voices</strong></p>
+                <div class="span12 page-wrapper gallery-wrapper">
+
+                  <div class="story-sidebar">
+                    <div class="sidebar-header voices">
+                      <p class="title">Voices</p>
                     </div>
-                      <div class="sub-toc-wrapper span12 offset1">
-                      {% for post in site.tags.voices reversed %}
-                        <div class="sub-toc-item span2">
-                          <img src="{{ post.toc-img}}">
-                          <p><strong>{{ post.title }}</strong></p>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum augue at ipsum imperdiet, quis dapibus elit rhoncus. Aliquam erat eros, rutrum eget dignissim lacinia, posuere a turpis. Mauris vel nisi arcu. Nulla facilisi. Vivamus in arcu rutrum, vehicula nisi sed, vestibulum diam.</p>
-                        </div>
-                      {% endfor %}
-                    </div>
+                    <div class="voices-gallery-pagination general-pagination"></div>
                   </div>
 
-                  <!-- horizontal slides for each voice post -->
-                  {% for post in site.tags.voices reversed %}
-                  <div class="swiper-slide" data-img="{{ post.story-img }}">
-                    <div class="story-header-small">
-                      <p><strong>{{ post.title }}</strong></p>
-                    </div>
-                    <div class="voice-content">
-                      {{ post.content }}
-                    </div>
-                  </div> 
-                  {% endfor %}<!-- end horizontal voices gallery swiper slide -->
-                </div> <!-- end swiper wrapper -->
-              </div> <!-- end swiper container -->
+                  <div class="swiper-container gallery" id="voices-gallery">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide light">
+                          <div class="sub-toc-wrapper gallery-slide">
+                          {% for post in site.tags.voices reversed %}
+                            <div class="sub-toc-item" style="width:19%;">
+                              <div style="margin-left:auto;margin-right:auto;">
+                                <img src="{{ post.toc-img}}">
+                                <p><strong>{{ post.author }}</strong></p>
+                                <p><em>{{ post.title }}</em></p>
+                                <p>{{ post.intro }}</p>
+                              </div>
+                            </div>
+                          {% endfor %}
+                        </div>
+                      </div>
+
+                      <!-- horizontal slides for each voice post -->
+                      {% for post in site.tags.voices reversed %}
+                      <div class="swiper-slide" data-img="{{ post.story-img }}">
+                        <!-- <div class="sidebar-header">
+                          <p><strong>{{ post.title }}</strong></p>
+                        </div> -->
+                        <div class="voice-content-wrapper">
+                          <div class="voice-player">
+                            <h3>{{ post.title }}</h3>
+                            <audio src="{{ASSET_PATH}}skeena/Audio/Cecil Paul FINAL MP3.mp3"  preload="none"></audio>
+                          </div>
+                          <div class="voice-content">
+                           {{ post.content }}
+                          </div>
+                        <div class="voice-footer">
+                          <span class="up"></span><span class="down"></span>
+                        </div>
+                        </div>
+                      </div> 
+                      {% endfor %}<!-- end horizontal voices gallery swiper slide -->
+
+
+                    </div> <!-- end swiper wrapper -->
+                  </div> <!-- end swiper container -->
+              </div>
+            </div> <!-- end full page container for styling -->
+          </div> <!-- end vertical slide for voices -->
+
+        {% else %}
+
+          <div class="swiper-slide" data-img="{{ post.story-img }}" data-hash="{{post.url | replace:'/',''}}" id="{{post.url | replace:'/',''}}">
+            <div class="story-header">
+              {% if post.author %}
+              <h3>{{ post.author }}</h3>      
+              <hr/>
+              {% endif %}
+              <h1>{{ post.title }}</h1>
+            </div>
+            <div class="page-footer">
+              <a href="#">
+                <i class="icon-chevron-down"></i>
+              </a>
+            </div>
           </div>
-        </div>
-      </div>
-      {% for post in site.tags.voices reversed %}
+          <!--Third Slide-->
+          {% assign post_length = post.content | number_of_words %}
+          <div class="swiper-slide" data-img="{{ post.story-img }}" data-hash="{{post.url | replace:'/',''}}" >
+            <div class="page{% if post.category == 'Gallery' %} full light ink-bg{% endif %}">
+
+              <div class="navarrows hidden-phone">
+                <div class="pull-left"><a href="#" class="leftarrow">&nbsp;</a></div>
+                <div class="pull-right"><a href="#" class="rightarrow">&nbsp;</a></div>
+              </div> <!-- end nav arrows container -->
+
+              <div class="span12 page-wrapper{% if post.category == 'Gallery' %} gallery-wrapper{% else %} paper-bg{% endif %}">
+
+                <div class="story-sidebar">
+                  <div class="sidebar-header">
+                    <p class="title">{{ post.title }}</p>
+                    {% if post.author %}
+                    <p class="author">{{ post.author }}</p>
+                    {% endif %}
+                  </div>
+                  <div class="{{post.url | replace:'/',''}}-gallery-pagination general-pagination"></div>
+                </div>
+
+                {% if post.category == 'Gallery' %}
+                  <div class="swiper-container gallery" id="{{post.url | replace:'/',''}}-gallery">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide light gallery-slide">
+                          <div class="gallery-intro-slide-wrapper">
+                            <p class="title center">{{ post.title }}</p>
+                            {% if post.author %}
+                            <p class="author center">{{ post.author }}</p>
+                            {% endif %}
+                            {{ post.content }}
+                          </div>
+                        </div>
+                    {% for image in post.slideshow %}
+                        <div class="swiper-slide light gallery-slide">
+                          <img src="{{ ASSET_PATH }}skeena/img/{{ post.path }}/{{ image.img }}">
+                        </div>
+                    {% endfor %}
+                  </div>
+                </div>
+                {% else %}
+                {% if post_length < 750 %}
+                <div class="page-content short-post post">
+                {% else %}
+                <div class="page-content long-post post">
+                {% endif %}
+                  {{ post.content }}
+                </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+      {% endif %}
+      {% endfor %}
+      
+      <!-- this block below creates a single vertical slide for each voice.
+      voices should all be contained inside a horizontal slider
+      which is a single slide (like a photo essay) as implemented above -->
+
+      <!-- {% for post in site.tags.voices reversed %}
       <div class="swiper-slide" data-img="{{ post.story-img }}" id="{{post.url | replace: '/', ''}}" data-hash="{{post.url | replace: '/', ''}}">
         <div class="page">
               <div class="span12 page-wrapper">
-                <div class="story-header-small">
+                <div class="sidebar-header">
                 <p><strong>{{ post.title }}</strong></p>
               </div>
             </div>
           </div>
         </div>
-      {% endfor %}
+      {% endfor %} -->
+
+
       </div>
-    </div>
-  </div>
-</div>
+    </div> <!-- end swiper wrapper -->
+    <!-- Scrollbar: -->
+<div class="swiper-scrollbar"></div>
+
+  </div> <!-- end swiper container -->
+<!-- </div>  it appears that this div is an orpahn, but i left it here just in case LB-->
 

@@ -12,9 +12,9 @@
 @font-face {font-family: 'CenturySchoolbookBT-Italic';src: url('../webfonts/273126_1_0.eot');src: url('../webfonts/273126_1_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/273126_1_0.woff') format('woff'),url('../webfonts/273126_1_0.ttf') format('truetype');}
 @font-face {font-family: 'CenturySchoolbookBT-Bold';src: url('../webfonts/273126_2_0.eot');src: url('../webfonts/273126_2_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/273126_2_0.woff') format('woff'),url('../webfonts/273126_2_0.ttf') format('truetype');}
 @font-face {font-family: 'CenturySchoolbookBT-BoldItalic';src: url('../webfonts/273126_3_0.eot');src: url('../webfonts/273126_3_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/273126_3_0.woff') format('woff'),url('../webfonts/273126_3_0.ttf') format('truetype');}
-@font-face {font-family: 'CenturySchoolbookBT-BoldCond';src: url('../webfonts/273126_4_0.eot');src: url('../webfonts/273126_4_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/273126_4_0.woff') format('woff'),url('../webfonts/273126_4_0.ttf') format('truetype');}
+/*@font-face {font-family: 'CenturySchoolbookBT-BoldCond';src: url('../webfonts/273126_4_0.eot');src: url('../webfonts/273126_4_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/273126_4_0.woff') format('woff'),url('../webfonts/273126_4_0.ttf') format('truetype');}
 @font-face {font-family: 'CenturySchoolbookBT-Monospace';src: url('../webfonts/273126_5_0.eot');src: url('../webfonts/273126_5_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/273126_5_0.woff') format('woff'),url('../webfonts/273126_5_0.ttf') format('truetype');}
- 
+*/ 
 @font-face {font-family: 'Intro-Black-Caps';src: url('../webfonts/273126_6_0.eot');src: url('../webfonts/273126_6_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/273126_6_0.woff') format('woff'),url('../webfonts/273126_6_0.ttf') format('truetype');}
 @font-face {font-family: 'Intro-Black-Inline-Caps';src: url('../webfonts/273126_7_0.eot');src: url('../webfonts/273126_7_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/273126_7_0.woff') format('woff'),url('../webfonts/273126_7_0.ttf') format('truetype');}
 
@@ -24,6 +24,18 @@ a {
 }
 a:hover {
   color: inherit;
+}
+
+.center {text-align: center;}
+
+/*set hover opacity for main UI elements*/
+.page-footer a:hover,
+.textify_nav li:hover{
+  /* IE 8 */  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
+  /* IE 5-7 */  filter: alpha(opacity=65);
+  /* Netscape */  -moz-opacity: 0.65;
+  /* Safari 1.x */  -khtml-opacity: 0.65;
+  /* Good browsers */ opacity: 0.65;
 }
 
 .popover-content h3 {line-height: 1.2em;font-family:Intro-Black-Caps; }
@@ -41,8 +53,8 @@ a:hover {
     font-weight: normal; 
     font-style: normal;
     text-transform: uppercase;
-    margin-top: 100px;
-    font-size: 120px;
+    margin-top: 4%;
+    font-size: 8em;
     line-height: 1;
   }
   .story-header hr { 
@@ -58,33 +70,263 @@ a:hover {
   }
 
   .story-header h3 {
-    font-family: CenturySchoolbookBT-Roman;
+    font-family: Montserrat;
   }
 
-.story-header-small {
+.page-wrapper {
+  margin:0 !important;  
+  height: 100%;
+}
+.page-content {
+  font-family: 'Montserrat';
+  padding: 0px 8% 0px 6%;
+  margin-top:5%;
+  overflow: auto;
+  height: 90%;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.page-content span.intro {
+    font-family: CenturySchoolbookBT-Bold;
+}
+
+.page-content p {
+  padding-left:28%;
+  padding-right: 15%;
+}
+
+/*
+this places the arrow at the end of each page, but it's unreliable where the arrow will appear.
+.contentText .column p:last-child:after{
+  display: inline-block;
+  content: "";
+  width: 19px;
+  height: 10px;
+  background: transparent url(../img/end-arrow.png) no-repeat right top;
+}*/
+
+.contentText div:last-child div.column>p:last-child:after {
+  display: inline-block;
+  content: "";
+  width: 19px;
+  height: 10px;
+  background: transparent url(../img/end-circle.png) no-repeat right top;
+}
+.page-content hr {margin-left:28%;}
+.page-content strong {color:rgb(51,150,243); font-weight: bold;}
+
+.page-content img {
+  float: left;
+  padding-right: 10px !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  max-width: 250px !important;
+  height:auto !important;
+  margin-left:-12% !important;
+}
+.page-content blockquote {
+  font-family: CenturySchoolbookBT-Roman;
+  border:none;
+  margin:20px 0;
+  padding: 0 15% 0 12%;
+}
+.page-content blockquote p {
+    color: rgb(51,150,243);
+    font-size: 1.4em;
+    font-style: italic;
+    padding:0;
+}
+.page-content blockquote blockquote {padding-right:0;}
+.page-content blockquote blockquote p {
+  font-weight: bold;
+  color: black;
+  font-size: 1em;
+  padding-left: 16%;
+}
+
+
+
+/*style pagination and navigation for horizontal gallery sliders*/
+.general-pagination{
+  text-align:left;
+  width:100%;
+  position: relative;
+  margin-top:15px;
+  z-index:100;
+}
+
+.general-pagination .swiper-pagination-switch {
+display:inline-block;
+width:10px;
+height:10px;
+border-radius:10px;
+background:#999;
+box-shadow:0 1px 2px #555 inset;
+cursor:pointer;
+margin:0 3px;
+}
+
+.general-pagination .swiper-active-switch {
+background:#fff;
+}
+
+.navarrows
+{
+  position: absolute;
+  top:75%;
+  height: 100px;
+  width: 100%;
+  z-index:100;
+}
+
+.navarrows a
+{
+  display: block;
+  width: 22px;
+  height: 64px;
+  background-repeat: no-repeat;
+  padding: 0;
+}
+
+.navarrows > div{
+  padding:15px;
+  cursor:pointer;
+}
+
+
+.navarrows a:hover
+{
+  background-position: right top;
+}
+
+.navarrows a:active
+{
+  background-position: left bottom;
+}
+
+
+.leftarrow
+{
+  background-image: url('../img/left-arrow.png');
+  background-position: left top;
+}
+
+.rightarrow
+{
+  background-image: url('../img/right-arrow.png');
+  background-position: left top;
+}
+
+
+/* this is the sidebar styling for full width layouts */
+.story-sidebar {
   color:white;
-  padding:15px 5px;
-  border-top:1px solid white;
-  border-bottom:1px solid white;
   position: absolute;
   width:120px;
-  left:-150px;
+  left:-140px;
   top:200px;
 }
 
-.page.full .story-header-small {
-  position: relative;
-  left: 25px;
-  top: 110px;
+.sidebar-header {
+  padding:15px 5px;
+  border-top:1px solid white;
+  border-bottom:1px solid white;
+
 }
 
-.story-header-small strong {
+.page.full .story-sidebar {
+  left: 25px;
+  top: 275px;
+}
+
+/*make room on the left for full page gallery navigation at large scren sizes*/
+
+.gallery-slide {
+  box-sizing: border-box;
+  padding-left:150px;
+  width:100%
+}
+
+.gallery-intro-slide-wrapper {
+  width:50%;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:15%;
+}
+
+.gallery-intro-slide-wrapper p.title {
+  font-size: 2.4em;
+  font-family: Intro-Black-Caps;
+  font-weight: normal;
+  letter-spacing: .1em;
+  line-height:1em;
+}
+
+.gallery-intro-slide-wrapper p.author {
+  font-family: Montserrat;
+  font-size:1em;
+  margin-bottom:9%;
+}
+
+.sub-toc-wrapper {max-width:1280px;margin-left:auto;margin-right:auto;}
+
+/* style the sidebar and gallery slide for tablets */
+@media (max-width: 1024px) {
+  .page.full .story-sidebar {
+    color:white;
+    position: absolute;
+    left:0;
+    top:80px;
+    width:100%;
+    border-top:1px solid white;
+    border-bottom:1px solid white;
+    padding-left:25px;
+  }
+
+  .page.full .sidebar-header {
+    padding:5px 5px;
+    border:none;
+    display:inline-block;
+  }
+
+  .page.full .sidebar-header p {
+    display:inline-block;
+    margin-right:10px;
+    margin-bottom:0;
+  }
+
+  .page.full .general-pagination {
+    display:inline-block;
+    width:auto;
+    margin:0;
+  }
+
+  /*make room on the left for gallery navigation at large scren sizes*/
+  .page.full .gallery-slide {
+    box-sizing: border-box;
+    padding-left:0;
+  }
+} /* end @media (max-width: 1024px) -> styling for gallery slides and sidebar position */
+
+
+
+body.dark .sidebar-header {
+  color:black;
+  border-color: black;
+}
+.sidebar-header p.title {
   font-size: 1.4em;
-  font-family: CenturySchoolbookBT-Roman;
+  font-family: Intro-Black-Caps;
   font-weight: normal;
   letter-spacing: .1em;
 }
 
+.sidebar-header p.author {
+  font-family: Montserrat;
+  font-size:.8em;
+}
 .page-header {
   text-align: center;
   border-bottom: 0;
@@ -111,9 +353,10 @@ a:hover {
     padding: 0; 
     opacity: .7;
   }
-.cover-slide {
+.cover-slide, .swiper-slide {
   position: relative;
 }
+
 .page-footer {
   position: absolute;
   bottom: 30px;
@@ -122,12 +365,16 @@ a:hover {
   left: 48%;
   z-index: 1000;
 }
-  .page-footer a {
-    text-align: center;
-    font-size: 48px;
-    color: yellow;
-  }
-
+.page-footer a {
+  display:inline-block;
+  width:30px;
+  height:34px;
+  text-indent: -10000px;
+  text-align: center;
+  font-size: 48px;
+  color: #FFC419;
+  background:url(../img/arrow-down.png) no-repeat left top;
+}
 
 
 .static-nav {
@@ -145,24 +392,40 @@ a:hover {
   -webkit-transition: opacity 0.5s ease-in-out;
   -moz-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
+
+  -webkit-transition: color .3s ease;
+  -moz-transition: color .3s ease;
+  -ms-transition: color .3s ease;
+  -o-transition: color .3s ease;
+  transition: color .3s ease;
+
 }
 
 .hidden {
   opacity: 0;
 }
+
+.navbar .nav>li>a, .navbar .nav>li>a:hover {color:white;}
+.dark .navbar .nav>li>a, .dark .navbar .nav>li>a:hover {color:#333333;}
+
 .masthead .navbar .nav>li>a {
   font-family: Intro-Black-Caps;
   letter-spacing: .1em;
-  color: white;
   text-shadow: none;
   border-right: 0;
   border-left: 0;
-  padding-bottom: 20px;
+  padding-bottom: 0;
   text-transform: uppercase;
 }
-.masthead .navbar .nav>li>a>h2 {
+
+.masthead .navbar .nav>li>a em {
+  font-family: CenturySchoolbookBT-Italic;
+  padding-right:8px;
+}
+.masthead .navbar .nav>li>a>h2, h2.title-name {
   text-transform: none;
-  font-family: CenturySchoolbookBT-Roman;
+  font-family: Montserrat;
+  margin-bottom:0;
 }
 .masthead .navbar .nav>li>a>span{
   width: 25px;
@@ -240,6 +503,26 @@ html, body, .container, .content, .section {
   height: 100%;
 }
 
+.swiper-scrollbar {
+  border-radius: 10px;
+position: absolute;
+right: 3px;
+top: 0;
+height: 100%;
+width: 5px;
+  background-color:#e5e5e5;
+  background: rgba(0,0,0,0.1);
+}
+
+.swiper-scrollbar-drag {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-color: #FFe18c;
+  background: rgba(255,196,25,0.5);
+  border-radius: 10px;
+}
+
 .page {
   background-color: white;
   width: 70%;
@@ -252,54 +535,30 @@ html, body, .container, .content, .section {
 }
 
 .page.full {
-  background-color:gray;
+  background-color:white;
   width:100%;
   max-width: 100%;
   height:100%;
   margin-top:0;
-  padding-top: 75px;
-}
-.page-wrapper {
-  
-  
-  height: 100%;
-}
-.page-content {
-  font-family: CenturySchoolbookBT-Roman;
-  padding: 50px 12% 50px 6%;
-  overflow: auto;
-  height: 90%;
-  -webkit-transition: opacity 0.5s ease-in-out;
-  -moz-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
 }
 
-.page-content p {padding-left:6%;}
-.page-content hr {margin-left:6%;}
-.page-content strong {color:rgb(51,150,243); font-weight: bold;}
-
-.page-content img {
-  float: left;
-  padding-right: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  max-width: 50%;
-}
-.page-content blockquote {
-  border-left: 0px;
-  margin:20px 0;
-}
-  .page-content blockquote p {
-    color: rgb(51,150,243);
-    font-style: italic;
-    padding:0;
+.page.full .page-wrapper{
+    padding-top: 115px;
 }
 
+.ink-bg {
+  background: url(../img/ink.jpg) left top;
+}
+.paper-bg {
+  background: url(../img/paper.jpg) left top;
+}
 /*voices styling*/
 .sub-toc-item {
   padding:10px 15px;
   margin:0 !important;
   border-right:1px dashed white;
+  display:inline-block;
+  -webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;
   -webkit-transition: background .3s ease;
   -moz-transition: background .3s ease;
   -ms-transition: background .3s ease;
@@ -311,48 +570,81 @@ html, body, .container, .content, .section {
 
 .sub-toc-item:hover {
   background-color:#d9d9d9;
+  background-color: rgba(217,217,217,.7);
+  background: transparent\9; /* clear current background for ie */
+  zoom:1; /* required for the filters */  
+  /* For IE 5.5 - 7*/
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7Fd9d9d9, endColorstr=#7Fd9d9d9);
+  /* For IE 8*/
+  -ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#7Fd9d9d9, endColorstr=#7Fd9d9d9)";
   cursor: pointer;
 }
-.voice-content{
-  overflow-y: scroll;
-  width: 310px;
-  float: right;
-  margin-right: 65px;
-  height: 60%;
-  overflow-x: hidden;
-  padding: 48px;
-  position: relative;
-  top: -30px;
-  background: white;
+.voice-content-wrapper{
+  position:absolute;
+  right:80px;
+  width: 395px;
+  height: 95%;
+  background: white url(../img/ink.jpg) left top;
 }
+
+@media (max-width: 1024px) {
+  .voice-content-wrapper{
+    right:10px;
+  }
+}
+
+.voice-player,.voice-content,.voice-footer{
+  box-sizing:border-box;-moz-box-sizing:border-box;
+  padding:0 20px;
+}
+.voice-player {position:absolute; top:0px; left:0px; height:100px; right:0px;overflow:hidden;}
+.voice-player h3 {margin-bottom:0;}
+.voice-content {position:absolute; top:95px; bottom:100; left:0px; right:0px; overflow:auto;}
+.voice-footer {position:absolute; bottom:0px; height:80px; left:0px; right:0px; overflow:hidden;}
 
 .gallery {
   height: 100%;
   width: 100%;
 }
-.galler img {
-  width: 100%;
+.gallery .swiper-slide>img {
+ /* width: 100%;*/
+ display:block;
+ margin-left: auto;
+ margin-right:auto;
+ max-width:100%;
+ max-height:100%;
 }
 
-/*style pagination dots for horizontal sliders*/
-.general-pagination{
-  text-align:center;
-  margin-top:55px;
+/* audio player in voices */
+.audiojs {
+  width:100%%;
+  background:none;
+  -webkit-box-shadow:none;
+  -moz-box-shadow:none;
+  -o-box-shadow:none;
+  box-shadow:none;
+  color:#333333;
 }
-.general-pagination .swiper-pagination-switch {
-display:inline-block;
-width:10px;
-height:10px;
-border-radius:10px;
-background:#999;
-box-shadow:0 1px 2px #555 inset;
-cursor:pointer;
-margin:0 3px;
+.audiojs .play-pause {
+  width:6%;
+  border:none;
 }
-
-.general-pagination .swiper-active-switch {
-background:#fff;
+.audiojs .scrubber {
+  width:60%;
+  border:none;
+  height:5px;
+  top:6px;
 }
+.audiojs .progress {
+  height:2px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background:none;
+  background-color: #cccccc;
+}
+.audiojs .time {width:12%;border:none;color:#333333;margin:0;padding:0;text-shadow:none;}
+.audiojs .time .played, .audiojs .time .of {display:none;}
 
 
   /*.page-content .short-post {
@@ -361,5 +653,5 @@ background:#fff;
   }
     .page-content .short-post .swiper-slide {
       width: 100% !important;
-      /*height: 100% !important;*/
-    }*/
+      /*height: 100% !important;
+    }*

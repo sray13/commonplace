@@ -111,7 +111,6 @@
                             .load(function () {
                             setImage(this, thisImg)
 
-
                             if ((i + 1) === $text.find('img')
                                 .length) {
                                 addPage()
@@ -134,7 +133,8 @@
                         'display': 'block',
                         'width': columnWidth,
                         'margin': 0,
-                        'padding': 0
+                        'padding': 0,
+                        'margin-bottom':'6px'
                     })
                     thisNewHeight = element.height * thisImg.width() / element.width
                     if (thisNewHeight >= columnHeight) {
@@ -142,8 +142,9 @@
                             'display': 'block',
                             'width': 'auto',
                             'margin': 0,
-                            'height': columnHeight,
-                            'padding': 0
+                            'height': columnHeight-100,
+                            'padding': 0,
+                            'padding-right':'15px'
                         })
                     }
                 } else {
@@ -153,6 +154,7 @@
                             'height': columnHeight - 100,
                             'margin': 0,
                             'padding': 0
+                            
                         })
                     } else {
 
