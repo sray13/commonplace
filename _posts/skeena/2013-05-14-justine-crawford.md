@@ -3,8 +3,7 @@ published: true
 layout: voices
 category: Voices
 author: Bruce Hill
-tags: 
-  - voices
+tags: ['voices']
 issue: Skeena
 "toc-img": "http://lorempixel.com/150/150/nature/1"
 "story-img": welcome.jpg
