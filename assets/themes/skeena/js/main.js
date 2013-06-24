@@ -80,8 +80,6 @@ if (window.location.hash) {
                     $('body').removeClass('dark');
                 }
 
-                            
-
                 // update the background image
                 if (backgroundImage && currentBackgroundImage !== backgroundImage) {
                     $('.swiper-root').backstretch('{{BASE_PATH}}/assets/themes/skeena/img/'+ backgroundImage, {fade:450});
@@ -97,8 +95,6 @@ if (window.location.hash) {
                     $('#-zoom-7').parent().fadeIn("fast");
                 }
 
-
-
                 // activate child swiper
                 if ($longPost.length && ! $longPost.find('.textify').length) {
                     $longPost.textify({
@@ -111,9 +107,9 @@ if (window.location.hash) {
                     $longPost.removeClass('hidden');
                 }
 
-                if ($slide.next().find('.gallery').length) {
-                    $slide.next().removeClass('hidden');
-                }
+                // if ($slide.next().find('.gallery').length) {
+                //     $slide.next().removeClass('hidden');
+                // }
 
                 if ($gallery.length) {
                     var theID=$gallery.attr('id'),
@@ -130,7 +126,18 @@ if (window.location.hash) {
                         onSlideChangeEnd: function (swiper) {
                             var $slide = $(swiper.getSlide(swiper.realIndex)),
                                 $slideRoot = $slide.parentsUntil(".page.full",".page-wrapper"),
-                                backgroundImage = $slide.data('img');
+                                backgroundImage = $slide.data('img'),
+                                $voiceWrapper=$slide.find('.voice-content-wrapper');
+
+
+                            if ($voiceWrapper && (!($voiceWrapper.find('.voice-scroller')))) {                                    
+                                if(($('.voice-content-text',$voiceWrapper).height())>($('.voice-content',$voiceWrapper).height())) {
+                                    console.log($('.voice-content-text',$this).height());
+                                    console.log($('.voice-content',$this).height());
+                                    $voiceWrapper.prepend('<div class="voice-scroller"><span class="up"></span><span class="down"></span></div>');
+                                }
+                            }
+
 
                             // update body class to change element colors + update the background image
                             //(swiper.activeIndex==0 && $slideRoot.parent().hasClass("light")) ? $('body').addClass('dark') : $('body').removeClass('dark');
@@ -226,15 +233,12 @@ if (window.location.hash) {
                 theContent=$this.parent().siblings('.voice-content'),
                 currentScroll=theContent.scrollTop();
 
-            console.log($this.parent().siblings('.voice-content').height());
-            console.log('here');
-
             if(scrollDown){
-                currentScroll+=(theContent.height()*.7)
+                currentScroll+=(theContent.height()*.3)
             } else{
-                currentScroll-=(theContent.height()*.7)                
+                currentScroll-=(theContent.height()*.3)                
             }
-                $this.parent().siblings('.voice-content').scrollTop(currentScroll);
+                $this.parent().siblings('.voice-content').animate({scrollTop: currentScroll}, 300);//.scrollTop(currentScroll);
 
         });
         
