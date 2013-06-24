@@ -217,6 +217,26 @@ if (window.location.hash) {
                 $('a.leftarrow','.swiper-slide.active').click();
             } 
         });
+
+        // Control voices biography content with up/down arrows
+        $('.voice-content-wrapper').on('click','span.up, span.down',function(e){
+            e.preventDefault();
+            var $this=$(this),
+                scrollDown=$this.hasClass('down') ? true : false,
+                theContent=$this.parent().siblings('.voice-content'),
+                currentScroll=theContent.scrollTop();
+
+            console.log($this.parent().siblings('.voice-content').height());
+            console.log('here');
+
+            if(scrollDown){
+                currentScroll+=(theContent.height()*.7)
+            } else{
+                currentScroll-=(theContent.height()*.7)                
+            }
+                $this.parent().siblings('.voice-content').scrollTop(currentScroll);
+
+        });
         
 
 
