@@ -57,4 +57,4 @@ slideshow:
 
   caption: Parsnip River and tributaries. According to GPS coorindates, the proposed Enbridge pipelines would be built less than 6 miles north of this location. 
 ---
-What's exactly would a double pipeline change? A whole world. Neil Ever Osborne's photos document life as we know it along the future Northern Gateway pipeline route, from the fjords of the Great Bear Rainforest to Canadian Rockies.
+ To document the great natural wealth along the future Northern Gateway pipeline route, Neil Ever Osborne took to the air. His photos, stretching from the fjords of the Great Bear Rainforest to the Canadian Rockies, put the Skeena region's grandeur in proper perspective. Broad coastal inlets glinting in twighlight, brown bears ranging across heather, serpentine tributaries snaking to the horizon. And a single road slicing through a purple-hued copse of trees - a harbinger of bigger things to come or just a road, something people and landscapes learn to live with? "In order to fully appreciate what is at risk," Osborne says."It is important to take stock of the ecosystems and people who will be affected."" 
