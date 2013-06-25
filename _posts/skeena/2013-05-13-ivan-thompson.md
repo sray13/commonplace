@@ -9,6 +9,7 @@ issue: Skeena
 "story-img": welcome.jpg
 place: Smithers 
 "intro": Thompson believes reckless change can be stopped by "people with a passion for place.” 
+audio: ivanthompson.mp3
 ---
 
 Ivan Thompson first saw the Skeena on a perfectly sunny fall day, coming up over Hungry Hill to take in the autumn colors of the Babine Mountains. He dropped into Smithers and browsed through a local bookstore, with its vast array of picture and history books. “I thought if a town this small has this many great publications about the place and the people that live here, there must be something cool going on,” he says. “It was a rare moment of clear decision in life—especially in my 20s.”
