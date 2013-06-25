@@ -158,23 +158,12 @@ if (window.location.hash) {
                                 $('body').removeClass('dark');
                             }
 
-
-
-
-                                //console.log($voiceWrapper);
-
-                                console.log($voiceWrapper.find('.voice-scroller').length);
-
-
-
+                            // initialize scroll buttons for voices content if overflowing
                             if ($voiceWrapper && (!($voiceWrapper.find('.voice-scroller').length))) {                                    
                                 if(($('.voice-content-text',$voiceWrapper).height())>($('.voice-content',$voiceWrapper).height())) {
                                     $voiceWrapper.prepend('<div class="voice-scroller"><span class="up"></span><span class="down"></span></div>');
                                 }
-                            }
-
-
-
+                            } //end voices bio scroll button init
                         } //end onSlideChangeEnd callback for horizontal slider                        
                     }); // end init array for main-slide-contained horizontal gallery
                     } // end if block checking for gallery object existance
@@ -296,52 +285,101 @@ if (window.location.hash) {
     $(document).ready(function () {
 
         var $title = $(".page-header").find('.title-name'),
-            $toc = $("#toc"),
+            //$toc = $("#toc"),
             $window = $(window),
             $popoverArray=new Array();
 
-        
-        $toc.popover({
-            placement: "bottom",
-            trigger: "manual",
-            container: ".toc-section",
-            animation: "false",
-            html: true,
-            content: $('#toc-content').html()
-        });
+///////////////////////////////////////
 
-        $toc.on('click mouseenter', function (e) {
-            var $popover, tocHeight;
-            e.preventDefault();
-            $toc.popover('toggle');
-            $popover = $('.toc-section').find('.popover');
-            tocHeight = $popover.closest('.toc-section').height();
-            $popover.find('.popover-content').height($popover.closest('.section').height() - tocHeight);
-            //console.log($popover.closest('.section').height() - tocHeight);
-            $popover.find('.arrow').position({
-               of: $toc,
-               my: 'bottom center',
-               at: 'bottom'
-            });
-            // equalize the heights of titles in each row
-            $('.popover-content .row').each(function () {
-                var currentTallest = 0;
-                $('h3.story-title',$(this)).each(function () {                    
-                        if ($(this).height() > currentTallest) { currentTallest = $(this).height(); }
+
+        $('a', 'ul.nav').each(function(){
+            var $this=$(this),
+                theID=$this.attr('id')||false;
+            if (theID) {
+               $popoverArray[theID]=$('#'+theID);
+                $popoverArray[theID].popover({
+                    placement: "bottom",
+                    trigger: "manual",
+                    container: ".toc-section",
+                    animation: "false",
+                    html: true,
+                    content: $('#'+theID+'-content').html()
+                });
+
+                $popoverArray[theID].on('click mouseenter', function (e) {
+                    var $popover,
+                        tocHeight,
+                        $this=$(this);
+                    e.preventDefault();
+                    $this.popover('toggle');
+                    $popover = $('.toc-section').find('.popover');
+                    tocHeight = $popover.closest('.toc-section').height();
+                    $popover.find('.popover-content').height($popover.closest('.section').height() - tocHeight);
+                    //console.log($popover.closest('.section').height() - tocHeight);
+                    $popover.find('.arrow').position({
+                       of: $this,
+                       my: 'bottom center',
+                       at: 'bottom'
                     });
-                    //if (!px && Number.prototype.pxToEm) currentTallest = currentTallest.pxToEm(); //use ems unless px is specified
-                    // for ie6, set height since min-height isn't supported
-                    if ($.browser.msie && $.browser.version == 6.0) { $(this).children().css({'height': currentTallest}); }
-                    $('h3.story-title',$(this)).css({'min-height': currentTallest});
-            });
+                    // equalize the heights of titles in each row
+                    $('.popover-content .row').each(function () {
+                        var currentTallest = 0;
+                        $('h3.story-title',$(this)).each(function () {                    
+                                if ($(this).height() > currentTallest) { currentTallest = $(this).height(); }
+                            });
+                            //if (!px && Number.prototype.pxToEm) currentTallest = currentTallest.pxToEm(); //use ems unless px is specified
+                            // for ie6, set height since min-height isn't supported
+                            if ($.browser.msie && $.browser.version == 6.0) { $(this).children().css({'height': currentTallest}); }
+                            $('h3.story-title',$(this)).css({'min-height': currentTallest});
+                    }); // end .each iteration of content row items to set each to same height
+                }); // end onclick binding
+            }//end block -> if this anchor has an ID attached to it
+        }); //end function to initialize all menu items
 
-        });
+
+        // $toc.popover({
+        //     placement: "bottom",
+        //     trigger: "manual",
+        //     container: ".toc-section",
+        //     animation: "false",
+        //     html: true,
+        //     content: $('#toc-content').html()
+        // });
+
+        // $toc.on('click mouseenter', function (e) {
+        //     var $popover, tocHeight;
+        //     e.preventDefault();
+        //     $toc.popover('toggle');
+        //     $popover = $('.toc-section').find('.popover');
+        //     tocHeight = $popover.closest('.toc-section').height();
+        //     $popover.find('.popover-content').height($popover.closest('.section').height() - tocHeight);
+        //     //console.log($popover.closest('.section').height() - tocHeight);
+        //     $popover.find('.arrow').position({
+        //        of: $toc,
+        //        my: 'bottom center',
+        //        at: 'bottom'
+        //     });
+        //     // equalize the heights of titles in each row
+        //     $('.popover-content .row').each(function () {
+        //         var currentTallest = 0;
+        //         $('h3.story-title',$(this)).each(function () {                    
+        //                 if ($(this).height() > currentTallest) { currentTallest = $(this).height(); }
+        //             });
+        //             //if (!px && Number.prototype.pxToEm) currentTallest = currentTallest.pxToEm(); //use ems unless px is specified
+        //             // for ie6, set height since min-height isn't supported
+        //             if ($.browser.msie && $.browser.version == 6.0) { $(this).children().css({'height': currentTallest}); }
+        //             $('h3.story-title',$(this)).css({'min-height': currentTallest});
+        //     });
+
+        // }); // end TOC click functino
+
+/////////////////////////////////////
 
         $(document).on('click', '.story', function (e) {
             e.preventDefault();
             mySwiper.swipeTo($($(this).data('story')).index());
             $toc.popover('hide');
-        });
+        }); // end scroll to clicked story binding
 
         $('.page-footer').on('click', function () {
             // var nextSlide = mySwiper.realIndex + 1;
@@ -352,8 +390,8 @@ if (window.location.hash) {
             // }
             mySwiper.swipeNext();
             
-        });
-    });
+        }); // end page footer scroll to next page click binding
+    }); //end document.ready function
 
     var layer = new MM.TemplatedLayer('http://tilestream.apps.ecotrust.org/v2/commonplace/{Z}/{X}/{Y}.png');
 
@@ -367,4 +405,4 @@ if (window.location.hash) {
     window.map = mapbox.map('map', layer, null, []);
     map.centerzoom(center, zoom);
 
-})();
+})(); //end generic wrapper function

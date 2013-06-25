@@ -3,9 +3,10 @@ published: true
 layout: post
 category: Feature
 author: Terry Glavin
-tags: 
-  - story
-"toc-img": "http://lorempixel.com/150/150/nature/3"
+tags: ['story']
+issue: Skeena
+toc-img: medeek_a.jpg
+story-img: medeek_a.jpg
 ---
 
 {% include JB/setup %}
