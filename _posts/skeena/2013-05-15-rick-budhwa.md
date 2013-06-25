@@ -5,9 +5,9 @@ category: Voices
 author: Bruce Hill
 tags: ['voices']
 issue: Skeena
-"toc-img": "http://lorempixel.com/150/150/nature/1"
+"toc-img": "http://lorempixel.com/175/175/nature/1"
 "story-img": welcome.jpg
-"title": Anthropologist, Wet'suwet'en 
+place: Smithers
 "intro": Budhwa argues that oral traditions are codes that inform ecology, technology, ethics, morality, and geneology.
 audio: rickbudhwa.mp3
 ---

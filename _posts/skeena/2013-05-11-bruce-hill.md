@@ -5,9 +5,9 @@ category: Voices
 author: Bruce Hill
 issue: Skeena
 tags: ['voices']
-"toc-img": "http://lorempixel.com/150/150/nature/1"
+"toc-img": "http://lorempixel.com/175/175/nature/1"
 "story-img": welcome.jpg
-"title": Logger turned conservationist
+place: Bulkley Valley
 "intro": “A folkstorm is when a community, faced with a bad idea…just rises up.”
 audio: brucehill.mp3
 ---

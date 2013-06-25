@@ -5,7 +5,7 @@ category: Voices
 author: Gerald Amos
 issue: Skeena
 tags: ['voices']
-"toc-img": "http://lorempixel.com/150/150/nature/1"
+"toc-img": "http://lorempixel.com/175/175/nature/1"
 "story-img": welcome.jpg
 "place": Kitamaat Village
 "intro": A double pipeline through Kitamaat could "wipe our what remains of our culture."
@@ -18,4 +18,3 @@ Gerald has a long history with advocacy and negotiations concerning fisheries an
 One of Gerald's main desires for the Haisla Nation has been to rejuvenate and preserve the memories of his ancestors. He has spoken out against industrial development like the Enbridge pipeline, pointing to environmental threats and the loss of access to ancestral foods like oolichans, abalone, and prawns.  
 
 Gerald’s other positions include: Chief Negotiator for the Haisla Treaty Negotiating Team, Ecotrust Canada founding board member, and Ecotrust board member. He’s carried out work for the Na na kila Institute, Northwest Tribal Treaties, and Coastal First Nations Great Bear Initiative.
-

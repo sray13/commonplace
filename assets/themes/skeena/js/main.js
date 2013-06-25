@@ -70,6 +70,7 @@ if (window.location.hash) {
                     $masthead.addClass('hidden');
                 }
 
+                //set the body class as light or dark to change nav and sidebar colors for different backgrounds
                 if (!(hGalleryArray[childSliderID]===undefined))     {          
                     subSlideIsLight=$('.swiper-slide',$slide).eq(hGalleryArray[childSliderID].activeSlide).hasClass('light');
                 }
@@ -95,7 +96,7 @@ if (window.location.hash) {
                     $('#-zoom-7').parent().fadeIn("fast");
                 }
 
-                // activate child swiper
+                // activate textify swiper
                 if ($longPost.length && ! $longPost.find('.textify').length) {
                     $longPost.textify({
                         numberOfColumn: 1,
@@ -106,6 +107,19 @@ if (window.location.hash) {
                     });
                     $longPost.removeClass('hidden');
                 }
+
+                // EDIT THIS FUNCTION TO MAKE THE SUB-TOC ITEMS ALL THE SAME HEIGHT
+                // $('.sub-toc-item').each(function () {
+                //     var currentTallest = 0;
+                //     $('h3.story-title',$(this)).each(function () {                    
+                //             if ($(this).height() > currentTallest) { currentTallest = $(this).height(); }
+                //         });
+                //         //if (!px && Number.prototype.pxToEm) currentTallest = currentTallest.pxToEm(); //use ems unless px is specified
+                //         // for ie6, set height since min-height isn't supported
+                //         if ($.browser.msie && $.browser.version == 6.0) { $(this).children().css({'height': currentTallest}); }
+                //         $('h3.story-title',$(this)).css({'min-height': currentTallest});
+                // });
+
 
                 // if ($slide.next().find('.gallery').length) {
                 //     $slide.next().removeClass('hidden');
@@ -283,8 +297,10 @@ if (window.location.hash) {
 
         var $title = $(".page-header").find('.title-name'),
             $toc = $("#toc"),
-            $window = $(window);
+            $window = $(window),
+            $popoverArray=new Array();
 
+        
         $toc.popover({
             placement: "bottom",
             trigger: "manual",
