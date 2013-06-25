@@ -5,19 +5,16 @@ tagline: Supporting tagline
 ---
 {% include JB/setup %}
 
-
-
-
 <div class="masthead hidden toc-section">
   <div class="navbar">
     <div>
       <div class="container">
         <ul class="nav">
           <li><a href="#" id="toc"><em>01</em>Table of Contents</a></li>
-          <li><a href="#"><em>02</em> Map</a></li>
+          <li><a href="#" id=""><em>02</em> Map</a></li>
           <li><a href="#"><h2>commonplace</h2></a></li>
-          <li><a href="#"><em>03</em> About</a></li>
-          <li><a href="#"><em>04</em> Issues</a></li>
+          <li><a href="#" id=""><em>03</em> About</a></li>
+          <li><a href="#" id="about"><em>04</em> Issues</a></li>
         </ul>
       </div>
     </div>
@@ -45,6 +42,32 @@ tagline: Supporting tagline
       {% endfor %}
   </div>
 </div>
+
+<div style="display: none" id="about-content">
+  <div class="close"></div>
+  <div class="container">
+    <h2>about us</h2>
+      {% for post in site.tags.story reversed %}
+      {% capture col %}{{ forloop.index |modulo:3 }}{% endcapture %}
+        {% if col == '1' %}
+        <div class="row">
+        {% endif %}
+          <div class="span4 story" data-story="#{{post.url | replace: '/', ''}}">
+            <a href="{{ post.url }}">
+              <img src="{{ post.toc-img }}" height="100" width="100" class="img-circle">
+              <h3 class="story-title">{{ post.title }}</h3>
+              <h4 class="story-category">{{ post.category }}</h4>
+              <p class="story-author">{{ post.author }}</p>
+            </a>
+          </div>
+        {% if col == '0' or forloop.last %}
+        </div>
+        {% endif %}
+      {% endfor %}
+  </div>
+</div>
+
+
 <div class="swiper-container swiper-root" id="map">
 
   <div class="swiper-wrapper">
@@ -92,7 +115,7 @@ tagline: Supporting tagline
                           <div class="sub-toc-wrapper gallery-slide">
                           {% for post in site.tags.voices reversed %}
                             <div class="sub-toc-item" style="width:19%;">
-                              <img src="{{ post.toc-img}}">
+                              <img src="{{ASSET_PATH}}skeena/img/Voices Headshots/thumbs/{{ post.toc-img}}">
                               <p class="author">{{ post.author }}</p>
                               <p class="place">{{ post.place }}</p>
                               <p class="voice-intro">{{ post.intro }}</p>
@@ -103,7 +126,7 @@ tagline: Supporting tagline
 
                       <!-- horizontal slides for each voice post -->
                       {% for post in site.tags.voices reversed %}
-                      <div class="swiper-slide" data-img="{{ post.story-img }}">
+                      <div class="swiper-slide" data-img="{{ASSET_PATH}}skeena/img/Voices Headshots/{{ post.story-img}}">
                         <!-- <div class="sidebar-header">
                           <p><strong>{{ post.title }}</strong></p>
                         </div> -->
