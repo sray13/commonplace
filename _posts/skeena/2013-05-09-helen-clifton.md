@@ -5,11 +5,12 @@ category: Voices
 author: Helen Clifton
 tags: ['voices']
 issue: Skeena
-"toc-img": "http://lorempixel.com/175/175/nature/1"
-"story-img": welcome.jpg
 place: Port Simpson
-"intro": "As First Nations people, it’s our last fight for the land and territories that we own."
+intro: "As First Nations people, it’s our last fight for the land and territories that we own."
+toc-img: helenclifton.jpg
+story-img: helenclifton.jpg
 audio: helenclifton.mp3
+transcript: helenclifton.pdf
 ---
 Within killer whale families, the grandmother is considered the head orca. “Because I belong to the killer whale clan (of the Gitga’at), this is one of the best things I ever heard,” says Helen Clifton, wryly. Helen’s home village was at Port Simpson, the people of Laxwalaams. She married Gitga’at hereditary chief John Clifton in 1942 and moved to Hartley Bay where together they raised six children, who gave them twenty grandchildren. John Clifton passed away in 2004. Helen remains an important and outspoken elder in Hartley Bay. 
 
