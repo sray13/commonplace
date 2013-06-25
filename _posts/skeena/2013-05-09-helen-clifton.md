@@ -7,7 +7,7 @@ tags: ['voices']
 issue: Skeena
 "toc-img": "http://lorempixel.com/175/175/nature/1"
 "story-img": welcome.jpg
-place: Port Simpson
+place: Hartley Bay
 "intro": "As First Nations people, it’s our last fight for the land and territories that we own."
 audio: helenclifton.mp3
 ---

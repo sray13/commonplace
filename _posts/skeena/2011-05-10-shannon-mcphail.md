@@ -7,8 +7,8 @@ issue: Skeena
 tags: ['voices']
 "toc-img": "http://lorempixel.com/225/225/nature/1"
 "story-img": lorempixel.jpg
-"place": Hazelton
-"intro": Once suspicious of activists, Shannon McPhail has found good reason to join them, and lead them.
+place: Hazelton
+"intro": Once suspicious of activists, Shannon McPhail has found good reason to join them and lead them.
 audio: shannonmcphail.mp3
 transcript: shannonmcphail.pdf
 ---
