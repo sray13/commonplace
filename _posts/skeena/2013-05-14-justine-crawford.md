@@ -7,7 +7,7 @@ tags: ['voices']
 issue: Skeena
 "toc-img": "http://lorempixel.com/175/175/nature/1"
 "story-img": welcome.jpg
-place: Cassiar Cannery
+place: Port Edward
 "intro": Crawford and her partner bought cannery left to rust for 20 years. 
 audio: justinecrawford.mp3
 ---
