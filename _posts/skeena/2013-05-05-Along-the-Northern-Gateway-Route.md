@@ -57,3 +57,4 @@ slideshow:
 
   caption: Parsnip River and tributaries. According to GPS coorindates, the proposed Enbridge pipelines would be built less than 6 miles north of this location. 
 ---
+What's exactly would a double pipeline change? A whole world. Neil Ever Osborne's photos document life as we know it along the future Northern Gateway pipeline route, from the fjords of the Great Bear Rainforest to Canadian Rockies.
