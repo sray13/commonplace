@@ -2,12 +2,12 @@
 published: true
 layout: voices
 category: Voices
-author: Bruce Hill
+author: Ican Thompson
 tags: ['voices']
 issue: Skeena
-"toc-img": "http://lorempixel.com/150/150/nature/1"
+"toc-img": "http://lorempixel.com/175/175/nature/1"
 "story-img": welcome.jpg
-"title": Portfolio manager, Gordon and Betty Moore Foundation 
+place: Smithers 
 "intro": Thompson believes reckless change can be stopped by "people with a passion for place.” 
 ---
 

@@ -2,12 +2,12 @@
 published: true
 layout: voices
 category: Voices
-author: Bruce Hill
+author: Justine Crawford
 tags: ['voices']
 issue: Skeena
-"toc-img": "http://lorempixel.com/150/150/nature/1"
+"toc-img": "http://lorempixel.com/175/175/nature/1"
 "story-img": welcome.jpg
-"title": Redeveloper
+place: Cassiar Cannery
 "intro": Crawford and her partner bought cannery left to rust for 20 years. 
 audio: justinecrawford.mp3
 ---

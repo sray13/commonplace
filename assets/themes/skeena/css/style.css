@@ -38,7 +38,7 @@ a:hover {
 }
 
 .center {text-align: center;}
-
+.small {font-size:.8em;}
 /*set hover opacity for main UI elements*/
 .page-footer a:hover,
 .textify_nav li:hover{
@@ -627,6 +627,21 @@ background: rgb(51,150,243);
   -ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#7Fd9d9d9, endColorstr=#7Fd9d9d9)";
   cursor: pointer;
 }
+
+.sub-toc-item p.author{
+  margin:10px 0 5px 0;
+}
+.sub-toc-item p.place{
+  margin-bottom:10px;
+  font-size: .9em;
+}
+.sub-toc-item p.voice-intro{
+  margin:0;
+  font-size:.9em;
+  line-height: .9em;
+  font-style: italic;
+}
+
 .voice-content-wrapper{
   position:absolute;
   right:80px;

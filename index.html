@@ -89,12 +89,10 @@ tagline: Supporting tagline
                           <div class="sub-toc-wrapper gallery-slide">
                           {% for post in site.tags.voices reversed %}
                             <div class="sub-toc-item" style="width:19%;">
-                              <div style="margin-left:auto;margin-right:auto;">
-                                <img src="{{ post.toc-img}}">
-                                <p><strong>{{ post.author }}</strong></p>
-                                <p><em>{{ post.title }}</em></p>
-                                <p>{{ post.intro }}</p>
-                              </div>
+                              <img src="{{ post.toc-img}}">
+                              <p class="author">{{ post.author }}</p>
+                              <p class="place">{{ post.place }}</p>
+                              <p class="voice-intro">{{ post.intro }}</p>
                             </div>
                           {% endfor %}
                         </div>
@@ -109,8 +107,13 @@ tagline: Supporting tagline
                         <div class="voice-content-wrapper">
                           <div class="voice-player">
                             <h3>{{ post.author }}</h3>
-                            <p>{{ post.place }}</p>
-                            <audio src="{{ASSET_PATH}}skeena/Audio/Cecil Paul FINAL MP3.mp3"  preload="none"></audio>
+                            <p>
+                              {{ post.place }}
+                              {%if post.transcript %}
+                                <span class="small"><em>[<a href="{{ASSET_PATH}}skeena/Audio/{{ post.transcript }}">Download a transcript of the audio</a>]</em></span>
+                              {% endif %}
+                            </p>
+                            <audio src="{{ASSET_PATH}}skeena/Audio/{{ post.audio }}"  preload="none"></audio>
                           </div>
                           <div class="voice-content">
                               <div class="voice-content-text">
@@ -167,7 +170,7 @@ tagline: Supporting tagline
                 </div>
 
                 {% if post.category == 'Gallery' %}
-                  <div class="swiper-container gallery" id="{{post.url | replace:'/',''}}-gallery">
+                  <div class="swiper-container gallery" id="{{post.url | replace:'/','' }}-gallery">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide light gallery-slide">
                           <div class="gallery-intro-slide-wrapper">
