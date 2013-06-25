@@ -5,9 +5,9 @@ category: Voices
 author: Cecil Paul
 tags: ['voices']
 issue: Skeena
-"toc-img": "http://lorempixel.com/150/150/nature/1"
+"toc-img": "http://lorempixel.com/175/175/nature/1"
 "story-img": fishing.jpg
-"title": Henaaksiala elder
+"place": Kitamaat Village
 "intro": Paul has vigorously and lyrically defended his homeland.
 audio: cecilpaul.mp3
 ---

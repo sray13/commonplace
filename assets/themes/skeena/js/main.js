@@ -70,6 +70,7 @@ if (window.location.hash) {
                     $masthead.addClass('hidden');
                 }
 
+                //set the body class as light or dark to change nav and sidebar colors for different backgrounds
                 if (!(hGalleryArray[childSliderID]===undefined))     {          
                     subSlideIsLight=$('.swiper-slide',$slide).eq(hGalleryArray[childSliderID].activeSlide).hasClass('light');
                 }
@@ -79,8 +80,6 @@ if (window.location.hash) {
                 } else {
                     $('body').removeClass('dark');
                 }
-
-                            
 
                 // update the background image
                 if (backgroundImage && currentBackgroundImage !== backgroundImage) {
@@ -97,9 +96,7 @@ if (window.location.hash) {
                     $('#-zoom-7').parent().fadeIn("fast");
                 }
 
-
-
-                // activate child swiper
+                // activate textify swiper
                 if ($longPost.length && ! $longPost.find('.textify').length) {
                     $longPost.textify({
                         numberOfColumn: 1,
@@ -111,9 +108,22 @@ if (window.location.hash) {
                     $longPost.removeClass('hidden');
                 }
 
-                if ($slide.next().find('.gallery').length) {
-                    $slide.next().removeClass('hidden');
-                }
+                // EDIT THIS FUNCTION TO MAKE THE SUB-TOC ITEMS ALL THE SAME HEIGHT
+                // $('.sub-toc-item').each(function () {
+                //     var currentTallest = 0;
+                //     $('h3.story-title',$(this)).each(function () {                    
+                //             if ($(this).height() > currentTallest) { currentTallest = $(this).height(); }
+                //         });
+                //         //if (!px && Number.prototype.pxToEm) currentTallest = currentTallest.pxToEm(); //use ems unless px is specified
+                //         // for ie6, set height since min-height isn't supported
+                //         if ($.browser.msie && $.browser.version == 6.0) { $(this).children().css({'height': currentTallest}); }
+                //         $('h3.story-title',$(this)).css({'min-height': currentTallest});
+                // });
+
+
+                // if ($slide.next().find('.gallery').length) {
+                //     $slide.next().removeClass('hidden');
+                // }
 
                 if ($gallery.length) {
                     var theID=$gallery.attr('id'),
@@ -130,7 +140,9 @@ if (window.location.hash) {
                         onSlideChangeEnd: function (swiper) {
                             var $slide = $(swiper.getSlide(swiper.realIndex)),
                                 $slideRoot = $slide.parentsUntil(".page.full",".page-wrapper"),
-                                backgroundImage = $slide.data('img');
+                                backgroundImage = $slide.data('img'),
+                                $voiceWrapper=$slide.find('.voice-content-wrapper');
+
 
                             // update body class to change element colors + update the background image
                             //(swiper.activeIndex==0 && $slideRoot.parent().hasClass("light")) ? $('body').addClass('dark') : $('body').removeClass('dark');
@@ -145,6 +157,23 @@ if (window.location.hash) {
                             } else {
                                 $('body').removeClass('dark');
                             }
+
+
+
+
+                                //console.log($voiceWrapper);
+
+                                console.log($voiceWrapper.find('.voice-scroller').length);
+
+
+
+                            if ($voiceWrapper && (!($voiceWrapper.find('.voice-scroller').length))) {                                    
+                                if(($('.voice-content-text',$voiceWrapper).height())>($('.voice-content',$voiceWrapper).height())) {
+                                    $voiceWrapper.prepend('<div class="voice-scroller"><span class="up"></span><span class="down"></span></div>');
+                                }
+                            }
+
+
 
                         } //end onSlideChangeEnd callback for horizontal slider                        
                     }); // end init array for main-slide-contained horizontal gallery
@@ -217,6 +246,23 @@ if (window.location.hash) {
                 $('a.leftarrow','.swiper-slide.active').click();
             } 
         });
+
+        // Control voices biography content with up/down arrows
+        $('.voice-content-wrapper').on('click','span.up, span.down',function(e){
+            e.preventDefault();
+            var $this=$(this),
+                scrollDown=$this.hasClass('down') ? true : false,
+                theContent=$this.parent().siblings('.voice-content'),
+                currentScroll=theContent.scrollTop();
+
+            if(scrollDown){
+                currentScroll+=(theContent.height()*.3)
+            } else{
+                currentScroll-=(theContent.height()*.3)                
+            }
+                $this.parent().siblings('.voice-content').animate({scrollTop: currentScroll}, 300);//.scrollTop(currentScroll);
+
+        });
         
 
 
@@ -251,8 +297,10 @@ if (window.location.hash) {
 
         var $title = $(".page-header").find('.title-name'),
             $toc = $("#toc"),
-            $window = $(window);
+            $window = $(window),
+            $popoverArray=new Array();
 
+        
         $toc.popover({
             placement: "bottom",
             trigger: "manual",
