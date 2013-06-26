@@ -30,7 +30,7 @@ tagline: Supporting tagline
         {% endif %}
           <div class="span4 story" data-story="#{{post.url | replace: '/', ''}}">
             <a href="{{ post.url }}">
-              <img src="{{ post.toc-img }}" height="100" width="100" class="img-circle">
+              <img src="{{ASSET_PATH}}skeena/img/TOC/{{ post.toc-img }}" height="100" width="100" class="img-circle">
               <h3 class="story-title">{{ post.title }}</h3>
               <h4 class="story-category">{{ post.category }}</h4>
               <p class="story-author">{{ post.author }}</p>
@@ -54,7 +54,7 @@ tagline: Supporting tagline
         {% endif %}
           <div class="span4 story" data-story="#{{post.url | replace: '/', ''}}">
             <a href="{{ post.url }}">
-              <img src="{{ post.toc-img }}" height="100" width="100" class="img-circle">
+              <img src="{{ASSET_PATH}}skeena/img/TOC/{{ post.toc-img }}" height="100" width="100" class="img-circle">
               <h3 class="story-title">{{ post.title }}</h3>
               <h4 class="story-category">{{ post.category }}</h4>
               <p class="story-author">{{ post.author }}</p>
@@ -86,16 +86,16 @@ tagline: Supporting tagline
        </div>
       
     </div>
-      <div class="swiper-slide" data-zoom=9>
+      <div class="swiper-slide marker-slide" id="skeena-map">
       </div>
       <!--Second Slide-->
       {% for post in site.tags.story reversed %}
         {% if forloop.index == 3 %}
           <!-- Build the vertical slide to contain voices gallery -->
           <div class="swiper-slide" data-img="{{ post.story-img }}" id="voices" data-hash="voices">
-            <div class="page full light ink-bg">
+            <div class="page full light ink-bg hide-arrows">
 
-              <div class="navarrows hidden-phone">
+              <div class="navarrows hidden-tablet">
                 <div class="pull-left"><a href="#" class="leftarrow">&nbsp;</a></div>
                 <div class="pull-right"><a href="#" class="rightarrow">&nbsp;</a></div>
               </div> <!-- end nav arrows container -->
@@ -157,9 +157,11 @@ tagline: Supporting tagline
             </div> <!-- end full page container for styling -->
           </div> <!-- end vertical slide for voices -->
 
-        {% else %}
+        {% endif %} <!-- end the block that inserts voices into the post stream -->
 
-          <div class="swiper-slide" data-img="{{ post.story-img }}" data-hash="{{post.url | replace:'/',''}}" id="{{post.url | replace:'/',''}}">
+
+          {% if post.category != 'Gallery' %}
+          <div class="swiper-slide" data-img="{{ASSET_PATH}}skeena/img/article_openers/{{ post.story-img }}" data-hash="{{post.url | replace:'/',''}}" id="{{post.url | replace:'/',''}}">
             <div class="story-header">
               {% if post.author %}
               <h3>{{ post.author }}</h3>      
@@ -173,9 +175,14 @@ tagline: Supporting tagline
               </a>
             </div>
           </div>
+          {% endif %}
+
           <!--Third Slide-->
           {% assign post_length = post.content | number_of_words %}
-          <div class="swiper-slide" data-img="{{ post.story-img }}" data-hash="{{post.url | replace:'/',''}}" >
+          <div class="swiper-slide"
+                data-img="{{ASSET_PATH}}skeena/img/article_openers/{{ post.story-img }}"
+                data-hash="{{post.url | replace:'/',''}}"
+                {% if post.category == 'Gallery' %} id="{{post.url | replace:'/',''}}" {% endif %}>
             <div class="page{% if post.category == 'Gallery' %} full light ink-bg{% endif %}">
 
               <div class="navarrows hidden-phone">
@@ -185,6 +192,7 @@ tagline: Supporting tagline
 
               <div class="span12 page-wrapper{% if post.category == 'Gallery' %} gallery-wrapper{% else %} paper-bg{% endif %}">
 
+                
                 <div class="story-sidebar">
                   <div class="sidebar-header">
                     <p class="title">{{ post.title }}</p>
@@ -199,17 +207,18 @@ tagline: Supporting tagline
                   <div class="swiper-container gallery" id="{{post.url | replace:'/','' }}-gallery">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide light gallery-slide">
-                          <div class="gallery-intro-slide-wrapper">
-                            <p class="title center">{{ post.title }}</p>
-                            {% if post.author %}
-                            <p class="author center">{{ post.author }}</p>
-                            {% endif %}
+                          <div class="gallery-intro-slide-wrapper paper-bg">
                             {{ post.content }}
                           </div>
+                          {% for image in post.slideshow %}
+                            {% if forloop.first %}
+                              <img src="{{ ASSET_PATH }}skeena/img/{{ post.path }}/{{ image.img }}" />
+                            {% endif %}
+                           {% endfor %} 
                         </div>
                     {% for image in post.slideshow %}
                         <div class="swiper-slide light gallery-slide">
-                          <img src="{{ ASSET_PATH }}skeena/img/{{ post.path }}/{{ image.img }}">
+                          <img src="{{ ASSET_PATH }}skeena/img/{{ post.path }}/{{ image.img }}" />
                           {% if image.caption %}<span class="caption">{{ image.caption }}</span>{% endif %}
                         </div>
                     {% endfor %}
@@ -227,25 +236,9 @@ tagline: Supporting tagline
               </div>
             </div>
           </div>
-      {% endif %}
+
       {% endfor %}
       
-      <!-- this block below creates a single vertical slide for each voice.
-      voices should all be contained inside a horizontal slider
-      which is a single slide (like a photo essay) as implemented above -->
-
-      <!-- {% for post in site.tags.voices reversed %}
-      <div class="swiper-slide" data-img="{{ post.story-img }}" id="{{post.url | replace: '/', ''}}" data-hash="{{post.url | replace: '/', ''}}">
-        <div class="page">
-              <div class="span12 page-wrapper">
-                <div class="sidebar-header">
-                <p><strong>{{ post.title }}</strong></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      {% endfor %} -->
-
 
       </div>
     </div> <!-- end swiper wrapper -->
