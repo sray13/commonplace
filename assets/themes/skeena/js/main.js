@@ -334,12 +334,14 @@ if (window.location.hash) {
                     content: $('#'+theID+'-content').html()
                 });
 
-                $popoverArray[theID].on('click mouseenter', function (e) {
+
+                $popoverArray[theID].on('click', function (e) {
                     var $popover,
                         tocHeight,
                         $this=$(this);
                     e.preventDefault();
-                    $this.popover('toggle');
+
+                    $this.popover('show');
                     $popover = $('.toc-section').find('.popover');
                     tocHeight = $popover.closest('.toc-section').height();
                     $popover.find('.popover-content').height($popover.closest('.section').height() - tocHeight);
@@ -360,6 +362,11 @@ if (window.location.hash) {
                             if ($.browser.msie && $.browser.version == 6.0) { $(this).children().css({'height': currentTallest}); }
                             $('h3.story-title',$(this)).css({'min-height': currentTallest});
                     }); // end .each iteration of content row items to set each to same height
+
+                    $('.toc-close','.popover').click(function () {
+                        $this.popover('hide');
+                    });
+
                 }); // end onclick binding
             }//end block -> if this anchor has an ID attached to it
         }); //end function to initialize all menu items
