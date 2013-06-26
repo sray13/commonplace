@@ -157,7 +157,7 @@ tagline: Supporting tagline
             </div> <!-- end full page container for styling -->
           </div> <!-- end vertical slide for voices -->
 
-        {% else %}
+        {% endif %} <!-- end the block that inserts voices into the post stream -->
 
 
           {% if post.category != 'Gallery' %}
@@ -236,25 +236,9 @@ tagline: Supporting tagline
               </div>
             </div>
           </div>
-      {% endif %}
+
       {% endfor %}
       
-      <!-- this block below creates a single vertical slide for each voice.
-      voices should all be contained inside a horizontal slider
-      which is a single slide (like a photo essay) as implemented above -->
-
-      <!-- {% for post in site.tags.voices reversed %}
-      <div class="swiper-slide" data-img="{{ post.story-img }}" id="{{post.url | replace: '/', ''}}" data-hash="{{post.url | replace: '/', ''}}">
-        <div class="page">
-              <div class="span12 page-wrapper">
-                <div class="sidebar-header">
-                <p><strong>{{ post.title }}</strong></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      {% endfor %} -->
-
 
       </div>
     </div> <!-- end swiper wrapper -->
