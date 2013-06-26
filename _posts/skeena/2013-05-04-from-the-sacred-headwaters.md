@@ -14,7 +14,7 @@ Oscar Dennis’s mother, Mary, once told me that the measure of a Tahltan was no
 
 When I first knew the Stikine, I attended a gathering at Iskut as the community rallied against BC Hydro’s plans to flood the Grand Canyon of a river that runs through the lives of every Tahltan man and woman. A young back-to-the-land hippie stood up and in what he took as a display of solidarity declared that if these dams got built he would just have to leave the country. Right after him a Tahltan youth rose and with immense dignity turned to the previous speaker and said, “Partner, that’s the difference between you and me. If they build these dams, I’ll still be here.”
 
-[Iskut River. Photo by Carr Clifton.]({{ ASSET_PATH }}skeena/img/Carr-Clifton/110-1536-BC_carr_clifton.jpg)
+![Iskut River. Photo by Carr Clifton.]({{ ASSET_PATH }}skeena/img/Carr-Clifton/110-1536-BC_carr_clifton.jpg)
 
 For nearly thirty-five years, the Stikine has called me home, and for much of that time, ever since we bought our place at Wolf Creek, it has actually been home, even as my work has taken me throughout the world. The poet Gary Snyder, asked how a person could best protect the environment, replied, “Stay put.”
 
@@ -24,7 +24,7 @@ Raina has a very special attachment to the lake and to all of the Stikine countr
 
 In the old days, Tahltan men and women often took in, and raised, children from other families; it was a natural adaptation for a hunting culture. Alex Jack never had his own kids, but he and Madeline brought up several nieces and nephews. But there was a strong sense that certain children would always remain by a parent’s side. Of Raina, Alex often said, “She’s the one gonna stay by you.”
 
-[Canoes at Ealue Lake. Photo by Carr Clifton.]({{ ASSET_PATH }}skeena/img/carr-clifton/110-1072-BC_carr_clifton.jpg)
+![Canoes at Ealue Lake. Photo by Carr Clifton.]({{ ASSET_PATH }}skeena/img/carr-clifton/110-1072-BC_carr_clifton.jpg)
 
 When she was five, Raina disappeared from our property. I searched for several hours before finding her far up the creek, dressed in her favorite purple bonnet and work gloves, kneeling by a dead black bear cub as she tried to stroke it back to life. I immediately looked for the boar that had undoubtedly killed the cub and now, though she did not know it, threatened my daughter. When I later recounted the story to Alex, he took it as a sign, of what I was never sure.
 
@@ -34,7 +34,7 @@ Raina was sitting alone, staring out to the lake. When I reached her I saw that 
 
 In that moment, even as engineers and drillers went about their business at the Red Chris site not three miles away from where we sat, I promised Raina that we would never abandon this country and that even if the mine went ahead, we would wait it out as a family, along with the families of our Tahltan friends in Iskut. I might not be around in thirty years to celebrate the return of silence to the lake, but she would be, along with her sister, Tara, and their children, and in time their children’s children.
 
-[Fall colors, north of Tumeka Lake. Photo by Carr Clifton.]({{ ASSET_PATH }}skeena/img/carr-clifton/110-2613-BC_carr_clifton.jpg)
+![Fall colors, north of Tumeka Lake. Photo by Carr Clifton.]({{ ASSET_PATH }}skeena/img/carr-clifton/110-2613-BC_carr_clifton.jpg)
 
 This is what Mary Dennis meant, and what the elders have been saying all along. When company officials confronted the blockade in the summer of 2005 Mary swept them back into their vehicles with these words:
 
