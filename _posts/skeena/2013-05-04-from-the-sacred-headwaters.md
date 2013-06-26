@@ -5,8 +5,8 @@ category: Essay
 author: Wade Davis
 tags: ['story']
 issue: Skeena
-toc-img: sacred.jpg
-story-img: sacred.jpg
+toc-img: sacredheadwaters.jpg
+story-img: sacredheadwaters.jpg
 ---
 Oscar Dennis’s mother, Mary, once told me that the measure of a Tahltan was not the color of skin or the makeup of the blood but the manner in which a person treats the land. She shared this thought at a wake, as she and James buried a son. I think what Mary meant was that in a sense we all have a chance to be Tahltan, not by ethnicity or by co-opting a heritage that is so powerfully and uniquely theirs, but simply by expressing in spirit and commitment a loyalty to place.
 
