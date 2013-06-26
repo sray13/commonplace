@@ -83,7 +83,7 @@ if (window.location.hash) {
 
                 // update the background image
                 if (backgroundImage && currentBackgroundImage !== backgroundImage) {
-                    $('.swiper-root').backstretch('{{BASE_PATH}}/assets/themes/skeena/img/'+ backgroundImage, {fade:450});
+                    $('.swiper-root').backstretch(backgroundImage, {fade:450});
                     
                 } else if (! backgroundImage) {
                     $('.swiper-root').backstretch('{{BASE_PATH}}/assets/themes/skeena/img/cover.jpg', {fade:450});
@@ -147,7 +147,7 @@ if (window.location.hash) {
                             // update body class to change element colors + update the background image
                             //(swiper.activeIndex==0 && $slideRoot.parent().hasClass("light")) ? $('body').addClass('dark') : $('body').removeClass('dark');
                             if (backgroundImage) {
-                                $slideRoot.backstretch('{{BASE_PATH}}/assets/themes/skeena/img/'+ backgroundImage, {fade:450});
+                                $slideRoot.backstretch(backgroundImage, {fade:450});
                             } else {
                                 $('.backstretch',$slideRoot).remove();
                             }

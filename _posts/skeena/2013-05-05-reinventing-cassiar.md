@@ -2,7 +2,7 @@
 layout: post
 category : Gallery
 tags: ['story']
-toc-img: cannery.jpg
+toc-img: cassiar.jpg
 author: Neil Ever Osborne
 issue: Skeena
 path: Cassiar slideshow

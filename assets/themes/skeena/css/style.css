@@ -48,6 +48,7 @@ a:hover {
   /* Safari 1.x */  -khtml-opacity: 0.65;
   /* Good browsers */ opacity: 0.65;
 }
+.textify_nav {margin:0;bottom:1px;}
 /************************************/
 
 /* this is the magazine main title block here */
@@ -99,6 +100,9 @@ a:hover {
   margin-top: 4%;
   font-size: 8em;
   line-height: 1;
+  max-width:1000px;
+  margin-left:auto;
+  margin-right:auto;
 }
 .story-header hr { 
 
@@ -369,7 +373,7 @@ width: 5px;
 
 .page-content img {
   float: left;
-  padding-right: 10px !important;
+  padding-right: 25px !important;
   padding-top: 10px;
   padding-bottom: 10px;
   max-width: 250px !important;
@@ -380,20 +384,22 @@ width: 5px;
   font-family: CenturySchoolbookBT-Roman;
   border:none;
   margin:20px 0;
-  padding: 0 25% 0 10%;
+  padding: 0 34% 0 10%;
 }
 .page-content blockquote p {
     color: rgb(51,150,243);
-    font-size: 1.4em;
+    font-size: 1.7em;
     font-style: italic;
     padding:0;
 }
 .page-content blockquote blockquote {padding-right:0;}
 .page-content blockquote blockquote p {
-  font-weight: bold;
+  font-weight: normal;
   color: black;
   font-size: 1em;
   padding-left: 26%;
+  line-height: 1.5em;
+  letter-spacing: .1em;
 }
 
 
@@ -402,7 +408,7 @@ width: 5px;
   color:white;
   position: absolute;
   width:120px;
-  left:-140px;
+  left:-160px;
   top:200px;
 }
 
@@ -423,7 +429,7 @@ body.dark .sidebar-header {
   border-color: black;
 }
 .sidebar-header p.title {
-  font-size: 1.4em;
+  font-size: 1.2em;
   font-family: Intro-Black-Caps;
   font-weight: normal;
   letter-spacing: .1em;
@@ -432,6 +438,7 @@ body.dark .sidebar-header {
 .sidebar-header p.author {
   font-family: Montserrat;
   font-size:.8em;
+  margin-bottom: 0;
 }
 
 
@@ -451,8 +458,9 @@ body.dark .sidebar-header {
 
 .gallery .swiper-slide span.caption {
   display:block;
+  text-align: center;
   font-family: CenturySchoolbookBT-Roman;
-  font-size:1.2em;
+  font-size:.9em;
   color:rgb(51,150,243);
   padding-top:15px;
 }
@@ -460,8 +468,8 @@ body.dark .sidebar-header {
 /*make room on the left for full page gallery navigation at large scren sizes*/
 .gallery-slide {
   -webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;
-  padding-left:150px;
-  padding-right:45px;
+  padding-left:225px;
+  padding-right:130px;
   width:100%
 }
 
@@ -515,7 +523,7 @@ background: rgb(51,150,243);
 .navarrows
 {
   position: absolute;
-  top:75%;
+  top:62%;
   height: 100px;
   width: 100%;
   z-index:100;
@@ -551,14 +559,14 @@ background: rgb(51,150,243);
 {
   background-image: url('../img/arrow_left.png');
   background-position: left top;
-  margin-left:15px;
+  margin-left:50px;
 }
 
 .rightarrow
 {
   background-image: url('../img/arrow_right.png');
   background-position: left top;
-  margin-right:15px;
+  margin-right:50px;
 }
 
 

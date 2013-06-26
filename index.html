@@ -30,7 +30,7 @@ tagline: Supporting tagline
         {% endif %}
           <div class="span4 story" data-story="#{{post.url | replace: '/', ''}}">
             <a href="{{ post.url }}">
-              <img src="{{ post.toc-img }}" height="100" width="100" class="img-circle">
+              <img src="{{ASSET_PATH}}skeena/img/TOC/{{ post.toc-img }}" height="100" width="100" class="img-circle">
               <h3 class="story-title">{{ post.title }}</h3>
               <h4 class="story-category">{{ post.category }}</h4>
               <p class="story-author">{{ post.author }}</p>
@@ -54,7 +54,7 @@ tagline: Supporting tagline
         {% endif %}
           <div class="span4 story" data-story="#{{post.url | replace: '/', ''}}">
             <a href="{{ post.url }}">
-              <img src="{{ post.toc-img }}" height="100" width="100" class="img-circle">
+              <img src="{{ASSET_PATH}}skeena/img/TOC/{{ post.toc-img }}" height="100" width="100" class="img-circle">
               <h3 class="story-title">{{ post.title }}</h3>
               <h4 class="story-category">{{ post.category }}</h4>
               <p class="story-author">{{ post.author }}</p>
@@ -159,7 +159,7 @@ tagline: Supporting tagline
 
         {% else %}
 
-          <div class="swiper-slide" data-img="{{ post.story-img }}" data-hash="{{post.url | replace:'/',''}}" id="{{post.url | replace:'/',''}}">
+          <div class="swiper-slide" data-img="{{ASSET_PATH}}skeena/img/article_openers/{{ post.story-img }}" data-hash="{{post.url | replace:'/',''}}" id="{{post.url | replace:'/',''}}">
             <div class="story-header">
               {% if post.author %}
               <h3>{{ post.author }}</h3>      
@@ -175,7 +175,7 @@ tagline: Supporting tagline
           </div>
           <!--Third Slide-->
           {% assign post_length = post.content | number_of_words %}
-          <div class="swiper-slide" data-img="{{ post.story-img }}" data-hash="{{post.url | replace:'/',''}}" >
+          <div class="swiper-slide" data-img="{{ASSET_PATH}}skeena/img/article_openers/{{ post.story-img }}" data-hash="{{post.url | replace:'/',''}}" >
             <div class="page{% if post.category == 'Gallery' %} full light ink-bg{% endif %}">
 
               <div class="navarrows hidden-phone">
@@ -185,6 +185,7 @@ tagline: Supporting tagline
 
               <div class="span12 page-wrapper{% if post.category == 'Gallery' %} gallery-wrapper{% else %} paper-bg{% endif %}">
 
+                
                 <div class="story-sidebar">
                   <div class="sidebar-header">
                     <p class="title">{{ post.title }}</p>
