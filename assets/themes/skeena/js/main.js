@@ -168,6 +168,13 @@ if (window.location.hash) {
                     }); // end init array for main-slide-contained horizontal gallery
                     } // end if block checking for gallery object existance
                 } // end if block for gallery.length
+
+                if ($slide.hasClass('marker-slide')) {
+                    map.addLayer(markerLayer);
+                } else {
+                    map.removeLayer(markerLayer);
+                }
+
             }, // end on slideChangeEnd callback for main vertical slider
             scrollbar: {
                 container : '.swiper-scrollbar',
@@ -432,5 +439,29 @@ if (window.location.hash) {
     // Create a map
     window.map = mapbox.map('map', layer, null, []);
     map.centerzoom(center, zoom);
+
+    var places = {
+        "Terrace, BC": [-128.5997, 54.5165],
+        "Kitmaat Village, BC": [-128.55, 53.9],
+        "Hartley Bay, BC": [-129.2500,53.4333]
+    }
+
+    window.markerLayer = mapbox.markers.layer().features([{
+           "geometry": { "type": "Point", "coordinates": places['Terrace, BC']},
+           "properties": { "image": "map_voice_wht.png" }
+       },{
+           "geometry": { "type": "Point", "coordinates": places['Kitmaat Village, BC']},
+           "properties": { "image": "map_voice_wht_90.png" }
+       },{
+           "geometry": { "type": "Point", "coordinates": places['Hartley Bay, BC']},
+           "properties": { "image": "map_voice_wht_180.png" }
+       }]).factory(function(f) {
+           var img = document.createElement('img');
+           img.className = 'marker-image';
+           img.setAttribute('src', '{{BASE_PATH}}/assets/themes/skeena/img/map/' + f.properties.image);
+           return img;
+       });
+
+    
 
 })(); //end generic wrapper function
