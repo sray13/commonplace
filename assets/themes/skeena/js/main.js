@@ -24,6 +24,7 @@ if (window.location.hash) {
 
 
     var mySwiper;
+    window.blockSlideChange=false;
 
     window.onload = function() {
         var $masthead = $('.masthead'),
@@ -171,8 +172,10 @@ if (window.location.hash) {
 
                 if ($slide.hasClass('marker-slide')) {
                     map.addLayer(markerLayer);
+                    window.blockSlideChange=true;
                 } else {
                     map.removeLayer(markerLayer);
+                    window.blockSlideChange=false;
                 }
 
             }, // end on slideChangeEnd callback for main vertical slider
@@ -256,7 +259,20 @@ if (window.location.hash) {
 
         $(document).on('textifyNavDone',function (e,$textify) {
             var $theNav=$('div.textify_nav',$textify),
-            theCurrentNumber=$('li.selected',$theNav).text();
+            theCurrentNumber=$('li.selected',$theNav).text(),
+            $images=$('.page'+theCurrentNumber+' img',$textify);
+
+            $images.each(function () {
+                var $this=$(this),
+                    theCaption=$this.attr('alt');
+
+                $this.parent().css('position','relative').prepend('<span class="caption">'+theCaption+'</span>').find('span').css('top',function () {
+                    var $that=$this;
+                    
+                    return ($that.height()-$(this).height())+$that.position().top;
+                });
+            });
+
             $('span.x', $theNav).text(theCurrentNumber);
         });
 
@@ -343,6 +359,7 @@ if (window.location.hash) {
 
                     $this.popover('show');
                     $popover = $('.toc-section').find('.popover');
+                    $popover.addClass('ink-bg');
                     tocHeight = $popover.closest('.toc-section').height();
                     $popover.find('.popover-content').height($popover.closest('.section').height() - tocHeight);
                     //console.log($popover.closest('.section').height() - tocHeight);
