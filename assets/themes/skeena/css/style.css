@@ -18,6 +18,14 @@
 @font-face {font-family: 'Intro-Black-Caps';src: url('../webfonts/273126_6_0.eot');src: url('../webfonts/273126_6_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/273126_6_0.woff') format('woff'),url('../webfonts/273126_6_0.ttf') format('truetype');}
 @font-face {font-family: 'Intro-Black-Inline-Caps';src: url('../webfonts/273126_7_0.eot');src: url('../webfonts/273126_7_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/273126_7_0.woff') format('woff'),url('../webfonts/273126_7_0.ttf') format('truetype');}
 
+span.schoolbook {
+    font-family: CenturySchoolbookBT-Bold;
+}
+
+span.intro {
+    font-family:Intro-Black-Caps;
+}
+
 
 html, body, .container, .content, .section {
   height: 100%;
@@ -69,6 +77,9 @@ a:hover {
   font-size: 120px;
   line-height: 1;
 }
+
+.page-header h3 {font-weight:normal; font-size:1.6em;}
+
 .page-header hr { 
 
   display: block; height: 1px;
@@ -352,9 +363,6 @@ width: 5px;
   transition: opacity 0.5s ease-in-out;
 }
 
-.page-content span.intro {
-    font-family: CenturySchoolbookBT-Bold;
-}
 
 .page-content p {
   padding-left:25%;
@@ -384,13 +392,14 @@ width: 5px;
   font-family: CenturySchoolbookBT-Roman;
   border:none;
   margin:20px 0;
-  padding: 0 34% 0 10%;
+  padding: 0 0 0 10%;
 }
 .page-content blockquote p {
     color: rgb(51,150,243);
     font-size: 1.7em;
     font-style: italic;
     padding:0;
+    padding-right:40%;
 }
 .page-content blockquote blockquote {padding-right:0;}
 .page-content blockquote blockquote p {
@@ -400,6 +409,7 @@ width: 5px;
   padding-left: 26%;
   line-height: 1.5em;
   letter-spacing: .1em;
+  padding-right:31%;
 }
 
 
@@ -474,10 +484,15 @@ body.dark .sidebar-header {
 }
 
 .gallery-intro-slide-wrapper {
-  width:50%;
-  margin-left:auto;
-  margin-right:auto;
-  margin-top:15%;
+  font-family: Montserrat;
+  position: absolute;
+  z-index: 10;
+  -webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;
+  padding: 5%;
+  left: 50%;
+  margin-left: -12%;
+  width:33%;
+  margin-top:8%;
 }
 
 .gallery-intro-slide-wrapper p.title {
@@ -569,6 +584,7 @@ background: rgb(51,150,243);
   margin-right:50px;
 }
 
+.hide-arrows .navarrows {display:none;}
 
 /* style the sidebar, captions, and gallery slide for tablets */
 @media (max-width: 1024px) {
@@ -700,8 +716,8 @@ background: rgb(51,150,243);
 }
 .voice-player {position:absolute; top:0px; left:0px; height:110px; right:0px;overflow:hidden;}
 .voice-player h3, .voice-player p {margin-bottom:0;}
-.voice-content {position:absolute; top:105px; bottom:40px; left:0px; right:0px; padding-bottom:0; overflow:hidden;}
-.voice-content-text {padding-bottom:35px;}
+.voice-content {position:absolute; top:125px; bottom:40px; left:0px; right:0px; padding-bottom:0; overflow:hidden;}
+.voice-content-text {font-family:Montserrat;padding-bottom:35px;}
 /*.voice-footer {position:absolute; bottom:0px; height:80px; left:0px; right:0px; overflow:hidden;}*/
 
 .voice-scroller {position:absolute;bottom:0;left:0;width:100%;height:35px;background:#CCC;z-index:10;
@@ -756,6 +772,13 @@ background: rgb(51,150,243);
 .audiojs .time {width:12%;border:none;color:#333333;margin:0;padding:0;text-shadow:none;}
 .audiojs .time .played, .audiojs .time .of {display:none;}
 
+@media (max-width: 1024px) {
+  .hidden-tablet {display:none;}
+}
+
+@media (min-width: 1500px) {
+  .page.full .story-sidebar {margin-left:5%;}
+}
 
   /*.page-content .short-post {
     width: 100% !important;

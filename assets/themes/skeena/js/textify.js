@@ -45,7 +45,7 @@
                         .remove();
                     myVar = setTimeout(function () {
                         initTextify($cache)
-                    }, 200);
+                        }, 200);
                 }
             });
 
@@ -124,7 +124,7 @@
                     })
                 } else {
                     addPage()
-                }
+                }                
             }
 
             function setImage(element, thisImg) {
@@ -410,6 +410,7 @@
                                         .attr('class', 'selected')
                                 }
                             }
+
                         })
                     }
                     columnHeight = pageheight - (options.padding * 2) - $('.textify_nav')
@@ -448,6 +449,7 @@
                                     .width()) / 2)
                             })
                         }
+                        $(document).trigger('textifyBuildDone',$textify);
                     }
                     $contentText.css('width', pagewidth * options.startPage)
                     $contentText.append('<div class="page' + options.startPage + '" />');
@@ -484,6 +486,7 @@
                 $contentText.animate({
                     marginLeft: [-marginLeft, 'easeOutExpo']
                 }, 600);
+                $(document).trigger('textifyNavDone',$textify)
             }
 
             function touch() {

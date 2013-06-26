@@ -236,6 +236,23 @@ if (window.location.hash) {
             } 
         });
 
+        $(document).on('textifyBuildDone',function (e,$textify) {
+            var $theNav=$('div.textify_nav',$textify),
+                theMaxNumber=$('li:last-child',$theNav).text();
+
+            if(!($theNav.find('#x-of-y')).length){
+                $('ul.text_pagination',$theNav).css({'visibility': 'hidden','margin-bottom': '-100px'})
+                $theNav.prepend('<div id="x-of-y" style="text-align:center;position:absolute;bottom:0;width:100%"><span class="x">1</span> of <span class="y"></span></div>');
+            }
+            $('span.y', $theNav).text(theMaxNumber);
+        });
+
+        $(document).on('textifyNavDone',function (e,$textify) {
+            var $theNav=$('div.textify_nav',$textify),
+            theCurrentNumber=$('li.selected',$theNav).text();
+            $('span.x', $theNav).text(theCurrentNumber);
+        });
+
         // Control voices biography content with up/down arrows
         $('.voice-content-wrapper').on('click','span.up, span.down',function(e){
             e.preventDefault();
@@ -261,17 +278,21 @@ if (window.location.hash) {
             mySwiper.swipeTo($(originalHash).index());    
         }
 
-
-        // style body copy intros and outros
-        $('p:firstChild','div.page-content').each(function(){
+        function styleStoryLeadin ($theElement) {
             var str=$(this).html(),
             delimiter = ' ',
             start = 0, end = 6,
             first = str.split(delimiter).slice(start,end).join(delimiter),
             last = str.split(delimiter).slice(end).join(delimiter),
-            result = "<span class='intro'>"+first+"</span> "+last;
+            result = "<span class='schoolbook'>"+first+"</span> "+last;
             $(this).html(result);
-        });
+        }
+
+        // style body copy intros and outros
+        $('p:firstChild','div.page-content').each(styleStoryLeadin);
+        $('p:firstChild','div.gallery-intro-slide-wrapper').each(styleStoryLeadin);
+        $('p:firstChild','div.voice-content-text').each(styleStoryLeadin);
+
 
         // init the audio player for voices
         audiojs.events.ready(function() {
