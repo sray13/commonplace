@@ -83,7 +83,7 @@ if (window.location.hash) {
 
                 // update the background image
                 if (backgroundImage && currentBackgroundImage !== backgroundImage) {
-                    $('.swiper-root').backstretch('{{BASE_PATH}}/assets/themes/skeena/img/'+ backgroundImage, {fade:450});
+                    $('.swiper-root').backstretch(backgroundImage, {fade:450});
                     
                 } else if (! backgroundImage) {
                     $('.swiper-root').backstretch('{{BASE_PATH}}/assets/themes/skeena/img/cover.jpg', {fade:450});
@@ -147,7 +147,7 @@ if (window.location.hash) {
                             // update body class to change element colors + update the background image
                             //(swiper.activeIndex==0 && $slideRoot.parent().hasClass("light")) ? $('body').addClass('dark') : $('body').removeClass('dark');
                             if (backgroundImage) {
-                                $slideRoot.backstretch('{{BASE_PATH}}/assets/themes/skeena/img/'+ backgroundImage, {fade:450});
+                                $slideRoot.backstretch(backgroundImage, {fade:450});
                             } else {
                                 $('.backstretch',$slideRoot).remove();
                             }
@@ -168,6 +168,13 @@ if (window.location.hash) {
                     }); // end init array for main-slide-contained horizontal gallery
                     } // end if block checking for gallery object existance
                 } // end if block for gallery.length
+
+                if ($slide.hasClass('marker-slide')) {
+                    map.addLayer(markerLayer);
+                } else {
+                    map.removeLayer(markerLayer);
+                }
+
             }, // end on slideChangeEnd callback for main vertical slider
             scrollbar: {
                 container : '.swiper-scrollbar',
@@ -236,6 +243,23 @@ if (window.location.hash) {
             } 
         });
 
+        $(document).on('textifyBuildDone',function (e,$textify) {
+            var $theNav=$('div.textify_nav',$textify),
+                theMaxNumber=$('li:last-child',$theNav).text();
+
+            if(!($theNav.find('#x-of-y')).length){
+                $('ul.text_pagination',$theNav).css({'visibility': 'hidden','margin-bottom': '-100px'})
+                $theNav.prepend('<div id="x-of-y" style="text-align:center;position:absolute;bottom:0;width:100%"><span class="x">1</span> of <span class="y"></span></div>');
+            }
+            $('span.y', $theNav).text(theMaxNumber);
+        });
+
+        $(document).on('textifyNavDone',function (e,$textify) {
+            var $theNav=$('div.textify_nav',$textify),
+            theCurrentNumber=$('li.selected',$theNav).text();
+            $('span.x', $theNav).text(theCurrentNumber);
+        });
+
         // Control voices biography content with up/down arrows
         $('.voice-content-wrapper').on('click','span.up, span.down',function(e){
             e.preventDefault();
@@ -261,17 +285,21 @@ if (window.location.hash) {
             mySwiper.swipeTo($(originalHash).index());    
         }
 
-
-        // style body copy intros and outros
-        $('p:firstChild','div.page-content').each(function(){
+        function styleStoryLeadin ($theElement) {
             var str=$(this).html(),
             delimiter = ' ',
             start = 0, end = 6,
             first = str.split(delimiter).slice(start,end).join(delimiter),
             last = str.split(delimiter).slice(end).join(delimiter),
-            result = "<span class='intro'>"+first+"</span> "+last;
+            result = "<span class='schoolbook'>"+first+"</span> "+last;
             $(this).html(result);
-        });
+        }
+
+        // style body copy intros and outros
+        $('p:firstChild','div.page-content').each(styleStoryLeadin);
+        $('p:firstChild','div.gallery-intro-slide-wrapper').each(styleStoryLeadin);
+        $('p:firstChild','div.voice-content-text').each(styleStoryLeadin);
+
 
         // init the audio player for voices
         audiojs.events.ready(function() {
@@ -306,12 +334,14 @@ if (window.location.hash) {
                     content: $('#'+theID+'-content').html()
                 });
 
-                $popoverArray[theID].on('click mouseenter', function (e) {
+
+                $popoverArray[theID].on('click', function (e) {
                     var $popover,
                         tocHeight,
                         $this=$(this);
                     e.preventDefault();
-                    $this.popover('toggle');
+
+                    $this.popover('show');
                     $popover = $('.toc-section').find('.popover');
                     tocHeight = $popover.closest('.toc-section').height();
                     $popover.find('.popover-content').height($popover.closest('.section').height() - tocHeight);
@@ -332,6 +362,11 @@ if (window.location.hash) {
                             if ($.browser.msie && $.browser.version == 6.0) { $(this).children().css({'height': currentTallest}); }
                             $('h3.story-title',$(this)).css({'min-height': currentTallest});
                     }); // end .each iteration of content row items to set each to same height
+
+                    $('.toc-close','.popover').click(function () {
+                        $this.popover('hide');
+                    });
+
                 }); // end onclick binding
             }//end block -> if this anchor has an ID attached to it
         }); //end function to initialize all menu items
@@ -404,5 +439,29 @@ if (window.location.hash) {
     // Create a map
     window.map = mapbox.map('map', layer, null, []);
     map.centerzoom(center, zoom);
+
+    var places = {
+        "Terrace, BC": [-128.5997, 54.5165],
+        "Kitmaat Village, BC": [-128.55, 53.9],
+        "Hartley Bay, BC": [-129.2500,53.4333]
+    }
+
+    window.markerLayer = mapbox.markers.layer().features([{
+           "geometry": { "type": "Point", "coordinates": places['Terrace, BC']},
+           "properties": { "image": "map_voice_wht.png" }
+       },{
+           "geometry": { "type": "Point", "coordinates": places['Kitmaat Village, BC']},
+           "properties": { "image": "map_voice_wht_90.png" }
+       },{
+           "geometry": { "type": "Point", "coordinates": places['Hartley Bay, BC']},
+           "properties": { "image": "map_voice_wht_180.png" }
+       }]).factory(function(f) {
+           var img = document.createElement('img');
+           img.className = 'marker-image';
+           img.setAttribute('src', '{{BASE_PATH}}/assets/themes/skeena/img/map/' + f.properties.image);
+           return img;
+       });
+
+    
 
 })(); //end generic wrapper function

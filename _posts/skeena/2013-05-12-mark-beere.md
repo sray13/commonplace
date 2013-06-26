@@ -2,7 +2,7 @@
 published: true
 layout: voices
 category: Voices
-author: Bruce Hill
+author: Mark Beere
 tags: ['voices']
 issue: Skeena
 place: Smithers

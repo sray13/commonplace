@@ -5,9 +5,11 @@ category: Essay
 author: Wade Davis
 tags: ['story']
 issue: Skeena
-toc-img: sacred.jpg
-story-img: sacred.jpg
+toc-img: sacredheadwaters.jpg
+story-img: sacredheadwaters.jpg
 ---
+_Editor’s note: Wade Davis’ piece here from his book_ The Sacred Headwaters _(Greystone and David Suzuki Foundation, 2011) centers around Ealue Lake, in the heart of the headwaters region that feeds the Stikine, Skeena, and Nass rivers and home to his longtime Native friends, Alex Jack and Oscar Dennis._
+
 Oscar Dennis’s mother, Mary, once told me that the measure of a Tahltan was not the color of skin or the makeup of the blood but the manner in which a person treats the land. She shared this thought at a wake, as she and James buried a son. I think what Mary meant was that in a sense we all have a chance to be Tahltan, not by ethnicity or by co-opting a heritage that is so powerfully and uniquely theirs, but simply by expressing in spirit and commitment a loyalty to place.
 
 When I first knew the Stikine, I attended a gathering at Iskut as the community rallied against BC Hydro’s plans to flood the Grand Canyon of a river that runs through the lives of every Tahltan man and woman. A young back-to-the-land hippie stood up and in what he took as a display of solidarity declared that if these dams got built he would just have to leave the country. Right after him a Tahltan youth rose and with immense dignity turned to the previous speaker and said, “Partner, that’s the difference between you and me. If they build these dams, I’ll still be here.”
@@ -30,6 +32,6 @@ In that moment, even as engineers and drillers went about their business at the 
 
 This is what Mary Dennis meant, and what the elders have been saying all along. When company officials confronted the blockade in the summer of 2005 Mary swept them back into their vehicles with these words:
 
->Great Spirit! Come on! Pray for our people, my children, my daughters, my sons, my grandchildren, my great-grandchildren. They’re crying because their hearts are broken. It’s tearing out. And also me. I’m speaking to the mining companies. I’m a Tahltan woman. I can go into the bush and cut my own wood and make my own campfire and set my own tent. I’m a hunter. I shot many moose and caribou. I’m a trapper. I skin whatever I catch. I live off of this land. I taught my children to live off of this land. We depend on this land. We must save it for our grandchildren. That’s why what I am doing today. And I will continue doing it as long as I’m here. I am proud to be who I am. _Meduh!_ Thank you.
+>>Great Spirit! Come on! Pray for our people, my children, my daughters, my sons, my grandchildren, my great-grandchildren. They’re crying because their hearts are broken. It’s tearing out. And also me. I’m speaking to the mining companies. I’m a Tahltan woman. I can go into the bush and cut my own wood and make my own campfire and set my own tent. I’m a hunter. I shot many moose and caribou. I’m a trapper. I skin whatever I catch. I live off of this land. I taught my children to live off of this land. We depend on this land. We must save it for our grandchildren. That’s why what I am doing today. And I will continue doing it as long as I’m here. I am proud to be who I am. _Meduh!_ Thank you.
 
-_Editor’s note: Davis’ piece here from his book_ The Sacred Headwaters _(Greystone and David Suzuki Foundation, 2011) centers around Ealue Lake, in the heart of the headwaters region that feeds the Stikine, Skeena, and Nass rivers and home to his longtime Native friends, Alex Jack and Oscar Dennis._
+

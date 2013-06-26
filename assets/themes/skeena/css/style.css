@@ -6,7 +6,12 @@
 
 /* @import must be at top of file, otherwise CSS will not work */
 @import url("//hello.myfonts.net/count/273126");
+@import url("//hello.myfonts.net/count/277cbe");
 
+@font-face {font-family: 'AvenirLT-Medium';src: url('../webfonts/277CBE_0_0.eot');src: url('../webfonts/277CBE_0_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/277CBE_0_0.woff') format('woff'),url('../webfonts/277CBE_0_0.ttf') format('truetype');}  
+@font-face {font-family: 'AvenirLT-Light';src: url('../webfonts/277CBE_1_0.eot');src: url('../webfonts/277CBE_1_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/277CBE_1_0.woff') format('woff'),url('../webfonts/277CBE_1_0.ttf') format('truetype');}
+@font-face {font-family: 'AvenirLT-LightOblique';src: url('../webfonts/277CBE_2_0.eot');src: url('../webfonts/277CBE_2_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/277CBE_2_0.woff') format('woff'),url('../webfonts/277CBE_2_0.ttf') format('truetype');}
+@font-face {font-family: 'AvenirLT-Black';src: url('../webfonts/277CBE_3_0.eot');src: url('../webfonts/277CBE_3_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/277CBE_3_0.woff') format('woff'),url('../webfonts/277CBE_3_0.ttf') format('truetype');}
   
 @font-face {font-family: 'CenturySchoolbookBT-Roman';src: url('../webfonts/273126_0_0.eot');src: url('../webfonts/273126_0_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/273126_0_0.woff') format('woff'),url('../webfonts/273126_0_0.ttf') format('truetype');}
 @font-face {font-family: 'CenturySchoolbookBT-Italic';src: url('../webfonts/273126_1_0.eot');src: url('../webfonts/273126_1_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/273126_1_0.woff') format('woff'),url('../webfonts/273126_1_0.ttf') format('truetype');}
@@ -18,6 +23,15 @@
 @font-face {font-family: 'Intro-Black-Caps';src: url('../webfonts/273126_6_0.eot');src: url('../webfonts/273126_6_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/273126_6_0.woff') format('woff'),url('../webfonts/273126_6_0.ttf') format('truetype');}
 @font-face {font-family: 'Intro-Black-Inline-Caps';src: url('../webfonts/273126_7_0.eot');src: url('../webfonts/273126_7_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/273126_7_0.woff') format('woff'),url('../webfonts/273126_7_0.ttf') format('truetype');}
 
+span.schoolbook {
+    font-family: CenturySchoolbookBT-Bold;
+}
+
+span.intro {
+    font-family:Intro-Black-Caps;
+}
+
+html, body {overflow: hidden;}
 
 html, body, .container, .content, .section {
   height: 100%;
@@ -48,6 +62,7 @@ a:hover {
   /* Safari 1.x */  -khtml-opacity: 0.65;
   /* Good browsers */ opacity: 0.65;
 }
+.textify_nav {margin:0;bottom:1px;}
 /************************************/
 
 /* this is the magazine main title block here */
@@ -68,6 +83,9 @@ a:hover {
   font-size: 120px;
   line-height: 1;
 }
+
+.page-header h3 {font-weight:normal; font-size:1.6em;}
+
 .page-header hr { 
 
   display: block; height: 1px;
@@ -99,6 +117,9 @@ a:hover {
   margin-top: 4%;
   font-size: 8em;
   line-height: 1;
+  max-width:1000px;
+  margin-left:auto;
+  margin-right:auto;
 }
 .story-header hr { 
 
@@ -116,7 +137,7 @@ a:hover {
 /* Good browsers */ opacity: 0.7;  }
 
 .story-header h3 {
-  font-family: Montserrat;
+  font-family: AvenirLT-Light;
 }
 
 .cover-slide, .swiper-slide {
@@ -194,7 +215,7 @@ a:hover {
 }
 .masthead .navbar .nav>li>a>h2, h2.title-name {
   text-transform: none;
-  font-family: Montserrat;
+  font-family: AvenirLT-Light;
   margin-bottom:0;
 }
 .masthead .navbar .nav>li>a>span{
@@ -204,6 +225,7 @@ a:hover {
 
   max-width: 100%;
   width: 100%;
+  left:0 !important;
   height: auto;
   border-radius: 0;
   /* IE 8 */  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
@@ -211,7 +233,14 @@ a:hover {
   /* Netscape */  -moz-opacity: 0.9;
   /* Safari 1.x */  -khtml-opacity: 0.9;
   /* Good browsers */ opacity: 0.9;  
-     background: rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.9);
+  border:none;
+  padding:0;
+  -webkit-box-shadow:none;
+  -moz-box-shadow:none;
+        box-shadow:none;
+
+
 }
 .toc-section .popover .popover-content {
   overflow: auto;
@@ -248,13 +277,14 @@ a:hover {
 /* Good browsers */ opacity: 0.8;  
 }
 
-.toc-section .popover .close {
+.toc-section .popover .toc-close {
   position: absolute;
   top:30px;
   right:30px;
   width: 17px;
   height: 13px;
   background: url(../img/close_x.png) no-repeat left top;
+  cursor:pointer;
 }
 
 .root-container {
@@ -329,7 +359,9 @@ width: 5px;
 }
 .paper-bg {
   background: url(../img/paper.jpg) left top;
-}
+-webkit-box-shadow: 6px 6px 13px rgba(50, 50, 50, 0.99);
+-moz-box-shadow:    6px 6px 13px rgba(50, 50, 50, 0.99);
+box-shadow:         6px 6px 13px rgba(50, 50, 50, 0.99);}
 
 .popover-content h3 {line-height: 1.2em;font-family:Intro-Black-Caps; }
 
@@ -338,7 +370,7 @@ width: 5px;
   height: 100%;
 }
 .page-content {
-  font-family: 'Montserrat';
+  font-family: 'AvenirLT-Light';
   padding: 0px 5% 0px 5%;
   margin-top:5%;
   overflow: auto;
@@ -348,9 +380,6 @@ width: 5px;
   transition: opacity 0.5s ease-in-out;
 }
 
-.page-content span.intro {
-    font-family: CenturySchoolbookBT-Bold;
-}
 
 .page-content p {
   padding-left:25%;
@@ -369,7 +398,7 @@ width: 5px;
 
 .page-content img {
   float: left;
-  padding-right: 10px !important;
+  padding-right: 25px !important;
   padding-top: 10px;
   padding-bottom: 10px;
   max-width: 250px !important;
@@ -380,20 +409,24 @@ width: 5px;
   font-family: CenturySchoolbookBT-Roman;
   border:none;
   margin:20px 0;
-  padding: 0 25% 0 10%;
+  padding: 0 0 0 10%;
 }
 .page-content blockquote p {
     color: rgb(51,150,243);
-    font-size: 1.4em;
+    font-size: 1.7em;
     font-style: italic;
     padding:0;
+    padding-right:40%;
 }
 .page-content blockquote blockquote {padding-right:0;}
 .page-content blockquote blockquote p {
-  font-weight: bold;
+  font-weight: normal;
   color: black;
   font-size: 1em;
   padding-left: 26%;
+  line-height: 1.5em;
+  letter-spacing: .1em;
+  padding-right:31%;
 }
 
 
@@ -402,7 +435,7 @@ width: 5px;
   color:white;
   position: absolute;
   width:120px;
-  left:-140px;
+  left:-160px;
   top:200px;
 }
 
@@ -423,15 +456,16 @@ body.dark .sidebar-header {
   border-color: black;
 }
 .sidebar-header p.title {
-  font-size: 1.4em;
+  font-size: 1.2em;
   font-family: Intro-Black-Caps;
   font-weight: normal;
   letter-spacing: .1em;
 }
 
 .sidebar-header p.author {
-  font-family: Montserrat;
+  font-family: AvenirLT-Light;
   font-size:.8em;
+  margin-bottom: 0;
 }
 
 
@@ -451,8 +485,9 @@ body.dark .sidebar-header {
 
 .gallery .swiper-slide span.caption {
   display:block;
+  text-align: center;
   font-family: CenturySchoolbookBT-Roman;
-  font-size:1.2em;
+  font-size:.9em;
   color:rgb(51,150,243);
   padding-top:15px;
 }
@@ -460,16 +495,21 @@ body.dark .sidebar-header {
 /*make room on the left for full page gallery navigation at large scren sizes*/
 .gallery-slide {
   -webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;
-  padding-left:150px;
-  padding-right:45px;
+  padding-left:225px;
+  padding-right:130px;
   width:100%
 }
 
 .gallery-intro-slide-wrapper {
-  width:50%;
-  margin-left:auto;
-  margin-right:auto;
-  margin-top:15%;
+  font-family: AvenirLT-Light;
+  position: absolute;
+  z-index: 10;
+  -webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;
+  padding: 5%;
+  left: 50%;
+  margin-left: -12%;
+  width:33%;
+  margin-top:8%;
 }
 
 .gallery-intro-slide-wrapper p.title {
@@ -481,7 +521,7 @@ body.dark .sidebar-header {
 }
 
 .gallery-intro-slide-wrapper p.author {
-  font-family: Montserrat;
+  font-family: AvenirLT-Light;
   font-size:1em;
   margin-bottom:9%;
 }
@@ -498,14 +538,16 @@ body.dark .sidebar-header {
 }
 
 .general-pagination .swiper-pagination-switch {
-display:inline-block;
-width:10px;
-height:10px;
-border-radius:10px;
-background:#999;
-box-shadow:0 1px 2px #555 inset;
-cursor:pointer;
-margin:0 11px 11px 3px;
+  display:inline-block;
+  width:10px;
+  height:10px;
+  border-radius:10px;
+  background:#999;
+  -webkit-box-shadow:  0px 1px 2px  #555 inset;
+  -moz-box-shadow:  0px 1px 2px  #555 inset;
+          box-shadow:  0px 1px 2px  #555 inset;
+  cursor:pointer;
+  margin:0 11px 11px 3px;
 }
 
 .general-pagination .swiper-active-switch {
@@ -515,7 +557,7 @@ background: rgb(51,150,243);
 .navarrows
 {
   position: absolute;
-  top:75%;
+  top:62%;
   height: 100px;
   width: 100%;
   z-index:100;
@@ -551,16 +593,17 @@ background: rgb(51,150,243);
 {
   background-image: url('../img/arrow_left.png');
   background-position: left top;
-  margin-left:15px;
+  margin-left:50px;
 }
 
 .rightarrow
 {
   background-image: url('../img/arrow_right.png');
   background-position: left top;
-  margin-right:15px;
+  margin-right:50px;
 }
 
+.hide-arrows .navarrows {display:none;}
 
 /* style the sidebar, captions, and gallery slide for tablets */
 @media (max-width: 1024px) {
@@ -692,8 +735,8 @@ background: rgb(51,150,243);
 }
 .voice-player {position:absolute; top:0px; left:0px; height:110px; right:0px;overflow:hidden;}
 .voice-player h3, .voice-player p {margin-bottom:0;}
-.voice-content {position:absolute; top:105px; bottom:40px; left:0px; right:0px; padding-bottom:0; overflow:hidden;}
-.voice-content-text {padding-bottom:35px;}
+.voice-content {position:absolute; top:125px; bottom:40px; left:0px; right:0px; padding-bottom:0; overflow:hidden;}
+.voice-content-text {font-family:AvenirLT-Light;padding-bottom:35px;}
 /*.voice-footer {position:absolute; bottom:0px; height:80px; left:0px; right:0px; overflow:hidden;}*/
 
 .voice-scroller {position:absolute;bottom:0;left:0;width:100%;height:35px;background:#CCC;z-index:10;
@@ -748,12 +791,10 @@ background: rgb(51,150,243);
 .audiojs .time {width:12%;border:none;color:#333333;margin:0;padding:0;text-shadow:none;}
 .audiojs .time .played, .audiojs .time .of {display:none;}
 
+@media (max-width: 1024px) {
+  .hidden-tablet {display:none;}
+}
 
-  /*.page-content .short-post {
-    width: 100% !important;
-    height: 100% !important;
-  }
-    .page-content .short-post .swiper-slide {
-      width: 100% !important;
-      /*height: 100% !important;
-    }*
+@media (min-width: 1500px) {
+  .page.full .story-sidebar {margin-left:5%;}
+}
