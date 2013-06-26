@@ -435,7 +435,8 @@ if (window.location.hash) {
 
     var places = {
         "Terrace, BC": [-128.5997, 54.5165],
-        "Kitmaat Village, BC": [-128.55, 53.9]
+        "Kitmaat Village, BC": [-128.55, 53.9],
+        "Hartley Bay, BC": [-129.2500,53.4333]
     }
 
     window.markerLayer = mapbox.markers.layer().features([{
@@ -443,7 +444,10 @@ if (window.location.hash) {
            "properties": { "image": "map_voice_wht.png" }
        },{
            "geometry": { "type": "Point", "coordinates": places['Kitmaat Village, BC']},
-           "properties": { "image": "map_voice_wht.png" }
+           "properties": { "image": "map_voice_wht_90.png" }
+       },{
+           "geometry": { "type": "Point", "coordinates": places['Hartley Bay, BC']},
+           "properties": { "image": "map_voice_wht_180.png" }
        }]).factory(function(f) {
            var img = document.createElement('img');
            img.className = 'marker-image';
