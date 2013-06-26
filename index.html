@@ -21,7 +21,7 @@ tagline: Supporting tagline
   </div><!-- /.navbar -->
 </div>
 <div style="display: none" id="toc-content">
-  <div class="close"></div>
+  <div class="toc-close"></div>
   <div class="container">
       {% for post in site.tags.story reversed %}
       {% capture col %}{{ forloop.index |modulo:3 }}{% endcapture %}
@@ -44,7 +44,7 @@ tagline: Supporting tagline
 </div>
 
 <div style="display: none" id="about-content">
-  <div class="close"></div>
+  <div class="toc-close"></div>
   <div class="container">
     <h2>about us</h2>
       {% for post in site.tags.story reversed %}

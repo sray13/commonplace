@@ -6,7 +6,12 @@
 
 /* @import must be at top of file, otherwise CSS will not work */
 @import url("//hello.myfonts.net/count/273126");
+@import url("//hello.myfonts.net/count/277cbe");
 
+@font-face {font-family: 'AvenirLT-Medium';src: url('../webfonts/277CBE_0_0.eot');src: url('../webfonts/277CBE_0_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/277CBE_0_0.woff') format('woff'),url('../webfonts/277CBE_0_0.ttf') format('truetype');}  
+@font-face {font-family: 'AvenirLT-Light';src: url('../webfonts/277CBE_1_0.eot');src: url('../webfonts/277CBE_1_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/277CBE_1_0.woff') format('woff'),url('../webfonts/277CBE_1_0.ttf') format('truetype');}
+@font-face {font-family: 'AvenirLT-LightOblique';src: url('../webfonts/277CBE_2_0.eot');src: url('../webfonts/277CBE_2_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/277CBE_2_0.woff') format('woff'),url('../webfonts/277CBE_2_0.ttf') format('truetype');}
+@font-face {font-family: 'AvenirLT-Black';src: url('../webfonts/277CBE_3_0.eot');src: url('../webfonts/277CBE_3_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/277CBE_3_0.woff') format('woff'),url('../webfonts/277CBE_3_0.ttf') format('truetype');}
   
 @font-face {font-family: 'CenturySchoolbookBT-Roman';src: url('../webfonts/273126_0_0.eot');src: url('../webfonts/273126_0_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/273126_0_0.woff') format('woff'),url('../webfonts/273126_0_0.ttf') format('truetype');}
 @font-face {font-family: 'CenturySchoolbookBT-Italic';src: url('../webfonts/273126_1_0.eot');src: url('../webfonts/273126_1_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/273126_1_0.woff') format('woff'),url('../webfonts/273126_1_0.ttf') format('truetype');}
@@ -26,6 +31,7 @@ span.intro {
     font-family:Intro-Black-Caps;
 }
 
+html, body {overflow: hidden;}
 
 html, body, .container, .content, .section {
   height: 100%;
@@ -131,7 +137,7 @@ a:hover {
 /* Good browsers */ opacity: 0.7;  }
 
 .story-header h3 {
-  font-family: Montserrat;
+  font-family: AvenirLT-Light;
 }
 
 .cover-slide, .swiper-slide {
@@ -209,7 +215,7 @@ a:hover {
 }
 .masthead .navbar .nav>li>a>h2, h2.title-name {
   text-transform: none;
-  font-family: Montserrat;
+  font-family: AvenirLT-Light;
   margin-bottom:0;
 }
 .masthead .navbar .nav>li>a>span{
@@ -219,6 +225,7 @@ a:hover {
 
   max-width: 100%;
   width: 100%;
+  left:0 !important;
   height: auto;
   border-radius: 0;
   /* IE 8 */  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
@@ -226,7 +233,14 @@ a:hover {
   /* Netscape */  -moz-opacity: 0.9;
   /* Safari 1.x */  -khtml-opacity: 0.9;
   /* Good browsers */ opacity: 0.9;  
-     background: rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.9);
+  border:none;
+  padding:0;
+  -webkit-box-shadow:none;
+  -moz-box-shadow:none;
+        box-shadow:none;
+
+
 }
 .toc-section .popover .popover-content {
   overflow: auto;
@@ -263,13 +277,14 @@ a:hover {
 /* Good browsers */ opacity: 0.8;  
 }
 
-.toc-section .popover .close {
+.toc-section .popover .toc-close {
   position: absolute;
   top:30px;
   right:30px;
   width: 17px;
   height: 13px;
   background: url(../img/close_x.png) no-repeat left top;
+  cursor:pointer;
 }
 
 .root-container {
@@ -344,7 +359,9 @@ width: 5px;
 }
 .paper-bg {
   background: url(../img/paper.jpg) left top;
-}
+-webkit-box-shadow: 6px 6px 13px rgba(50, 50, 50, 0.99);
+-moz-box-shadow:    6px 6px 13px rgba(50, 50, 50, 0.99);
+box-shadow:         6px 6px 13px rgba(50, 50, 50, 0.99);}
 
 .popover-content h3 {line-height: 1.2em;font-family:Intro-Black-Caps; }
 
@@ -353,7 +370,7 @@ width: 5px;
   height: 100%;
 }
 .page-content {
-  font-family: 'Montserrat';
+  font-family: 'AvenirLT-Light';
   padding: 0px 5% 0px 5%;
   margin-top:5%;
   overflow: auto;
@@ -446,7 +463,7 @@ body.dark .sidebar-header {
 }
 
 .sidebar-header p.author {
-  font-family: Montserrat;
+  font-family: AvenirLT-Light;
   font-size:.8em;
   margin-bottom: 0;
 }
@@ -484,7 +501,7 @@ body.dark .sidebar-header {
 }
 
 .gallery-intro-slide-wrapper {
-  font-family: Montserrat;
+  font-family: AvenirLT-Light;
   position: absolute;
   z-index: 10;
   -webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;
@@ -504,7 +521,7 @@ body.dark .sidebar-header {
 }
 
 .gallery-intro-slide-wrapper p.author {
-  font-family: Montserrat;
+  font-family: AvenirLT-Light;
   font-size:1em;
   margin-bottom:9%;
 }
@@ -521,14 +538,16 @@ body.dark .sidebar-header {
 }
 
 .general-pagination .swiper-pagination-switch {
-display:inline-block;
-width:10px;
-height:10px;
-border-radius:10px;
-background:#999;
-box-shadow:0 1px 2px #555 inset;
-cursor:pointer;
-margin:0 11px 11px 3px;
+  display:inline-block;
+  width:10px;
+  height:10px;
+  border-radius:10px;
+  background:#999;
+  -webkit-box-shadow:  0px 1px 2px  #555 inset;
+  -moz-box-shadow:  0px 1px 2px  #555 inset;
+          box-shadow:  0px 1px 2px  #555 inset;
+  cursor:pointer;
+  margin:0 11px 11px 3px;
 }
 
 .general-pagination .swiper-active-switch {
@@ -717,7 +736,7 @@ background: rgb(51,150,243);
 .voice-player {position:absolute; top:0px; left:0px; height:110px; right:0px;overflow:hidden;}
 .voice-player h3, .voice-player p {margin-bottom:0;}
 .voice-content {position:absolute; top:125px; bottom:40px; left:0px; right:0px; padding-bottom:0; overflow:hidden;}
-.voice-content-text {font-family:Montserrat;padding-bottom:35px;}
+.voice-content-text {font-family:AvenirLT-Light;padding-bottom:35px;}
 /*.voice-footer {position:absolute; bottom:0px; height:80px; left:0px; right:0px; overflow:hidden;}*/
 
 .voice-scroller {position:absolute;bottom:0;left:0;width:100%;height:35px;background:#CCC;z-index:10;
