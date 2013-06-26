@@ -779,12 +779,3 @@ background: rgb(51,150,243);
 @media (min-width: 1500px) {
   .page.full .story-sidebar {margin-left:5%;}
 }
-
-  /*.page-content .short-post {
-    width: 100% !important;
-    height: 100% !important;
-  }
-    .page-content .short-post .swiper-slide {
-      width: 100% !important;
-      /*height: 100% !important;
-    }*
