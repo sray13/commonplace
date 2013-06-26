@@ -5,7 +5,7 @@ category: Voices
 author: Bruce Hill
 issue: Skeena
 tags: ['voices']
-place: Bulkley Valley
+place: Terrace
 intro: “A folkstorm is when a community, faced with a bad idea…just rises up.”
 toc-img: brucehill.jpg
 story-img: brucehill.jpg

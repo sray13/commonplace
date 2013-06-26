@@ -5,7 +5,7 @@ category: Voices
 author: Justine Crawford
 tags: ['voices']
 issue: Skeena
-place: Cassiar Cannery
+place: Port Edward
 intro: Crawford and her partner bought cannery left to rust for 20 years. 
 toc-img: justinecrawford.jpg
 story-img: justinecrawford.jpg
