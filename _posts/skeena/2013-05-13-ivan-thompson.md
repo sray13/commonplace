@@ -6,7 +6,7 @@ author: Ivan Thompson
 tags: ['voices']
 issue: Skeena
 place: Smithers 
-intro: Thompson believes reckless change can be stopped by "people with a passion for place.” 
+intro: Healthy, diverse Skeena ecosystems, cultures, communities, and civic groups are "the immune response” to outside threats. 
 toc-img: ivanthompson.jpg
 story-img: ivanthompson.jpg
 audio: ivanthompson.mp3
