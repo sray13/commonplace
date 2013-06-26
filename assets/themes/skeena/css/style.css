@@ -350,7 +350,7 @@ width: 5px;
 }
 
 .page.full .page-wrapper{
-    padding-top: 115px;
+    padding-top: 145px;
 }
 
 
@@ -405,6 +405,19 @@ box-shadow:         6px 6px 13px rgba(50, 50, 50, 0.99);}
   height:auto !important;
   margin-left:-12% !important;
 }
+
+.page-content .textify span.caption {
+  line-height: 1.2em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 17%;
+  text-align: right;
+  font-size: .9em;
+  color: rgb(51,150,243);
+}
+
+.page-content .caption
 .page-content blockquote {
   font-family: CenturySchoolbookBT-Roman;
   border:none;
@@ -480,7 +493,7 @@ body.dark .sidebar-header {
  margin-left: auto;
  margin-right:auto;
  max-width:100%;
- max-height:100%;
+ max-height:90%;
 }
 
 .gallery .swiper-slide span.caption {
@@ -611,11 +624,15 @@ background: rgb(51,150,243);
     color:white;
     position: absolute;
     left:0;
-    top:80px;
+    top:100px;
     width:100%;
-    border-top:1px solid white;
-    border-bottom:1px solid white;
     padding-left:25px;
+  }
+
+  .dark .page.full .story-sidebar {
+    border-top:1px solid #333;
+    border-bottom:1px solid #333;
+
   }
 
   .page.full .sidebar-header {
@@ -640,7 +657,10 @@ background: rgb(51,150,243);
     margin:0 3px;
   }
 
-
+  .gallery-intro-slide-wrapper {
+    margin-left: -30%;
+    width: 63%;
+  }
 
   /*make room on the left for gallery navigation at large scren sizes*/
   .page.full .gallery-slide {
@@ -649,20 +669,11 @@ background: rgb(51,150,243);
   }
 
   .gallery .swiper-slide span.caption {
-    position:absolute;
-    bottom:0;
-    background-color:white;
-    padding:15px 35px;
     width:100%;
-    /* IE 8 */  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
-    /* IE 5-7 */  filter: alpha(opacity=65);
-    /* Netscape */  -moz-opacity: 0.65;
-    /* Safari 1.x */  -khtml-opacity: 0.65;
-    /* Good browsers */ opacity: 0.65;
-
-    -webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;
-  
-  }
+    max-width:800px;  
+    margin-right:auto;
+    margin-left:auto;
+   }
 
 } /* end @media (max-width: 1024px) -> styling for gallery slides and sidebar position */
 
