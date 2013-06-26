@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-category: Profile
+category: Essay
 author: Jim Norton 
 tags: ['story']
 issue: Skeena
