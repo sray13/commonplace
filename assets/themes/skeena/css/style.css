@@ -829,3 +829,8 @@ background: rgb(51,150,243);
 @media (min-width: 1500px) {
   .page.full .story-sidebar {margin-left:5%;}
 }
+
+.active-map {
+  z-index: 1000 !important;
+  pointer-events: auto !important;
+}

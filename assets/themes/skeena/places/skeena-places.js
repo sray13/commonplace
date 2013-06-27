@@ -9,10 +9,14 @@ skeenaPlaces.push({
 		"coordinates": [ {{ post.longitude }}, {{ post.latitude }} ]
 	},
 	"properties": {
-		"image": "{{ post.map-icon }}"
+		"image": "{{ post.map-icon }}",
+		"title": "{{ post.title }}",
+		"popup": "popup-{{post.url | replace:'/',''}}-content"
 	}
 });
 {% endif %}{% endfor %}
+
+
 // var skeenaPlaces = [{
 // 		"geometry": {
 // 			"type": "Point",
