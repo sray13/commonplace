@@ -245,11 +245,11 @@ a:hover {
   margin: 0 auto;
   padding-top:85px !important;
   font-family: AvenirLT-Light;
-  fo
 }
 
 .toc-section .popover .container.narrow {
     width: 70% !important;
+    max-width:900px !important;
 }
 
 .toc-section .popover .container .row {
@@ -258,19 +258,22 @@ a:hover {
 .toc-section .popover .container .story {
   text-align: center;
   margin-top: 5%;
-
+  padding: 0 35px;
 }
 .toc-section .popover .container .story .story-title {
   text-transform: uppercase;
-  padding-bottom 15px;
   color: black;
-  border-bottom: 1px solid rgb(107,103,101);
   font-size: 16px;
+  vertical-align: middle;
 }
 .toc-section .popover .container .story .story-category {
   font-style: italic;
   font-family: CenturySchoolbookBT-Italic;
   color: rgb(52,150,242);
+  margin-bottom:2px;
+  border-top: 1px solid rgb(107,103,101);
+  margin-top: 13px;
+  padding-top:12px;
 }
 .toc-section .popover .arrow {
   left: 15%;
@@ -302,6 +305,31 @@ a:hover {
   border-bottom:1px solid #333;
   margin-top:80px;
   padding:10px 0 10px 5px;
+}
+
+.popover .large {
+  font-size:1.1em;
+  line-height: 1.7em;
+  letter-spacing: .1em;
+}
+
+.about-masthead {
+  color:rgb(51,150,243);
+}
+
+
+.about-masthead .row {margin-bottom:25px;}
+.about-masthead .row.break-line { padding-bottom:25px;border-bottom:1px dashed #CCC;}
+
+.about-masthead h5{
+  font-weight:normal;
+  font-family: CenturySchoolbookBT-Italic;
+  color:#333;
+  margin-bottom:0;
+}
+
+.about-masthead p {
+  margin-bottom:0;
 }
 
 .root-container {
@@ -380,7 +408,10 @@ width: 5px;
 -moz-box-shadow:    6px 6px 13px rgba(50, 50, 50, 0.99);
 box-shadow:         6px 6px 13px rgba(50, 50, 50, 0.99);}
 
-.popover-content h3 {line-height: 1.2em;font-family:Intro-Black-Caps; }
+.popover-content h3 {
+  line-height: 1.2em;
+  font-family:Intro-Black-Caps;
+}
 
 .page-wrapper {
   margin:0 !important;  

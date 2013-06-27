@@ -356,8 +356,8 @@ if (window.location.hash) {
                         tocHeight,
                         $this=$(this);
                     e.preventDefault();
-
-                    $this.popover('show');
+                    $('.masthead .popover').remove();
+                    $this.popover('toggle');
                     $popover = $('.toc-section').find('.popover');
                     $popover.addClass('ink-bg');
                     tocHeight = $popover.closest('.toc-section').height();
