@@ -17,7 +17,6 @@ window.markerLayer = mapbox.markers.layer().features(skeenaPlaces).factory(funct
 	var img = document.createElement('img');
 
 	var popup = function(e) {
-		debugger;
 		$(e.target).popover({
 			placement: "bottom",
 			trigger: "manual",
@@ -26,9 +25,13 @@ window.markerLayer = mapbox.markers.layer().features(skeenaPlaces).factory(funct
 			content: $($(e.target).data('popup')).html()
 		}).popover('show');
 	}
+
 	img.className = 'marker-image';
 	img.setAttribute('src', 'assets/themes/skeena/img/map/' + f.properties.image);
 	$(img).data('popup', "#" + f.properties.popup);
+
 	MM.addEvent(img, 'click', popup);
+	MM.addEvent(img, 'touch', popup);
+
 	return img;
 });
