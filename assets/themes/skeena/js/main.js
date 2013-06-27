@@ -87,8 +87,8 @@ if (window.location.hash) {
                     $('.swiper-root').backstretch(backgroundImage, {fade:450});
                     
                 } else if (! backgroundImage) {
-                    $('.swiper-root').backstretch('{{BASE_PATH}}/assets/themes/skeena/img/cover.jpg', {fade:450});
-                    
+                    //$('.swiper-root').backstretch('{{BASE_PATH}}/assets/themes/skeena/img/cover.jpg', {fade:450});
+                    $('.swiper-root').find('.backstretch').remove();
 
                 }
                 if (swiper.activeIndex > 1){
