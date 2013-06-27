@@ -5,8 +5,8 @@ category: Voices
 author: Ivan Thompson
 tags: ['voices']
 issue: Skeena
-place: Smithers 
-intro: Healthy, diverse Skeena ecosystems, cultures, communities, and civic groups are "the immune response” to outside threats. 
+place: Vancouver 
+intro: Healthy, diverse Skeena ecosystems, cultures, communities, and civic groups are the basin's "immune system.”
 toc-img: ivanthompson.jpg
 story-img: ivanthompson.jpg
 audio: ivanthompson.mp3
