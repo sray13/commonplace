@@ -890,3 +890,8 @@ div.next-story {display:none; text-align: center;padding-right:15px;}
 @media (min-width: 1500px) {
   .page.full .story-sidebar {margin-left:5%;}
 }
+
+.active-map {
+  z-index: 1000 !important;
+  pointer-events: auto !important;
+}

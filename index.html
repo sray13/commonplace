@@ -171,6 +171,14 @@ tagline: Supporting tagline
   </div> <!-- end about content container -->
 </div> <!-- end about content wrapper div -->
 
+{% for post in site.posts %}{% if post.latitude && post.longitude %}
+<div style="display: none" id="popup-{{post.url | replace:'/',''}}-content">
+  <h3 class="popover-title">{{ post.title }}</h3>
+  <div class="popover-content">
+    <p>{{ post.intro }}</p>
+  </div>
+</div>
+{% endif %}{% endfor %}
 
 <div class="swiper-container swiper-root" id="map">
 
