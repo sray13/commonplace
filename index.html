@@ -11,24 +11,35 @@ tagline: Supporting tagline
       <div class="container">
         <ul class="nav">
           <li><a href="#" id="toc"><em>01</em>Table of Contents</a></li>
-          <li><a href="#" id=""><em>02</em> Connect</a></li>
+          <li><a href="#" id="connect"><em>02</em> Connect</a></li>
           <li><a href="#"><h2>commonplace</h2></a></li>
-          <li><a href="#" id=""><em>03</em> About</a></li>
-          <li><a href="#" id="about"><em>04</em> Issues</a></li>
+          <li><a href="#" id="about"><em>03</em> About</a></li>
+          <li><a href="#" id=""><em>04</em> Issues</a></li>
         </ul>
       </div>
     </div>
   </div><!-- /.navbar -->
 </div>
+
+
+<!-- TABLE OF CONTENTS CONTENT -->
 <div style="display: none" id="toc-content">
-  <div class="toc-close"></div>
-  <div class="container">
+  <div class="toc-close">CLOSE</div>
+  <div class="container narrow">
       {% for post in site.tags.story reversed %}
-      {% capture col %}{{ forloop.index |modulo:3 }}{% endcapture %}
-        {% if col == '1' %}
-        <div class="row">
+
+        {% if forloop.index == 3 %}
+          <div class="story" data-story="#voices">
+            <a href="#">
+              <img src="{{ASSET_PATH}}skeena/img/TOC/medeek_b.jpg" height="100" width="100" class="img-circle">
+              <h3 class="story-title">Voices</h3>
+              <h4 class="story-category">Audio stories</h4>
+              <p class="story-author">Skeena residents speak</p>
+            </a>
+          </div>
         {% endif %}
-          <div class="span4 story" data-story="#{{post.url | replace: '/', ''}}">
+
+          <div class="story" data-story="#{{post.url | replace: '/', ''}}">
             <a href="{{ post.url }}">
               <img src="{{ASSET_PATH}}skeena/img/TOC/{{ post.toc-img }}" height="100" width="100" class="img-circle">
               <h3 class="story-title">{{ post.title }}</h3>
@@ -36,36 +47,129 @@ tagline: Supporting tagline
               <p class="story-author">{{ post.author }}</p>
             </a>
           </div>
-        {% if col == '0' or forloop.last %}
-        </div>
-        {% endif %}
+
       {% endfor %}
   </div>
 </div>
 
-<div style="display: none" id="about-content">
-  <div class="toc-close"></div>
+
+<!-- CONNECT WITH US TOC CONTENT -->
+<div style="display: none" id="connect-content">
+  <div class="toc-close">CLOSE</div>
   <div class="container">
-    <h2>about us</h2>
-      {% for post in site.tags.story reversed %}
-      {% capture col %}{{ forloop.index |modulo:3 }}{% endcapture %}
-        {% if col == '1' %}
+    <div class="row">
+      <div class="span2">
+      <p class="toc-sidebar">Connect With Commonplace</p>
+      </div>
+      <div class="span8 offset1">
         <div class="row">
-        {% endif %}
-          <div class="span4 story" data-story="#{{post.url | replace: '/', ''}}">
-            <a href="{{ post.url }}">
-              <img src="{{ASSET_PATH}}skeena/img/TOC/{{ post.toc-img }}" height="100" width="100" class="img-circle">
-              <h3 class="story-title">{{ post.title }}</h3>
-              <h4 class="story-category">{{ post.category }}</h4>
-              <p class="story-author">{{ post.author }}</p>
-            </a>
+          <div class="span11 connect-content">
+            <div class="row">
+              <div class="span6">
+                <div class="row">
+                  <div class="span3"><img src="{{ASSET_PATH}}skeena/img/email_grey.png"></div>
+                  <div class="span7"><p class="large">Subscribe</p><p>Sign up for Commonplace news via email.</p></div>
+                </div>
+              </div>
+              <div class="span6">
+                <div class="row">
+                  <div class="span3"><img src="{{ASSET_PATH}}skeena/img/twitter_grey.png"></div>
+                  <div class="span7"><p class="large">Follow us</p><p>We’re on Twitter @Commonplacemag</p></div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="span6">
+                <div class="row">
+                  <div class="span3"><img src="{{ASSET_PATH}}skeena/img/facebook_grey.png"></div>
+                  <div class="span7"><p class="large">Join us</p><p>on Facebook.</p></div>
+                </div>
+              </div>
+              <div class="span6">
+                <div class="row">
+                  <div class="span3"><img src="{{ASSET_PATH}}skeena/img/map_voice_grey.png"></div>
+                  <div class="span7"><p class="large">Contribute</p><p>to our Voices section by writing to the Editor at <a href="mailto:cholland@ecotrust.org">cholland@ecotrust.org</a>.</p></div>
+                </div>
+              </div>
+            </div>
           </div>
-        {% if col == '0' or forloop.last %}
+          <div class="span1">&nbsp;</div>
         </div>
-        {% endif %}
-      {% endfor %}
+      </div>
+    </div>
   </div>
 </div>
+
+<!-- ABOUT US TOC CONTENT -->
+<div style="display: none" id="about-content">
+  <div class="toc-close">CLOSE</div>
+  <div class="container">
+    <div class="row">
+      <div class="span2">
+      <p class="toc-sidebar">About Commonplace</p>
+      </div>
+      <div class="span6 about-content">
+        <p>Commonplace is a publication of <a href="http://www.ecotrust.org">Ecotrust</a> focused on stories of home. Our hope is to create places for connection, for mapping out new understandings of what is common across states, nations, and human nature. We look forward to hearing your stories about the places you live, your experiences of the stories we publish, and your ideas about how to evolve Commonplace in future issues. Share your thoughts on <a href="www.facebook.com/commonplacemagazine">Facebook</a>, <a href="https://twitter.com/Commonplacemag">Twitter</a>, or write to us at <a href="mailto:info@commonplacemagazine.org">info@commonplacemagazine.org</a></p>
+      </div>
+      <div class="span4 about-masthead">
+        <div class="row">
+          <div class="span6"><img src="/assets/themes/skeena/img/TOC/welcome.jpg" height="100" width="100" class="img-circle"></div>
+          <div class="span6">
+            <h5>Publisher</h5>
+            <p>Spencer B. Beebe</p>
+            <p class="black">Founder &amp; Chair, Ecotrust</p>
+          </div>
+        </div>
+
+        <div class="row break-line">
+          <div class="span6"><img src="/assets/themes/skeena/img/TOC/arrival.jpg" height="100" width="100" class="img-circle"></div>
+          <div class="span6">
+            <h5>Editor</h5>
+            <p>Carolyn Holland</p>
+            <p class="black">cholland@ecotrust.org</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="span6">
+            <h5>Managing Editor</h5>
+            <p>Oakley Brooks</p>
+          </div>
+          <div class="span6">
+            <h5>Contributing Editors</h5>
+            <p>Jim Norton</p>
+            <p>Sam Beebe</p>
+            <p>Emma Deans</p>
+            <p>Lola Milholland</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="span6">
+            <h5>Design Director</h5>
+            <p>Sarah Magrish Cline</p>
+          </div>
+          <div class="span6">
+            <h5>Lead Developer</h5>
+            <p>Edwin Knuth</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="span6">
+            <h5>Editorial Intern</h5>
+            <p>Sabin Ray</p>
+          </div>
+          <div class="span6">
+            <h5></h5>
+            <p></p>
+          </div>
+        </div>
+
+      </div> <!-- end masthead column -->
+    </div> <!-- end main row inside the content container -->
+  </div> <!-- end about content container -->
+</div> <!-- end about content wrapper div -->
 
 
 <div class="swiper-container swiper-root" id="map">
@@ -87,6 +191,11 @@ tagline: Supporting tagline
       
     </div>
       <div class="swiper-slide marker-slide" id="skeena-map">
+         <div class="page-footer">
+           <a href="#">
+             <i class="icon-chevron-down"></i>
+           </a>
+         </div>
       </div>
       <!--Second Slide-->
       {% for post in site.tags.story reversed %}
@@ -97,7 +206,7 @@ tagline: Supporting tagline
 
               <div class="navarrows hidden-tablet">
                 <div class="pull-left"><a href="#" class="leftarrow">&nbsp;</a></div>
-                <div class="pull-right"><a href="#" class="rightarrow">&nbsp;</a></div>
+                <div class="pull-right"><a href="#" class="rightarrow">&nbsp;</a><div class="next-story avenir-light">Next:<br><span class="next-story-name intro blue"></span></div></div>
               </div> <!-- end nav arrows container -->
 
                 <div class="span12 page-wrapper gallery-wrapper">
@@ -180,14 +289,14 @@ tagline: Supporting tagline
           <!--Third Slide-->
           {% assign post_length = post.content | number_of_words %}
           <div class="swiper-slide"
-                data-img="{{ASSET_PATH}}skeena/img/article_openers/{{ post.story-img }}"
+                {% if post.story-img %} data-img="{{ASSET_PATH}}skeena/img/article_openers/{{ post.story-img }}" {% endif %}
                 data-hash="{{post.url | replace:'/',''}}"
                 {% if post.category == 'Gallery' %} id="{{post.url | replace:'/',''}}" {% endif %}>
             <div class="page{% if post.category == 'Gallery' %} full light ink-bg{% endif %}">
 
               <div class="navarrows hidden-phone">
                 <div class="pull-left"><a href="#" class="leftarrow">&nbsp;</a></div>
-                <div class="pull-right"><a href="#" class="rightarrow">&nbsp;</a></div>
+                <div class="pull-right"><a href="#" class="rightarrow">&nbsp;</a><div class="next-story avenir-light">Next:<br><span class="next-story-name intro blue"></span></div></div>
               </div> <!-- end nav arrows container -->
 
               <div class="span12 page-wrapper{% if post.category == 'Gallery' %} gallery-wrapper{% else %} paper-bg{% endif %}">
