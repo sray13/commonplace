@@ -7,6 +7,7 @@ tags: ['story']
 issue: Skeena
 toc-img: medeek_a.jpg
 story-img: medeek_a.jpg
+story-img caption: Grizzly and cub near Stuart Lake. Photo by Neil Ever Osborne.
 ---
 {% include JB/setup %}
 
