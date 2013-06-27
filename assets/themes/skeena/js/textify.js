@@ -148,10 +148,10 @@
                         })
                     }
                 } else {
-                    if (element.height >= columnHeight - 100) {
+                    if (element.height >= columnHeight - 150) {
                         thisImg.css({
                             'display': 'block',
-                            'height': columnHeight - 100,
+                            'height': columnHeight - 150,
                             'margin': 0,
                             'padding': 0
                             

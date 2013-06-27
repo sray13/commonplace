@@ -253,7 +253,7 @@ a:hover {
 .toc-section .popover .container {
   /*width: 90% !important;*/
   margin: 0 auto;
-  padding-top:85px !important;
+  padding-top:15px !important;
   font-family: AvenirLT-Light;
   line-height:1.3em;
 }
@@ -788,10 +788,12 @@ div.next-story {display:none; text-align: center;padding-right:15px;}
 }
 
 .sub-toc-item p.author{
-  font-weight: bold;
-  margin: 10px 0 0px 0;
+  font-family: Intro-Black-Caps;
+  margin: 0;
+  font-size: .9em;
 }
 .sub-toc-item p.place{
+  font-family: AvenirLT-Light;
   margin-bottom:2px;
   font-size: .9em;
 }
@@ -799,7 +801,7 @@ div.next-story {display:none; text-align: center;padding-right:15px;}
   margin:0;
   font-size:.9em;
   line-height: 1em;
-  font-style: italic;
+  font-family:CenturySchoolbookBT-Italic;
   padding-bottom:5px;
 }
 
