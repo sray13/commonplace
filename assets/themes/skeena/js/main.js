@@ -30,7 +30,6 @@ if (window.location.hash) {
         var $masthead = $('.masthead'),
             hGalleryArray=new Array();
 
-
         mySwiper = new Swiper('.swiper-root',{
             mode:'vertical',
             // loop: true,
@@ -173,9 +172,12 @@ if (window.location.hash) {
                 if ($slide.hasClass('marker-slide')) {
                     map.addLayer(markerLayer);
                     window.blockSlideChange=true;
+                    $('#map').children('div:last-child').addClass('active-map');
+
                 } else {
                     map.removeLayer(markerLayer);
                     window.blockSlideChange=false;
+                    $('#map').children('div:last-child').removeClass('active-map');
                 }
 
             }, // end on slideChangeEnd callback for main vertical slider
@@ -429,8 +431,8 @@ if (window.location.hash) {
 
         $(document).on('click', '.story', function (e) {
             e.preventDefault();
-            mySwiper.swipeTo($($(this).data('story')).index());
-            $toc.popover('hide');
+            $('#toc').popover('hide');
+           mySwiper.swipeTo($($(this).data('story')).index());
         }); // end scroll to clicked story binding
 
         $('.page-footer').on('click', function () {
@@ -445,40 +447,7 @@ if (window.location.hash) {
         }); // end page footer scroll to next page click binding
     }); //end document.ready function
 
-    var layer = new MM.TemplatedLayer('http://tilestream.apps.ecotrust.org/v2/commonplace/{Z}/{X}/{Y}.png');
-
-    var center = {
-        lat:54,
-        lon: -130
-    };
-    var zoom = 7;
-
-    // Create a map
-    window.map = mapbox.map('map', layer, null, []);
-    map.centerzoom(center, zoom);
-
-    var places = {
-        "Terrace, BC": [-128.5997, 54.5165],
-        "Kitmaat Village, BC": [-128.55, 53.9],
-        "Hartley Bay, BC": [-129.2500,53.4333]
-    }
-
-    window.markerLayer = mapbox.markers.layer().features([{
-           "geometry": { "type": "Point", "coordinates": places['Terrace, BC']},
-           "properties": { "image": "map_voice_wht.png" }
-       },{
-           "geometry": { "type": "Point", "coordinates": places['Kitmaat Village, BC']},
-           "properties": { "image": "map_voice_wht_90.png" }
-       },{
-           "geometry": { "type": "Point", "coordinates": places['Hartley Bay, BC']},
-           "properties": { "image": "map_voice_wht_180.png" }
-       }]).factory(function(f) {
-           var img = document.createElement('img');
-           img.className = 'marker-image';
-           img.setAttribute('src', '{{BASE_PATH}}/assets/themes/skeena/img/map/' + f.properties.image);
-           return img;
-       });
-
+    
     
 
 })(); //end generic wrapper function
