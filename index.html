@@ -20,9 +20,10 @@ tagline: Supporting tagline
     </div>
   </div><!-- /.navbar -->
 </div>
+
 <div style="display: none" id="toc-content">
   <div class="toc-close"></div>
-  <div class="container">
+  <div class="container narrow">
       {% for post in site.tags.story reversed %}
       {% capture col %}{{ forloop.index |modulo:3 }}{% endcapture %}
         {% if col == '1' %}
@@ -46,24 +47,24 @@ tagline: Supporting tagline
 <div style="display: none" id="about-content">
   <div class="toc-close"></div>
   <div class="container">
-    <h2>about us</h2>
-      {% for post in site.tags.story reversed %}
-      {% capture col %}{{ forloop.index |modulo:3 }}{% endcapture %}
-        {% if col == '1' %}
+    <div class="row">
+      <div class="span2">
+      <p class="toc-sidebar">About Commonplace</p>
+      </div>
+      <div class="span6 large">
+        <p>Commonplace is a publication of <a href="http://www.ecotrust.org">Ecotrust</a> focused on stories of home. Our hope is to create places for connection, for mapping out new understandings of what is common across states, nations, and human nature. We look forward to hearing your stories about the places you live, your experiences of the stories we publish, and your ideas about how to evolve Commonplace in future issues. Share your thoughts on <a href="www.facebook.com/commonplacemagazine">Facebook</a>, <a href="https://twitter.com/Commonplacemag">Twitter</a>, or write to us at <a href="mailto:info@commonplacemagazine.org">info@commonplacemagazine.org</a></p>
+      </div>
+      <div class="span4">
         <div class="row">
-        {% endif %}
-          <div class="span4 story" data-story="#{{post.url | replace: '/', ''}}">
-            <a href="{{ post.url }}">
-              <img src="{{ASSET_PATH}}skeena/img/TOC/{{ post.toc-img }}" height="100" width="100" class="img-circle">
-              <h3 class="story-title">{{ post.title }}</h3>
-              <h4 class="story-category">{{ post.category }}</h4>
-              <p class="story-author">{{ post.author }}</p>
-            </a>
-          </div>
-        {% if col == '0' or forloop.last %}
+          <div class="span4">spencer pic</div>
+          <div class="span6 offset2">spencer info</div>
         </div>
-        {% endif %}
-      {% endfor %}
+        <div class="row">
+          <div class="span4">carolyn pic</div>
+          <div class="span6 offset2">carolyn info</div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -180,7 +181,7 @@ tagline: Supporting tagline
           <!--Third Slide-->
           {% assign post_length = post.content | number_of_words %}
           <div class="swiper-slide"
-                data-img="{{ASSET_PATH}}skeena/img/article_openers/{{ post.story-img }}"
+                {% if post.story-img %} data-img="{{ASSET_PATH}}skeena/img/article_openers/{{ post.story-img }}" {% endif %}
                 data-hash="{{post.url | replace:'/',''}}"
                 {% if post.category == 'Gallery' %} id="{{post.url | replace:'/',''}}" {% endif %}>
             <div class="page{% if post.category == 'Gallery' %} full light ink-bg{% endif %}">

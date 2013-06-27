@@ -429,8 +429,8 @@ if (window.location.hash) {
 
         $(document).on('click', '.story', function (e) {
             e.preventDefault();
-            mySwiper.swipeTo($($(this).data('story')).index());
-            $toc.popover('hide');
+            $('#toc').popover('hide');
+           mySwiper.swipeTo($($(this).data('story')).index());
         }); // end scroll to clicked story binding
 
         $('.page-footer').on('click', function () {
