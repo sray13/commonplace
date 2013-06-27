@@ -24,6 +24,6 @@ slideshow:
 - img: Cassiar-Cannery---towing-boats.jpg
   caption: Towing purse seiners out to fish the Skeena's mouth, in the old days. Courtesy of Prince Rupert District Regional Archive
 - img: Cassiar-Cannery-boats-along-the-tracks-001(low).jpg
-  caption: The Cassiar fleet up on dry land. Courtesy of Cassiar Cannery.
+  caption: The old Cassiar fleet up on dry land. Courtesy of Cassiar Cannery.
 ---
-After they purchased the shuttered Cassiar Cannery in 2006, it took Mark Bell and Justine Crawford eight painstaking months to clear the junk and guano out of the place. But they eventually unleashed the latent energy of what was once the largest cannery on the West Coast. "Cassiar wants to get back to work," Crawford says. Crawford and Bell began restoring boats and pulled salvage logs out of the river. They overhauled the former manager's cottages for visitors. And they'll harvest water from the same system once used by 600 employees to clean what seemed like an endless supply of fish.   
+After they purchased the shuttered Cassiar Cannery in 2006, it took Mark Bell and Justine Crawford eight painstaking months to clear the junk and guano out of the place. But they eventually unleashed the latent energy of what was once the largest cannery on the West Coast. "Cassiar wants to get back to work," Crawford says. Crawford and Bell began restoring boats and pulled salvage logs out of the river. They overhauled the former managers' cottages for visitors. And they'll harvest water from the same system once used by 600 employees to clean what seemed like an endless supply of fish.   
