@@ -55,7 +55,8 @@ if (window.location.hash) {
                     currentBackgroundPath = $('.swiper-root').css('background-image').split('/'),
                     currentBackgroundImage = currentBackgroundPath[currentBackgroundPath.length-1].replace(')',''),
                     childSliderID=$('.gallery',$slide).attr('id') || '',
-                    subSlideIsLight=undefined;
+                    subSlideIsLight=undefined,
+                    nextStoryName=$slide.next().attr('id') || false;
 
                 //set this slide to be 'active' for purposes of applying global keypress events
                 $('.swiper-root>.swiper-wrapper>div.swiper-slide').removeClass('active');
@@ -89,7 +90,12 @@ if (window.location.hash) {
                 } else if (! backgroundImage) {
                     //$('.swiper-root').backstretch('{{BASE_PATH}}/assets/themes/skeena/img/cover.jpg', {fade:450});
                     $('.swiper-root').find('.backstretch').remove();
+                }
 
+
+                // find the name of the next story and populate the div under the right nav arrow
+                if(nextStoryName) {
+                    $slide.find('.next-story-name').text(nextStoryName.split('-').join(' '));
                 }
                 if (swiper.activeIndex > 1){
                     $('#-zoom-7').parent().fadeOut("fast");
@@ -126,12 +132,14 @@ if (window.location.hash) {
                 //     $slide.next().removeClass('hidden');
                 // }
 
+
+                //activate the photo essay if there is one
                 if ($gallery.length) {
                     var theID=$gallery.attr('id'),
                         paginationClass='.'+theID+'-pagination';
 
-                // Add this new gallery object into an array for
-                // later access to the swiper methods
+                    // Add this new gallery object into an array for
+                    // later access to the swiper methods
                     if(!(theID in hGalleryArray)){
                     hGalleryArray[theID]= $gallery.swiper({
                         mode: 'horizontal',
@@ -157,6 +165,13 @@ if (window.location.hash) {
                                 $('body').addClass('dark');
                             } else {
                                 $('body').removeClass('dark');
+                            }
+
+                            //check to see if this is the last slide
+                            if ((swiper.slides.length-1)==swiper.activeIndex){
+                                $('.swiper-slide.active').addClass('last-page');
+                            } else {
+                                $('.swiper-slide.active').removeClass('last-page');
                             }
 
                             // initialize scroll buttons for voices content if overflowing
@@ -196,6 +211,10 @@ if (window.location.hash) {
                 isGallery=$hContainer.hasClass('gallery-wrapper'),
                 // yes, here theID may be a string, or it may be an object. sorry.
                 theID= isGallery ? $hContainer.find('.gallery').attr('id') : $hContainer.find('.text_pagination');
+
+                if ($('.swiper-slide.active').hasClass('last-page') && $(this).hasClass("rightarrow")) {
+                    mySwiper.swipeNext();
+                }
 
                 if(isGallery){
                     //this is a swiper gallery.  simply use the built in swipeNext/swipePrev methods
@@ -274,6 +293,11 @@ if (window.location.hash) {
             });
 
             $('span.x', $theNav).text(theCurrentNumber);
+            if ($('span.x', $theNav).text()==$('span.y', $theNav).text()) {
+                $('.swiper-slide.active').addClass('last-page');
+            } else {
+                $('.swiper-slide.active').removeClass('last-page');
+            }
         });
 
         // Control voices biography content with up/down arrows
@@ -301,22 +325,6 @@ if (window.location.hash) {
             mySwiper.swipeTo($(originalHash).index());    
         }
 
-        function styleStoryLeadin ($theElement) {
-            var str=$(this).html(),
-            delimiter = ' ',
-            start = 0, end = 6,
-            first = str.split(delimiter).slice(start,end).join(delimiter),
-            last = str.split(delimiter).slice(end).join(delimiter),
-            result = "<span class='schoolbook'>"+first+"</span> "+last;
-            $(this).html(result);
-        }
-
-        // style body copy intros and outros
-        $('p:firstChild','div.page-content').each(styleStoryLeadin);
-        $('p:firstChild','div.gallery-intro-slide-wrapper').each(styleStoryLeadin);
-        $('p:firstChild','div.voice-content-text').each(styleStoryLeadin);
-
-
         // init the audio player for voices
         audiojs.events.ready(function() {
             var as = audiojs.createAll();
@@ -332,6 +340,23 @@ if (window.location.hash) {
             //$toc = $("#toc"),
             $window = $(window),
             $popoverArray=new Array();
+
+            function styleStoryLeadin ($theElement,start,end) {
+                var str=$(this).html(),
+                delimiter = ' ',
+                start = start || 0, end = end || 5,
+                first = str.split(delimiter).slice(start,end).join(delimiter),
+                last = str.split(delimiter).slice(end).join(delimiter),
+                result = "<span class='schoolbook'>"+first+"</span> "+last;
+                $(this).html(result);
+            }
+
+            // style body copy intros and outros
+            $('p:firstChild','div.page-content').each(styleStoryLeadin);
+            $('p:firstChild','div.gallery-intro-slide-wrapper').each(styleStoryLeadin);
+            $('p:firstChild','div.voice-content-text').each(styleStoryLeadin);
+            $('p:firstChild','.main-content').each(styleStoryLeadin);
+
 
 ///////////////////////////////////////
 
@@ -356,30 +381,35 @@ if (window.location.hash) {
                         tocHeight,
                         $this=$(this);
                     e.preventDefault();
-                    $('.masthead .popover').remove();
+                    //disappear all popovers that are not linked to the clicked item
+                    $('a','ul.nav').not('#'+theID).popover('hide');
+                    //toggle popover for the clicked item
                     $this.popover('toggle');
+
+                    //set some heights, based on content
                     $popover = $('.toc-section').find('.popover');
                     $popover.addClass('ink-bg');
                     tocHeight = $popover.closest('.toc-section').height();
                     $popover.find('.popover-content').height($popover.closest('.section').height() - tocHeight);
-                    //console.log($popover.closest('.section').height() - tocHeight);
                     $popover.find('.arrow').position({
                        of: $this,
                        my: 'bottom center',
                        at: 'bottom'
                     });
-                    // equalize the heights of titles in each row
-                    $('.popover-content .row').each(function () {
-                        var currentTallest = 0;
-                        $('h3.story-title',$(this)).each(function () {                    
+
+
+                    // equalize the heights of titles in each row for the TOC item
+                    var currentTallest = 0;
+                        $('.popover-content h3.story-title').each(function () {                    
                                 if ($(this).height() > currentTallest) { currentTallest = $(this).height(); }
                             });
-                            //if (!px && Number.prototype.pxToEm) currentTallest = currentTallest.pxToEm(); //use ems unless px is specified
-                            // for ie6, set height since min-height isn't supported
-                            if ($.browser.msie && $.browser.version == 6.0) { $(this).children().css({'height': currentTallest}); }
-                            $('h3.story-title',$(this)).css({'min-height': currentTallest});
-                    }); // end .each iteration of content row items to set each to same height
+                        //if (!px && Number.prototype.pxToEm) currentTallest = currentTallest.pxToEm(); //use ems unless px is specified
+                        // for ie6, set height since min-height isn't supported
+                        if ($.browser.msie && $.browser.version == 6.0) { $(this).children().css({'height': currentTallest}); }
+                        $('.popover-content h3.story-title').css({'min-height': currentTallest});
 
+                    
+                    // wire up the close "X" button
                     $('.toc-close','.popover').click(function () {
                         $this.popover('hide');
                     });
@@ -426,6 +456,10 @@ if (window.location.hash) {
         // }); // end TOC click functino
 
 /////////////////////////////////////
+
+        $('.nav h2').on('click', function (e) {
+            mySwiper.swipeTo(1);
+        });
 
         $(document).on('click', '.story', function (e) {
             e.preventDefault();
