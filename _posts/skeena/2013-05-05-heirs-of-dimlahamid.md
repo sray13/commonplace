@@ -5,7 +5,7 @@ tags: ['story']
 toc-img: dimlahamid.jpg
 author: Gary Fiegehen
 issue: Skeena
-path: Gary slideshow
+path: Gary Slideshow
 slideshow:
 
 - img: gary01.jpg

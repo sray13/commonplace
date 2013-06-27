@@ -7,6 +7,7 @@ tags: ['story']
 issue: Skeena
 toc-img: medeek_a.jpg
 story-img: medeek_a.jpg
+story-img caption: Grizzly and cub near Stuart Lake, by Neil Ever Osborne.
 ---
 {% include JB/setup %}
 
@@ -34,7 +35,7 @@ More than anything else, the salmon connect everyone to one another as well as t
 
 Words like *ecosystem* might get you partway into understanding all this, but *wilderness* is where you’ll get lost. Every river confluence, every hillock, and every rock outcrop in the Skeena Country has its own story. 
 
-![A Wet’suwet’en dipnetter works the Moricetown Canyon.Photo by Gary Fiegehen.](assets/themes/skeena/img/Glavin/Moricetown20120731_006.jpg)
+![A Gitanow pole. Photo by Gary Fiegehen.](assets/themes/skeena/img/Glavin/Gitanow20120718_030.jpg)
 
 Ancient forms of tenure and title radiate outward from Dimlahamid in every direction: rank, name, fishing station, goat-hunting mountain, hillside berry ground, crest. Hawilamax is The Place They Throw Away Turnips. Anwaris is Place of Digging. There is a place called Angudoon, which is the short form for a name that translates more fully as The Steep Place on the Riverbank Where a Man Is Pulled Up with the Right Hand of a Friend. Every cranny and back eddy is accounted for in the deepest antiquity by means of matrilineal clan systems of ownership and succession, all codified in what the Gitxsan call *ada’ox*, and what their Bulkley River neighbors among the Wet’suwet’en call *kungax*, and replicated in similarly distinct ways among the Kitselas, the Kitsumkalum, the Gitxaala, the Metlakatla, the Nisga’a, the Haisla, and all the way out to the Gitga’at of Hartley Bay.
 
@@ -120,7 +121,7 @@ But the place that people from away have chosen to imagine as the primeval Great
 The Union Steamship Company once boasted twenty regular ports of call in the Great Bear Rainforest. As the Age of Steam gave rise to the Oil Age, the region was called the Jungles, and generations of loggers and sawmill workers lived and toiled in it and took out the biggest and best and most easily felled timber until the rest was barely worth the bother.
 
 It should also be remembered that there were once more than eighty cannery towns between the Kwagiulth waters around Cape Caution and the Nass River, near the ancient Nisga’a town of Gingolx. Aboriginal workers formed the central division of a cosmopolitan Great Bear Rainforest proletariat that brought in Japanese immigrants, Chinese immigrants, Hawaiians, Orkney Islanders, Englishmen, Americans, Finns, and on and on. The industrial revolution clanked and whirred away, devouring whatever it could refine and process and merchandise. Entire cultures went into its gaping maw and came out the other side forever changed.
-![A Gitanow pole. Photo by Gary Fiegehen.](assets/themes/skeena/img/Glavin/Gitanow20120718_030.jpg)
+
 For the Gitga’at people of the Tsimshian community of Hartley Bay, the initiation into this new world occurred in a utopian New Jerusalem of about 1,100 Tsimshians at Metlakatla, after the name of the Tsimshian village that had been there on Pike Island, at what is now the northern entrance to Prince Rupert Harbour, from time out of mind. Its cavernous Anglican church was the largest church west of Chicago and north of San Francisco. Its streets lit with gas lamps to brighten the twilight gloom, Metlakatla boasted a sawmill, a printing press, a cannery, a textile factory, and merry-go-rounds for the children. By the late 1860s, Metlakatla’s primly uniformed Tsimshian police were patrolling the inlets for rum runners. Its brass band entertained visiting dignitaries. Its choir, renowned for its renditions of Handel’s *Messiah*, occasionally toured the United States.
 
 The Holy City of Metlakatla was established at a time of apocalyptic upheaval, smallpox, spiritual malaise, and cultural collapse among the Tsimshians. Founded by the slightly mad English missionary William Duncan, Metlakatla came to an abrupt demise brought on by the provincial authorities’ nervousness about the community’s power and the Anglican church authorities’ absurd doctrinal disputes with Duncan. In 1887, almost the entire community set off in canoes and small sailboats to establish New Metlakatla in Alaska. By then, there wasn’t much left of the Gitga’at people, one of a dozen Tsimshian communities that had been swept up in Duncan’s utopian fervors.
