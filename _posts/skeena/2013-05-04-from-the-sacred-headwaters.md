@@ -15,7 +15,7 @@ Oscar Dennis’s mother, Mary, once told me that the measure of a Tahltan was no
 
 When I first knew the Stikine, I attended a gathering at Iskut as the community rallied against BC Hydro’s plans to flood the Grand Canyon of a river that runs through the lives of every Tahltan man and woman. A young back-to-the-land hippie stood up and in what he took as a display of solidarity declared that if these dams got built he would just have to leave the country. Right after him a Tahltan youth rose and with immense dignity turned to the previous speaker and said, “Partner, that’s the difference between you and me. If they build these dams, I’ll still be here.”
 
-![Iskut River. Photo by Carr Clifton.](assets/themes/skeena/img/Carr-Clifton/110-1536-BC_carr_clifton.jpg)
+![Iskut River. Photo by Carr Clifton.](assets/themes/skeena/img/carr-clifton/110-1536-BC_carr_clifton.jpg)
 
 For nearly thirty-five years, the Stikine has called me home, and for much of that time, ever since we bought our place at Wolf Creek, it has actually been home, even as my work has taken me throughout the world. The poet Gary Snyder, asked how a person could best protect the environment, replied, “Stay put.”
 
