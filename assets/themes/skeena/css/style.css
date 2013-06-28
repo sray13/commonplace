@@ -253,7 +253,7 @@ a:hover {
 .toc-section .popover .container {
   /*width: 90% !important;*/
   margin: 0 auto;
-  padding-top:15px !important;
+  padding-top:85px !important;
   font-family: AvenirLT-Light;
   line-height:1.3em;
 }
@@ -261,6 +261,7 @@ a:hover {
 .toc-section .popover .container.narrow {
     width: 75% !important;
     max-width:900px !important;
+    margin-top:15px;
 }
 
 .toc-section .popover .container .row {
