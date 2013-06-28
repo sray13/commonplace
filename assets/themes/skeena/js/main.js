@@ -26,9 +26,30 @@ if (window.location.hash) {
     var mySwiper;
     window.blockSlideChange=false;
 
-    window.onload = function() {
+    //window.onload = function() {
+    $('document').ready( function() {
         var $masthead = $('.masthead'),
-            hGalleryArray=new Array();
+            hGalleryArray=new Array(),
+            loadIntroImages = window.setInterval(function () {postLoadImages($('div.swiper-slide'),'intro')},5000),
+            loadGalleryImages = window.setInterval(function () {postLoadImages($('img.postload'),'gallery')},10000);
+
+            function postLoadImages ($theImages, which){
+                $theImages.each(function () {
+                    var $this=$(this),
+                    theSource=$this.data('img') || false;
+
+                    if (theSource)
+                        if (which=='gallery'){
+                            $this.attr('src', theSource);
+                        } else {
+                            $('<img />')[0].src = theSource;
+                        }
+                });
+
+                clearInterval(which=='intro' ? loadIntroImages : loadGalleryImages);
+            }
+
+            
 
         mySwiper = new Swiper('.swiper-root',{
             mode:'vertical',
@@ -40,7 +61,6 @@ if (window.location.hash) {
             onSlideChangeStart: function (swiper) {
                 var $slide = $(swiper.getSlide(swiper.realIndex));
 
-                console.log (swiper.realIndex)
                 // if ($slide.data('zoom')) {
                 //     map.zoom($slide.data('zoom'), true);
                 // } else {
@@ -61,8 +81,6 @@ if (window.location.hash) {
                     childSliderID=$('.gallery',$slide).attr('id') || '',
                     subSlideIsLight=undefined,
                     nextStoryName=$slide.next().attr('id') || false;
-
-                                    console.log (swiper.realIndex)
 
 
                 //set this slide to be 'active' for purposes of applying global keypress events
@@ -93,10 +111,8 @@ if (window.location.hash) {
 
                 // update the background image
                 if (backgroundImage && currentBackgroundImage !== backgroundImage && !preserveBodyBackground) {
-                    $('.swiper-root').backstretch(backgroundImage, {fade:450});
-                    
+                    $('.swiper-root').backstretch(backgroundImage, {fade:450});                    
                 } else if (! backgroundImage && !preserveBodyBackground) {
-                    //$('.swiper-root').backstretch('{{BASE_PATH}}/assets/themes/skeena/img/cover.jpg', {fade:450});
                     $('.swiper-root').children('.backstretch').remove();
                 }
 
@@ -342,8 +358,8 @@ if (window.location.hash) {
             var as = audiojs.createAll();
         });
         
-    }; //end window.onLoad event handler function
-
+ //   }; //end window.onLoad event handler function
+}); // end test document.ready wrapper
 
 
     $(document).ready(function () {

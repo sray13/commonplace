@@ -359,7 +359,7 @@ tagline: Supporting tagline
                         </div>
                     {% for image in post.slideshow %}
                         <div class="swiper-slide light gallery-slide">
-                          <img src="{{ ASSET_PATH }}skeena/img/{{ post.path }}/{{ image.img }}" />
+                          <img class="postload" data-img="{{ ASSET_PATH }}skeena/img/{{ post.path }}/{{ image.img }}" />
                           {% if image.caption %}<span class="caption">{{ image.caption }}</span>{% endif %}
                         </div>
                     {% endfor %}
