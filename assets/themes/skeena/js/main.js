@@ -52,7 +52,9 @@ if (window.location.hash) {
                     $gallery = $slide.find('.gallery'),
                     backgroundImage = $slide.data('img'),
                     currentBackgroundPath = $('.swiper-root').css('background-image').split('/'),
-                    currentBackgroundImage = currentBackgroundPath[currentBackgroundPath.length-1].replace(')',''),
+                    //currentBackgroundImage = currentBackgroundPath[currentBackgroundPath.length-1].replace(')',''),
+                    currentBackgroundImage = $('.backstretch:last img',$('.swiper-root')).attr('src'),
+                    subBackgroundImage = false,
                     childSliderID=$('.gallery',$slide).attr('id') || '',
                     subSlideIsLight=undefined,
                     nextStoryName=$slide.next().attr('id') || false;
@@ -74,6 +76,7 @@ if (window.location.hash) {
                 //set the body class as light or dark to change nav and sidebar colors for different backgrounds
                 if (!(hGalleryArray[childSliderID]===undefined))     {          
                     subSlideIsLight=$('.swiper-slide',$slide).eq(hGalleryArray[childSliderID].activeSlide).hasClass('light');
+                    subBackgroundImage=$('.swiper-slide',$slide).eq(hGalleryArray[childSliderID].activeSlide).data('img');
                 }
 
                 if ((($slide.find('div.page.light').length) && subSlideIsLight === undefined) || (subSlideIsLight)) {
@@ -83,12 +86,12 @@ if (window.location.hash) {
                 }
 
                 // update the background image
-                if (backgroundImage && currentBackgroundImage !== backgroundImage) {
+                if (backgroundImage && currentBackgroundImage !== backgroundImage && !subBackgroundImage) {
                     $('.swiper-root').backstretch(backgroundImage, {fade:450});
                     
-                } else if (! backgroundImage) {
+                } else if (! backgroundImage && !subBackgroundImage) {
                     //$('.swiper-root').backstretch('{{BASE_PATH}}/assets/themes/skeena/img/cover.jpg', {fade:450});
-                    $('.swiper-root').find('.backstretch').remove();
+                    $('.swiper-root').children('.backstretch').remove();
                 }
 
 
@@ -156,6 +159,7 @@ if (window.location.hash) {
                             //(swiper.activeIndex==0 && $slideRoot.parent().hasClass("light")) ? $('body').addClass('dark') : $('body').removeClass('dark');
                             if (backgroundImage) {
                                 $slideRoot.backstretch(backgroundImage, {fade:450});
+                                if ($('.backstretch',$slideRoot).length>2) $('.backstretch:lt(1)').remove();
                             } else {
                                 $('.backstretch',$slideRoot).remove();
                             }
