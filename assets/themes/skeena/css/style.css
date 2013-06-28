@@ -24,11 +24,19 @@
 @font-face {font-family: 'Intro-Black-Inline-Caps';src: url('../webfonts/273126_7_0.eot');src: url('../webfonts/273126_7_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/273126_7_0.woff') format('woff'),url('../webfonts/273126_7_0.ttf') format('truetype');}
 
 .schoolbook {
+    font-family: CenturySchoolbookBT-Roman;
+}
+
+.schoolbook-bold {
     font-family: CenturySchoolbookBT-Bold;
 }
 
 .intro {
     font-family:Intro-Black-Caps;
+}
+
+.intro-inline {
+  font-family: Intro-Black-Inline-Caps;
 }
 
 .avenir-light {
@@ -261,7 +269,7 @@ a:hover {
 .toc-section .popover .container.narrow {
     width: 75% !important;
     max-width:900px !important;
-    margin-top:15px;
+    padding-top:15px !important;
 }
 
 .toc-section .popover .container .row {
@@ -344,6 +352,10 @@ a:hover {
   letter-spacing: .1em;
 }
 
+.popover .issues-container .issues-title {
+  font-size: 4.5em;
+  line-height: 1em;
+}
 
 .about-masthead {
   color:rgb(51,150,243);

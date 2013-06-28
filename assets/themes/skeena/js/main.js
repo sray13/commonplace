@@ -39,6 +39,8 @@ if (window.location.hash) {
             grabCursor: true,
             onSlideChangeStart: function (swiper) {
                 var $slide = $(swiper.getSlide(swiper.realIndex));
+
+                console.log (swiper.realIndex)
                 // if ($slide.data('zoom')) {
                 //     map.zoom($slide.data('zoom'), true);
                 // } else {
@@ -54,10 +56,14 @@ if (window.location.hash) {
                     currentBackgroundPath = $('.swiper-root').css('background-image').split('/'),
                     //currentBackgroundImage = currentBackgroundPath[currentBackgroundPath.length-1].replace(')',''),
                     currentBackgroundImage = $('.backstretch:last img',$('.swiper-root')).attr('src'),
-                    subBackgroundImage = false,
+                    //subBackgroundImage = false,
+                    preserveBodyBackground = $slide.children('div.page.full').length,
                     childSliderID=$('.gallery',$slide).attr('id') || '',
                     subSlideIsLight=undefined,
                     nextStoryName=$slide.next().attr('id') || false;
+
+                                    console.log (swiper.realIndex)
+
 
                 //set this slide to be 'active' for purposes of applying global keypress events
                 $('.swiper-root>.swiper-wrapper>div.swiper-slide').removeClass('active');
@@ -76,7 +82,7 @@ if (window.location.hash) {
                 //set the body class as light or dark to change nav and sidebar colors for different backgrounds
                 if (!(hGalleryArray[childSliderID]===undefined))     {          
                     subSlideIsLight=$('.swiper-slide',$slide).eq(hGalleryArray[childSliderID].activeSlide).hasClass('light');
-                    subBackgroundImage=$('.swiper-slide',$slide).eq(hGalleryArray[childSliderID].activeSlide).data('img');
+                    //subBackgroundImage=$('.swiper-slide',$slide).eq(hGalleryArray[childSliderID].activeSlide).data('img');
                 }
 
                 if ((($slide.find('div.page.light').length) && subSlideIsLight === undefined) || (subSlideIsLight)) {
@@ -86,10 +92,10 @@ if (window.location.hash) {
                 }
 
                 // update the background image
-                if (backgroundImage && currentBackgroundImage !== backgroundImage && !subBackgroundImage) {
+                if (backgroundImage && currentBackgroundImage !== backgroundImage && !preserveBodyBackground) {
                     $('.swiper-root').backstretch(backgroundImage, {fade:450});
                     
-                } else if (! backgroundImage && !subBackgroundImage) {
+                } else if (! backgroundImage && !preserveBodyBackground) {
                     //$('.swiper-root').backstretch('{{BASE_PATH}}/assets/themes/skeena/img/cover.jpg', {fade:450});
                     $('.swiper-root').children('.backstretch').remove();
                 }
@@ -343,7 +349,6 @@ if (window.location.hash) {
     $(document).ready(function () {
 
         var $title = $(".page-header").find('.title-name'),
-            //$toc = $("#toc"),
             $window = $(window),
             $popoverArray=new Array();
 
@@ -357,14 +362,14 @@ if (window.location.hash) {
                 $(this).html(result);
             }
 
-            // style body copy intros and outros
+            // style first five words of body copy with a span to change font to Schoolbook
             $('p:firstChild','div.page-content').each(styleStoryLeadin);
             $('p:firstChild','div.gallery-intro-slide-wrapper').each(styleStoryLeadin);
             $('p:firstChild','div.voice-content-text').each(styleStoryLeadin);
-            $('p:firstChild','.main-content').each(styleStoryLeadin);
+            $('p:firstChild','.about-content').each(styleStoryLeadin);
 
 
-///////////////////////////////////////
+/////////////////////////////////////// Initialize menu items and click-to-swipe navigation
 
 
         $('a', 'ul.nav').each(function(){
@@ -420,69 +425,30 @@ if (window.location.hash) {
                         $this.popover('hide');
                     });
 
-                }); // end onclick binding
-            }//end block -> if this anchor has an ID attached to it
+                }); // end onclick binding for top menu items
+            } //end block -> if this anchor has an ID attached to it
         }); //end function to initialize all menu items
 
 
-        // $toc.popover({
-        //     placement: "bottom",
-        //     trigger: "manual",
-        //     container: ".toc-section",
-        //     animation: "false",
-        //     html: true,
-        //     content: $('#toc-content').html()
-        // });
-
-        // $toc.on('click mouseenter', function (e) {
-        //     var $popover, tocHeight;
-        //     e.preventDefault();
-        //     $toc.popover('toggle');
-        //     $popover = $('.toc-section').find('.popover');
-        //     tocHeight = $popover.closest('.toc-section').height();
-        //     $popover.find('.popover-content').height($popover.closest('.section').height() - tocHeight);
-        //     //console.log($popover.closest('.section').height() - tocHeight);
-        //     $popover.find('.arrow').position({
-        //        of: $toc,
-        //        my: 'bottom center',
-        //        at: 'bottom'
-        //     });
-        //     // equalize the heights of titles in each row
-        //     $('.popover-content .row').each(function () {
-        //         var currentTallest = 0;
-        //         $('h3.story-title',$(this)).each(function () {                    
-        //                 if ($(this).height() > currentTallest) { currentTallest = $(this).height(); }
-        //             });
-        //             //if (!px && Number.prototype.pxToEm) currentTallest = currentTallest.pxToEm(); //use ems unless px is specified
-        //             // for ie6, set height since min-height isn't supported
-        //             if ($.browser.msie && $.browser.version == 6.0) { $(this).children().css({'height': currentTallest}); }
-        //             $('h3.story-title',$(this)).css({'min-height': currentTallest});
-        //     });
-
-        // }); // end TOC click functino
-
-/////////////////////////////////////
-
+        // swipe back to the top, when clicking on "COMMONPLACE" in the header
         $('.nav h2').on('click', function (e) {
             mySwiper.swipeTo(1);
         });
 
+        // swipe to the story when you click on the icon in the TOC
         $(document).on('click', '.story', function (e) {
             e.preventDefault();
             $('#toc').popover('hide');
            mySwiper.swipeTo($($(this).data('story')).index());
         }); // end scroll to clicked story binding
 
+
+        //swipe to the next slide when clicking on the yellow arrow at the page footer
         $('.page-footer').on('click', function () {
-            // var nextSlide = mySwiper.realIndex + 1;
-            // if (nextSlide === mySwiper.slides.length) {
-            //     mySwiper.swipeTo(0);
-            // } else {
-            //     mySwiper.swipeTo(mySwiper.realIndex);    
-            // }
-            mySwiper.swipeNext();
-            
+            mySwiper.swipeNext();            
         }); // end page footer scroll to next page click binding
+
+
     }); //end document.ready function
 
     

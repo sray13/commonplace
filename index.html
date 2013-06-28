@@ -14,7 +14,7 @@ tagline: Supporting tagline
           <li><a href="#" id="connect"><em>02</em> Connect</a></li>
           <li><a href="#"><h2>commonplace</h2></a></li>
           <li><a href="#" id="about"><em>03</em> About</a></li>
-          <li><a href="#" id=""><em>04</em> Issues</a></li>
+          <li><a href="#" id="issues"><em>04</em> Issues</a></li>
         </ul>
       </div>
     </div>
@@ -25,7 +25,7 @@ tagline: Supporting tagline
 <!-- TABLE OF CONTENTS CONTENT -->
 <div style="display: none" id="toc-content">
   <div class="toc-close">CLOSE</div>
-  <div class="container narrow">
+  <div class="container narrow toc-container">
       {% for post in site.tags.story reversed %}
 
         {% if forloop.index == 3 %}
@@ -56,7 +56,7 @@ tagline: Supporting tagline
 <!-- CONNECT WITH US TOC CONTENT -->
 <div style="display: none" id="connect-content">
   <div class="toc-close">CLOSE</div>
-  <div class="container">
+  <div class="container connect-container">
     <div class="row">
       <div class="span2">
       <p class="toc-sidebar">Connect With Commonplace</p>
@@ -103,7 +103,7 @@ tagline: Supporting tagline
 <!-- ABOUT US TOC CONTENT -->
 <div style="display: none" id="about-content">
   <div class="toc-close">CLOSE</div>
-  <div class="container">
+  <div class="container about-container">
     <div class="row">
       <div class="span2">
       <p class="toc-sidebar">About Commonplace</p>
@@ -170,6 +170,30 @@ tagline: Supporting tagline
     </div> <!-- end main row inside the content container -->
   </div> <!-- end about content container -->
 </div> <!-- end about content wrapper div -->
+
+
+<!-- ISSUES TOC CONTENT -->
+<div style="display: none" id="issues-content">
+  <div class="toc-close">CLOSE</div>
+  <div class="container issues-container">
+    <div class="row">
+      <div class="span2">
+      <p class="toc-sidebar">Commonplace Issues</p>
+      </div>
+      <div class="span8 offset1">
+        <div class="row">
+          <div class="span6">
+            <p class="issue-title intro-inline">Skeena Voices</p>
+            <p class="issue-number blue"><span class="schoolbook">Issue</span> <span class="intro">01</span></p>
+            <p>Summary of the issue. <span class="schoolbook">Published Summer 2013</span></p>
+          </div>
+          <div class="span6"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> <!-- End ISSUES CONTENT wrapper -->
+
 
 {% for post in site.posts %}{% if post.latitude && post.longitude %}
 <div style="display: none" id="popup-{{post.url | replace:'/',''}}-content">
