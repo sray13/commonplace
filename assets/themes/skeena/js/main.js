@@ -60,6 +60,7 @@ if (window.location.hash) {
             grabCursor: true,
             onSlideChangeStart: function (swiper) {
                 var $slide = $(swiper.getSlide(swiper.realIndex));
+                
 
                 // if ($slide.data('zoom')) {
                 //     map.zoom($slide.data('zoom'), true);
@@ -214,6 +215,8 @@ if (window.location.hash) {
                     map.addLayer(markerLayer);
                     window.blockSlideChange=true;
                     $('#map').children('div:last-child').addClass('active-map');
+                    if (!($('.active-map').find('.page-footer').length))
+                        $('.active-map').append('<div class="page-footer"><a href="#"><i class="icon-chevron-down"></i></a></div>')
 
                 } else {
                     map.removeLayer(markerLayer);
@@ -299,7 +302,7 @@ if (window.location.hash) {
 
             if(!($theNav.find('#x-of-y')).length){
                 $('ul.text_pagination',$theNav).css({'visibility': 'hidden','margin-bottom': '-100px'})
-                $theNav.prepend('<div id="x-of-y" style="text-align:center;position:absolute;bottom:0;width:100%"><span class="x">1</span> of <span class="y"></span></div>');
+                $theNav.prepend('<div id="x-of-y" style="text-align:center;position:absolute;bottom:0;width:100%"><span class="x intro">1</span> <span class="of">of</span> <span class="y intro"></span></div>');
             }
             $('span.y', $theNav).text(theMaxNumber);
         });
@@ -437,7 +440,7 @@ if (window.location.hash) {
 
                     
                     // wire up the close "X" button
-                    $('.toc-close','.popover').click(function () {
+                    $('.popover-close','.popover').click(function () {
                         $this.popover('hide');
                     });
 
@@ -460,7 +463,7 @@ if (window.location.hash) {
 
 
         //swipe to the next slide when clicking on the yellow arrow at the page footer
-        $('.page-footer').on('click', function () {
+        $('.content').on('click','.page-footer', function () {
             mySwiper.swipeNext();            
         }); // end page footer scroll to next page click binding
 

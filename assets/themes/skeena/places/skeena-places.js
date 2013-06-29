@@ -11,7 +11,8 @@ skeenaPlaces.push({
 	"properties": {
 		"image": "{{ post.map-icon }}",
 		"title": "{{ post.title }}",
-		"popup": "popup-{{post.url | replace:'/',''}}-content"
+		"content" : $("#popup-{{post.url | replace:'/',''}}-content").html()
+		//"popup": "popup-{{post.url | replace:'/',''}}-content"
 	}
 });
 {% endif %}{% endfor %}

@@ -24,7 +24,7 @@ tagline: Supporting tagline
 
 <!-- TABLE OF CONTENTS CONTENT -->
 <div style="display: none" id="toc-content">
-  <div class="toc-close">CLOSE</div>
+  <div class="popover-close">CLOSE</div>
   <div class="container narrow toc-container">
       {% for post in site.tags.story reversed %}
 
@@ -42,9 +42,9 @@ tagline: Supporting tagline
           <div class="story" data-story="#{{post.url | replace: '/', ''}}">
             <a href="{{ post.url }}">
               <img src="{{ASSET_PATH}}skeena/img/TOC/{{ post.toc-img }}" height="100" width="100" class="img-circle">
-              <h3 class="story-title">{{ post.title }}</h3>
-              <h4 class="story-category">{{ post.category }}</h4>
+             <h4 class="story-category">{{ post.category }}</h4>
               <p class="story-author">{{ post.author }}</p>
+             <h3 class="story-title">{{ post.title }}</h3>
             </a>
           </div>
 
@@ -55,7 +55,7 @@ tagline: Supporting tagline
 
 <!-- CONNECT WITH US TOC CONTENT -->
 <div style="display: none" id="connect-content">
-  <div class="toc-close">CLOSE</div>
+  <div class="popover-close">CLOSE</div>
   <div class="container connect-container">
     <div class="row">
       <div class="span2">
@@ -102,7 +102,7 @@ tagline: Supporting tagline
 
 <!-- ABOUT US TOC CONTENT -->
 <div style="display: none" id="about-content">
-  <div class="toc-close">CLOSE</div>
+  <div class="popover-close">CLOSE</div>
   <div class="container about-container">
     <div class="row">
       <div class="span2">
@@ -174,7 +174,7 @@ tagline: Supporting tagline
 
 <!-- ISSUES TOC CONTENT -->
 <div style="display: none" id="issues-content">
-  <div class="toc-close">CLOSE</div>
+  <div class="popover-close">CLOSE</div>
   <div class="container issues-container">
     <div class="row">
       <div class="span2">
@@ -223,11 +223,6 @@ tagline: Supporting tagline
       
     </div>
       <div class="swiper-slide marker-slide" id="skeena-map">
-         <div class="page-footer">
-           <a href="#">
-             <i class="icon-chevron-down"></i>
-           </a>
-         </div>
       </div>
       <!--Second Slide-->
       {% for post in site.tags.story reversed %}
@@ -273,7 +268,7 @@ tagline: Supporting tagline
                         </div> -->
                         <div class="voice-content-wrapper">
                           <div class="voice-player">
-                            <h3>{{ post.author }}</h3>
+                            <h3 class="intro">{{ post.author }}</h3>
                             <p>
                               {{ post.place }}
                               {%if post.transcript %}
