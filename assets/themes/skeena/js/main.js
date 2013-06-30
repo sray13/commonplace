@@ -60,13 +60,12 @@ if (window.location.hash) {
             grabCursor: true,
             onSlideChangeStart: function (swiper) {
                 var $slide = $(swiper.getSlide(swiper.realIndex));
-                
 
-                // if ($slide.data('zoom')) {
-                //     map.zoom($slide.data('zoom'), true);
-                // } else {
-                //     map.zoom(zoom, true);
-                // }
+                if ($slide.hasClass('marker-slide')) {
+                } else {
+                    $('#map').children('div:last-child').removeClass('active-map');
+                    $('.legend').addClass('hidden');
+                }
             },
             onSlideChangeEnd: function (swiper) {
                 var $slide = $(swiper.getSlide(swiper.realIndex)),
@@ -212,6 +211,7 @@ if (window.location.hash) {
                 } // end if block for gallery.length
 
                 if ($slide.hasClass('marker-slide')) {
+                    $('.legend').removeClass('hidden');
                     map.addLayer(markerLayer);
                     window.blockSlideChange=true;
                     $('#map').children('div:last-child').addClass('active-map');
@@ -221,7 +221,6 @@ if (window.location.hash) {
                 } else {
                     map.removeLayer(markerLayer);
                     window.blockSlideChange=false;
-                    $('#map').children('div:last-child').removeClass('active-map');
                 }
 
             }, // end on slideChangeEnd callback for main vertical slider

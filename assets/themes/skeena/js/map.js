@@ -66,3 +66,9 @@ interaction.formatter(function(feature) {
         return o;
     });
 
+
+$(document).ready(function () {
+	$('.legend').on('click', 'li', function (e) {
+		$(e.target).toggleClass('layer-on');
+	});
+})

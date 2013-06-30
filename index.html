@@ -21,6 +21,18 @@ tagline: Supporting tagline
   </div><!-- /.navbar -->
 </div>
 
+<div class="hidden legend">
+  <h3>Skeena<br/> Country</h3>
+  <h4>Map Legend</h4>
+  <ul class="unstyled">
+    <li>Voices <img src="{{ASSET_PATH}}skeena/img/map/map_voice_grey.png"></li>
+    <li>Images <img src="{{ASSET_PATH}}skeena/img/map/map_image_grey.png"></li>
+  </li>
+  <hr/>
+  <ul class="unstyled">
+    <li>Places</li>
+    <li>Pipeline Route</li>
+</div>
 
 <!-- TABLE OF CONTENTS CONTENT -->
 <div style="display: none" id="toc-content">
@@ -222,7 +234,8 @@ tagline: Supporting tagline
        </div>
       
     </div>
-      <div class="swiper-slide marker-slide" id="skeena-map">
+      <div class="swiper-slide marker-slide" id="skeena-map" data-hash="skeena-map">
+        
       </div>
       <!--Second Slide-->
       {% for post in site.tags.story reversed %}
