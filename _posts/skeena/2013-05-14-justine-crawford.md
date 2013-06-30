@@ -11,6 +11,8 @@ toc-img: justinecrawford.jpg
 story-img: justinecrawford.jpg
 audio: justinecrawford.mp3
 transcript: justinecrawford.pdf
+latitude: 54.194267614300003
+longitude: -130.230768388
 ---
 
 It took fifteen seconds at the Cassiar Cannery for Mark Bell and Justine Crawford to get hooked. At what was once the largest cannery in British Columbia, situated on a channel right at the mouth of the Skeena, “we were running around like kids at recess, envisioning all the ways that the place could sustain us,” Crawford says. 
