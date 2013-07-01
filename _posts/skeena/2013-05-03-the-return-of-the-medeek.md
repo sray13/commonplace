@@ -8,6 +8,9 @@ issue: Skeena
 toc-img: medeek_a.jpg
 story-img: medeek_a.jpg
 story-img caption: Grizzly and cub near Stuart Lake, by Neil Ever Osborne.
+latitude: 55.138585045399999
+longitude: -127.579004799
+map-icon: map_essay_wht.png
 ---
 {% include JB/setup %}
 
