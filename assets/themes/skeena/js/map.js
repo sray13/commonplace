@@ -50,7 +50,7 @@ window.markerLayer = mapbox.markers.layer().features(skeenaPlaces).factory(funct
 		f.properties.image = 'map_voice_wht_90.png'
 	}
 	img.setAttribute('src', 'assets/themes/skeena/img/map/' + f.properties.image);
-	$(img).data('popup', "#" + f.properties.popup);
+	$(img).data('popup', "#" + f.properties.popup).addClass(f.properties.category);
 
 	// MM.addEvent(img, 'mouseover', popup);
 	// MM.addEvent(img, 'mouseout', hide);
