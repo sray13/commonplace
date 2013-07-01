@@ -1,0 +1,46 @@
+{
+	"type": "FeatureCollection",
+
+	"features": [{
+			"type": "Feature",
+			"properties": {
+				"Id": 0,
+				"Location": "Red Rose Peak\r\nRed Rose Peak, BC",
+				"Voice": "Medeek",
+				"LAT": 55.138585045399999,
+				"LONG": -127.579004799
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-127.579004799383398, 55.138585045449034]
+			}
+		}, {
+			"type": "Feature",
+			"properties": {
+				"Id": 0,
+				"Location": "Ealue Lake\r\n",
+				"Voice": "Sacred Headwaters\r\n",
+				"LAT": 57.7716708373,
+				"LONG": -129.830473272
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-129.830473272378526, 57.771670837327001]
+			}
+		}, {
+			"type": "Feature",
+			"properties": {
+				"Id": 0,
+				"Location": "Smithers, BC",
+				"Voice": "Epilogue",
+				"LAT": 54.780825376599999,
+				"LONG": -127.155954927
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-127.15595492695239, 54.780825376575919]
+			}
+		}
+
+	]
+}

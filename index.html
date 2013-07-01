@@ -208,10 +208,18 @@ tagline: Supporting tagline
 
 
 {% for post in site.posts %}{% if post.latitude && post.longitude %}
-<div style="display: none" id="popup-{{post.url | replace:'/',''}}-content">
-  <h3 class="popover-title">{{ post.title }}</h3>
+<div style="display: none" id="popup-{{post.url | replace:'/',''}}-content" class="popup-content">
+  <h3 class="popover-title">{{ post.author }}</h3>
   <div class="popover-content">
-    <p>{{ post.intro }}</p>
+    <h4>{{ post.place }}</h4>
+    <p class="intro">{{ post.intro }}</p>
+    {% if post.audio %}
+    <p><a href="#">Listen</a></p>
+    {% else if post.slideshow %%}
+    First slideshow image goes here.
+    {% else %}
+    <p><a href="#">Read about {{ post.place }} in "{{ post.title }}" by {{ post.author }}</a></p>
+    {% endif %}
   </div>
 </div>
 {% endif %}{% endfor %}
