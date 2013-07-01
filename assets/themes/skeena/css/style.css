@@ -422,6 +422,41 @@ width: 5px;
   border-radius: 10px;
 }
 
+
+.legend {
+  z-index: 2000;
+  position: absolute;
+  top: 150px;
+  padding: 10px 15px;
+  background-color: white;
+}
+  .legend {
+    font-family: Intro-Black-Caps;
+  }
+  .legend h3 {
+    margin: 0px;
+    font-size: 16px;
+    line-height: 1;
+  }
+  .legend h4 {
+    font-family:CenturySchoolbookBT-Italic;
+    font-size: 10px;
+    margin: 0px;
+  }
+  .legend li {
+    margin-left: 10px;
+    list-style-image: url(../img/map/layer-off.png)
+  }
+  .legend li.layer-on {
+    list-style-image: url(../img/map/layer-on.png)
+  }
+  .legend li img {
+    height: 20px;
+  }
+  .legend h4 {
+    color: rgb(40,40,40);
+  }
+
 .page {
   background-color: white;
   width: 70%;
@@ -539,6 +574,9 @@ div[data-hash=welcome] .contentText div:last-child div.column>p:last-child:after
   letter-spacing: .1em;
   padding-right:36%;
 }
+
+
+/* styling for map popups */
 
 
 /* this is the sidebar styling for full width layouts */
