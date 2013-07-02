@@ -7,7 +7,7 @@ tags: ['story']
 issue: Skeena
 toc-img: epilogue.jpg
 story-img: epilogue.jpg
-story-img caption: Ship off the BC coast, by Neil Ever Osborne.
+story-img-caption: Ship off the BC coast, by Neil Ever Osborne.
 ---
 At a recent conference in Smithers, people gathered from throughout the watershed and the region to discuss various issues related to salmon and steelhead habitat in the Skeena. Speakers from government, advocacy, First Nations, and scientific communities shared elements of their experience with subjects as diverse as salmon life history, constitutional case law, and the effects of climate change on water flows. Visuals included a chart titled “Defining Salmon Biodiversity” showing thirty-two ecotypic zones with distinct borders and coloration, hosting special populations of “conservation units.” And one participant walked us through a new ecosystem-based management handbook, a detailed template for conservation inspired by recent success in securing protections for the Great Bear Rainforest. 
 

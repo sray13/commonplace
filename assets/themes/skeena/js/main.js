@@ -26,9 +26,30 @@ if (window.location.hash) {
     var mySwiper;
     window.blockSlideChange=false;
 
-    window.onload = function() {
+    //window.onload = function() {
+    $('document').ready( function() {
         var $masthead = $('.masthead'),
-            hGalleryArray=new Array();
+            hGalleryArray=new Array(),
+            loadIntroImages = window.setInterval(function () {postLoadImages($('div.swiper-slide'),'intro')},5000),
+            loadGalleryImages = window.setInterval(function () {postLoadImages($('img.postload'),'gallery')},10000);
+
+            function postLoadImages ($theImages, which){
+                $theImages.each(function () {
+                    var $this=$(this),
+                    theSource=$this.data('img') || false;
+
+                    if (theSource)
+                        if (which=='gallery'){
+                            $this.attr('src', theSource);
+                        } else {
+                            $('<img />')[0].src = theSource;
+                        }
+                });
+
+                clearInterval(which=='intro' ? loadIntroImages : loadGalleryImages);
+            }
+
+            
 
         mySwiper = new Swiper('.swiper-root',{
             mode:'vertical',
@@ -39,11 +60,11 @@ if (window.location.hash) {
             grabCursor: true,
             onSlideChangeStart: function (swiper) {
                 var $slide = $(swiper.getSlide(swiper.realIndex));
-                // if ($slide.data('zoom')) {
-                //     map.zoom($slide.data('zoom'), true);
-                // } else {
-                //     map.zoom(zoom, true);
-                // }
+
+                if (!$slide.hasClass('marker-slide')) {
+                    $('#map').children('div:last-child').removeClass('active-map');
+                    $('.legend').addClass('hidden');
+                }
             },
             onSlideChangeEnd: function (swiper) {
                 var $slide = $(swiper.getSlide(swiper.realIndex)),
@@ -54,10 +75,12 @@ if (window.location.hash) {
                     currentBackgroundPath = $('.swiper-root').css('background-image').split('/'),
                     //currentBackgroundImage = currentBackgroundPath[currentBackgroundPath.length-1].replace(')',''),
                     currentBackgroundImage = $('.backstretch:last img',$('.swiper-root')).attr('src'),
-                    subBackgroundImage = false,
+                    //subBackgroundImage = false,
+                    preserveBodyBackground = $slide.children('div.page.full').length,
                     childSliderID=$('.gallery',$slide).attr('id') || '',
                     subSlideIsLight=undefined,
                     nextStoryName=$slide.next().attr('id') || false;
+
 
                 //set this slide to be 'active' for purposes of applying global keypress events
                 $('.swiper-root>.swiper-wrapper>div.swiper-slide').removeClass('active');
@@ -76,7 +99,7 @@ if (window.location.hash) {
                 //set the body class as light or dark to change nav and sidebar colors for different backgrounds
                 if (!(hGalleryArray[childSliderID]===undefined))     {          
                     subSlideIsLight=$('.swiper-slide',$slide).eq(hGalleryArray[childSliderID].activeSlide).hasClass('light');
-                    subBackgroundImage=$('.swiper-slide',$slide).eq(hGalleryArray[childSliderID].activeSlide).data('img');
+                    //subBackgroundImage=$('.swiper-slide',$slide).eq(hGalleryArray[childSliderID].activeSlide).data('img');
                 }
 
                 if ((($slide.find('div.page.light').length) && subSlideIsLight === undefined) || (subSlideIsLight)) {
@@ -86,11 +109,9 @@ if (window.location.hash) {
                 }
 
                 // update the background image
-                if (backgroundImage && currentBackgroundImage !== backgroundImage && !subBackgroundImage) {
-                    $('.swiper-root').backstretch(backgroundImage, {fade:450});
-                    
-                } else if (! backgroundImage && !subBackgroundImage) {
-                    //$('.swiper-root').backstretch('{{BASE_PATH}}/assets/themes/skeena/img/cover.jpg', {fade:450});
+                if (backgroundImage && currentBackgroundImage !== backgroundImage && !preserveBodyBackground) {
+                    $('.swiper-root').backstretch(backgroundImage, {fade:450});                    
+                } else if (! backgroundImage && !preserveBodyBackground) {
                     $('.swiper-root').children('.backstretch').remove();
                 }
 
@@ -107,6 +128,24 @@ if (window.location.hash) {
 
                 // activate textify swiper
                 if ($longPost.length && ! $longPost.find('.textify').length) {
+
+                   var theImages=$('img',$longPost);
+
+                   $longPost.on('click','img',function () {
+                        var $theImage = theImages.filter('img[src="'+$(this).attr("src")+'"]'),
+                        $theBox=$('<div id="the-lightbox" style="width:100%"><div class="popover-close">close</div><div id="the-lightbox-content" style="margin-top:30px;width:100%;text-align:center;height:'+($(window).height()-150)+'px;"></div></div>');
+                        $theImage.css({'max-height':'100%','cursor':'pointer'});
+                        $theBox.find(":nth-child(2)").append($theImage).append('<div class="caption">'+$(this).attr("alt")+'</div>');
+                        //debugger;
+                       $theBox.lightbox_me({
+                            centered:false,
+                            destroyOnClose:true,
+                            modalCSS: {top: '0'},
+                            closeSelector:'.popover-close',
+                            overlayCSS:{background: 'white', opacity: .9}    
+                        });
+                   });
+
                     $longPost.textify({
                         numberOfColumn: 1,
                         width: "auto",
@@ -114,7 +153,11 @@ if (window.location.hash) {
                         height: "auto"//$longPost.height()
 
                     });
+
+  
+
                     $longPost.removeClass('hidden');
+                    //debugger;
                 }
 
                 // EDIT THIS FUNCTION TO MAKE THE SUB-TOC ITEMS ALL THE SAME HEIGHT
@@ -173,8 +216,10 @@ if (window.location.hash) {
                             //check to see if this is the last slide
                             if ((swiper.slides.length-1)==swiper.activeIndex){
                                 $('.swiper-slide.active').addClass('last-page');
-                            } else {
-                                $('.swiper-slide.active').removeClass('last-page');
+                            } else if (swiper.activeIndex==0) {
+                                $('.swiper-slide.active').addClass('first-page');
+                            }else {
+                                $('.swiper-slide.active').removeClass('last-page first-page');
                             }
 
                             // initialize scroll buttons for voices content if overflowing
@@ -189,14 +234,16 @@ if (window.location.hash) {
                 } // end if block for gallery.length
 
                 if ($slide.hasClass('marker-slide')) {
+                    $('.legend').removeClass('hidden');
                     map.addLayer(markerLayer);
                     window.blockSlideChange=true;
                     $('#map').children('div:last-child').addClass('active-map');
+                    if (!($('.active-map').find('.page-footer').length))
+                        $('.active-map').append('<div class="page-footer"><a href="#"><i class="icon-chevron-down"></i></a></div>')
 
                 } else {
                     map.removeLayer(markerLayer);
                     window.blockSlideChange=false;
-                    $('#map').children('div:last-child').removeClass('active-map');
                 }
 
             }, // end on slideChangeEnd callback for main vertical slider
@@ -216,15 +263,16 @@ if (window.location.hash) {
             var $hContainer=$(this).parentsUntil('div.swiper-slide','div.page').find('div.page-wrapper'),
                 isGallery=$hContainer.hasClass('gallery-wrapper'),
                 // yes, here theID may be a string, or it may be an object. sorry.
-                theID= isGallery ? $hContainer.find('.gallery').attr('id') : $hContainer.find('.text_pagination');
+                theID= isGallery ? $hContainer.find('.gallery').attr('id') : $hContainer.find('.text_pagination'),
+                $activeSlide = $('.swiper-slide.active');
 
-                if ($('.swiper-slide.active').hasClass('last-page') && $(this).hasClass("rightarrow")) {
+                if ($activeSlide.hasClass('last-page') && $(this).hasClass("right-arrow")){
                     mySwiper.swipeNext();
-                }
+                } 
 
                 if(isGallery){
                     //this is a swiper gallery.  simply use the built in swipeNext/swipePrev methods
-                    $(this).hasClass("rightarrow") ? hGalleryArray[theID].swipeNext() : hGalleryArray[theID].swipePrev();
+                    $(this).hasClass("right-arrow") ? hGalleryArray[theID].swipeNext() : hGalleryArray[theID].swipePrev();
                 } else { 
                     //this isn't a gallery -> must be a textify slide. update logic later if more slide types introduced
                     //we need to fire the click event on the next/previous hilited number
@@ -234,7 +282,7 @@ if (window.location.hash) {
                     theNavNumbers=$('li',theID);
 
                     //are we going right?
-                    if ($(this).hasClass("rightarrow")){ 
+                    if ($(this).hasClass("right-arrow")){ 
                         //can we go right?
                         if ((++theGalIndex)<theNavNumbers.length) {
                             theNavNumbers.eq(theGalIndex).click();
@@ -264,10 +312,11 @@ if (window.location.hash) {
                 e.stopPropagation();
             }
             if (kc == 39) {
-                $('a.rightarrow','.swiper-slide.active').click();
+                if(!$('.swiper-slide.active').hasClass('last-page'))
+                $('a.right-arrow','.swiper-slide.active').click();
             }
             if (kc == 37) {
-                $('a.leftarrow','.swiper-slide.active').click();
+                $('a.left-arrow','.swiper-slide.active').click();
             } 
         });
 
@@ -277,7 +326,7 @@ if (window.location.hash) {
 
             if(!($theNav.find('#x-of-y')).length){
                 $('ul.text_pagination',$theNav).css({'visibility': 'hidden','margin-bottom': '-100px'})
-                $theNav.prepend('<div id="x-of-y" style="text-align:center;position:absolute;bottom:0;width:100%"><span class="x">1</span> of <span class="y"></span></div>');
+                $theNav.prepend('<div id="x-of-y" style="text-align:center;position:absolute;bottom:0;width:100%"><span class="x intro">1</span> <span class="of">of</span> <span class="y intro"></span></div>');
             }
             $('span.y', $theNav).text(theMaxNumber);
         });
@@ -291,18 +340,22 @@ if (window.location.hash) {
                 var $this=$(this),
                     theCaption=$this.attr('alt');
 
-                $this.parent().css('position','relative').prepend('<span class="caption">'+theCaption+'</span>').find('span').css('top',function () {
-                    var $that=$this;
+                if (!$this.parent().find('span').length) {
+                    $this.parent().css('position','relative').prepend('<span class="caption">'+theCaption+'</span>').find('span').css('top',function () {
+                        var $that=$this;
                     
-                    return ($that.height()-$(this).height())+$that.position().top;
-                });
+                        return ($that.height()-$(this).height())+$that.position().top;
+                    });
+                }
             });
 
             $('span.x', $theNav).text(theCurrentNumber);
             if ($('span.x', $theNav).text()==$('span.y', $theNav).text()) {
                 $('.swiper-slide.active').addClass('last-page');
+            } else if ($('span.x', $theNav).text()=='1') {
+                $('.swiper-slide.active').addClass('first-page');
             } else {
-                $('.swiper-slide.active').removeClass('last-page');
+                $('.swiper-slide.active').removeClass('first-page last-page');
             }
         });
 
@@ -336,14 +389,13 @@ if (window.location.hash) {
             var as = audiojs.createAll();
         });
         
-    }; //end window.onLoad event handler function
-
+ //   }; //end window.onLoad event handler function
+}); // end test document.ready wrapper
 
 
     $(document).ready(function () {
 
         var $title = $(".page-header").find('.title-name'),
-            //$toc = $("#toc"),
             $window = $(window),
             $popoverArray=new Array();
 
@@ -357,14 +409,15 @@ if (window.location.hash) {
                 $(this).html(result);
             }
 
-            // style body copy intros and outros
+            // style first five words of body copy with a span to change font to Schoolbook
             $('p:firstChild','div.page-content').each(styleStoryLeadin);
             $('p:firstChild','div.gallery-intro-slide-wrapper').each(styleStoryLeadin);
             $('p:firstChild','div.voice-content-text').each(styleStoryLeadin);
-            $('p:firstChild','.main-content').each(styleStoryLeadin);
+            $('p:firstChild','.about-content').each(styleStoryLeadin);
 
 
-///////////////////////////////////////
+
+/////////////////////////////////////// Initialize menu items and click-to-swipe navigation
 
 
         $('a', 'ul.nav').each(function(){
@@ -416,73 +469,36 @@ if (window.location.hash) {
 
                     
                     // wire up the close "X" button
-                    $('.toc-close','.popover').click(function () {
+                    $('.popover-close','.popover').click(function () {
                         $this.popover('hide');
                     });
 
-                }); // end onclick binding
-            }//end block -> if this anchor has an ID attached to it
+                }); // end onclick binding for top menu items
+            } //end block -> if this anchor has an ID attached to it
         }); //end function to initialize all menu items
 
 
-        // $toc.popover({
-        //     placement: "bottom",
-        //     trigger: "manual",
-        //     container: ".toc-section",
-        //     animation: "false",
-        //     html: true,
-        //     content: $('#toc-content').html()
-        // });
-
-        // $toc.on('click mouseenter', function (e) {
-        //     var $popover, tocHeight;
-        //     e.preventDefault();
-        //     $toc.popover('toggle');
-        //     $popover = $('.toc-section').find('.popover');
-        //     tocHeight = $popover.closest('.toc-section').height();
-        //     $popover.find('.popover-content').height($popover.closest('.section').height() - tocHeight);
-        //     //console.log($popover.closest('.section').height() - tocHeight);
-        //     $popover.find('.arrow').position({
-        //        of: $toc,
-        //        my: 'bottom center',
-        //        at: 'bottom'
-        //     });
-        //     // equalize the heights of titles in each row
-        //     $('.popover-content .row').each(function () {
-        //         var currentTallest = 0;
-        //         $('h3.story-title',$(this)).each(function () {                    
-        //                 if ($(this).height() > currentTallest) { currentTallest = $(this).height(); }
-        //             });
-        //             //if (!px && Number.prototype.pxToEm) currentTallest = currentTallest.pxToEm(); //use ems unless px is specified
-        //             // for ie6, set height since min-height isn't supported
-        //             if ($.browser.msie && $.browser.version == 6.0) { $(this).children().css({'height': currentTallest}); }
-        //             $('h3.story-title',$(this)).css({'min-height': currentTallest});
-        //     });
-
-        // }); // end TOC click functino
-
-/////////////////////////////////////
-
+        // swipe back to the top, when clicking on "COMMONPLACE" in the header
         $('.nav h2').on('click', function (e) {
             mySwiper.swipeTo(1);
         });
 
+        // swipe to the story when you click on the icon in the TOC
         $(document).on('click', '.story', function (e) {
             e.preventDefault();
             $('#toc').popover('hide');
            mySwiper.swipeTo($($(this).data('story')).index());
         }); // end scroll to clicked story binding
 
-        $('.page-footer').on('click', function () {
-            // var nextSlide = mySwiper.realIndex + 1;
-            // if (nextSlide === mySwiper.slides.length) {
-            //     mySwiper.swipeTo(0);
-            // } else {
-            //     mySwiper.swipeTo(mySwiper.realIndex);    
-            // }
-            mySwiper.swipeNext();
-            
+
+        $('.photo-info').on('click',function () {$(this).toggleClass('visible');});
+
+        //swipe to the next slide when clicking on the yellow arrow at the page footer
+        $('.content').on('click','.page-footer', function () {
+            mySwiper.swipeNext();            
         }); // end page footer scroll to next page click binding
+
+
     }); //end document.ready function
 
     

@@ -10,6 +10,8 @@ intro: "Mountains are like heroin: once you get them in your blood, you can't gi
 toc-img: montybassett.jpg
 story-img: montybassett.jpg
 audio: montybassett.mp3
+latitude: 54.875095337399998
+longitude: -127.163680459
 ---
 “When the pickups started to get outnumbered by the BMWs,” Monty Bassett says of his hometown, Jackson Hole, Wyoming, “I knew it was time to leave.” Monty, 65, moved to British Columbia in the 1970s seeking a more peaceful existence. He’s cleared land, run cattle, and raised five daughters with his wife on the Telkwa High Road above Smithers. Monty has also been involved in a number of advocacy campaigns in the region over the past thirty years and operates Out Yonder Productions, a documentary production company. His work has garnered awards and appeared on the Discovery Channel and History Channel, among others.
 

@@ -7,7 +7,10 @@ tags: ['story']
 issue: Skeena
 toc-img: sacredheadwaters.jpg
 story-img: sacredheadwaters.jpg
-story-img caption: Headwaters region photo by Gary Irving.
+story-img-caption: Headwaters region photo by Gary Irving.
+latitude: 57.7716708373,
+longitude: -129.830473272
+map-icon: map_essay_wht.png
 ---
 _Editor’s note: Wade Davis’ piece here from his book_ The Sacred Headwaters _(Greystone and David Suzuki Foundation, 2011) centers around Ealue Lake, in the heart of the headwaters region that feeds the Stikine, Skeena, and Nass rivers and home to his longtime Native friends, Alex Jack and Oscar Dennis._
 

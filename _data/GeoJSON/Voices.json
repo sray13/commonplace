@@ -1,0 +1,137 @@
+{
+	"type": "FeatureCollection",
+
+	"features": [{
+			"type": "Feature",
+			"properties": {
+				"Id": 0,
+				"Location": "Terrace, BC",
+				"Voice": "Bruce Hill\r\nBruce Hill\r\nBruce Hill\r\nBruce Hill\r\n",
+				"LAT": 54.513821160699997,
+				"LONG": -128.613717137
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-128.613717137327455, 54.513821160662857]
+			}
+		}, {
+			"type": "Feature",
+			"properties": {
+				"Id": 0,
+				"Location": "Kitamaat Village, BC",
+				"Voice": "Cecil Paul",
+				"LAT": 53.974048175100002,
+				"LONG": -128.648429282
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-128.648429282036261, 53.974048175067061]
+			}
+		}, {
+			"type": "Feature",
+			"properties": {
+				"Id": 0,
+				"Location": "Kitamaat Village, BC",
+				"Voice": "Gerald Amos",
+				"LAT": 54.004376069,
+				"LONG": -128.645338718
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-128.645338718307642, 54.004376069008437]
+			}
+		}, {
+			"type": "Feature",
+			"properties": {
+				"Id": 0,
+				"Location": "Hartley Bay, BC",
+				"Voice": "Helen Clifton",
+				"LAT": 53.404223820799999,
+				"LONG": -129.255594729
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-129.255594729038563, 53.404223820807921]
+			}
+		}, {
+			"type": "Feature",
+			"properties": {
+				"Id": 0,
+				"Location": "Vancouver, BC",
+				"Voice": "Ivan Thompson",
+				"LAT": 49.260621698100003,
+				"LONG": -123.110341653
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-123.1103416530853, 49.260621698073003]
+			}
+		}, {
+			"type": "Feature",
+			"properties": {
+				"Id": 0,
+				"Location": "Port Edward, BC",
+				"Voice": "Justine Crawford",
+				"LAT": 54.194267614300003,
+				"LONG": -130.230768388
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-130.230768388028366, 54.194267614302056]
+			}
+		}, {
+			"type": "Feature",
+			"properties": {
+				"Id": 0,
+				"Location": "Telkwah Rd, Smithers",
+				"Voice": "Monty Bassett",
+				"LAT": 54.875095337399998,
+				"LONG": -127.163680459
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-127.163680459123213, 54.875095337377829]
+			}
+		}, {
+			"type": "Feature",
+			"properties": {
+				"Id": 0,
+				"Location": "Smithers, BC",
+				"Voice": "Mark Beere",
+				"LAT": 54.781410634,
+				"LONG": -127.13160519
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-127.131605189558925, 54.781410634037186]
+			}
+		}, {
+			"type": "Feature",
+			"properties": {
+				"Id": 0,
+				"Location": "Smithers, BC",
+				"Voice": "Rick Budhwa",
+				"LAT": 54.782604703,
+				"LONG": -127.201563951
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-127.201563950723923, 54.782604702975405]
+			}
+		}, {
+			"type": "Feature",
+			"properties": {
+				"Id": 0,
+				"Location": "Hazelton, BC",
+				"Voice": "Shannon MacPhail\r\nShannon MacPhail",
+				"LAT": 55.253778097100003,
+				"LONG": -127.667564797
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-127.667564797189144, 55.253778097060682]
+			}
+		}
+
+	]
+}
