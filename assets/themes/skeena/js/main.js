@@ -64,6 +64,10 @@ if (window.location.hash) {
                 if (!$slide.hasClass('marker-slide')) {
                     $('#map').children('div:last-child').removeClass('active-map');
                     $('.legend').addClass('hidden');
+                    // window.map.dragging.disable();
+                    // window.map.touchZoom.disable();
+                    // window.map.doubleClickZoom.disable();
+                    // window.map.scrollWheelZoom.disable();
                 }
             },
             onSlideChangeEnd: function (swiper) {
@@ -257,7 +261,7 @@ if (window.location.hash) {
         
 
         // Activate left/right arrows that we've placed on top of all horizontally enabled slides
-        $('.navarrows a').on('click',function (e){
+        $('.navarrows a, .next-story').on('click',function (e){
             e.preventDefault();
             e.stopPropagation();
             var $hContainer=$(this).parentsUntil('div.swiper-slide','div.page').find('div.page-wrapper'),
@@ -266,7 +270,7 @@ if (window.location.hash) {
                 theID= isGallery ? $hContainer.find('.gallery').attr('id') : $hContainer.find('.text_pagination'),
                 $activeSlide = $('.swiper-slide.active');
 
-                if ($activeSlide.hasClass('last-page') && $(this).hasClass("right-arrow")){
+                if ($activeSlide.hasClass('last-page') && ($(this).hasClass("next-story") || $(this).hasClass("right-arrow"))) {
                     mySwiper.swipeNext();
                 } 
 
@@ -282,7 +286,7 @@ if (window.location.hash) {
                     theNavNumbers=$('li',theID);
 
                     //are we going right?
-                    if ($(this).hasClass("right-arrow")){ 
+                    if ($(this).hasClass("right-arrow") || $(this).hasClass("next-story")) { 
                         //can we go right?
                         if ((++theGalIndex)<theNavNumbers.length) {
                             theNavNumbers.eq(theGalIndex).click();
@@ -377,17 +381,6 @@ if (window.location.hash) {
         });
         
 
-
-
-        // manage hash changes
-        if (originalHash) {
-            mySwiper.swipeTo($(originalHash).index());    
-        }
-
-        // init the audio player for voices
-        audiojs.events.ready(function() {
-            var as = audiojs.createAll();
-        });
         
  //   }; //end window.onLoad event handler function
 }); // end test document.ready wrapper
@@ -499,9 +492,17 @@ if (window.location.hash) {
         }); // end page footer scroll to next page click binding
 
 
-    }); //end document.ready function
+        // manage hash changes
+        if (originalHash) {
+            mySwiper.swipeTo($(originalHash).index());    
+        }
 
-    
+        // init the audio player for voices
+        audiojs.events.ready(function() {
+            var as = audiojs.createAll();
+        });
+
+    }); //end document.ready function
     
 
 })(); //end generic wrapper function
