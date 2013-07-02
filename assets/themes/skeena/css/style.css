@@ -67,17 +67,17 @@ a {
   text-decoration: none !important;
   color: inherit;
 }
-a:hover {
+.no-touch a:hover {
   color: inherit;
 }
 
 .center {text-align: center;}
 .small {font-size:.8em;}
 /*set hover opacity for main UI elements*/
-.page-footer a:hover,
-.textify_nav li:hover,
-.popover-close:hover,
-.left-arrow:hover, .right-arrow:hover {
+.no-touch .page-footer a:hover,
+.no-touch .textify_nav li:hover,
+.no-touch .popover-close:hover,
+.no-touch .left-arrow:hover, .no-touch .right-arrow:hover {
   /* IE 8 */  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
   /* IE 5-7 */  filter: alpha(opacity=65);
   /* Netscape */  -moz-opacity: 0.65;
@@ -163,8 +163,10 @@ span.of {font-size:.9em;}
   /* Good browsers */ opacity: 0.7;
 }
 
+
 .story-header h3 {
-  font-family: AvenirLT-Light;
+  font-family: AvenirLT-Medium;
+  font-weight: normal;
 }
 
 .cover-slide, .swiper-slide {
@@ -229,11 +231,11 @@ span.of {font-size:.9em;}
   -webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;
 }
 
-.photo-info:hover {
+.no-touch .photo-info:hover {
   width:55px;
 }
 
-.photo-info.visible {
+.no-touch .photo-info.visible, .photo-info.visible {
   width:220px;
 }
 
@@ -266,8 +268,8 @@ span.of {font-size:.9em;}
   opacity: 0;
 }
 
-.navbar .nav>li>a, .navbar .nav>li>a:hover, .navbar .nav>li>a:active, .navbar .nav>li>a:focus {color:white;}
-.dark .navbar .nav>li>a, .dark .navbar .nav>li>a:hover, .dark .navbar .nav>li>a:active , .dark .navbar .nav>li>a:focus {color:#333333;}
+.navbar .nav>li>a, .no-touch .navbar .nav>li>a:hover, .navbar .nav>li>a:hover, .navbar .nav>li>a:active, .navbar .nav>li>a:focus {color:white;}
+.dark .navbar .nav>li>a, .no-touch .dark .navbar .nav>li>a:hover, .dark .navbar .nav>li>a:active , .dark .navbar .nav>li>a:focus {color:#333333;}
 
 .masthead .navbar .nav>li>a {
   font-family: Intro-Black-Caps;
@@ -286,8 +288,9 @@ span.of {font-size:.9em;}
 }
 .masthead .navbar .nav>li>a>h2, h2.title-name {
   text-transform: none;
-  font-family: AvenirLT-Light;
+  font-family: AvenirLT-Medium;
   margin-bottom:0;
+  font-weight: normal;
 }
 .masthead .navbar .nav>li>a>span{
   width: 25px;
@@ -520,7 +523,7 @@ width: 5px;
   }
 
 .page {
-  background-color: white;
+  /*background-color: white;*/
   width: 70%;
   max-width: 900px;
   height: 80%;
@@ -659,7 +662,7 @@ div[data-hash=welcome] .contentText div:last-child div.column>p:last-child:after
 
 .page.full .story-sidebar {
   left: 25px;
-  top: 275px;
+  top: 15%;
 }
 
 body.dark .sidebar-header {
@@ -674,7 +677,7 @@ body.dark .sidebar-header {
 }
 
 .sidebar-header p.author {
-  font-family: AvenirLT-Light;
+  font-family: AvenirLT-Medium;
   font-size:.8em;
   margin-bottom: 0;
 }
@@ -820,6 +823,8 @@ div.next-story {display:none; text-align: center;padding-right:15px;}
 
 /* style the sidebar, captions, and gallery slide for tablets */
 @media (max-width: 1024px) {
+
+  /* Move pagination to the top of the screen on full-page things -> voices and galleries*/
   .page.full .story-sidebar {
     color:white;
     position: absolute;
@@ -858,14 +863,26 @@ div.next-story {display:none; text-align: center;padding-right:15px;}
   }
 
   .gallery-intro-slide-wrapper {
-    margin-left: -30%;
-    width: 63%;
+    margin-left: -31%;
+    width: 54%;
   }
 
-  /*make room on the left for gallery navigation at large scren sizes*/
+  .page.full .right-arrow {
+    margin-right:20px;
+  }
+
+  .page.full .left-arrow {
+    margin-left:20px;
+  }
+
+  /*move and increase size of base slide area becuase pagination is now above the photos*/
   .page.full .gallery-slide {
     padding-left:0;
     padding-right:0;
+  }
+
+  #voices-gallery{
+    padding-left:10px;
   }
 
   .gallery .swiper-slide span.caption {
@@ -875,8 +892,30 @@ div.next-story {display:none; text-align: center;padding-right:15px;}
     margin-left:auto;
    }
 
+  /*handle story sidebar on written pieces*/
+
+ /* .story-sidebar {
+    left:-135px;
+  }*/
+
+  .essay .page {position:relative; left:65px;}
+
 } /* end @media (max-width: 1024px) -> styling for gallery slides and sidebar position */
 
+@media (max-height: 700px) {
+  .gallery-intro-slide-wrapper {
+    margin-left: -16%;
+    width: 38%;
+    margin-top: 4%;
+  }
+  .page.full .page-wrapper {
+    padding-top:100px;
+  }
+
+  .story-header {
+    padding-top:8%;
+  }
+}
 
 
 /*voices styling*/
@@ -896,7 +935,7 @@ div.next-story {display:none; text-align: center;padding-right:15px;}
 
 .sub-toc-item:last-child {border:none;}
 
-.sub-toc-item:hover {
+.no-touch .sub-toc-item:hover {
   background-color:#d9d9d9;
   background-color: rgba(217,217,217,.7);
   background: transparent\9; /* clear current background for ie */
@@ -1115,7 +1154,7 @@ div.next-story {display:none; text-align: center;padding-right:15px;}
 }
 
 .addthis_toolbox {
-  margin-bottom:7px;
+  margin-bottom:13px;
 }
 
 .at16nc.at16t_facebook {

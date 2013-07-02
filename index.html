@@ -407,7 +407,7 @@ tagline: Supporting tagline
 
           <!--Third Slide-->
           {% assign post_length = post.content | number_of_words %}
-          <div class="swiper-slide first-page"
+          <div class="swiper-slide first-page{% if post.category != 'Gallery' %} essay{% endif %}"
                 {% if post.story-img %} data-img="{{ASSET_PATH}}skeena/img/article_openers/{{ post.story-img }}" {% endif %}
                 data-hash="{{post.url | replace:'/',''}}"
                 {% if post.category == 'Gallery' %} id="{{post.url | replace:'/',''}}" {% endif %}>
