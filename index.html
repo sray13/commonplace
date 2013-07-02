@@ -4,7 +4,7 @@ title: Skeena Voices
 tagline: Supporting tagline
 ---
 {% include JB/setup %}
-
+<div style="display:none;" id="puimage"></div>
 <div class="masthead hidden toc-section">
   <div class="navbar">
     <div>
@@ -36,17 +36,17 @@ tagline: Supporting tagline
 
 <!-- TABLE OF CONTENTS CONTENT -->
 <div style="display: none" id="toc-content">
-  <div class="popover-close">CLOSE</div>
+  <div class="popover-close">close</div>
   <div class="container narrow toc-container">
       {% for post in site.tags.story reversed %}
 
         {% if forloop.index == 3 %}
           <div class="story" data-story="#voices">
             <a href="#">
-              <img src="{{ASSET_PATH}}skeena/img/TOC/medeek_b.jpg" height="100" width="100" class="img-circle">
-              <h3 class="story-title">Voices</h3>
+              <img src="{{ASSET_PATH}}skeena/img/TOC/voices.jpg" height="100" width="100" class="img-circle">
               <h4 class="story-category">Audio stories</h4>
               <p class="story-author">Skeena residents speak</p>
+              <h3 class="story-title">Voices</h3>
             </a>
           </div>
         {% endif %}
@@ -67,7 +67,7 @@ tagline: Supporting tagline
 
 <!-- CONNECT WITH US TOC CONTENT -->
 <div style="display: none" id="connect-content">
-  <div class="popover-close">CLOSE</div>
+  <div class="popover-close">close</div>
   <div class="container connect-container">
     <div class="row">
       <div class="span2">
@@ -80,13 +80,38 @@ tagline: Supporting tagline
               <div class="span6">
                 <div class="row">
                   <div class="span3"><img src="{{ASSET_PATH}}skeena/img/email_grey.png"></div>
-                  <div class="span7"><p class="large">Subscribe</p><p>Sign up for Commonplace news via email.</p></div>
+                  <div class="span7">
+                    <p class="large">Subscribe</p>
+                    <p>Sign up for Commonplace news via email.</p>
+                    <!-- form pulled directly from commonplace splash site -->
+                    <form action="http://ecotrust.us5.list-manage.com/subscribe/post?u=2263c982fe55ebaa023041b8b&amp;id=0ca3d50af5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+                    <div class="mc-field-group">
+                      <label for="mce-EMAIL" style="font-size:25px; display:none;">your email address here</label><br>
+                      <input placeholder="Sign up for Commonplace emails here" required="" type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                        <input type="submit" value="subscribe »" name="subscribe" id="mc-embedded-subscribe" class="button">
+                    </div>
+                    <div class="mc-field-group input-group">
+                        <ul style="display:none;"><li><input type="checkbox" value="1" name="group[2281][1]" id="mce-group[2281]-2281-0"><label for="mce-group[2281]-2281-0">Ecotrust eNews</label></li>
+                    <li><input type="checkbox" value="2" name="group[2281][2]" id="mce-group[2281]-2281-1"><label for="mce-group[2281]-2281-1">Edible Portland Newsletter</label></li>
+                    <li><input type="checkbox" value="4" name="group[2281][4]" id="mce-group[2281]-2281-2"><label for="mce-group[2281]-2281-2">Farm to Preschool Newsletter</label></li>
+                    <li><input type="checkbox" value="8" name="group[2281][8]" id="mce-group[2281]-2281-3"><label for="mce-group[2281]-2281-3">Ecotrust Indigenous Affairs Updates</label></li>
+                    <li><input type="checkbox" value="32" name="group[2281][32]" id="mce-group[2281]-2281-4"><label for="mce-group[2281]-2281-4">Community Fisheries Network Newsletter</label></li>
+                    <li><input type="checkbox" value="64" name="group[2281][64]" id="mce-group[2281]-2281-5" checked="checked"><label for="mce-group[2281]-2281-5">Commonplace Magazine Updates</label></li>
+                    </ul>
+                    </div>
+                      <div id="mce-responses" class="clear">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                      </div>
+                    </form>
+
+                  </div>
                 </div>
               </div>
               <div class="span6">
                 <div class="row">
                   <div class="span3"><img src="{{ASSET_PATH}}skeena/img/twitter_grey.png"></div>
-                  <div class="span7"><p class="large">Follow us</p><p>We’re on Twitter @Commonplacemag</p></div>
+                  <div class="span7"><p class="large">Follow us</p><p>We’re on Twitter <a href="https://twitter.com/Commonplacemag" target="_blank">@Commonplacemag</a></p></div>
                 </div>
               </div>
             </div>
@@ -94,7 +119,7 @@ tagline: Supporting tagline
               <div class="span6">
                 <div class="row">
                   <div class="span3"><img src="{{ASSET_PATH}}skeena/img/facebook_grey.png"></div>
-                  <div class="span7"><p class="large">Join us</p><p>on Facebook.</p></div>
+                  <div class="span7"><p class="large">Join us</p><p>on <a href="https://www.facebook.com/commonplacemagazine" target="_blank">Facebook</a>.</p></div>
                 </div>
               </div>
               <div class="span6">
@@ -114,18 +139,18 @@ tagline: Supporting tagline
 
 <!-- ABOUT US TOC CONTENT -->
 <div style="display: none" id="about-content">
-  <div class="popover-close">CLOSE</div>
+  <div class="popover-close">close</div>
   <div class="container about-container">
     <div class="row">
       <div class="span2">
       <p class="toc-sidebar">About Commonplace</p>
       </div>
       <div class="span6 about-content">
-        <p>Commonplace is a publication of <a href="http://www.ecotrust.org">Ecotrust</a> focused on stories of home. Our hope is to create places for connection, for mapping out new understandings of what is common across states, nations, and human nature. We look forward to hearing your stories about the places you live, your experiences of the stories we publish, and your ideas about how to evolve Commonplace in future issues. Share your thoughts on <a href="www.facebook.com/commonplacemagazine">Facebook</a>, <a href="https://twitter.com/Commonplacemag">Twitter</a>, or write to us at <a href="mailto:info@commonplacemagazine.org">info@commonplacemagazine.org</a></p>
+        <p>Commonplace is a publication of <a href="http://www.ecotrust.org">Ecotrust</a> focused on stories of home. Our hope is to create places for connection, for mapping out new understandings of what is common across states, nations, and human nature. We look forward to hearing your stories about the places you live, your experiences of the stories we publish, and your ideas about how to evolve Commonplace in future issues. Share your thoughts on <a href="http://www.facebook.com/commonplacemagazine">Facebook</a>, <a href="https://twitter.com/Commonplacemag">Twitter</a>, or write to us at <a href="mailto:info@commonplacemagazine.org">info@commonplacemagazine.org</a></p>
       </div>
       <div class="span4 about-masthead">
         <div class="row">
-          <div class="span6"><img src="/assets/themes/skeena/img/TOC/welcome.jpg" height="100" width="100" class="img-circle"></div>
+          <div class="span6"><img src="/assets/themes/skeena/img/Contributor Headshots/spencer.jpg" height="100" width="100" class="img-circle"></div>
           <div class="span6">
             <h5>Publisher</h5>
             <p>Spencer B. Beebe</p>
@@ -134,7 +159,7 @@ tagline: Supporting tagline
         </div>
 
         <div class="row break-line">
-          <div class="span6"><img src="/assets/themes/skeena/img/TOC/arrival.jpg" height="100" width="100" class="img-circle"></div>
+          <div class="span6"><img src="/assets/themes/skeena/img/Contributor Headshots/carolyn.jpg" height="100" width="100" class="img-circle"></div>
           <div class="span6">
             <h5>Editor</h5>
             <p>Carolyn Holland</p>
@@ -186,7 +211,7 @@ tagline: Supporting tagline
 
 <!-- ISSUES TOC CONTENT -->
 <div style="display: none" id="issues-content">
-  <div class="popover-close">CLOSE</div>
+  <div class="popover-close">close</div>
   <div class="container issues-container">
     <div class="row">
       <div class="span2">
@@ -207,22 +232,52 @@ tagline: Supporting tagline
 </div> <!-- End ISSUES CONTENT wrapper -->
 
 
+<!-- Build content for map marker info -->
+
 {% for post in site.posts %}{% if post.latitude && post.longitude %}
 <div style="display: none" id="popup-{{post.url | replace:'/',''}}-content" class="popup-content">
-  <h3 class="popover-title">{{ post.author }}</h3>
+  <h3 class="popover-title">{{ post.title }}</h3>
+  <hr />
   <div class="popover-content">
-    <h4>{{ post.place }}</h4>
-    <p class="intro">{{ post.intro }}</p>
-    {% if post.audio %}
-    <p><a href="#">Listen</a></p>
-    {% else if post.slideshow %%}
-    First slideshow image goes here.
+    <p class="popover-subtitle">{% if post.place %}{{ post.place }}{% else %}{{ post.author }}{% endif %}</p>
+
+    {% if post.story-img %}
+      <div  style="width:45%;margin-right:5%;display:inline-block;vertical-align:top;"><p class="intro-image"><img src="{{ ASSET_PATH }}skeena/img/{% if post.category == 'Voices' %}Voices Headshots{% else %}article_openers{% endif %}/{{ post.story-img }}" /></p></div><div  style="width:50%;display:inline-block;vertical-align:top;">
     {% else %}
-    <p><a href="#">Read about {{ post.place }} in "{{ post.title }}" by {{ post.author }}</a></p>
+    <div>
     {% endif %}
+
+    {% if post.intro %}<p class="intro-content">{{ post.intro }}</p>{% endif %}
+    
+    {% case post.category %}
+    {% when 'Voices' %}
+    <p><a href="#">Listen to this voice &raquo;</a></p>
+
+    {% when 'Essay' %}
+        <p><a href="#">Read the full essay &raquo;</a></p>
+    {% when 'Feature' %}
+        <p><a href="#">Read the full essay &raquo;</a></p>
+
+    {% when 'Gallery' %}
+      {% for image in post.slideshow %}
+        {% if forloop.first %}
+          <p class="intro-image"><img src="{{ ASSET_PATH }}skeena/img/{{ post.path }}/{{ image.img }}" /></p>
+          <p><a href="#">View the photo essay &raquo;</a></p>
+        {% endif %}
+      {% endfor %}
+
+    {% else %}
+
+    {% endcase %}
+    <!-- <p><a href="#">Read about {{ post.place }} in "{{ post.title }}" by {{ post.author }}</a></p> -->
+  </div>
+   
   </div>
 </div>
 {% endif %}{% endfor %}
+<!-- <div id="map">
+      <div class="swiper-slide marker-slide" id="skeena-map" data-hash="skeena-map">
+</div> -->
 
 <div class="swiper-container swiper-root" id="map">
 
@@ -242,8 +297,10 @@ tagline: Supporting tagline
        </div>
       
     </div>
+
       <div class="swiper-slide marker-slide" id="skeena-map" data-hash="skeena-map">
-        
+
+
       </div>
       <!--Second Slide-->
       {% for post in site.tags.story reversed %}
@@ -283,10 +340,15 @@ tagline: Supporting tagline
 
                       <!-- horizontal slides for each voice post -->
                       {% for post in site.tags.voices reversed %}
-                      <div class="swiper-slide" data-img="{{ASSET_PATH}}skeena/img/Voices Headshots/{{ post.story-img}}">
-                        <!-- <div class="sidebar-header">
-                          <p><strong>{{ post.title }}</strong></p>
-                        </div> -->
+                      <div class="swiper-slide" data-img="{{ASSET_PATH}}skeena/img/Voices Headshots/{{ post.story-img }}">
+                        {% if post.story-img-caption %}
+                          <div class="photo-info">
+                            <div class="caption-content">
+                              {{ post.story-img-caption }}
+                            </div>
+                          </div>
+                        {% endif %}
+
                         <div class="voice-content-wrapper">
                           <div class="voice-player">
                             <h3 class="intro">{{ post.author }}</h3>
@@ -326,6 +388,15 @@ tagline: Supporting tagline
               {% endif %}
               <h1>{{ post.title }}</h1>
             </div>
+
+            {% if post.story-img-caption %}
+              <div class="photo-info">
+                <div class="caption-content">
+                  {{ post.story-img-caption }}
+                </div>
+              </div>
+            {% endif %}
+            
             <div class="page-footer">
               <a href="#">
                 <i class="icon-chevron-down"></i>
@@ -336,7 +407,7 @@ tagline: Supporting tagline
 
           <!--Third Slide-->
           {% assign post_length = post.content | number_of_words %}
-          <div class="swiper-slide"
+          <div class="swiper-slide first-page"
                 {% if post.story-img %} data-img="{{ASSET_PATH}}skeena/img/article_openers/{{ post.story-img }}" {% endif %}
                 data-hash="{{post.url | replace:'/',''}}"
                 {% if post.category == 'Gallery' %} id="{{post.url | replace:'/',''}}" {% endif %}>
@@ -351,6 +422,17 @@ tagline: Supporting tagline
 
                 
                 <div class="story-sidebar">
+
+                <!-- AddThis Button BEGIN -->
+                <div class="addthis_toolbox addthis_default_style addthis_16x16_style">
+                <a class="addthis_button_facebook" addthis:url="http://commonplacemagazine.org/#{{post.url | replace:'/',''}}"></a>
+                <a class="addthis_button_twitter" addthis:url="http://commonplacemagazine.org/#{{post.url | replace:'/',''}}"></a>
+                <a class="addthis_button_google_plusone_share" addthis:url="http://commonplacemagazine.org/#{{post.url | replace:'/',''}}"></a>
+                <a class="addthis_button_email" addthis:url="http://commonplacemagazine.org/#{{post.url | replace:'/',''}}"></a>
+                </div>
+                <!-- AddThis Button END -->
+
+
                   <div class="sidebar-header">
                     <p class="title">{{ post.title }}</p>
                     {% if post.author %}
@@ -385,7 +467,7 @@ tagline: Supporting tagline
                 {% if post_length < 750 %}
                 <div class="page-content short-post post">
                 {% else %}
-                <div class="page-content long-post post">
+                <div class="page-content long-post post hidden">
                 {% endif %}
                   {{ post.content }}
                 </div>

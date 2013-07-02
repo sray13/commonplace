@@ -9,7 +9,7 @@ place: Hazelton
 intro: Once suspicious of activists, Shannon McPhail has found good reason to join them, and lead them.
 toc-img: shannonmcphail.jpg
 story-img: shannonmcphail.jpg
-story-img caption: Photo by Gary Fiegehen
+story-img-caption: Photo by Gary Fiegehen
 audio: shannonmcphail.mp3
 latitude: 55.253778097100003
 longitude: -127.667564797

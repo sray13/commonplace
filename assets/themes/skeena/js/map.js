@@ -20,30 +20,8 @@ pipeline.parent.style.opacity = 0
 map.centerzoom(center, zoom);
 //map.ui.zoomer.add();
 
-
 window.markerLayer = mapbox.markers.layer().features(skeenaPlaces).factory(function(f) {
-	var img = document.createElement('img'),
-		delayedHideTimer;
-
-	// var popup = function(e) {
-	// 	$(e.target).popover({
-	// 		placement: "bottom",
-	// 		trigger: "manual",
-	// 		animation: "false",
-	// 		html: true,
-	// 		content: $($(e.target).data('popup')).html()
-	// 	}).popover('show');
-	// }
-
-	// var hide = function (e){
-	// 	delayedHideTimer = window.setInterval(function () {delayHide(e)},150);
-	// }
-
-	// function delayHide(e) {
-	// 	$(e.target).popover('hide');
-	// 	clearInterval(delayedHideTimer);
-	// }
-
+	var img = document.createElement('img');
 
 	img.className = 'marker-image';
 	if (f.properties.image === '') {
@@ -52,29 +30,19 @@ window.markerLayer = mapbox.markers.layer().features(skeenaPlaces).factory(funct
 	img.setAttribute('src', 'assets/themes/skeena/img/map/' + f.properties.image);
 	$(img).data('popup', "#" + f.properties.popup).addClass(f.properties.category);
 
-	// MM.addEvent(img, 'mouseover', popup);
-	// MM.addEvent(img, 'mouseout', hide);
-	// MM.addEvent(img, 'click', popup);
-	// MM.addEvent(img, 'touch', popup);
-
-	// $('.swiper-root')
-	// 	.on('mouseenter','.active-map .popover',function () {
-	// 		clearInterval(delayedHideTimer);
-	// 	});
-
- //    $('.swiper-root').on('click','.popover-close', function () {
- //        $(this).parent().parent().fadeOut(100,function () {$(this).remove()});
- //    });
-
 	return img;
 });
 
+
+// add interaction layer for popups on map
 var interaction = mapbox.markers.interaction(window.markerLayer);
 interaction.formatter(function(feature) {
         var o = feature.properties.content;
 
         return o;
     });
+
+
 
 
 $(document).ready(function () {

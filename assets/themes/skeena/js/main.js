@@ -61,8 +61,7 @@ if (window.location.hash) {
             onSlideChangeStart: function (swiper) {
                 var $slide = $(swiper.getSlide(swiper.realIndex));
 
-                if ($slide.hasClass('marker-slide')) {
-                } else {
+                if (!$slide.hasClass('marker-slide')) {
                     $('#map').children('div:last-child').removeClass('active-map');
                     $('.legend').addClass('hidden');
                 }
@@ -129,6 +128,20 @@ if (window.location.hash) {
 
                 // activate textify swiper
                 if ($longPost.length && ! $longPost.find('.textify').length) {
+
+                   var theImages=$('img',$longPost);
+
+                   $longPost.on('click','img',function () {
+                        var $theImage = theImages.filter('img[src="'+$(this).attr("src")+'"]');
+                        $('#puimage').append($theImage).append('<div>'+$(this).attr("alt")+'</div>');
+                        //debugger;
+                       $('#puimage').lightbox_me({
+                            centered:true,
+                            //destroyOnClose:true,
+                            overlayCSS:{background: 'white', opacity: .9}    
+                        });
+                   });
+
                     $longPost.textify({
                         numberOfColumn: 1,
                         width: "auto",
@@ -136,7 +149,11 @@ if (window.location.hash) {
                         height: "auto"//$longPost.height()
 
                     });
+
+  
+
                     $longPost.removeClass('hidden');
+                    //debugger;
                 }
 
                 // EDIT THIS FUNCTION TO MAKE THE SUB-TOC ITEMS ALL THE SAME HEIGHT
@@ -195,8 +212,10 @@ if (window.location.hash) {
                             //check to see if this is the last slide
                             if ((swiper.slides.length-1)==swiper.activeIndex){
                                 $('.swiper-slide.active').addClass('last-page');
-                            } else {
-                                $('.swiper-slide.active').removeClass('last-page');
+                            } else if (swiper.activeIndex==0) {
+                                $('.swiper-slide.active').addClass('first-page');
+                            }else {
+                                $('.swiper-slide.active').removeClass('last-page first-page');
                             }
 
                             // initialize scroll buttons for voices content if overflowing
@@ -240,11 +259,12 @@ if (window.location.hash) {
             var $hContainer=$(this).parentsUntil('div.swiper-slide','div.page').find('div.page-wrapper'),
                 isGallery=$hContainer.hasClass('gallery-wrapper'),
                 // yes, here theID may be a string, or it may be an object. sorry.
-                theID= isGallery ? $hContainer.find('.gallery').attr('id') : $hContainer.find('.text_pagination');
+                theID= isGallery ? $hContainer.find('.gallery').attr('id') : $hContainer.find('.text_pagination'),
+                $activeSlide = $('.swiper-slide.active');
 
-                if ($('.swiper-slide.active').hasClass('last-page') && $(this).hasClass("rightarrow")) {
+                if ($activeSlide.hasClass('last-page') && $(this).hasClass("rightarrow")){
                     mySwiper.swipeNext();
-                }
+                } 
 
                 if(isGallery){
                     //this is a swiper gallery.  simply use the built in swipeNext/swipePrev methods
@@ -288,6 +308,7 @@ if (window.location.hash) {
                 e.stopPropagation();
             }
             if (kc == 39) {
+                if(!$('.swiper-slide.active').hasClass('last-page'))
                 $('a.rightarrow','.swiper-slide.active').click();
             }
             if (kc == 37) {
@@ -325,8 +346,10 @@ if (window.location.hash) {
             $('span.x', $theNav).text(theCurrentNumber);
             if ($('span.x', $theNav).text()==$('span.y', $theNav).text()) {
                 $('.swiper-slide.active').addClass('last-page');
+            } else if ($('span.x', $theNav).text()=='1') {
+                $('.swiper-slide.active').addClass('first-page');
             } else {
-                $('.swiper-slide.active').removeClass('last-page');
+                $('.swiper-slide.active').removeClass('first-page last-page');
             }
         });
 
@@ -385,6 +408,7 @@ if (window.location.hash) {
             $('p:firstChild','div.gallery-intro-slide-wrapper').each(styleStoryLeadin);
             $('p:firstChild','div.voice-content-text').each(styleStoryLeadin);
             $('p:firstChild','.about-content').each(styleStoryLeadin);
+
 
 
 /////////////////////////////////////// Initialize menu items and click-to-swipe navigation
@@ -460,6 +484,8 @@ if (window.location.hash) {
            mySwiper.swipeTo($($(this).data('story')).index());
         }); // end scroll to clicked story binding
 
+
+        $('.photo-info').on('click',function () {$(this).toggleClass('visible');});
 
         //swipe to the next slide when clicking on the yellow arrow at the page footer
         $('.content').on('click','.page-footer', function () {

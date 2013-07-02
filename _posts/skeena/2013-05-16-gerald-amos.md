@@ -8,7 +8,7 @@ tags: ['voices']
 intro: A double pipeline through Kitamaat could "wipe our what remains of our culture."
 toc-img: geraldamos.jpg
 story-img: geraldamos.jpg
-story-img caption: Photo by Gary Fiegehen.
+story-img-caption: Photo by Gary Fiegehen.
 audio: geraldamos.mp3
 place: Kitamaat Village
 latitude: 54.004376069,
