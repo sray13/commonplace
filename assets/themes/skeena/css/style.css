@@ -829,7 +829,7 @@ div.next-story {display:none; text-align: center;padding-right:15px;}
     color:white;
     position: absolute;
     left:0;
-    top:100px;
+    top:80px;
     width:100%;
     padding-left:25px;
   }
@@ -857,6 +857,11 @@ div.next-story {display:none; text-align: center;padding-right:15px;}
     width:auto;
     margin:0;
   }
+
+  .page.full .page-wrapper {
+    padding-top:275px;
+  }
+
 
   .general-pagination .swiper-pagination-switch {
     margin:0 3px;

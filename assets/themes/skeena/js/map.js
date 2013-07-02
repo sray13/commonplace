@@ -12,7 +12,7 @@ var center = {
 var zoom = 7;
 
 // Create a map
-window.map = mapbox.map('map', layer, null);
+window.map = mapbox.map('map', layer, null, []);
 
 map.addLayer(pipeline);
 pipeline.parent.style.opacity = 0
