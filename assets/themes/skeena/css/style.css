@@ -47,6 +47,10 @@
   color:rgb(51,150,243);
 }
 
+.black {
+  color:#333333;
+}
+
 html, body {overflow: hidden;}
 
 html, body, .container, .content, .section {
@@ -72,8 +76,8 @@ a:hover {
 /*set hover opacity for main UI elements*/
 .page-footer a:hover,
 .textify_nav li:hover,
-.popover .popover-close:hover,
-.leftarrow:hover, .rightarrow:hover {
+.popover-close:hover,
+.left-arrow:hover, .right-arrow:hover {
   /* IE 8 */  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
   /* IE 5-7 */  filter: alpha(opacity=65);
   /* Netscape */  -moz-opacity: 0.65;
@@ -339,7 +343,7 @@ span.of {font-size:.9em;}
 }
 
 
-.popover .popover-close {
+.popover-close {
   font-family: CenturySchoolbookBT-Italic;
   font-style: normal;
   position: absolute;
@@ -486,6 +490,7 @@ width: 5px;
   top: 150px;
   padding: 10px 15px;
   background-color: white;
+  border-top:3px solid #CCC;
 }
   .legend {
     font-family: Intro-Black-Caps;
@@ -689,7 +694,7 @@ body.dark .sidebar-header {
  max-height:90%;
 }
 
-.gallery .swiper-slide span.caption {
+.gallery .swiper-slide span.caption,#the-lightbox .caption {
   line-height: 1.2em;
   width: 65%;
   display: block;
@@ -791,14 +796,14 @@ background: rgb(51,150,243);
 
 .navarrows .pull-right {width:141px;}
 
-.leftarrow
+.left-arrow
 {
   background-image: url('../img/arrow_sprite.png');
   background-position: left top;
   margin-left:50px;
 }
 
-.rightarrow
+.right-arrow
 {
   background-image: url('../img/arrow_sprite.png');
   background-position: right top;
@@ -810,8 +815,8 @@ div.next-story {display:none; text-align: center;padding-right:15px;}
 
 .hide-arrows .navarrows {display:none;}
 .last-page div.next-story {display:block;}
-.last-page .rightarrow {background-position: right bottom;}
-.first-page .leftarrow {background-position: left bottom;}
+.last-page .right-arrow {background-position: right bottom;}
+.first-page .left-arrow {background-position: left bottom;}
 
 /* style the sidebar, captions, and gallery slide for tablets */
 @media (max-width: 1024px) {
@@ -1028,11 +1033,8 @@ div.next-story {display:none; text-align: center;padding-right:15px;}
 
 .active-map img.marker-image {cursor:pointer;}
 
-.active-map .popover {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
 
+.marker-popup {
   background-color:#FFFFFF;
   background-color: rgba(255,255,255,.7);
   background: transparent\9; /* clear current background for ie */
@@ -1041,13 +1043,37 @@ div.next-story {display:none; text-align: center;padding-right:15px;}
   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FFFFFFF, endColorstr=#7FFFFFFF);
   /* For IE 8*/
   -ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FFFFFFF, endColorstr=#7FFFFFFF)";
-}
 
-.active-map .popover.bottom .arrow:after {
- border-bottom-color:rgba(255,255,255,.7);
- }
+  border:none;
+  -webkit-border-radius:0;
+    -moz-border-radius: 0;
+          border-radius:0;
+  }
+  .marker-popup:after,
+  .marker-popup:before {
+    top:100%;
+    border:solid transparent;
+    content:'';
+    height:0;
+    width:0;
+    left:50%;
+    position:absolute;
+    pointer-events:none;
+    }
 
-.active-map .popover h3 {
+  .marker-popup:after {
+    border-top-color:rgba(255,255,255,.7);
+    border-width:15px;
+    margin-left:-15px;
+    }
+
+  .marker-popup:before {
+    border-top-color:transparent;
+    border-width:18px;
+    margin-left:-18px;
+    }
+
+.active-map .marker-popup h3 {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -1074,6 +1100,7 @@ div.next-story {display:none; text-align: center;padding-right:15px;}
   width: 25%;
   background-color: rgb(52,150,242);
   height: 2px;
+  border:none;
 }
 
 .marker-tooltip .popover-subtitle{

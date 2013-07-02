@@ -119,7 +119,7 @@
             function closeLightbox() {
                 var s = $self[0].style;
                 if (opts.destroyOnClose) {
-                    $self.add($overlay).remove();
+                    $self.add($overlay).fadeOut('fast',function () {$(this).remove()});
                 } else {
                     $self.add($overlay).hide();
                 }

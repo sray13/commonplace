@@ -132,12 +132,16 @@ if (window.location.hash) {
                    var theImages=$('img',$longPost);
 
                    $longPost.on('click','img',function () {
-                        var $theImage = theImages.filter('img[src="'+$(this).attr("src")+'"]');
-                        $('#puimage').append($theImage).append('<div>'+$(this).attr("alt")+'</div>');
+                        var $theImage = theImages.filter('img[src="'+$(this).attr("src")+'"]'),
+                        $theBox=$('<div id="the-lightbox" style="width:100%"><div class="popover-close">close</div><div id="the-lightbox-content" style="margin-top:30px;width:100%;text-align:center;height:'+($(window).height()-150)+'px;"></div></div>');
+                        $theImage.css({'max-height':'100%','cursor':'pointer'});
+                        $theBox.find(":nth-child(2)").append($theImage).append('<div class="caption">'+$(this).attr("alt")+'</div>');
                         //debugger;
-                       $('#puimage').lightbox_me({
-                            centered:true,
-                            //destroyOnClose:true,
+                       $theBox.lightbox_me({
+                            centered:false,
+                            destroyOnClose:true,
+                            modalCSS: {top: '0'},
+                            closeSelector:'.popover-close',
                             overlayCSS:{background: 'white', opacity: .9}    
                         });
                    });
@@ -262,13 +266,13 @@ if (window.location.hash) {
                 theID= isGallery ? $hContainer.find('.gallery').attr('id') : $hContainer.find('.text_pagination'),
                 $activeSlide = $('.swiper-slide.active');
 
-                if ($activeSlide.hasClass('last-page') && $(this).hasClass("rightarrow")){
+                if ($activeSlide.hasClass('last-page') && $(this).hasClass("right-arrow")){
                     mySwiper.swipeNext();
                 } 
 
                 if(isGallery){
                     //this is a swiper gallery.  simply use the built in swipeNext/swipePrev methods
-                    $(this).hasClass("rightarrow") ? hGalleryArray[theID].swipeNext() : hGalleryArray[theID].swipePrev();
+                    $(this).hasClass("right-arrow") ? hGalleryArray[theID].swipeNext() : hGalleryArray[theID].swipePrev();
                 } else { 
                     //this isn't a gallery -> must be a textify slide. update logic later if more slide types introduced
                     //we need to fire the click event on the next/previous hilited number
@@ -278,7 +282,7 @@ if (window.location.hash) {
                     theNavNumbers=$('li',theID);
 
                     //are we going right?
-                    if ($(this).hasClass("rightarrow")){ 
+                    if ($(this).hasClass("right-arrow")){ 
                         //can we go right?
                         if ((++theGalIndex)<theNavNumbers.length) {
                             theNavNumbers.eq(theGalIndex).click();
@@ -309,10 +313,10 @@ if (window.location.hash) {
             }
             if (kc == 39) {
                 if(!$('.swiper-slide.active').hasClass('last-page'))
-                $('a.rightarrow','.swiper-slide.active').click();
+                $('a.right-arrow','.swiper-slide.active').click();
             }
             if (kc == 37) {
-                $('a.leftarrow','.swiper-slide.active').click();
+                $('a.left-arrow','.swiper-slide.active').click();
             } 
         });
 
@@ -336,11 +340,13 @@ if (window.location.hash) {
                 var $this=$(this),
                     theCaption=$this.attr('alt');
 
-                $this.parent().css('position','relative').prepend('<span class="caption">'+theCaption+'</span>').find('span').css('top',function () {
-                    var $that=$this;
+                if (!$this.parent().find('span').length) {
+                    $this.parent().css('position','relative').prepend('<span class="caption">'+theCaption+'</span>').find('span').css('top',function () {
+                        var $that=$this;
                     
-                    return ($that.height()-$(this).height())+$that.position().top;
-                });
+                        return ($that.height()-$(this).height())+$that.position().top;
+                    });
+                }
             });
 
             $('span.x', $theNav).text(theCurrentNumber);
