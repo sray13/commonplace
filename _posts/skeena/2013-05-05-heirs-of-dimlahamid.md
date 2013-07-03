@@ -6,8 +6,10 @@ toc-img: dimlahamid.jpg
 author: Gary Fiegehen
 issue: Skeena
 path: Gary Slideshow
+map-icon: map_image_wht.png
+latitude: 54.1987473756,
+longitude: -130.24543573
 slideshow:
-
 - img: gary01.jpg
   caption: 
 - img: gary02.jpg
@@ -17,9 +19,7 @@ slideshow:
 - img: gary04.jpg
   caption: 
 - img: gary05.jpg
-  caption: 
-- img: gary06.jpg
-  caption: 
+  caption:  
 - img: gary07.jpg
   caption: 
 - img: gary08.jpg

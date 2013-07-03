@@ -7,6 +7,9 @@ toc-img: pipeline.jpg
 author: Neil Ever Osborne
 issue: Skeena
 path: Neil slideshow
+latitude: 54.393028706499997
+longitude: -124.228379992
+map-icon: map_image_wht.png
 slideshow:
 - img: 1106_NEO_Pipeline_101.jpg
 
