@@ -40,8 +40,27 @@ var voicesLayer = L.geoJson(voices, {
 	onEachFeature: onEachFeature
 }).addTo(map);
 
+var imageLayer = L.geoJson(images, {
+	pointToLayer: function (feature, latlng) {
+		var image = feature.properties.image;
+		if (image === '') {
+			image = 'map_image_wht.png';
+		}
+		return L.marker(latlng, {
+			icon: L.icon({
+				iconUrl: 'assets/themes/skeena/img/map/' + image,
+				iconSize: [32, 37],
+				iconAnchor: [16, 37],
+				popupAnchor: [0, -28]
+			})
+		});
+	},
+	onEachFeature: onEachFeature
+}).addTo(map);
+
 var layers = {
-	voices: voicesLayer
+	voices: voicesLayer,
+	images: imageLayer
 };
 
 
