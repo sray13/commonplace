@@ -10,6 +10,11 @@ window.map = L.mapbox.map('map', null, {
 	keyboard: false
 });
 
+map.dragging.disable();
+map.touchZoom.disable();
+map.doubleClickZoom.disable();
+map.scrollWheelZoom.disable();
+
 new L.Control.Zoom({ position: 'bottomright' }).addTo(map);
 map.addLayer(L.tileLayer('http://tilestream.apps.ecotrust.org/v2/commonplace/{z}/{x}/{y}.png'));
 map.setView([center.lat, center.lon], zoom);
@@ -38,7 +43,7 @@ var voicesLayer = L.geoJson(voices, {
 		});
 	},
 	onEachFeature: onEachFeature
-}).addTo(map);
+});
 
 var imageLayer = L.geoJson(images, {
 	pointToLayer: function (feature, latlng) {
@@ -49,21 +54,28 @@ var imageLayer = L.geoJson(images, {
 		return L.marker(latlng, {
 			icon: L.icon({
 				iconUrl: 'assets/themes/skeena/img/map/' + image,
-				iconSize: [32, 37],
 				iconAnchor: [16, 37],
 				popupAnchor: [0, -28]
 			})
 		});
 	},
 	onEachFeature: onEachFeature
-}).addTo(map);
+});
 
 $.get('assets/themes/skeena/places/pipeline.geojson', function (data) {
 	layers.pipeline = new L.GeoJSON(JSON.parse(data), {
 		style: {
 			"color": "black",
-			"weight": 8,
+			"weight": 6,
 			"opacity": 1
+		}
+	});
+});
+
+$.get('assets/themes/skeena/places/majcities.geojson', function (data) {
+	layers.places = new L.GeoJSON(JSON.parse(data), {
+		pointToLayer: function (feature, latlng) {
+			return new L.marker(latlng).bindLabel(feature.properties.NAME, { noHide: true }).showLabel();
 		}
 	});
 });
@@ -76,6 +88,7 @@ var layers = {
 
 
 $(document).ready(function () {
+	$('.leaflet-control-zoom').addClass('hidden');
 	$('.legend').on('click', 'li', function (e) {
 		var $target = $(e.target);
 		$target.toggleClass('layer-on');
