@@ -58,6 +58,17 @@ var imageLayer = L.geoJson(images, {
 	onEachFeature: onEachFeature
 }).addTo(map);
 
+$.get('assets/themes/skeena/places/pipeline.geojson', function (data) {
+	layers.pipeline = new L.GeoJSON(JSON.parse(data), {
+		style: {
+			"color": "black",
+			"weight": 8,
+			"opacity": 1
+		}
+	});
+});
+
+
 var layers = {
 	voices: voicesLayer,
 	images: imageLayer
