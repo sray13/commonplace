@@ -64,6 +64,7 @@ if (window.location.hash) {
                 if (!$slide.hasClass('marker-slide')) {
                     $('#map').children('div:last-child').removeClass('active-map');
                     $('.legend').addClass('hidden');
+                    $('.swiper-root').addClass('no-touch-event');
                     // window.map.dragging.disable();
                     // window.map.touchZoom.disable();
                     // window.map.doubleClickZoom.disable();
@@ -239,14 +240,16 @@ if (window.location.hash) {
 
                 if ($slide.hasClass('marker-slide')) {
                     $('.legend').removeClass('hidden');
-                    map.addLayer(markerLayer);
+                    // map.addLayer(markerLayer);
                     window.blockSlideChange=true;
                     $('#map').children('div:last-child').addClass('active-map');
-                    if (!($('.active-map').find('.page-footer').length))
+                    $('.swiper-root').addClass('no-touch-event');
+                    if (!($('.active-map').find('.page-footer').length)) {
                         $('.active-map').append('<div class="page-footer"><a href="#"><i class="icon-chevron-down"></i></a></div>')
-
+                    }
                 } else {
-                    map.removeLayer(markerLayer);
+                    // map.removeLayer(markerLayer);
+                    $('.swiper-root').removeClass('no-touch-event');
                     window.blockSlideChange=false;
                 }
 
