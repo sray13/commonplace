@@ -80,13 +80,8 @@ $.get('assets/themes/skeena/places/majcities.geojson', function (data) {
     layers.places = new L.GeoJSON(JSON.parse(data), {
         pointToLayer: function (feature, latlng) {
             return L.marker(latlng, {
-                icon: L.icon({
-                    iconUrl: 'assets/themes/skeena/img/map/map_image_wht.png',
-                    iconSize: [32, 37],
-                    iconAnchor: [16, 37],
-                    popupAnchor: [0, -28],
-                    labelText: 'test'
-
+                icon: L.divIcon({
+                    html: '<img src="assets/themes/skeena/img/map/map_image_wht.png"><span>' + feature.properties.NAME + '</span>'
                 })
             });
         }

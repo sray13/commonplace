@@ -1256,3 +1256,12 @@ div.next-story {display:none; text-align: center;padding-right:15px;}
   user-select: none;
   white-space: nowrap;
 }
+.leaflet-div-icon {
+  background: rgba(0,0,0,0);
+  border: 0px;
+  height: auto!important;
+  width: auto!important;
+}
+.leaflet-div-icon span{
+  float: right;
+}
