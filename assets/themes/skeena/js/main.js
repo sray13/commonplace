@@ -341,6 +341,8 @@ if (window.location.hash) {
             if ($link.hasClass('voices-link')) {
                 mySwiper.swipeTo($('#voices').index());
                 hGalleryArray['voices-gallery'].swipeTo($($link.data('story')).index());
+            } else {
+                mySwiper.swipeTo($($link.data('story')).index());
             }
         });
 

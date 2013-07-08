@@ -66,6 +66,24 @@ var imageLayer = L.geoJson(images, {
     onEachFeature: onEachFeature
 });
 
+
+var essayLayer = L.geoJson(essays, {
+    pointToLayer: function (feature, latlng) {
+        var image = feature.properties.image;
+        if (image === '') {
+            image = 'map_essay_wht.png';
+        }
+        return L.marker(latlng, {
+            icon: L.icon({
+                iconUrl: 'assets/themes/skeena/img/map/' + image,
+                iconAnchor: [16, 37],
+                popupAnchor: [0, -28]
+            })
+        });
+    },
+    onEachFeature: onEachFeature
+});
+
 $.get('assets/themes/skeena/places/pipeline.geojson', function (data) {
     layers.pipeline = new L.GeoJSON(JSON.parse(data), {
         style: {
@@ -91,7 +109,8 @@ $.get('assets/themes/skeena/places/majcities.geojson', function (data) {
 
 var layers = {
     voices: voicesLayer,
-    images: imageLayer
+    images: imageLayer,
+    essays: essayLayer
 };
 
 

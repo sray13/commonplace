@@ -27,6 +27,7 @@ tagline: Supporting tagline
   <ul class="unstyled">
     <li data-layer="voices" class="layer-on">Voices <img src="{{ASSET_PATH}}skeena/img/map/map_voice_grey.png"></li>
     <li data-layer="images" class="layer-on">Images <img src="{{ASSET_PATH}}skeena/img/map/map_image_grey.png"></li>
+    <li data-layer="essays" class="layer-on">Essays <img src="{{ASSET_PATH}}skeena/img/map/map_essay_grey.png"></li>
   </li>
   <hr/>
   <ul class="unstyled">
@@ -262,7 +263,7 @@ tagline: Supporting tagline
       {% for image in post.slideshow %}
         {% if forloop.first %}
           <p class="intro-image"><img src="{{ ASSET_PATH }}skeena/img/{{ post.path }}/{{ image.img }}" /></p>
-          <p><a href="#">View the photo essay &raquo;</a></p>
+          <p><a href="#" data-story="#{{post.url | replace: '/', ''}}">View the photo essay &raquo;</a></p>
         {% endif %}
       {% endfor %}
 
