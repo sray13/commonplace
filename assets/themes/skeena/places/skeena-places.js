@@ -1,13 +1,18 @@
 ---
 ---
-var skeenaPlaces = {
+var voices = {
     "type": "FeatureCollection",
     "features": []
 };
-{% for post in site.posts %}{% if post.latitude && post.longitude %}
-// {{ post.title }}
+var images = {
+    "type": "FeatureCollection",
+    "features": []
+};
 
-skeenaPlaces.features.push({
+{% for post in site.posts %}{% if post.latitude && post.longitude %}
+{% case post.category %}
+{% when 'Voices' %}
+voices.features.push({
 	"type": "Feature",
 	"geometry": {
 		"type": "Point",
@@ -20,4 +25,19 @@ skeenaPlaces.features.push({
 		"popup": "popup-{{post.url | replace:'/',''}}-content"
 	}
 });
+{% when 'Gallery' %}
+images.features.push({
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [ {{ post.longitude }}, {{ post.latitude }} ]
+	},
+	"properties": {
+		"image": "{{ post.map-icon }}",
+		"title": "{{ post.title }}",
+		"category": "{{ post.category }}",
+		"popup": "popup-{{post.url | replace:'/',''}}-content"
+	}
+});
+{% endcase %}
 {% endif %}{% endfor %}
