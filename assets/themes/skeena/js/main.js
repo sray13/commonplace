@@ -65,10 +65,6 @@ if (window.location.hash) {
                     $('#map').children('div:last-child').removeClass('active-map');
                     $('.legend').addClass('hidden');
                     $('.swiper-root').addClass('no-touch-event');
-                    // window.map.dragging.disable();
-                    // window.map.touchZoom.disable();
-                    // window.map.doubleClickZoom.disable();
-                    // window.map.scrollWheelZoom.disable();
                     $('.leaflet-control-zoom').addClass('hidden');
                     $('.layer-on').each(function (i, layer) {
                         map.removeLayer(layers[$(layer).data('layer')]);
@@ -243,8 +239,19 @@ if (window.location.hash) {
                             } //end voices bio scroll button init
                         } //end onSlideChangeEnd callback for horizontal slider                        
                     }); // end init array for main-slide-contained horizontal gallery
+                    
                     } // end if block checking for gallery object existance
                 } // end if block for gallery.length
+
+                $('#map').on('click', '.leaflet-popup a', function (e) {
+                    var $link = $(this);
+                    e.preventDefault();
+                    if ($link.hasClass('voices-link')) {
+                        mySwiper.swipeTo($('#voices').index());
+                    }
+                    debugger;
+                });
+
 
                 if ($slide.hasClass('marker-slide')) {
                     $('.legend').removeClass('hidden');
@@ -326,6 +333,17 @@ if (window.location.hash) {
                 theGalIndex = $(this).hasClass('sub-toc-item') ? $(this).index()+1 : $(this).index();
             hGalleryArray[theID].swipeTo(theGalIndex);
         });
+
+        // nav to story from map
+        $('#map').on('click', '.leaflet-popup a', function (e) {
+            var $link = $(this);
+            e.preventDefault();
+            if ($link.hasClass('voices-link')) {
+                mySwiper.swipeTo($('#voices').index());
+                hGalleryArray['voices-gallery'].swipeTo($($link.data('story')).index());
+            }
+        });
+
 
         // Control the horizontal sliders using arrow keys
         $(document).on('keydown',function (e) {
@@ -494,6 +512,8 @@ if (window.location.hash) {
         $('.nav h2').on('click', function (e) {
             mySwiper.swipeTo(1);
         });
+
+        
 
         // swipe to the story when you click on the icon in the TOC
         $(document).on('click', '.story', function (e) {

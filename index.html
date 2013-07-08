@@ -251,12 +251,12 @@ tagline: Supporting tagline
     
     {% case post.category %}
     {% when 'Voices' %}
-    <p><a href="#">Listen to this voice &raquo;</a></p>
+    <p><a href="#" class="voices-link" data-story="#{{post.url | replace: '/', ''}}">Listen to this voice &raquo;</a></p>
 
     {% when 'Essay' %}
-        <p><a href="#">Read the full essay &raquo;</a></p>
+        <p><a href="#" class="essay-link" data-story="#{{post.url | replace: '/', ''}}">Read the full essay &raquo;</a></p>
     {% when 'Feature' %}
-        <p><a href="#">Read the full essay &raquo;</a></p>
+        <p><a href="#" class="feature-link" data-story="#{{post.url | replace: '/', ''}}">Read the full essay &raquo;</a></p>
 
     {% when 'Gallery' %}
       {% for image in post.slideshow %}
@@ -340,7 +340,7 @@ tagline: Supporting tagline
 
                       <!-- horizontal slides for each voice post -->
                       {% for post in site.tags.voices reversed %}
-                      <div class="swiper-slide" data-img="{{ASSET_PATH}}skeena/img/Voices Headshots/{{ post.story-img }}">
+                      <div class="swiper-slide" id="{{post.url| replace:'/',''}}" data-img="{{ASSET_PATH}}skeena/img/Voices Headshots/{{ post.story-img }}">
                         {% if post.story-img-caption %}
                           <div class="photo-info">
                             <div class="caption-content">
