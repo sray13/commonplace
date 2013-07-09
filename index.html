@@ -25,12 +25,13 @@ tagline: Supporting tagline
   <h3>Skeena<br/> Country</h3>
   <h4>Map Legend</h4>
   <ul class="unstyled">
-    <li class="layer-on">Voices <img src="{{ASSET_PATH}}skeena/img/map/map_voice_grey.png"></li>
-    <li class="layer-on">Images <img src="{{ASSET_PATH}}skeena/img/map/map_image_grey.png"></li>
+    <li data-layer="voices" class="layer-on">Voices <img src="{{ASSET_PATH}}skeena/img/map/map_voice_grey.png"></li>
+    <li data-layer="images" class="layer-on">Images <img src="{{ASSET_PATH}}skeena/img/map/map_image_grey.png"></li>
+    <li data-layer="essays" class="layer-on">Essays <img src="{{ASSET_PATH}}skeena/img/map/map_essay_grey.png"></li>
   </li>
   <hr/>
   <ul class="unstyled">
-    <li>Places</li>
+    <li data-layer="places">Places</li>
     <li data-layer="pipeline">Pipeline Route</li>
 </div>
 
@@ -251,18 +252,18 @@ tagline: Supporting tagline
     
     {% case post.category %}
     {% when 'Voices' %}
-    <p><a href="#">Listen to this voice &raquo;</a></p>
+    <p><a href="#" class="voices-link" data-story="#{{post.url | replace: '/', ''}}">Listen to this voice &raquo;</a></p>
 
     {% when 'Essay' %}
-        <p><a href="#">Read the full essay &raquo;</a></p>
+        <p><a href="#" class="essay-link" data-story="#{{post.url | replace: '/', ''}}">Read the full essay &raquo;</a></p>
     {% when 'Feature' %}
-        <p><a href="#">Read the full essay &raquo;</a></p>
+        <p><a href="#" class="feature-link" data-story="#{{post.url | replace: '/', ''}}">Read the full essay &raquo;</a></p>
 
     {% when 'Gallery' %}
       {% for image in post.slideshow %}
         {% if forloop.first %}
           <p class="intro-image"><img src="{{ ASSET_PATH }}skeena/img/{{ post.path }}/{{ image.img }}" /></p>
-          <p><a href="#">View the photo essay &raquo;</a></p>
+          <p><a href="#" data-story="#{{post.url | replace: '/', ''}}">View the photo essay &raquo;</a></p>
         {% endif %}
       {% endfor %}
 
@@ -278,8 +279,8 @@ tagline: Supporting tagline
 <!-- <div id="map">
       <div class="swiper-slide marker-slide" id="skeena-map" data-hash="skeena-map">
 </div> -->
-
-<div class="swiper-container swiper-root" id="map">
+<div id="map">
+  <div class="swiper-container swiper-root">
 
   <div class="swiper-wrapper">
     <!--First Slide-->
@@ -340,7 +341,7 @@ tagline: Supporting tagline
 
                       <!-- horizontal slides for each voice post -->
                       {% for post in site.tags.voices reversed %}
-                      <div class="swiper-slide" data-img="{{ASSET_PATH}}skeena/img/Voices Headshots/{{ post.story-img }}">
+                      <div class="swiper-slide" id="{{post.url| replace:'/',''}}" data-img="{{ASSET_PATH}}skeena/img/Voices Headshots/{{ post.story-img }}">
                         {% if post.story-img-caption %}
                           <div class="photo-info">
                             <div class="caption-content">
@@ -482,6 +483,7 @@ tagline: Supporting tagline
       </div>
     </div> <!-- end swiper wrapper -->
     <!-- Scrollbar: -->
+</div>
 <div class="swiper-scrollbar"></div>
 
   </div> <!-- end swiper container -->

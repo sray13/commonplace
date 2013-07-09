@@ -19,9 +19,7 @@ slideshow:
 - img: gary04.jpg
   caption: 
 - img: gary05.jpg
-  caption: 
-- img: gary06.jpg
-  caption: 
+  caption:  
 - img: gary07.jpg
   caption: 
 - img: gary08.jpg
