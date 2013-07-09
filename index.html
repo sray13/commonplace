@@ -239,9 +239,8 @@ tagline: Supporting tagline
 <div style="display: none" id="popup-{{post.url | replace:'/',''}}-content" class="popup-content">
   <h3 class="popover-title">{{ post.title }}</h3>
   <hr />
+  <p class="popover-subtitle">{% if post.place %}{{ post.place }}{% else %}{{ post.author }}{% endif %}</p>
   <div class="popover-content">
-    <p class="popover-subtitle">{% if post.place %}{{ post.place }}{% else %}{{ post.author }}{% endif %}</p>
-
     {% if post.story-img %}
       <div  style="width:45%;margin-right:5%;display:inline-block;vertical-align:top;"><p class="intro-image"><img src="{{ ASSET_PATH }}skeena/img/{% if post.category == 'Voices' %}Voices Headshots{% else %}article_openers{% endif %}/{{ post.story-img }}" /></p></div><div  style="width:50%;display:inline-block;vertical-align:top;">
     {% else %}

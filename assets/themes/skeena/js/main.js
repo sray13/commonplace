@@ -249,7 +249,7 @@ if (window.location.hash) {
                     if ($link.hasClass('voices-link')) {
                         mySwiper.swipeTo($('#voices').index());
                     }
-                    debugger;
+                    //debugger;
                 });
 
 
