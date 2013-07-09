@@ -14,6 +14,7 @@ window.map = L.mapbox.map('map', null, {
     ]
 });
 
+
 map.dragging.disable();
 map.touchZoom.disable();
 map.doubleClickZoom.disable();
@@ -29,6 +30,7 @@ function onEachFeature(feature, layer) {
         closeButton: true,
         minWidth: 320
     });
+
 }
 
 var voicesLayer = L.geoJson(voices, {
@@ -40,7 +42,7 @@ var voicesLayer = L.geoJson(voices, {
         return L.marker(latlng, {
             icon: L.icon({
                 iconUrl: 'assets/themes/skeena/img/map/' + image,
-                iconSize: [32, 37],
+                //iconSize: [32, 37],
                 iconAnchor: [16, 37],
                 popupAnchor: [0, -28]
             })
