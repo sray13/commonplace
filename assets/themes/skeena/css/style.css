@@ -1099,19 +1099,6 @@ div.next-story {display:none; text-align: center;padding-right:15px;}
   right: 6px;
 }
 
-.leaflet-popup-content-wrapper, .leaflet-popup-tip {
-  background-color:#FFFFFF;
-  background-color: rgba(255,255,255,.7);
-  background: transparent\9; /* clear current background for ie */
-  zoom:1; /* required for the filters */  
-  /* For IE 5.5 - 7*/
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FFFFFFF, endColorstr=#7FFFFFFF);
-  /* For IE 8*/
-  -ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FFFFFFF, endColorstr=#7FFFFFFF)";
-
-  box-shadow: 0 3px 14px rgba(0,0,0,0.4);
-  }
-
 .leaflet-popup-content-wrapper {
   background-color:#FFFFFF;
   background-color: rgba(255,255,255,.7);
@@ -1121,12 +1108,15 @@ div.next-story {display:none; text-align: center;padding-right:15px;}
   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FFFFFFF, endColorstr=#7FFFFFFF);
   /* For IE 8*/
   -ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FFFFFFF, endColorstr=#7FFFFFFF)";
-
+ 
   border:none;
   -webkit-border-radius:0;
     -moz-border-radius: 0;
           border-radius:0;
   }
+
+.leaflet-popup-tip {background-color:#FFFFFF;opacity:.7;}
+
 
 
 
@@ -1263,4 +1253,4 @@ div.next-story {display:none; text-align: center;padding-right:15px;}
 /*IE9/10 bugfix for mapbox.js to actually show the map.*/
 .leaflet-map-pane, .leaflet-tile-pane, .leaflet-objects-pane,
 .leaflet-layer, .leaflet-tile-container,.leaflet-marker-pane,
-.leaflet-overlay-pane,.leaflet-shadow-pane,.leaflet-popup-pane {width:100%;min-height:500px;}
+.leaflet-overlay-pane,.leaflet-shadow-pane {width:100%;min-height:500px;}
