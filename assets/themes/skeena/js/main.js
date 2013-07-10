@@ -64,6 +64,15 @@ if (window.location.hash) {
                 if (!$slide.hasClass('marker-slide')) {
                     $('#map').children('div:last-child').removeClass('active-map');
                     $('.legend').addClass('hidden');
+                    $('.swiper-root').addClass('no-touch-event');
+                    $('.leaflet-control-zoom').addClass('hidden');
+                    $('.layer-on').each(function (i, layer) {
+                        map.removeLayer(layers[$(layer).data('layer')]);
+                    });
+                    map.dragging.disable();
+                    map.touchZoom.disable();
+                    map.doubleClickZoom.disable();
+                    map.scrollWheelZoom.disable();
                 }
             },
             onSlideChangeEnd: function (swiper) {
@@ -230,19 +239,40 @@ if (window.location.hash) {
                             } //end voices bio scroll button init
                         } //end onSlideChangeEnd callback for horizontal slider                        
                     }); // end init array for main-slide-contained horizontal gallery
+                    
                     } // end if block checking for gallery object existance
                 } // end if block for gallery.length
 
+                $('#map').on('click', '.leaflet-popup a', function (e) {
+                    var $link = $(this);
+                    e.preventDefault();
+                    if ($link.hasClass('voices-link')) {
+                        mySwiper.swipeTo($('#voices').index());
+                    }
+                    //debugger;
+                });
+
+
                 if ($slide.hasClass('marker-slide')) {
                     $('.legend').removeClass('hidden');
-                    map.addLayer(markerLayer);
+                    $('.leaflet-control-zoom').removeClass('hidden');
+                    // map.addLayer(markerLayer);
                     window.blockSlideChange=true;
                     $('#map').children('div:last-child').addClass('active-map');
-                    if (!($('.active-map').find('.page-footer').length))
+                    $('.swiper-root').addClass('no-touch-event');
+                    if (!($('.active-map').find('.page-footer').length)) {
                         $('.active-map').append('<div class="page-footer"><a href="#"><i class="icon-chevron-down"></i></a></div>')
-
+                    }
+                    $('.layer-on').each(function (i, layer) {
+                        layers[$(layer).data('layer')].addTo(map);
+                    });
+                    map.dragging.enable();
+                    map.touchZoom.enable();
+                    map.doubleClickZoom.enable();
+                    map.scrollWheelZoom.enable();
                 } else {
-                    map.removeLayer(markerLayer);
+                    // map.removeLayer(markerLayer);
+                    $('.swiper-root').removeClass('no-touch-event');
                     window.blockSlideChange=false;
                 }
 
@@ -257,7 +287,7 @@ if (window.location.hash) {
         
 
         // Activate left/right arrows that we've placed on top of all horizontally enabled slides
-        $('.navarrows a').on('click',function (e){
+        $('.navarrows a, .next-story').on('click',function (e){
             e.preventDefault();
             e.stopPropagation();
             var $hContainer=$(this).parentsUntil('div.swiper-slide','div.page').find('div.page-wrapper'),
@@ -266,7 +296,7 @@ if (window.location.hash) {
                 theID= isGallery ? $hContainer.find('.gallery').attr('id') : $hContainer.find('.text_pagination'),
                 $activeSlide = $('.swiper-slide.active');
 
-                if ($activeSlide.hasClass('last-page') && $(this).hasClass("right-arrow")){
+                if ($activeSlide.hasClass('last-page') && ($(this).hasClass("next-story") || $(this).hasClass("right-arrow"))) {
                     mySwiper.swipeNext();
                 } 
 
@@ -282,7 +312,7 @@ if (window.location.hash) {
                     theNavNumbers=$('li',theID);
 
                     //are we going right?
-                    if ($(this).hasClass("right-arrow")){ 
+                    if ($(this).hasClass("right-arrow") || $(this).hasClass("next-story")) { 
                         //can we go right?
                         if ((++theGalIndex)<theNavNumbers.length) {
                             theNavNumbers.eq(theGalIndex).click();
@@ -303,6 +333,19 @@ if (window.location.hash) {
                 theGalIndex = $(this).hasClass('sub-toc-item') ? $(this).index()+1 : $(this).index();
             hGalleryArray[theID].swipeTo(theGalIndex);
         });
+
+        // nav to story from map
+        $('#map').on('click', '.leaflet-popup a', function (e) {
+            var $link = $(this);
+            e.preventDefault();
+            if ($link.hasClass('voices-link')) {
+                mySwiper.swipeTo($('#voices').index());
+                hGalleryArray['voices-gallery'].swipeTo($($link.data('story')).index());
+            } else {
+                mySwiper.swipeTo($($link.data('story')).index());
+            }
+        });
+
 
         // Control the horizontal sliders using arrow keys
         $(document).on('keydown',function (e) {
@@ -377,17 +420,6 @@ if (window.location.hash) {
         });
         
 
-
-
-        // manage hash changes
-        if (originalHash) {
-            mySwiper.swipeTo($(originalHash).index());    
-        }
-
-        // init the audio player for voices
-        audiojs.events.ready(function() {
-            var as = audiojs.createAll();
-        });
         
  //   }; //end window.onLoad event handler function
 }); // end test document.ready wrapper
@@ -483,6 +515,8 @@ if (window.location.hash) {
             mySwiper.swipeTo(1);
         });
 
+        
+
         // swipe to the story when you click on the icon in the TOC
         $(document).on('click', '.story', function (e) {
             e.preventDefault();
@@ -499,9 +533,17 @@ if (window.location.hash) {
         }); // end page footer scroll to next page click binding
 
 
-    }); //end document.ready function
+        // manage hash changes
+        if (originalHash) {
+            mySwiper.swipeTo($(originalHash).index());    
+        }
 
-    
+        // init the audio player for voices
+        audiojs.events.ready(function() {
+            var as = audiojs.createAll();
+        });
+
+    }); //end document.ready function
     
 
 })(); //end generic wrapper function

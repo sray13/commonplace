@@ -1,9 +1,23 @@
 ---
 ---
-var skeenaPlaces = [];
+var voices = {
+    "type": "FeatureCollection",
+    "features": []
+};
+var images = {
+    "type": "FeatureCollection",
+    "features": []
+};
+var essays = {
+    "type": "FeatureCollection",
+    "features": []
+};
+
 {% for post in site.posts %}{% if post.latitude && post.longitude %}
-// {{ post.title }}
-skeenaPlaces.push({
+{% case post.category %}
+{% when 'Voices' %}
+voices.features.push({
+	"type": "Feature",
 	"geometry": {
 		"type": "Point",
 		"coordinates": [ {{ post.longitude }}, {{ post.latitude }} ]
@@ -11,37 +25,52 @@ skeenaPlaces.push({
 	"properties": {
 		"image": "{{ post.map-icon }}",
 		"title": "{{ post.title }}",
-		"content" : $("#popup-{{post.url | replace:'/',''}}-content").html(),
-		"category": "{{ post.category }}"
-		//"popup": "popup-{{post.url | replace:'/',''}}-content"
+		"category": "{{ post.category }}",
+		"popup": "popup-{{post.url | replace:'/',''}}-content"
 	}
 });
+{% when 'Gallery' %}
+images.features.push({
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [ {{ post.longitude }}, {{ post.latitude }} ]
+	},
+	"properties": {
+		"image": "{{ post.map-icon }}",
+		"title": "{{ post.title }}",
+		"category": "{{ post.category }}",
+		"popup": "popup-{{post.url | replace:'/',''}}-content"
+	}
+});
+{% when 'Essay' %}
+essays.features.push({
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [ {{ post.longitude }}, {{ post.latitude }} ]
+	},
+	"properties": {
+		"image": "{{ post.map-icon }}",
+		"title": "{{ post.title }}",
+		"category": "{{ post.category }}",
+		"popup": "popup-{{post.url | replace:'/',''}}-content"
+	}
+});
+
+{% when 'Feature' %}
+essays.features.push({
+	"type": "Feature",
+	"geometry": {
+		"type": "Point",
+		"coordinates": [ {{ post.longitude }}, {{ post.latitude }} ]
+	},
+	"properties": {
+		"image": "{{ post.map-icon }}",
+		"title": "{{ post.title }}",
+		"category": "{{ post.category }}",
+		"popup": "popup-{{post.url | replace:'/',''}}-content"
+	}
+});
+{% endcase %}
 {% endif %}{% endfor %}
-
-
-// var skeenaPlaces = [{
-// 		"geometry": {
-// 			"type": "Point",
-// 			"coordinates": [-128.5997, 54.5165]
-// 		},
-// 		"properties": {
-// 			"image": "map_voice_wht.png"
-// 		}
-// 	}, {
-// 		"geometry": {
-// 			"type": "Point",
-// 			"coordinates": [-128.55, 53.9]
-// 		},
-// 		"properties": {
-// 			"image": "map_voice_wht_90.png"
-// 		}
-// 	}, {
-// 		"geometry": {
-// 			"type": "Point",
-// 			"coordinates": [-129.2500,53.4333]
-// 		},
-// 		"properties": {
-// 			"image": "map_voice_wht_180.png"
-// 		}
-// 	}
-// ];
