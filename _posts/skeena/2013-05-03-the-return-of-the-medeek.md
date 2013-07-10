@@ -204,10 +204,10 @@ A completely new mind-set was beginning to take hold in the countryside. “When
 “If you’re going strictly for economy, the communities and the environment pay. All three have to be incorporated.”
 
 ---
-[Terry Glavin](assets/themes/skeena/img/terry_glavin.jpg)
+![Terry Glavin](assets/themes/skeena/img/terry_glavin.jpg)
 
 Terry Glavin is an author, journalist, blogger, occasional activist and teacher whose non-fiction has earned more than a dozen writing awards including the Hubert Evans Prize for Non-Fiction, the British Columbia Lieutenant-Governor’s Award for Literary Excellence, and several national and regional magazine writing awards. He is the author of seven books and the co-author of three. Terry has worked as a reporter, columnist, and assistant city editor for the Daily Columbian and the Vancouver Sun and as a columnist for the Globe and Mail, the Georgia Straight and the Tyee. The founder and editor of Transmontanus Books (New Star, Vancouver), Terry is an adjunct professor in the Department of Creative Writing (MFA) at the University of British Columbia and a frequent contributor to newspapers and magazines as diverse as Canadian Geographic, Vancouver Review, Democratiya, National Post, Globe and Mail, Seed, Adbusters, and Lettre International (Berlin).
 
-[Gary Fiegehen](assets/themes/skeena/img/gary.jpg)
+![Gary Fiegehen](assets/themes/skeena/img/gary.jpg)
 
 Gary Fiegehen has been photographing the BC landscape and working with First Nations for over 35 years and has contributed to numerous magazines, books, and environmental campaigns. His work has also taken him to Russia, China, and the U.S.A. From sweeping aerial shots to detailed images that evoke an inner stillness, Fiegehen’s work reflects the countryside, the wilderness, and the animals and people who inhabit those places. Fiegehen supported the Nisga’a Nation in attaining the first modern day treaty west of the Rockies. His photography is featured in the NISGA’A TREATY GALLERY, a permanent installation in the Royal British Columbia Museum, Victoria, BC. His work is also featured in the Squamish Lil’wat Cultural Centre in Whistler, BC, and represented in the British Museum, London, UK; The National Museum of the American Indian, Washington DC; and appeared in a major exhibition in Canada’s Museum of Civilization, Hull Quebec.
