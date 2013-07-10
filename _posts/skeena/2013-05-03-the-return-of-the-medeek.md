@@ -202,3 +202,8 @@ In the Sacred Headwaters, the pressure of those usual alliances produced a measu
 A completely new mind-set was beginning to take hold in the countryside. “When we look at things, we don’t look at the environment for the sake of saving the environment,” says Shannon MacPhail, the fourth-generation Kispiox Valley rancher turned activist. “In any decision, you have to look at community, the environment, and the economy, and they all have equal bearing.
 
 “If you’re going strictly for economy, the communities and the environment pay. All three have to be incorporated.”
+
+---
+(assets/themes/skeena/img/terry_glavin.jpg)
+
+Terry Glavin is an author, journalist, blogger, occasional activist and teacher whose non-fiction has earned more than a dozen writing awards including the Hubert Evans Prize for Non-Fiction, the British Columbia Lieutenant-Governor’s Award for Literary Excellence, and several national and regional magazine writing awards. He is the author of seven books and the co-author of three. Terry has worked as a reporter, columnist, and assistant city editor for the Daily Columbian and the Vancouver Sun and as a columnist for the Globe and Mail, the Georgia Straight and the Tyee. The founder and editor of Transmontanus Books (New Star, Vancouver), Terry is an adjunct professor in the Department of Creative Writing (MFA) at the University of British Columbia and a frequent contributor to newspapers and magazines as diverse as Canadian Geographic, Vancouver Review, Democratiya, National Post, Globe and Mail, Seed, Adbusters, and Lettre International (Berlin).
