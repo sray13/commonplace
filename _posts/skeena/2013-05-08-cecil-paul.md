@@ -6,7 +6,7 @@ author: Cecil Paul
 tags: ['voices']
 issue: Skeena
 place: Kitamaat Village
-intro: Paul has vigorously and lyrically defended his homeland.
+intro: The abundance of this river that comes down and feeds my people...that is going to disappear."
 toc-img: cecilpaul.jpg
 story-img: cecilpaul.jpg
 audio: cecilpaul.mp3

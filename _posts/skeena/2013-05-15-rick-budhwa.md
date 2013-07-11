@@ -6,7 +6,7 @@ author: Rick Budhwa
 tags: ['voices']
 issue: Skeena
 place: Smithers
-intro: Budhwa argues that oral traditions are codes that inform ecology, technology, ethics, morality, and geneology.
+intro: These people have been going to a place on the landscape for thousands of years...they've had a connection to that place."
 toc-img: rickbudhwa.jpg
 story-img: rickbudhwa.jpg
 audio: rickbudhwa.mp3

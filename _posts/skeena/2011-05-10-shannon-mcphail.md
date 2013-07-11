@@ -6,7 +6,7 @@ author: Shannon McPhail
 issue: Skeena
 tags: ['voices']
 place: Hazelton
-intro: Once suspicious of activists, Shannon McPhail has found good reason to join them, and lead them.
+intro: I didn't believe that corporations and governments would make such terrible decisions."
 toc-img: shannonmcphail.jpg
 story-img: shannonmcphail.jpg
 story-img-caption: Photo by Gary Fiegehen
