@@ -30,8 +30,8 @@ if (window.location.hash) {
     $('document').ready( function() {
         var $masthead = $('.masthead'),
             hGalleryArray=new Array(),
-            loadIntroImages = window.setInterval(function () {postLoadImages($('div.swiper-slide'),'intro')},5000),
-            loadGalleryImages = window.setInterval(function () {postLoadImages($('img.postload'),'gallery')},10000);
+            loadIntroImages = window.setTimeout(function () {postLoadImages($('div.swiper-slide'),'intro')},3000),
+            loadGalleryImages = window.setTimeout(function () {postLoadImages($('img.postload'),'gallery')},6000);
 
             function postLoadImages ($theImages, which){
                 $theImages.each(function () {
@@ -46,7 +46,6 @@ if (window.location.hash) {
                         }
                 });
 
-                clearInterval(which=='intro' ? loadIntroImages : loadGalleryImages);
             }
 
             
@@ -62,10 +61,10 @@ if (window.location.hash) {
                 var $slide = $(swiper.getSlide(swiper.realIndex));
 
                 if (!$slide.hasClass('marker-slide')) {
-                    $('#map').children('div:last-child').removeClass('active-map');
-                    $('.legend').addClass('hidden');
+                    //$('#map').children('div:last-child').removeClass('active-map');
                     $('.swiper-root').addClass('no-touch-event');
-                    $('.leaflet-control-zoom').addClass('hidden');
+                    $('.legend, .leaflet-control-zoom, #map > .page-footer').addClass('hidden');
+
                     $('.layer-on').each(function (i, layer) {
                         map.removeLayer(layers[$(layer).data('layer')]);
                     });
@@ -241,27 +240,18 @@ if (window.location.hash) {
                     }); // end init array for main-slide-contained horizontal gallery
                     
                     } // end if block checking for gallery object existance
-                } // end if block for gallery.length
+                } // end block checking if this slide contains a horizontal 
 
-                $('#map').on('click', '.leaflet-popup a', function (e) {
-                    var $link = $(this);
-                    e.preventDefault();
-                    if ($link.hasClass('voices-link')) {
-                        mySwiper.swipeTo($('#voices').index());
-                    }
-                    //debugger;
-                });
 
 
                 if ($slide.hasClass('marker-slide')) {
-                    $('.legend').removeClass('hidden');
-                    $('.leaflet-control-zoom').removeClass('hidden');
+                    $('.legend, .leaflet-control-zoom, #map > .page-footer').removeClass('hidden');
                     // map.addLayer(markerLayer);
                     window.blockSlideChange=true;
-                    $('#map').children('div:last-child').addClass('active-map');
+                    //$('#map').children('div:last-child').addClass('active-map');
                     $('.swiper-root').addClass('no-touch-event');
-                    if (!($('.active-map').find('.page-footer').length)) {
-                        $('.active-map').append('<div class="page-footer"><a href="#"><i class="icon-chevron-down"></i></a></div>')
+                    if (!($('#map').children('.page-footer').length)) {
+                        $('#map').append('<div class="page-footer"><a href="#"><i class="icon-chevron-down"></i></a></div>')
                     }
                     $('.layer-on').each(function (i, layer) {
                         layers[$(layer).data('layer')].addTo(map);
@@ -285,6 +275,7 @@ if (window.location.hash) {
             } //end scrollbar plugin parameter array
         });  //end init block for main vertical swiper         
         
+//Begin main event bindings
 
         // Activate left/right arrows that we've placed on top of all horizontally enabled slides
         $('.navarrows a, .next-story').on('click',function (e){
@@ -346,6 +337,18 @@ if (window.location.hash) {
             }
         });
 
+        // This block used to be in slideChangeEnd for vertical slider.  see if we can delete it.
+        // //Bind swiping action to link click on map popups
+        // $('#map').on('click', '.leaflet-popup a', function (e) {
+        //     var $link = $(this);
+        //     e.preventDefault();
+        //     if ($link.hasClass('voices-link')) {
+        //         mySwiper.swipeTo($('#voices').index());
+        //     }
+        //     //debugger;
+        // });
+
+
 
         // Control the horizontal sliders using arrow keys
         $(document).on('keydown',function (e) {
@@ -401,6 +404,29 @@ if (window.location.hash) {
                 $('.swiper-slide.active').removeClass('first-page last-page');
             }
         });
+
+        
+//         $('.addthis_toolbox a').on('click',function (e) {
+//             e.preventDefault();
+//             var theURL=$(this).attr("href").replace(/ /g,'+').replace('#','%23');
+//             console.log(theURL);
+//             window.open (theURL,'Sharing is caring','height=400,width=600,toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=no')
+
+// //             var $theBox=$('<div id="the-lightbox" style="width:100%"><div class="popover-close">close</div><div id="the-lightbox-content" style="margin-top:30px;width:100%;text-align:center;height:'+($(window).height()-150)+'px;"><iframe id="foo" style="z-index: 1;border: none; margin: 0; padding: 0; position: absolute; width: 75%; height: 100%; top: 0; left: 0; filter: mask();"/></div></div>');
+
+// // debugger;
+
+// //             $theBox.find("#foo").attr('src',$(this).attr('href'));
+// //             //debugger;
+// //            $theBox.lightbox_me({
+// //                 centered:false,
+// //                 destroyOnClose:true,
+// //                 modalCSS: {top: '0'},
+// //                 closeSelector:'.popover-close',
+// //                 overlayCSS:{background: 'white', opacity: .9}    
+// //             });
+//        });
+
 
         // Control voices biography content with up/down arrows
         $('.voice-content-wrapper').on('click','span.up, span.down',function(e){
@@ -528,7 +554,7 @@ if (window.location.hash) {
         $('.photo-info').on('click',function () {$(this).toggleClass('visible');});
 
         //swipe to the next slide when clicking on the yellow arrow at the page footer
-        $('.content').on('click','.page-footer', function () {
+        $('#map').on('click','.page-footer', function () {
             mySwiper.swipeNext();            
         }); // end page footer scroll to next page click binding
 
