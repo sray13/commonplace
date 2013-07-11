@@ -187,8 +187,10 @@ span.of {font-size:.9em;}
   height: 44px;
   width: 44px;
   left: 48%;
-  /*z-index: 1000;*/
+  z-index: 10;
+  cursor: pointer;
 }
+
 .page-footer a {
   display:inline-block;
   width:30px;
@@ -634,7 +636,6 @@ div[data-hash=welcome] .contentText div:last-child div.column>p:last-child:after
 }
 
 .page-content blockquote {
-  font-family: CenturySchoolbookBT-Roman;
   border:none;
   margin:20px 0;
   padding: 0 0 0 10%;
@@ -642,12 +643,13 @@ div[data-hash=welcome] .contentText div:last-child div.column>p:last-child:after
 .page-content blockquote p {
     color: rgb(51,150,243);
     font-size: 1.7em;
-    font-style: italic;
+  font-family: CenturySchoolbookBT-Roman;
     padding:0;
     padding-right:40%;
 }
 .page-content blockquote blockquote {padding-right:0;}
 .page-content blockquote blockquote p {
+  font-family: CenturySchoolbookBT-Italic;
   font-weight: normal;
   color: black;
   font-size: 1em;
@@ -1088,16 +1090,24 @@ div.next-story {display:none; text-align: center;padding-right:15px;}
   .page.full .story-sidebar {margin-left:5%;}
 }
 
-.active-map {
+/*.active-map {
   z-index: 1000 !important;
   pointer-events: auto !important;
 }
 
 .active-map img.marker-image {cursor:pointer;}
-
+*/
 .leaflet-container img {
-    max-width: 100% !important;
-  }
+  max-width: 100% !important;
+}
+
+.backstretch img {
+  max-width:none !important;
+}
+
+.leaflet-popup img {
+  max-width: 100% !important;
+}
 
 .leaflet-popup .popover-close {
   width: 19px;
@@ -1170,30 +1180,32 @@ div.next-story {display:none; text-align: center;padding-right:15px;}
   font-size:1em;
 }
 
+.leaflet-map-pane .page-footer {z-index: 100;}
+
 .addthis_toolbox {
   margin-bottom:13px;
 }
 
 .at16nc.at16t_facebook {
-  background:transparent url(../img/facebook_wht.png) no-repeat left top;
+  background:transparent url(../img/facebook_wht.png) no-repeat left top !important;
   width:22px;
   height:22px;
 }
 
 .at16nc.at16t_twitter {
-  background:url(../img/twitter_wht.png) no-repeat left top;
+  background:transparent url(../img/twitter_wht.png) no-repeat left top !important;
   width:22px;
   height:22px;
 }
 
 .at16nc.at16t_google_plusone_share {
-  background:url(../img/googlepls_wht.png) no-repeat left top;
+  background:transparent url(../img/googlepls_wht.png) no-repeat left top !important;
   width:23px;
   height:22px;
 }
 
 .at16nc.at16t_email {
-  background:url(../img/email_wht.png) no-repeat left center;
+  background:transparent url(../img/email_wht.png) no-repeat left center !important;
   width:25px;
   height:22px;
 }
