@@ -6,7 +6,7 @@ author: Ivan Thompson
 tags: ['voices']
 issue: Skeena
 place: Vancouver 
-intro: Healthy, diverse Skeena ecosystems, cultures, communities, and civic groups are the basin's "immune system.”
+intro: Some would call this ability to work together for the health of a system an immune response.”
 toc-img: ivanthompson.jpg
 story-img: ivanthompson.jpg
 audio: ivanthompson.mp3
