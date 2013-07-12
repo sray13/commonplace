@@ -8,7 +8,7 @@ issue: Skeena
 toc-img: sacredheadwaters.jpg
 story-img: sacredheadwaters.jpg
 story-img-caption: Headwaters region photo by Gary Irving, Garyfoto.com.
-latitude: 57.7716708373,
+latitude: 57.7716708373
 longitude: -129.830473272
 map-icon: map_essay_wht.png
 ---

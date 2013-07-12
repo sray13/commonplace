@@ -11,7 +11,7 @@ story-img: geraldamos.jpg
 story-img-caption: Photo by Gary Fiegehen.
 audio: geraldamos.mp3
 place: Kitamaat Village
-latitude: 54.004376069,
+latitude: 54.004376069
 longitude: -128.645338718
 map-icon: map_voice_wht_90.png
 ---

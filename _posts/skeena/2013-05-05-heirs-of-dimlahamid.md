@@ -7,7 +7,7 @@ author: Gary Fiegehen
 issue: Skeena
 path: Gary Slideshow
 map-icon: map_image_wht.png
-latitude: 54.1987473756,
+latitude: 54.1987473756
 longitude: -130.24543573
 slideshow:
 - img: gary01.jpg
