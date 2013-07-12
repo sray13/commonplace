@@ -66,7 +66,7 @@ if (window.location.hash) {
                     $('.legend, .leaflet-control-zoom, #map > .page-footer').addClass('hidden');
 
                     $('.layer-on').each(function (i, layer) {
-                        map.removeLayer(layers[$(layer).data('layer')]);
+                        map.removeLayer(currentLayers[$(layer).data('layer')]);
                     });
                     map.dragging.disable();
                     map.touchZoom.disable();
@@ -254,7 +254,7 @@ if (window.location.hash) {
                         $('#map').append('<div class="page-footer"><a href="#"><i class="icon-chevron-down"></i></a></div>')
                     }
                     $('.layer-on').each(function (i, layer) {
-                        layers[$(layer).data('layer')].addTo(map);
+                        currentLayers[$(layer).data('layer')].addTo(map);
                     });
                     map.dragging.enable();
                     map.touchZoom.enable();

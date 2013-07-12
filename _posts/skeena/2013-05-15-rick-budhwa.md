@@ -11,7 +11,7 @@ toc-img: rickbudhwa.jpg
 story-img: rickbudhwa.jpg
 audio: rickbudhwa.mp3
 transcript: rickbudhwa.pdf
-latitude: 54.782604703,
+latitude: 54.782604703
 longitude: -127.201563951
 ---
 
