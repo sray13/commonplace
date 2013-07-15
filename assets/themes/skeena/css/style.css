@@ -614,14 +614,16 @@ div[data-hash=welcome] .contentText div:last-child div.column>p:last-child:after
 .page-content hr {margin-left:28%;}
 .page-content strong {color:rgb(51,150,243); font-weight: bold;}
 
-.page-content img {
+.leaflet-container .page-content img {
   float: left;
   padding-right: 25px !important;
   padding-top: 10px;
   padding-bottom: 10px;
   max-width: 250px !important;
+  max-height: 300px;
   height:auto !important;
   margin-left:-12% !important;
+  cursor: pointer;
 }
 
 .page-content .textify span.caption {
@@ -748,7 +750,7 @@ body.dark .sidebar-header {
   left: 50%;
   margin-left: -12%;
   width:33%;
-  margin-top:8%;
+  margin-top:4%;
 }
 
 /*.gallery-intro-slide-wrapper p.title {

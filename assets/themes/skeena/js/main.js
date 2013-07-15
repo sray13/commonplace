@@ -33,6 +33,9 @@ if (window.location.hash) {
             loadIntroImages = window.setTimeout(function () {postLoadImages($('div.swiper-slide'),'intro')},3000),
             loadGalleryImages = window.setTimeout(function () {postLoadImages($('img.postload'),'gallery')},6000);
 
+            $('div.gallery-wrapper img[src*="contributor-headshots"]').addClass('img-circle').css({'float': 'left','margin-right': '5px','width': '75px'})
+                .parent().next().css({'font-size':'.8em', 'line-height': '1.3em'});
+
             function postLoadImages ($theImages, which){
                 $theImages.each(function () {
                     var $this=$(this),
@@ -66,7 +69,7 @@ if (window.location.hash) {
                     $('.legend, .leaflet-control-zoom, #map > .page-footer').addClass('hidden');
 
                     $('.layer-on').each(function (i, layer) {
-                        map.removeLayer(layers[$(layer).data('layer')]);
+                        map.removeLayer(currentLayers[$(layer).data('layer')]);
                     });
                     map.dragging.disable();
                     map.touchZoom.disable();
@@ -254,7 +257,7 @@ if (window.location.hash) {
                         $('#map').append('<div class="page-footer"><a href="#"><i class="icon-chevron-down"></i></a></div>')
                     }
                     $('.layer-on').each(function (i, layer) {
-                        layers[$(layer).data('layer')].addTo(map);
+                        currentLayers[$(layer).data('layer')].addTo(map);
                     });
                     map.dragging.enable();
                     map.touchZoom.enable();

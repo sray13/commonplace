@@ -8,6 +8,7 @@ var zoom = 7;
 window.map = L.mapbox.map('map', null, { 
     zoomControl: false,
     keyboard: false,
+    markerZoomAnimation: false,
     maxBounds:[
         [60.72, -117.07],
         [44.59, -149.32]
@@ -24,13 +25,23 @@ new L.Control.Zoom({ position: 'bottomright' }).addTo(map);
 map.addLayer(L.tileLayer('http://tilestream.apps.ecotrust.org/v2/commonplace/{z}/{x}/{y}.png'));
 map.setView([center.lat, center.lon], zoom);
 
+
+function onEachFeature_wide(feature, layer) {
+    layer.on('click', function (e) {  
+        if (zoom < 8) {
+            map.setView(e.latlng,zoom+2);
+        } 
+    });
+}
+
 function onEachFeature(feature, layer) {
     var popupContent =  $("#" + feature.properties.popup).html();
+    // console.log('opening');
     layer.bindPopup(popupContent, {
         closeButton: true,
-        minWidth: 320
+        minWidth: 320,
+        autoPanPadding: new L.Point(75, 75)
     });
-
 }
 
 var voicesLayer = L.geoJson(voices, {
@@ -49,6 +60,23 @@ var voicesLayer = L.geoJson(voices, {
         });
     },
     onEachFeature: onEachFeature
+});
+var voicesLayer_wide = L.geoJson(voices_wide, {
+    pointToLayer: function (feature, latlng) {
+        var image = feature.properties.image;
+        if (image === '') {
+            image = 'map_voice_wht_90.png';
+        }
+        return L.marker(latlng, {
+            icon: L.icon({
+                iconUrl: 'assets/themes/skeena/img/map/' + image,
+                //iconSize: [32, 37],
+                iconAnchor: [16, 37],
+                popupAnchor: [0, -28]
+            })
+        });
+    },
+    onEachFeature: onEachFeature_wide
 });
 
 var imageLayer = L.geoJson(images, {
@@ -115,6 +143,32 @@ var layers = {
     essays: essayLayer
 };
 
+var layers_wide = {
+    voices: voicesLayer_wide,
+    images: imageLayer,
+    essays: essayLayer
+};
+var currentLayers = layers_wide;
+map.on('zoomstart', function () {
+    $.each(currentLayers, function (i, layer) {
+        map.removeLayer(layer);
+    });
+});
+
+
+map.on('zoomend', function () {
+    var zoom = map.getZoom();
+    console.log('zoomend ', zoom);
+    if (zoom < 9) {
+        currentLayers = layers_wide;
+    } else {
+        currentLayers = layers;
+    } 
+    $('.layer-on').each(function (i, layer) {
+        currentLayers[$(layer).data('layer')].addTo(map);
+    });
+})
+
 
 $(document).ready(function () {
     $('.leaflet-control-zoom').addClass('hidden');
@@ -123,9 +177,9 @@ $(document).ready(function () {
         $target.toggleClass('layer-on');
 
         if (($target).hasClass('layer-on')) {
-            layers[$target.data('layer')].addTo(map);
+            currentLayers[$target.data('layer')].addTo(map);
         } else {
-            map.removeLayer(layers[$target.data('layer')]);
+            map.removeLayer(currentlayers[$target.data('layer')]);
         }
     });
 });
