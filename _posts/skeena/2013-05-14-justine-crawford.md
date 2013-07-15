@@ -9,6 +9,7 @@ place: Port Edward
 intro: Crawford and her partner bought cannery left to rust for 20 years. 
 toc-img: justinecrawford.jpg
 story-img: justinecrawford.jpg
+story-img caption: Photo courtesy of Justine Crawford.
 audio: justinecrawford.mp3
 transcript: justinecrawford.pdf
 ---
