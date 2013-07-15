@@ -11,31 +11,31 @@ latitude: 54.1987473756
 longitude: -130.24543573
 slideshow:
 - img: gary01.jpg
-  caption: 
+  caption: Hartley Bay is home to the Gitga’at, who originally lived in the village of Laxgal’tsap near the Quaal River.
 - img: gary02.jpg
-  caption: 
+  caption: The Enbridge Pipeline proposal includes more than 200 oil tankers coming out of nearby Douglas Channel every year.
 - img: gary03.jpg
-  caption: 
+  caption: After English missionary William Duncan set off to establish New Metlakatla in Alaska, the remaining Gitga’at chose the cove at Hartley Bay as their new home.
 - img: gary04.jpg
-  caption: 
+  caption: Development proposals across the Skeena have brought everyone into a conversation about the value of the land, including homesteaders like Ken Rabnett.
 - img: gary05.jpg
-  caption:  
+  caption: The Great Bear Rainforest takes its name from the white grizzly or “spirit” bear, which the Tsimshian people said had the power to transform into a man.
 - img: gary07.jpg
-  caption: 
+  caption: Elder Helen Clifton married Gitga’at hereditary chief John Clifton in 1942 and moved to Hartley Bay where they raised six children, who gave them twenty grandchildren.
 - img: gary08.jpg
-  caption: 
+  caption: The Gitga’at are known as the People of the Cane, which refers to the “canes” or poles by which people once navigated canoes in the lower Skeena.
 - img: gary09.jpg
-  caption: 
+  caption: Jason Loring prepares a net for fishing in the upper Skeena. More than anything else, the salmon connect everyone within the watershed.
 - img: gary10.jpg
-  caption: 
+  caption: Dimlahamid territory is in the middle of something very old and quiet, and at the edge of something very big and loud.
 - img: gary11.jpg
-  caption: 
+  caption: Dimlahamid was said to be a vast city, a place that covered so much ground that a flock of geese could not transverse it without falling from the sky.
 - img: gary12.jpg
-  caption: 
+  caption: As the heirs of Dimlahamid describe the landscape, they talk with a mix of reverence, pride and melancholy.
 - img: gary13.jpg
-  caption: 
+  caption: “Everything we have comes from the sea,” says Gitga’at elder Helen Clifton.
 - img: gary14.jpg
-  caption: 
+  caption: About 200 people currently live at Hartley Bay. Many use small skiffs and fishing boats to set crab traps or catch salmon and halibut. When it comes to discussing Enbridge, the only answer is no.
 ---
 {% include JB/setup %}
 
