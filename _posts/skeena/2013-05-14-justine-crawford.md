@@ -9,6 +9,7 @@ place: Port Edward
 intro: I'd like Cassiar to go back to work."
 toc-img: justinecrawford.jpg
 story-img: justinecrawford.jpg
+story-img caption: Photo courtesy of Justine Crawford.
 audio: justinecrawford.mp3
 transcript: justinecrawford.pdf
 latitude: 54.194267614300003

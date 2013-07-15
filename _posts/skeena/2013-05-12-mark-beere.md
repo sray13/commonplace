@@ -6,9 +6,10 @@ author: Mark Beere
 tags: ['voices']
 issue: Skeena
 place: Smithers
-intro: “We’re nestled in this special place…it’s such a magical system, with its own rhythm."
+intro: We’re nestled in this special place…it’s such a magical system, with its own rhythm."
 toc-img: markbeere.jpg
 story-img: markbeere.jpg
+story-img caption: Photo courtesy of Mark Beere.
 audio: markbeere.mp3
 transcript: markbeere.pdf
 latitude: 54.781410634

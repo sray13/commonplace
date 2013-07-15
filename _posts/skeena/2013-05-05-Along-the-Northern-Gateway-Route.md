@@ -62,7 +62,7 @@ slideshow:
 ---
 {% include JB/setup %}
 
- In order to document the great natural wealth along the proposed Northern Gateway pipeline route, Neil Ever Osborne took to the air. His photos, stretching from the fjords of the Great Bear Rainforest to the Canadian Rockies, put the Skeena region's grandeur in proper perspective. Broad coastal inlets glinting in twilight, brown bears ranging across heather, serpentine tributaries snaking to the horizon. And a single road slicing through a purple-hued copse of trees - a harbinger of bigger things to come or just a road, something people and landscapes learn to live with? "In order to fully appreciate what is at risk," Osborne says, "it is important to take stock of the ecosystems and people who will be affected."
+ In order to document the great natural wealth along the proposed Northern Gateway pipeline route, Neil Ever Osborne took to the air. His photos, stretching from the fjords of the Great Bear Rainforest to the Canadian Rockies, put the Skeena region's grandeur in proper perspective. Broad coastal inlets glinting in twilight, brown bears ranging across heather, serpentine tributaries snaking to the horizon. And a single road slicing through a purple-hued copse of trees--a harbinger of bigger things to come or just a road, something people and landscapes learn to live with? "In order to fully appreciate what is at risk," Osborne says, "it is important to take stock of the ecosystems and people who will be affected."
 
 ![Neil Ever Osborne]({{ ASSET_PATH }}skeena/img/contributor-headshots/osborne.jpg)
 

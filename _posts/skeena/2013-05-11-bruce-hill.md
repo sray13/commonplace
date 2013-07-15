@@ -5,9 +5,11 @@ category: Voices
 author: Bruce Hill
 issue: Skeena
 tags: ['voices']
-intro: “A folkstorm is when a community, faced with a bad idea…just rises up.”
+place: Terrace
+intro: A folkstorm is when a community, faced with a bad idea…just rises up.”
 toc-img: brucehill.jpg
 story-img: brucehill.jpg
+story-img caption: Photo by Gary Fiegehen.
 audio: brucehill.mp3
 place: Terrace
 latitude: 54.513821160699997
