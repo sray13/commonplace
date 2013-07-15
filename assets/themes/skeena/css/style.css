@@ -512,12 +512,14 @@ width: 5px;
   padding: 10px 15px;
   background-color: white;
   border-top:3px solid #CCC;
+  width:13em;
 }
   .legend {
     font-family: Intro-Black-Caps;
+    font-weight: normal;
   }
   .legend h3 {
-    margin: 0px;
+    margin: 15px 0 0 0;
     font-size: 16px;
     line-height: 1;
   }
@@ -616,7 +618,7 @@ div[data-hash=welcome] .contentText div:last-child div.column>p:last-child:after
 
 .leaflet-container .page-content img {
   float: left;
-  padding-right: 25px !important;
+  padding-right: 25px;
   padding-top: 10px;
   padding-bottom: 10px;
   max-width: 250px !important;
