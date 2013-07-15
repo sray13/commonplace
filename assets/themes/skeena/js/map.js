@@ -36,7 +36,7 @@ function onEachFeature_wide(feature, layer) {
 
 function onEachFeature(feature, layer) {
     var popupContent =  $("#" + feature.properties.popup).html();
-    console.log('opening');
+    // console.log('opening');
     layer.bindPopup(popupContent, {
         closeButton: true,
         minWidth: 320,

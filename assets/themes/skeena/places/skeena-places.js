@@ -52,7 +52,7 @@ if (! voicesPoints[[({{post.longitude}}).toFixed(0),({{ post.latitude }}).toFixe
 	voicesPoints[[({{post.longitude}}).toFixed(0),({{ post.latitude }}).toFixed(0)].join(':')] = true;
 } else {
 
-	console.log('already there');
+	//console.log('already there');
 }
 
 {% when 'Gallery' %}
