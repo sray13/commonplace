@@ -9,6 +9,8 @@ toc-img: epilogue.jpg
 story-img: epilogue.jpg
 story-img-caption: Ship off the BC coast, by Neil Ever Osborne.
 ---
+{% include JB/setup %}
+
 At a recent conference in Smithers, people gathered from throughout the watershed and the region to discuss various issues related to salmon and steelhead habitat in the Skeena. Speakers from government, advocacy, First Nations, and scientific communities shared elements of their experience with subjects as diverse as salmon life history, constitutional case law, and the effects of climate change on water flows. Visuals included a chart titled “Defining Salmon Biodiversity” showing thirty-two ecotypic zones with distinct borders and coloration, hosting special populations of “conservation units.” And one participant walked us through a new ecosystem-based management handbook, a detailed template for conservation inspired by recent success in securing protections for the Great Bear Rainforest. 
 
 Each presentation distilled specific expertise and expressed a commitment to applying it on behalf of salmon. Collectively, the information reflected our considerable interest in the Skeena and the sophistication of the tools and process by which we seek to understand it.
@@ -62,6 +64,6 @@ The language of this accommodation is a language of magic, poetry to accompany o
 
 The voice of the Skeena will be fully expressed only through evolutionary significant units _and_ salmon kings, in conference rooms _and_ around campfires. It will be expressed in the Tyee test fishery, at Kitwanga and Babine counting fences, and in ancient songs reminding us simply that our boxes are full. Empirical understanding will be tantamount to emotive celebration—of the glorious riot of life in the Skeena that needs nothing, wants nothing, other than to be free.
 
-![Jim Norton]({{ ASSET_PATH }}skeena/img/jim_norton.jpg)
+![Jim Norton]({{ ASSET_PATH }}skeena/img/contributor-headshots/jim_norton.jpg)
 
 Jim Norton is Adventure Capitalist and Director of Strategic Partnerships for Ecotrust's Natural Capital Fund. He is based in San Francisco. In addition to his current work for Ecotrust, he has been a professional river guide and naturalist for the last twenty years and continues to guide in Idaho and on the Colorado River through Grand Canyon. He has also worked as a professional guide in China, Chile, and New Zealand. Norton has served as a screenwriter for a number of nature and adventure documentaries. Most recently, inspired by a lost heritage of abundance in salmon streams of his adopted Pacific Northwest home, Norton wrote and produced Salmon: Running the Gauntlet, which aired nationally in May of 2011 as an episode of PBS’s Nature. He received a B.S. in biology (Bowdoin College), but prefers the BS around campfires (everywhere).

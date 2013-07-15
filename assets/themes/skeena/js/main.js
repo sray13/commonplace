@@ -33,6 +33,8 @@ if (window.location.hash) {
             loadIntroImages = window.setTimeout(function () {postLoadImages($('div.swiper-slide'),'intro')},3000),
             loadGalleryImages = window.setTimeout(function () {postLoadImages($('img.postload'),'gallery')},6000);
 
+            $('div.gallery-wrapper img[src*="contributor-headshots"]').addClass('img-circle').css({'float': 'left','margin-right': '5px','width': '75px'});
+
             function postLoadImages ($theImages, which){
                 $theImages.each(function () {
                     var $this=$(this),
