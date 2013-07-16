@@ -132,7 +132,7 @@
                     thisImg.css({
                         'display': 'block',
                         'width': columnWidth,
-                        'margin': 0,
+                        'margin-right': '20px',
                         'padding': 0,
                         'margin-bottom':'6px'
                     })
@@ -141,7 +141,7 @@
                         thisImg.css({
                             'display': 'block',
                             'width': 'auto',
-                            'margin': 0,
+                            'margin-right': '20px',
                             'height': columnHeight-100,
                             'padding': 0,
                             'padding-right':'15px'
@@ -152,7 +152,7 @@
                         thisImg.css({
                             'display': 'block',
                             'height': columnHeight - 150,
-                            'margin': 0,
+                            'margin-right': '20px',
                             'padding': 0
                             
                         })

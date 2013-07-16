@@ -512,12 +512,14 @@ width: 5px;
   padding: 10px 15px;
   background-color: white;
   border-top:3px solid #CCC;
+  width:13em;
 }
   .legend {
     font-family: Intro-Black-Caps;
+    font-weight: normal;
   }
   .legend h3 {
-    margin: 0px;
+    margin: 15px 0 0 0;
     font-size: 16px;
     line-height: 1;
   }
@@ -536,6 +538,8 @@ width: 5px;
   .legend li img {
     height: 20px;
   }
+  .legend ul {margin-top:45px;}
+  .legend ul li {padding:0 0 45px 15px};
   .legend h4 {
     color: rgb(40,40,40);
   }
@@ -616,10 +620,10 @@ div[data-hash=welcome] .contentText div:last-child div.column>p:last-child:after
 
 .leaflet-container .page-content img {
   float: left;
-  padding-right: 25px !important;
+/*  padding-right: 25px;
   padding-top: 10px;
   padding-bottom: 10px;
-  max-width: 250px !important;
+*/  max-width: 250px !important;
   max-height: 300px;
   height:auto !important;
   margin-left:-12% !important;
@@ -891,7 +895,7 @@ div.next-story {display:none; text-align: center;padding-right:15px;}
 
   .gallery-intro-slide-wrapper {
     margin-left: -31%;
-    width: 54%;
+    width: 62%;
   }
 
   .page.full .right-arrow {
