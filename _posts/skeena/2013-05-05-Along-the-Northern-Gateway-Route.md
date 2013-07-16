@@ -19,7 +19,7 @@ slideshow:
   caption: Grizzly bear north of Frost Road and west of Stuart Lake Highway. According to GPS coorindates, the proposed Enbridge pipelines would be built less than half a mile from this location.
 - img: 1106_NEO_Pipeline_121.jpg
 
-  caption: Intact forest west of Stuart Lake Highway River and south of Frost Road. According to GPS coorindates, the proposed Enbridge pipelines would be built less than three miles from this location.
+  caption: Intact forest west of Stuart Lake Highway and south of Frost Road. According to GPS coorindates, the proposed Enbridge pipelines would be built less than three miles from this location.
 - img: 1106_NEO_Pipeline_123.jpg
 
   caption: Island in Marie Lake. According to GPS coorindates, the proposed Enbridge pipelines would be built less than a mile and a half south of this location. 
