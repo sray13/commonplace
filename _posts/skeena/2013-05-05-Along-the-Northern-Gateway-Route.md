@@ -19,7 +19,7 @@ slideshow:
   caption: Grizzly bear north of Frost Road and west of Stuart Lake Highway. According to GPS coorindates, the proposed Enbridge pipelines would be built less than half a mile from this location.
 - img: 1106_NEO_Pipeline_121.jpg
 
-  caption: Intact forest west of Stuart Lake Highway River and South of Frost Road. According to GPS coorindates, the proposed Enbridge pipelines would be built less than three miles from this location.
+  caption: Intact forest west of Stuart Lake Highway River and south of Frost Road. According to GPS coorindates, the proposed Enbridge pipelines would be built less than three miles from this location.
 - img: 1106_NEO_Pipeline_123.jpg
 
   caption: Island in Marie Lake. According to GPS coorindates, the proposed Enbridge pipelines would be built less than a mile and a half south of this location. 
@@ -43,7 +43,7 @@ slideshow:
   caption: Kitimat River. Kitimat-Stikine.
 - img: 1106_NEO_Pipeline_26.jpg
 
-  caption: Tyler Thomas of the Saik’uz nation scans his territory in central British Columbia, which the pipelines would bisect. The Saik’uz are one of more than 75 First Nation groups to speak out against the project. “Our nations are the wall this pipeline will not break through,” says Larry Nooski, Chief of the Nadleh Whut’en. 
+  caption: Tyler Thomas of the Saik’uz nation scans his territory in central British Columbia, which the pipelines would bisect. The Saik’uz are one of more than seventy-five First Nation groups to speak out against the project. “Our nations are the wall this pipeline will not break through,” says Larry Nooski, Chief of the Nadleh Whut’en.
 - img: 1106_NEO_Pipeline_269.jpg
 
   caption: Douglas Channel near Kitimat. Oil tankers would need to navigate these waters to reach the tanker terminal near Kitimat.
@@ -58,7 +58,7 @@ slideshow:
   caption: Road bisecting forest near Stuart River, south of Stuart Lake. 
 - img: 1106_NEO_Pipeline_66.jpg
 
-  caption: Parsnip River and tributaries. According to GPS coorindates, the proposed Enbridge pipelines would be built less than 6 miles north of this location. 
+  caption: Parsnip River and tributaries. According to GPS coorindates, the proposed Enbridge pipelines would be built less than six miles north of this location. 
 ---
 {% include JB/setup %}
 
