@@ -26,7 +26,6 @@ if (window.location.hash) {
     var mySwiper;
     window.blockSlideChange=false;
 
-    //window.onload = function() {
     $('document').ready( function() {
         var $masthead = $('.masthead'),
             hGalleryArray=new Array(),
@@ -121,7 +120,8 @@ if (window.location.hash) {
 
                 // update the background image
                 if (backgroundImage && currentBackgroundImage !== backgroundImage && !preserveBodyBackground) {
-                    $('.swiper-root').backstretch(backgroundImage, {fade:450});                    
+                    $('.swiper-root').backstretch(backgroundImage, {fade:450}); 
+                    if ($('.backstretch',$('.swiper-root')).length>2) $('.backstretch:lt(1)',$('.swiper-root')).remove();                   
                 } else if (! backgroundImage && !preserveBodyBackground) {
                     $('.swiper-root').children('.backstretch').remove();
                 }
@@ -168,28 +168,10 @@ if (window.location.hash) {
   
 
                     $longPost.removeClass('hidden');
-                    //debugger;
                 }
 
-                // EDIT THIS FUNCTION TO MAKE THE SUB-TOC ITEMS ALL THE SAME HEIGHT
-                // $('.sub-toc-item').each(function () {
-                //     var currentTallest = 0;
-                //     $('h3.story-title',$(this)).each(function () {                    
-                //             if ($(this).height() > currentTallest) { currentTallest = $(this).height(); }
-                //         });
-                //         //if (!px && Number.prototype.pxToEm) currentTallest = currentTallest.pxToEm(); //use ems unless px is specified
-                //         // for ie6, set height since min-height isn't supported
-                //         if ($.browser.msie && $.browser.version == 6.0) { $(this).children().css({'height': currentTallest}); }
-                //         $('h3.story-title',$(this)).css({'min-height': currentTallest});
-                // });
 
-
-                // if ($slide.next().find('.gallery').length) {
-                //     $slide.next().removeClass('hidden');
-                // }
-
-
-                //activate the photo essay if there is one
+                //activate horizontal slider if there is one
                 if ($gallery.length) {
                     var theID=$gallery.attr('id'),
                         paginationClass='.'+theID+'-pagination';
@@ -243,6 +225,7 @@ if (window.location.hash) {
                     }); // end init array for main-slide-contained horizontal gallery
                     
                     } // end if block checking for gallery object existance
+                    $(document).trigger('galleryBuilt');
                 } // end block checking if this slide contains a horizontal 
 
 
@@ -334,24 +317,11 @@ if (window.location.hash) {
             e.preventDefault();
             if ($link.hasClass('voices-link')) {
                 mySwiper.swipeTo($('#voices').index());
-                hGalleryArray['voices-gallery'].swipeTo($($link.data('story')).index());
+                $(document).one('galleryBuilt',function () {hGalleryArray['voices-gallery'].swipeTo($($link.data('story')).index())});
             } else {
                 mySwiper.swipeTo($($link.data('story')).index());
             }
         });
-
-        // This block used to be in slideChangeEnd for vertical slider.  see if we can delete it.
-        // //Bind swiping action to link click on map popups
-        // $('#map').on('click', '.leaflet-popup a', function (e) {
-        //     var $link = $(this);
-        //     e.preventDefault();
-        //     if ($link.hasClass('voices-link')) {
-        //         mySwiper.swipeTo($('#voices').index());
-        //     }
-        //     //debugger;
-        // });
-
-
 
         // Control the horizontal sliders using arrow keys
         $(document).on('keydown',function (e) {
@@ -549,7 +519,7 @@ if (window.location.hash) {
         // swipe to the story when you click on the icon in the TOC
         $(document).on('click', '.story', function (e) {
             e.preventDefault();
-            $('#toc').popover('hide');
+            $('#toc,#connect').popover('hide');
            mySwiper.swipeTo($($(this).data('story')).index());
         }); // end scroll to clicked story binding
 
