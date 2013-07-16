@@ -5,6 +5,7 @@ category: Essay
 author: Wade Davis
 tags: ['story']
 issue: Skeena
+intro: We all have a chance to be native, by expressing a loyalty to place.
 toc-img: sacredheadwaters.jpg
 story-img: sacredheadwaters.jpg
 story-img-caption: Headwaters region photo by Gary Irving, Garyfoto.com.
