@@ -10,7 +10,7 @@ intro: I didn't believe that corporations and governments would make such terrib
 toc-img: shannonmcphail.jpg
 story-img: shannonmcphail.jpg
 story-img-caption: Photo by Gary Fiegehen
-audio: shannonmcphail.mp3
+audio: shannonmcPhail.mp3
 latitude: 55.253778097100003
 longitude: -127.667564797
 ---
