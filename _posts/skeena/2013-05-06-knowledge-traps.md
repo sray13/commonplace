@@ -64,6 +64,6 @@ The language of this accommodation is a language of magic, poetry to accompany o
 
 The voice of the Skeena will be fully expressed only through evolutionary significant units _and_ salmon kings, in conference rooms _and_ around campfires. It will be expressed in the Tyee test fishery, at Kitwanga and Babine counting fences, and in ancient songs reminding us simply that our boxes are full. Empirical understanding will be tantamount to emotive celebration—of the glorious riot of life in the Skeena that needs nothing, wants nothing, other than to be free.
 
-![Jim Norton]({{ ASSET_PATH }}skeena/img/contributor-headshots/jim_norton.jpg)
+![Jim Norton](assets/themes/skeena/img/contributor-headshots/jim_norton.jpg)
 
 Jim Norton is Adventure Capitalist and Director of Strategic Partnerships for Ecotrust's Natural Capital Fund. He is based in San Francisco. In addition to his current work for Ecotrust, he has been a professional river guide and naturalist for the last twenty years and continues to guide in Idaho and on the Colorado River through Grand Canyon. He has also worked as a professional guide in China, Chile, and New Zealand. Norton has served as a screenwriter for a number of nature and adventure documentaries. Most recently, inspired by a lost heritage of abundance in salmon streams of his adopted Pacific Northwest home, Norton wrote and produced Salmon: Running the Gauntlet, which aired nationally in May of 2011 as an episode of PBS’s Nature. He received a B.S. in biology (Bowdoin College), but prefers the BS around campfires (everywhere).
