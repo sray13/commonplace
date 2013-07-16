@@ -5,7 +5,7 @@ category: Voices
 author: Helen Clifton
 tags: ['voices']
 issue: Skeena
-place: Port Simpson
+place: Hartley Bay
 intro: "As First Nations people, it’s our last fight for the land and territories that we own."
 toc-img: helenclifton.jpg
 story-img: helenclifton.jpg
