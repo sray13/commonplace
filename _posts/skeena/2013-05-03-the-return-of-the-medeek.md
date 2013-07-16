@@ -5,6 +5,7 @@ category: Feature
 author: Terry Glavin
 tags: ['story']
 issue: Skeena
+intro: Terrifying things sometimes appear on the horizon, as though straight out of ancient nightmares.
 toc-img: medeek_a.jpg
 story-img: medeek_a.jpg
 story-img-caption: Grizzly and cub near Stuart Lake, by Neil Ever Osborne.

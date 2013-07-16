@@ -40,6 +40,7 @@ tagline: Supporting tagline
   <div class="popover-close">close</div>
   <div class="container narrow toc-container">
       {% for post in site.tags.story reversed %}
+      {% if post.category != "Reader Voices" %}
 
         {% if forloop.index == 3 %}
           <div class="story" data-story="#voices">
@@ -60,7 +61,7 @@ tagline: Supporting tagline
              <h3 class="story-title">{{ post.title }}</h3>
             </a>
           </div>
-
+      {% endif %}
       {% endfor %}
   </div>
 </div>
@@ -126,7 +127,7 @@ tagline: Supporting tagline
               <div class="span6">
                 <div class="row">
                   <div class="span3"><img src="{{ASSET_PATH}}skeena/img/map_voice_grey.png"></div>
-                  <div class="span7"><p class="large">Contribute</p><p>to our Voices section by writing to the Editor at <a href="mailto:cholland@ecotrust.org">cholland@ecotrust.org</a>.</p></div>
+                  <div class="span7"><p class="large">Contribute</p><p>to Your Voice in the magazine.</p></div>
                 </div>
               </div>
             </div>
@@ -207,6 +208,20 @@ tagline: Supporting tagline
 
       </div> <!-- end masthead column -->
     </div> <!-- end main row inside the content container -->
+    <div class="row">
+      <div class="span2">
+        <p class="toc-sidebar">Acknowledgements</p>
+      </div>
+      <div class="span6 about-content">
+      <p>We extend our gratitude first and foremost to the people of the Skeena, who shared their stories and homes in contribution to this project.  And there are many others that we would like to give our heartfelt thanks:</p>        
+      <p>To The Charles Engelhard Foundation, Faraway Foundation, Thendara Foundation, Deborah J. and Peter A. Magowan Family Foundation, Neukom Family Foundation, and The Tim and Karen Hixon Foundation whose generous contributions made this project possible.</p>        
+      <p>To our friends at Ecotrust Canada and Skeena Wild Conservation Trust, who are working on the ground in Skeena Country at the intersection of conservation and community economic development.</p>        
+      <p>To Gary Miranda for sharing research and inspiration about commonplace books.</p>        
+      <p>To Benjamin Drummond and Sara Joy Steele, who, along with many other Blue Earth photographers and media artists, shared invaluable ideas and feedback as this project was under development.</p>        
+      <p>To Gary Fiegehen, Terry Glavin, Wade Davis, Neil Ever Osborne and Carr Clifton for their contributions to this project.</p>
+      </div>
+      <div class="span4"></div>
+    </div>
   </div> <!-- end about content container -->
 </div> <!-- end about content wrapper div -->
 
@@ -224,7 +239,7 @@ tagline: Supporting tagline
           <div class="span6">
             <p class="issue-title intro-inline">Skeena Voices</p>
             <p class="issue-number blue"><span class="schoolbook">Issue</span> <span class="intro">01</span></p>
-            <p>Summary of the issue. <span class="schoolbook">Published Summer 2013</span></p>
+            <p>One of North America’s last great salmon watersheds faces an unprecedented&mdash;almost mythical&mdash;round of industrial development. A collection of essays, slideshows and audio vignettes examines the history and resolve of people in this unique place, facing challenges all too common. <span class="schoolbook">Published Summer 2013</span></p>
           </div>
           <div class="span6"></div>
         </div>
@@ -263,7 +278,7 @@ tagline: Supporting tagline
       {% for image in post.slideshow %}
         {% if forloop.first %}
           <p class="intro-image"><img src="{{ ASSET_PATH }}skeena/img/{{ post.path }}/{{ image.img }}" /></p>
-          <p><a href="#" data-story="#{{post.url | replace: '/', ''}}">View the photo essay &raquo;</a></p>
+          <p style="text-align:center"><a class="photogallery-link" href="#" data-story="#{{post.url | replace: '/', ''}}">View the photo essay &raquo;</a></p>
         {% endif %}
       {% endfor %}
 
@@ -322,6 +337,17 @@ tagline: Supporting tagline
                 <div class="span12 page-wrapper gallery-wrapper">
 
                   <div class="story-sidebar">
+
+                    <!-- AddThis Button BEGIN -->
+                    <div class="addthis_toolbox addthis_default_style addthis_16x16_style hidden-tablet">
+                    <a class="addthis_button_facebook" addthis:url="http://commonplacemagazine.org/#{{post.url | replace:'/',''}}"></a>
+                    <a class="addthis_button_twitter" addthis:url="http://commonplacemagazine.org/#{{post.url | replace:'/',''}}"></a>
+                    <a class="addthis_button_google_plusone_share" addthis:url="http://commonplacemagazine.org/#{{post.url | replace:'/',''}}"></a>
+                    <a class="addthis_button_email" addthis:url="http://commonplacemagazine.org/#{{post.url | replace:'/',''}}"></a>
+                    </div>
+                    <!-- AddThis Button END -->
+
+
                     <div class="sidebar-header voices">
                       <p class="title">Voices</p>
                     </div>
