@@ -2,7 +2,7 @@ var center = {
     lat: 54,
     lon: -130
 };
-var zoom = 7;
+var zoom = 6;
 
 // Create a map
 window.map = L.mapbox.map('map', null, { 
