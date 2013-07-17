@@ -30,7 +30,7 @@ function onEachFeature_wide(feature, layer) {
     layer.on('click', function (e) {  
         var zoom = map.getZoom();
         var point = new L.latLng(e.target.feature.properties.coordinates);
-        if (zoom < 8) {
+        if (zoom < 7) {
             map.setView(point,zoom+2);
         } 
     });
