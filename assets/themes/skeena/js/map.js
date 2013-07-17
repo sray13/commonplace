@@ -28,8 +28,10 @@ map.setView([center.lat, center.lon], zoom);
 
 function onEachFeature_wide(feature, layer) {
     layer.on('click', function (e) {  
+        var zoom = map.getZoom();
+        var point = new L.latLng(e.target.feature.properties.coordinates);
         if (zoom < 8) {
-            map.setView(e.latlng,zoom+2);
+            map.setView(point,zoom+2);
         } 
     });
 }
@@ -122,25 +124,28 @@ $.get('assets/themes/skeena/places/pipeline.geojson', function (data) {
             "opacity": 1
         }
     });
+    layers_wide.pipeline = layers.pipeline;
 });
 
-$.get('assets/themes/skeena/places/majcities.geojson', function (data) {
+$.get('assets/themes/skeena/places/places.geojson', function (data) {
     layers.places = new L.GeoJSON(JSON.parse(data), {
         pointToLayer: function (feature, latlng) {
             return L.marker(latlng, {
                 icon: L.divIcon({
-                    html: '<img src="assets/themes/skeena/img/map/map_image_wht.png"><span>' + feature.properties.NAME + '</span>'
+                    html: '<img src="assets/themes/skeena/img/map/map_place_plus.png"><span>' + feature.properties.Feature + '</span>',
+                    opacity: feature.properties.Class_Deta === 'Town' ? 1: 0
                 })
             });
         }
     });
+    layers_wide.places = layers.places;
 });
 
 
 var layers = {
     voices: voicesLayer,
     images: imageLayer,
-    essays: essayLayer
+    essays: essayLayer,
 };
 
 var layers_wide = {
@@ -158,7 +163,6 @@ map.on('zoomstart', function () {
 
 map.on('zoomend', function () {
     var zoom = map.getZoom();
-    console.log('zoomend ', zoom);
     if (zoom < 9) {
         currentLayers = layers_wide;
     } else {
@@ -167,10 +171,11 @@ map.on('zoomend', function () {
     $('.layer-on').each(function (i, layer) {
         currentLayers[$(layer).data('layer')].addTo(map);
     });
-})
-
+});
 
 $(document).ready(function () {
+    var currentLayers = layers_wide;
+
     $('.leaflet-control-zoom').addClass('hidden');
     $('.legend').on('click', 'li', function (e) {
         var $target = $(e.target);
@@ -179,7 +184,7 @@ $(document).ready(function () {
         if (($target).hasClass('layer-on')) {
             currentLayers[$target.data('layer')].addTo(map);
         } else {
-            map.removeLayer(currentlayers[$target.data('layer')]);
+            map.removeLayer(currentLayers[$target.data('layer')]);
         }
     });
 });

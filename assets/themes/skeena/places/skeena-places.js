@@ -46,7 +46,9 @@ if (! voicesPoints[[({{post.longitude}}).toFixed(0),({{ post.latitude }}).toFixe
 			"image": "{{ post.map-icon }}",
 			"title": "{{ post.title }}",
 			"category": "{{ post.category }}",
-			"popup": "popup-{{post.url | replace:'/',''}}-content"
+			"popup": "popup-{{post.url | replace:'/',''}}-content",
+			// reversed to keep things interesting
+			"coordinates": [ {{ post.latitude }}, {{ post.longitude }} ]
 		}
 	});	
 	voicesPoints[[({{post.longitude}}).toFixed(0),({{ post.latitude }}).toFixed(0)].join(':')] = true;
