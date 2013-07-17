@@ -39,7 +39,7 @@ slideshow:
 ---
 {% include JB/setup %}
 
-In Skeena country, the relationship between land and people goes back eons, to time of the great mythical city at center of the region: Dimlahamid.  Ancient forms of tenure and title radiate outward from Dimlahamid in every direction: rank, name, fishing station, goat-hunting mountain, hillside berry ground, crest. Every cranny and back eddy is accounted for. And settlers are very much becoming part of the tradition, leaving behind their early moniker bestowed by natives: umshewa, or “driftwood.” The Skeena is a wildness tended by people.
+In Skeena country, the relationship between land and people goes back eons, to the time of the great mythical city at the center of the region: Dimlahamid.  Ancient forms of tenure and title radiate outward from Dimlahamid in every direction: rank, name, fishing station, goat-hunting mountain, hillside berry ground, crest. Every cranny and back eddy is accounted for. The Skeena is a wildness tended by people. And settlers are very much becoming part of the tradition, leaving behind their early moniker bestowed by natives: umshewa, or “driftwood.” 
 
 ![Gary Fiegehen](assets/themes/skeena/img/contributor-headshots/Gary.jpg)
 
