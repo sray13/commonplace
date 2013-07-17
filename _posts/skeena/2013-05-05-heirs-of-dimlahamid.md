@@ -7,8 +7,8 @@ author: Gary Fiegehen
 issue: Skeena
 path: Gary Slideshow
 map-icon: map_image_wht.png
-latitude: 54.1987473756
-longitude: -130.24543573
+latitude: 53.404223820799999
+longitude: -129.35
 slideshow:
 - img: gary01.jpg
   caption: Hartley Bay is home to the Gitga’at, who originally lived in the village of Laxgal’tsap near the Quaal River.
