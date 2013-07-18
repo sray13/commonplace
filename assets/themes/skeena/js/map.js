@@ -29,9 +29,10 @@ map.setView([center.lat, center.lon], zoom);
 function onEachFeature_wide(feature, layer) {
     layer.on('click', function (e) {  
         var zoom = map.getZoom();
+        console.log(zoom);
         var point = new L.latLng(e.target.feature.properties.coordinates);
-        if (zoom < 7) {
-            map.setView(point,zoom+2);
+        if (zoom < 8) {
+            map.setView(point,zoom+3);
         } 
     });
 }
