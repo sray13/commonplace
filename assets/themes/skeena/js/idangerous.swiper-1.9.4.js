@@ -736,6 +736,7 @@ var Swiper = function (selector, params, callback) {
         function handleMousewheel (e) {
             var we = _this._wheelEvent;
             var delta;
+            if (blockSlideChange) return false;
             //Opera & IE
             if (e.detail) delta = -e.detail;
             //WebKits   

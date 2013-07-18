@@ -1,0 +1,22 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "id": 0, "properties": { "Feature": "Gitanmaax", "Class_Deta": "Town", "Class_Gen": "Infrastructure", "Edit": 1, "Lat": 55.258344569800002, "Long": -127.664204743 }, "geometry": { "type": "Point", "coordinates": [ -127.664204743049439, 55.258344569822498 ] } }
+,
+{ "type": "Feature", "id": 14, "properties": { "Feature": "Moricetown", "Class_Deta": "Town", "Class_Gen": "Infrastructure", "Edit": 1, "Lat": 55.016666667, "Long": -127.316666667 }, "geometry": { "type": "Point", "coordinates": [ -127.316666667000021, 55.016666667 ] } }
+,
+{ "type": "Feature", "id": 16, "properties": { "Feature": "New Hazelton", "Class_Deta": "Town", "Class_Gen": "Infrastructure", "Edit": 1, "Lat": 55.249999999400004, "Long": -127.583300002 }, "geometry": { "type": "Point", "coordinates": [ -127.583300002443096, 55.249999999359979 ] } }
+,
+{ "type": "Feature", "id": 17, "properties": { "Feature": "Prince Rupert", "Class_Deta": "Town", "Class_Gen": "Infrastructure", "Edit": 1, "Lat": 54.316700001699999, "Long": -130.31669999799999 }, "geometry": { "type": "Point", "coordinates": [ -130.316699997929391, 54.316700001654986 ] } }
+,
+{ "type": "Feature", "id": 21, "properties": { "Feature": "Smithers", "Class_Deta": "Town", "Class_Gen": "Infrastructure", "Edit": 1, "Lat": 54.781824, "Long": -127.167998 }, "geometry": { "type": "Point", "coordinates": [ -127.16799800000048, 54.781824000000157 ] } }
+,
+{ "type": "Feature", "id": 22, "properties": { "Feature": "South Hazelton", "Class_Deta": "Town", "Class_Gen": "Infrastructure", "Edit": 1, "Lat": 55.233300000299998, "Long": -127.666700002 }, "geometry": { "type": "Point", "coordinates": [ -127.666700001864214, 55.233300000254992 ] } }
+,
+{ "type": "Feature", "id": 24, "properties": { "Feature": "Terrace", "Class_Deta": "Town", "Class_Gen": "Infrastructure", "Edit": 1, "Lat": 54.516700001300002, "Long": -128.6 }, "geometry": { "type": "Point", "coordinates": [ -128.599999999569292, 54.516700001258982 ] } }
+,
+{ "type": "Feature", "id": 25, "properties": { "Feature": "Wudat", "Class_Deta": "Village", "Class_Gen": "Infrastructure", "Edit": 2, "Lat": 55.0386111, "Long": -126.3144444 }, "geometry": { "type": "Point", "coordinates": [ -126.314444400000014, 55.0386111 ] } }
+
+]
+}

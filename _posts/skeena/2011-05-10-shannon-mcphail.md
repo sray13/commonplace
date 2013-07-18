@@ -3,11 +3,16 @@ published: true
 layout: voices
 category: Voices
 author: Shannon McPhail
-tags: []
 issue: Skeena
 tags: ['voices']
-"toc-img": "http://lorempixel.com/150/150/nature/1"
-"story-img": welcome.jpg
+place: Hazelton
+intro: I didn't believe that corporations and governments would make such terrible decisions."
+toc-img: shannonmcphail.jpg
+story-img: shannonmcphail.jpg
+story-img-caption: Photo by Gary Fiegehen
+audio: shannonmcPhail.mp3
+latitude: 55.253778097100003
+longitude: -127.667564797
 ---
 With lineage that goes back four generations in the Kispiox Valley region, Shannon McPhail grew up on a working ranch within the Skeena watershed, raised on a diet of mountain goat meat, moose, wild sheep, and fish.
 She left for Calgary, seeking outlets for education and sports. But it was only a number of years before she and husband Steve left high-paying jobs in the city—she managed a fitness and nutrition center for women, and he worked as a welder—to move back to the Kispiox Valley, a place where the “community will rally together when needed.” 

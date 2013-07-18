@@ -4,51 +4,299 @@ title: Skeena Voices
 tagline: Supporting tagline
 ---
 {% include JB/setup %}
-
+<div style="display:none;" id="puimage"></div>
 <div class="masthead hidden toc-section">
   <div class="navbar">
     <div>
       <div class="container">
         <ul class="nav">
           <li><a href="#" id="toc"><em>01</em>Table of Contents</a></li>
-          <li><a href="#"><em>02</em> Map</a></li>
-          <li><a href="#"><h2>commonplace</h2></a></li>
-          <li><a href="#"><em>03</em> About</a></li>
-          <li><a href="#"><em>04</em> Issues</a></li>
+          <li><a href="#" id="connect"><em>02</em> Connect</a></li>
+          <li><a href="#"><h2 style="margin:0;">commonplace</h2></a></li>
+          <li><a href="#" id="about"><em>03</em> About</a></li>
+          <li><a href="#" id="issues"><em>04</em> Issues</a></li>
         </ul>
       </div>
     </div>
   </div><!-- /.navbar -->
 </div>
+
+<div class="hidden legend ink-bg">
+  <h3>Skeena<br/> Country</h3>
+  <h4>Map Legend</h4>
+  <ul class="unstyled">
+    <li data-layer="voices" class="layer-on">Voices <img src="{{ASSET_PATH}}skeena/img/map/map_voice_grey.png"></li>
+    <li data-layer="images" class="layer-on">Images <img src="{{ASSET_PATH}}skeena/img/map/map_image_grey.png"></li>
+    <li data-layer="essays" class="layer-on">Essays <img src="{{ASSET_PATH}}skeena/img/map/map_essay_grey.png"></li>
+  </li>
+  <hr/>
+  <ul class="unstyled">
+    <li data-layer="places">Places</li>
+    <li data-layer="pipeline">Pipeline Route</li>
+</div>
+
+<!-- TABLE OF CONTENTS CONTENT -->
 <div style="display: none" id="toc-content">
-  <div class="container">
+  <div class="popover-close">close</div>
+  <div class="container narrow toc-container">
       {% for post in site.tags.story reversed %}
-      {% capture col %}{{ forloop.index |modulo:3 }}{% endcapture %}
-        {% if col == '1' %}
-        <div class="row">
-        {% endif %}
-          <div class="span4 story" data-story="#{{post.url | replace: '/', ''}}">
-            <a href="{{ post.url }}">
-              <img src="{{ post.toc-img }}" height="100" width="100" class="img-circle">
-              <h3 class="story-title">{{ post.title }}</h3>
-              <h4 class="story-category">{{ post.category }}</h4>
-              <p class="story-author">{{ post.author }}</p>
+      {% if post.category != "Reader Voices" %}
+
+        {% if forloop.index == 3 %}
+          <div class="story" data-story="#voices">
+            <a href="#">
+              <img src="{{ASSET_PATH}}skeena/img/TOC/voices.jpg" height="100" width="100" class="img-circle">
+              <h4 class="story-category">Audio stories</h4>
+              <p class="story-author">Skeena residents speak</p>
+              <h3 class="story-title">Voices</h3>
             </a>
           </div>
-        {% if col == '0' or forloop.last %}
-        </div>
         {% endif %}
+
+          <div class="story" data-story="#{{post.url | replace: '/', ''}}">
+            <a href="{{ post.url }}">
+              <img src="{{ASSET_PATH}}skeena/img/TOC/{{ post.toc-img }}" height="100" width="100" class="img-circle">
+             <h4 class="story-category">{{ post.category }}</h4>
+              <p class="story-author">{{ post.author }}</p>
+             <h3 class="story-title">{{ post.title }}</h3>
+            </a>
+          </div>
+      {% endif %}
       {% endfor %}
   </div>
 </div>
-<div id="bg-img"></div>
-<div class="swiper-container swiper-root" id="map">
 
- <div class="page-footer">
-   <a href="#">
-     <i class="icon-chevron-down"></i>
-   </a>
- </div>
+
+<!-- CONNECT WITH US TOC CONTENT -->
+<div style="display: none" id="connect-content">
+  <div class="popover-close">close</div>
+  <div class="container connect-container">
+    <div class="row">
+      <div class="span2">
+      <p class="toc-sidebar">Connect With Commonplace</p>
+      </div>
+      <div class="span8 offset1">
+        <div class="row">
+          <div class="span11 connect-content">
+            <div class="row">
+              <div class="span6">
+                <div class="row">
+                  <div class="span3"><img src="{{ASSET_PATH}}skeena/img/email_grey.png"></div>
+                  <div class="span7">
+                    <p class="large">Subscribe</p>
+                    <p>Sign up for Commonplace news via email.</p>
+                    <!-- form pulled directly from commonplace splash site -->
+                    <form action="http://ecotrust.us5.list-manage.com/subscribe/post?u=2263c982fe55ebaa023041b8b&amp;id=0ca3d50af5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+                    <div class="mc-field-group">
+                      <label for="mce-EMAIL" style="font-size:25px; display:none;">your email address here</label><br>
+                      <input placeholder="Sign up for Commonplace emails here" required="" type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                        <input type="submit" value="subscribe »" name="subscribe" id="mc-embedded-subscribe" class="button">
+                    </div>
+                    <div class="mc-field-group input-group">
+                        <ul style="display:none;"><li><input type="checkbox" value="1" name="group[2281][1]" id="mce-group[2281]-2281-0"><label for="mce-group[2281]-2281-0">Ecotrust eNews</label></li>
+                    <li><input type="checkbox" value="2" name="group[2281][2]" id="mce-group[2281]-2281-1"><label for="mce-group[2281]-2281-1">Edible Portland Newsletter</label></li>
+                    <li><input type="checkbox" value="4" name="group[2281][4]" id="mce-group[2281]-2281-2"><label for="mce-group[2281]-2281-2">Farm to Preschool Newsletter</label></li>
+                    <li><input type="checkbox" value="8" name="group[2281][8]" id="mce-group[2281]-2281-3"><label for="mce-group[2281]-2281-3">Ecotrust Indigenous Affairs Updates</label></li>
+                    <li><input type="checkbox" value="32" name="group[2281][32]" id="mce-group[2281]-2281-4"><label for="mce-group[2281]-2281-4">Community Fisheries Network Newsletter</label></li>
+                    <li><input type="checkbox" value="64" name="group[2281][64]" id="mce-group[2281]-2281-5" checked="checked"><label for="mce-group[2281]-2281-5">Commonplace Magazine Updates</label></li>
+                    </ul>
+                    </div>
+                      <div id="mce-responses" class="clear">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                      </div>
+                    </form>
+
+                  </div>
+                </div>
+              </div>
+              <div class="span6">
+                <div class="row">
+                  <div class="span3"><img src="{{ASSET_PATH}}skeena/img/twitter_grey.png"></div>
+                  <div class="span7"><p class="large">Follow us</p><p>We’re on Twitter <a href="https://twitter.com/Commonplacemag" target="_blank">@Commonplacemag</a></p></div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="span6">
+                <div class="row">
+                  <div class="span3"><img src="{{ASSET_PATH}}skeena/img/facebook_grey.png"></div>
+                  <div class="span7"><p class="large">Join us</p><p>on <a href="https://www.facebook.com/commonplacemagazine" target="_blank">Facebook</a>.</p></div>
+                </div>
+              </div>
+              <div class="span6">
+                <div class="row">
+                  <div class="span3"><img src="{{ASSET_PATH}}skeena/img/map_voice_grey.png"></div>
+                  <div class="span7"><div class="story" data-story="#your-voice" style="display:inline; padding:0;text-align:left;margin:0;width:auto;"><p class="large">Contribute</p><p>to <a href="/your-voice">Your Voice</a> in the magazine.</p></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="span1">&nbsp;</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT US TOC CONTENT -->
+<div style="display: none" id="about-content">
+  <div class="popover-close">close</div>
+  <div class="container about-container">
+    <div class="row">
+      <div class="span2">
+      <p class="toc-sidebar">About Commonplace</p>
+      </div>
+      <div class="span6 about-content">
+        <p>Commonplace is a publication of <a href="http://www.ecotrust.org">Ecotrust</a> focused on stories of home. Our hope is to create places for connection, for mapping out new understandings of what is common across states, nations, and human nature. We look forward to hearing your stories about the places you live, your experiences of the stories we publish, and your ideas about how to evolve Commonplace in future issues. Share your thoughts on <a href="http://www.facebook.com/commonplacemagazine">Facebook</a>, <a href="https://twitter.com/Commonplacemag">Twitter</a>, or write to us at <a href="mailto:info@commonplacemagazine.org">info@commonplacemagazine.org</a></p>
+      </div>
+      <div class="span4 about-masthead">
+        <div class="row">
+          <div class="span6"><img src="assets/themes/skeena/img/contributor-headshots/Spencer.jpg" height="100" width="100" class="img-circle"></div>
+          <div class="span6">
+            <h5>Publisher</h5>
+            <p>Spencer B. Beebe</p>
+            <p class="black">Founder &amp; Chair, Ecotrust</p>
+          </div>
+        </div>
+
+        <div class="row break-line">
+          <div class="span6"><img src="assets/themes/skeena/img/contributor-headshots/carolyn.jpg" height="100" width="100" class="img-circle"></div>
+          <div class="span6">
+            <h5>Editor</h5>
+            <p>Carolyn Holland</p>
+            <p class="black">cholland@ecotrust.org</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="span6">
+            <h5>Managing Editor</h5>
+            <p>Oakley Brooks</p>
+          </div>
+          <div class="span6">
+            <h5>Contributing Editors</h5>
+            <p>Jim Norton</p>
+            <p>Sam Beebe</p>
+            <p>Emma Deans</p>
+            <p>Lola Milholland</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="span6">
+            <h5>Design Director</h5>
+            <p>Sarah Magrish Cline</p>
+          </div>
+          <div class="span6">
+            <h5>Developers</h5>
+            <p>Edwin Knuth</p>
+            <p>Lucas Balzer</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="span6">
+            <h5>Editorial Intern</h5>
+            <p>Sabin Ray</p>
+          </div>
+          <div class="span6">
+            <h5></h5>
+            <p></p>
+          </div>
+        </div>
+
+      </div> <!-- end masthead column -->
+    </div> <!-- end main row inside the content container -->
+    <div class="row">
+      <div class="span2">
+        <p class="toc-sidebar">Acknowledgements</p>
+      </div>
+      <div class="span6 about-content">
+      <p>We extend our gratitude first and foremost to the people of the Skeena, who shared their stories and homes in contribution to this project.  And there are many others that we would like to give our heartfelt thanks:</p>        
+      <p>To The Charles Engelhard Foundation, Faraway Foundation, Thendara Foundation, Deborah J. and Peter A. Magowan Family Foundation, Neukom Family Foundation, and The Tim and Karen Hixon Foundation whose generous contributions made this project possible.</p>        
+      <p>To our friends at Ecotrust Canada and Skeena Wild Conservation Trust, who are working on the ground in Skeena Country at the intersection of conservation and community economic development.</p>        
+      <p>To Gary Miranda for sharing research and inspiration about commonplace books.</p>        
+      <p>To Benjamin Drummond and Sara Joy Steele, who, along with many other Blue Earth photographers and media artists, shared invaluable ideas and feedback as this project was under development.</p>        
+      <p>To Gary Fiegehen, Terry Glavin, Wade Davis, Neil Ever Osborne and Carr Clifton for their contributions to this project.</p>
+      </div>
+      <div class="span4"></div>
+    </div>
+  </div> <!-- end about content container -->
+</div> <!-- end about content wrapper div -->
+
+
+<!-- ISSUES TOC CONTENT -->
+<div style="display: none" id="issues-content">
+  <div class="popover-close">close</div>
+  <div class="container issues-container">
+    <div class="row">
+      <div class="span2">
+      <p class="toc-sidebar">Commonplace Issues</p>
+      </div>
+      <div class="span8 offset1">
+        <div class="row">
+          <div class="span6">
+            <p class="issue-title intro-inline">Skeena Voices</p>
+            <p class="issue-number blue"><span class="schoolbook">Issue</span> <span class="intro">01</span></p>
+            <p>One of North America’s last great salmon watersheds faces an unprecedented&mdash;almost mythical&mdash;round of industrial development. A collection of essays, slideshows and audio vignettes examines the history and resolve of people in this unique place, facing challenges all too common. <span class="schoolbook">Published Summer 2013</span></p>
+          </div>
+          <div class="span6"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> <!-- End ISSUES CONTENT wrapper -->
+
+
+<!-- Build content for map marker info -->
+
+{% for post in site.posts %}{% if post.latitude && post.longitude %}
+<div style="display: none" id="popup-{{post.url | replace:'/',''}}-content" class="popup-content">
+  <h3 class="popover-title">{{ post.title }}</h3>
+  <hr />
+  <p class="popover-subtitle">{% if post.place %}{{ post.place }}{% else %}{{ post.author }}{% endif %}</p>
+  <div class="popover-content">
+    {% if post.story-img %}
+      <div  style="width:45%;margin-right:5%;display:inline-block;vertical-align:top;"><p class="intro-image"><img src="{{ ASSET_PATH }}skeena/img/{% if post.category == 'Voices' %}Voices Headshots{% else %}article_openers{% endif %}/{{ post.story-img }}" /></p></div><div  style="width:50%;display:inline-block;vertical-align:top;">
+    {% else %}
+    <div>
+    {% endif %}
+
+    {% if post.intro %}<p class="intro-content">{{ post.intro }}</p>{% endif %}
+    
+    {% case post.category %}
+    {% when 'Voices' %}
+    <p><a href="#" class="voices-link" data-story="#{{post.url | replace: '/', ''}}">Listen to this voice &raquo;</a></p>
+
+    {% when 'Essay' %}
+        <p><a href="#" class="essay-link" data-story="#{{post.url | replace: '/', ''}}">Read the full essay &raquo;</a></p>
+    {% when 'Feature' %}
+        <p><a href="#" class="feature-link" data-story="#{{post.url | replace: '/', ''}}">Read the full essay &raquo;</a></p>
+
+    {% when 'Gallery' %}
+      {% for image in post.slideshow %}
+        {% if forloop.first %}
+          <p class="intro-image"><img src="{{ ASSET_PATH }}skeena/img/{{ post.path }}/{{ image.img }}" /></p>
+          <p style="text-align:center"><a class="photogallery-link" href="#" data-story="#{{post.url | replace: '/', ''}}">View the photo essay &raquo;</a></p>
+        {% endif %}
+      {% endfor %}
+
+    {% else %}
+
+    {% endcase %}
+    <!-- <p><a href="#">Read about {{ post.place }} in "{{ post.title }}" by {{ post.author }}</a></p> -->
+  </div>
+   
+  </div>
+</div>
+{% endif %}{% endfor %}
+<!-- <div id="map">
+      <div class="swiper-slide marker-slide" id="skeena-map" data-hash="skeena-map">
+</div> -->
+<div id="map">
+  <div class="swiper-container swiper-root">
+
   <div class="swiper-wrapper">
     <!--First Slide-->
     <div class="swiper-slide cover-slide">
@@ -58,116 +306,227 @@ tagline: Supporting tagline
         <h3>{{ site.tagline }}</h3>
         <h1>{{ page.title }}</h1>
       </div>
+       <div class="page-footer">
+         <a href="#">
+           <i class="icon-chevron-down"></i>
+         </a>
+       </div>
       
     </div>
-      <div class="swiper-slide" data-zoom=9>
-      </div>
+
+
+
       <!--Second Slide-->
       {% for post in site.tags.story reversed %}
-        <div class="swiper-slide" data-img="{{ post.story-img }}" data-hash="{{post.url | replace:'/',''}}" id="{{post.url | replace:'/',''}}">
-          <div class="story-header">
-            {% if post.author %}
-            <h3>{{ post.author }}</h3>      
-            <hr/>
-            {% endif %}
-            <h1>{{ post.title }}</h1>
-          </div>
-          <div class="page-footer">
-            <a href="#">
-              <i class="icon-chevron-down"></i>
-            </a>
-          </div>
-        </div>
-        <!--Third Slide-->
-        {% assign post_length = post.content | number_of_words %}
-        <div class="swiper-slide" data-img="{{ post.story-img }}" data-hash="{{post.url | replace:'/',''}}" >
-          <div class="page">
-            <div class="span12 page-wrapper">
-              <div class="story-header-small">
-              <p><strong>{{ post.title }}</strong></p>
-              {% if post.author %}
-              <p>{{ post.author }}</p>
-              {% endif %}
-              </div>
-              {% if post.category == 'Gallery' %}
-                <div class="swiper-container gallery" id="{{post.url | replace:'/',''}}-gallery">
-                  <div class="{{post.url | replace:'/',''}}-gallery-pagination general-pagination"></div>
-                  <div class="swiper-wrapper">
-                  {% for image in post.slideshow %}
-                      <div class="swiper-slide">
-                        <img src="{{ ASSET_PATH }}skeena/img/Cassiar slideshow/{{ image.img }}">
-                      </div>
-                  {% endfor %}
-                </div>
-              </div>
-              {% else %}
-              {% if post_length < 750 %}
-              <div class="page-content short-post post">
-              {% else %}
-              <div class="page-content long-post post">
-              {% endif %}
-                {{ post.content }}
-              </div>
-              {% endif %}
-            </div>
-          </div>
-        </div>
-      {% endfor %}
-      
-      <!-- Build the vertical slide to contain voices gallery -->
-      <div class="swiper-slide" data-img="{{ post.story-img }}" id="voices" data-hash="voices">
-        <div class="page full">
-            <div class="span12 page-wrapper">
 
-              <div class="swiper-container gallery" id="voices-gallery">
-               <div class="voices-gallery-pagination general-pagination"></div>
-                <div class="swiper-wrapper">
-                  
+        {% if forloop.index == 2 %}
+            <div class="swiper-slide marker-slide" id="skeena-map" data-hash="skeena-map"></div>
+        {% endif %}
 
-                  <div class="swiper-slide">
-                    <div class="story-header-small">
-                      <p><strong>Voices</strong></p>
+
+        {% if forloop.index == 3 %}
+          <!-- Build the vertical slide to contain voices gallery -->
+          <div class="swiper-slide"  id="voices" data-hash="voices">
+            <div class="page full light ink-bg hide-arrows">
+
+              <div class="navarrows hidden-tablet">
+                <div class="pull-left"><a href="#" class="left-arrow">&nbsp;</a></div>
+                <div class="pull-right"><a href="#" class="right-arrow">&nbsp;</a><div class="next-story avenir-light">Next:<br><span class="next-story-name intro blue"></span></div></div>
+              </div> <!-- end nav arrows container -->
+
+                <div class="span12 page-wrapper gallery-wrapper">
+
+                  <div class="story-sidebar">
+
+                    <!-- AddThis Button BEGIN -->
+                    <div class="addthis_toolbox addthis_default_style addthis_16x16_style hidden-tablet">
+                    <a class="addthis_button_facebook" addthis:url="http://commonplacemagazine.org/#{{post.url | replace:'/',''}}"></a>
+                    <a class="addthis_button_twitter" addthis:url="http://commonplacemagazine.org/#{{post.url | replace:'/',''}}"></a>
+                    <a class="addthis_button_google_plusone_share" addthis:url="http://commonplacemagazine.org/#{{post.url | replace:'/',''}}"></a>
+                    <a class="addthis_button_email" addthis:url="http://commonplacemagazine.org/#{{post.url | replace:'/',''}}"></a>
                     </div>
-                      <div class="sub-toc-wrapper span12 offset1">
-                      {% for post in site.tags.voices reversed %}
-                        <div class="sub-toc-item span2">
-                          <img src="{{ post.toc-img}}">
-                          <p><strong>{{ post.title }}</strong></p>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum augue at ipsum imperdiet, quis dapibus elit rhoncus. Aliquam erat eros, rutrum eget dignissim lacinia, posuere a turpis. Mauris vel nisi arcu. Nulla facilisi. Vivamus in arcu rutrum, vehicula nisi sed, vestibulum diam.</p>
-                        </div>
-                      {% endfor %}
+                    <!-- AddThis Button END -->
+
+
+                    <div class="sidebar-header voices">
+                      <p class="title">Voices</p>
                     </div>
+                    <div class="voices-gallery-pagination general-pagination"></div>
                   </div>
 
-                  <!-- horizontal slides for each voice post -->
-                  {% for post in site.tags.voices reversed %}
-                  <div class="swiper-slide" data-img="{{ post.story-img }}">
-                    <div class="story-header-small">
-                      <p><strong>{{ post.title }}</strong></p>
-                    </div>
-                    <div class="voice-content">
-                      {{ post.content }}
-                    </div>
-                  </div> 
-                  {% endfor %}<!-- end horizontal voices gallery swiper slide -->
-                </div> <!-- end swiper wrapper -->
-              </div> <!-- end swiper container -->
+                  <div class="swiper-container gallery" id="voices-gallery">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide light">
+                          <div class="sub-toc-wrapper gallery-slide">
+                          {% for post in site.tags.voices reversed %}
+                            <div class="sub-toc-item" style="width:19%;">
+                              <img src="{{ASSET_PATH}}skeena/img/Voices Headshots/thumbs/{{ post.toc-img}}">
+                              <p class="author">{{ post.author }}</p>
+                              <p class="place">{{ post.place }}</p>
+                              <p class="voice-intro">{{ post.intro }}</p>
+                            </div>
+                          {% endfor %}
+                        </div>
+                      </div>
+
+                      <!-- horizontal slides for each voice post -->
+                      {% for post in site.tags.voices reversed %}
+                      <div class="swiper-slide" id="{{post.url| replace:'/',''}}" data-img="{{ASSET_PATH}}skeena/img/Voices Headshots/{{ post.story-img }}">
+                        {% if post.story-img-caption %}
+                          <div class="photo-info">
+                            <div class="caption-content">
+                              {{ post.story-img-caption }}
+                            </div>
+                          </div>
+                        {% endif %}
+
+                        <div class="voice-content-wrapper">
+                          <div class="voice-player">
+                            <h3 class="intro">{{ post.author }}</h3>
+                            <p>
+                              {{ post.place }}
+                              {%if post.transcript %}
+                                <span class="small"><em>[<a target="_blank" href="{{ASSET_PATH}}skeena/pdfs/{{ post.transcript }}">Download a transcript of the audio</a>]</em></span>
+                              {% endif %}
+                            </p>
+                            <audio src="{{ASSET_PATH}}skeena/Audio/{{ post.audio }}"  preload="none"></audio>
+                          </div>
+                          <div class="voice-content">
+                              <div class="voice-content-text">
+                               {{ post.content }}
+                             </div>
+                          </div>                        
+                        </div>
+                      </div> 
+                      {% endfor %}<!-- end horizontal voices gallery swiper slide -->
+
+
+                    </div> <!-- end swiper wrapper -->
+                  </div> <!-- end swiper container -->
+              </div>
+            </div> <!-- end full page container for styling -->
+          </div> <!-- end vertical slide for voices -->
+
+        {% endif %} <!-- end the block that inserts voices into the post stream -->
+
+
+          {% if post.category != 'Gallery' %}
+          <div class="swiper-slide" data-img="{{ASSET_PATH}}skeena/img/article_openers/{{ post.story-img }}" data-hash="{{post.url | replace:'/',''}}" id="{{post.url | replace:'/',''}}">
+            <div class="story-header">
+              {% if post.author %}
+              <h3>{{ post.author }}</h3>      
+              <hr/>
+              {% endif %}
+              <h1>{{ post.title }}</h1>
+            </div>
+
+            {% if post.story-img-caption %}
+              <div class="photo-info">
+                <div class="caption-content">
+                  {{ post.story-img-caption }}
+                </div>
+              </div>
+            {% endif %}
+            
+            <div class="page-footer">
+              <a href="#">
+                <i class="icon-chevron-down"></i>
+              </a>
+            </div>
           </div>
-        </div>
-      </div>
-      {% for post in site.tags.voices reversed %}
-      <div class="swiper-slide" data-img="{{ post.story-img }}" id="{{post.url | replace: '/', ''}}" data-hash="{{post.url | replace: '/', ''}}">
-        <div class="page">
-              <div class="span12 page-wrapper">
-                <div class="story-header-small">
-                <p><strong>{{ post.title }}</strong></p>
+          {% endif %}
+
+          <!--Third Slide-->
+          {% assign post_length = post.content | number_of_words %}
+          <div class="swiper-slide first-page{% if post.category != 'Gallery' %} essay{% endif %}"
+                {% if post.story-img %} data-img="{{ASSET_PATH}}skeena/img/article_openers/{{ post.story-img }}" {% endif %}
+                data-hash="{{post.url | replace:'/',''}}"
+                {% if post.category == 'Gallery' %} id="{{post.url | replace:'/',''}}" {% endif %}>
+            <div class="page{% if post.category == 'Gallery' %} full light ink-bg{% endif %}">
+
+              <div class="navarrows hidden-phone">
+                <div class="pull-left"><a href="#" class="left-arrow">&nbsp;</a></div>
+                <div class="pull-right"><a href="#" class="right-arrow">&nbsp;</a><div class="next-story avenir-light">Next:<br><span class="next-story-name intro blue"></span></div></div>
+              </div> <!-- end nav arrows container -->
+
+              <div class="span12 page-wrapper{% if post.category == 'Gallery' %} gallery-wrapper{% else %} paper-bg{% endif %}">
+
+                
+                <div class="story-sidebar">
+
+                <!-- AddThis Button BEGIN -->
+                <div class="addthis_toolbox addthis_default_style addthis_16x16_style hidden-tablet">
+                <a class="addthis_button_facebook" addthis:url="http://commonplacemagazine.org/#{{post.url | replace:'/',''}}"></a>
+                <a class="addthis_button_twitter" addthis:url="http://commonplacemagazine.org/#{{post.url | replace:'/',''}}"></a>
+                <a class="addthis_button_google_plusone_share" addthis:url="http://commonplacemagazine.org/#{{post.url | replace:'/',''}}"></a>
+                <a class="addthis_button_email" addthis:url="http://commonplacemagazine.org/#{{post.url | replace:'/',''}}"></a>
+                </div>
+                <!-- AddThis Button END -->
+
+
+             <!-- version for no JS.
+                  opening a new window using our own JS breaks IE
+               <div class="addthis_toolbox addthis_default_style addthis_16x16_style hidden-tablet">
+                <a class="addthis_button_facebook" href="http://api.addthis.com/oexchange/0.8/forward/facebook/offer?url=http://commonplacemagazine.org/#{{post.url | replace:'/',''}}&title=commonplace Magazine&description=a new online magazine exploring digital landscapes and real geographies on the ground.&pubid=xa-51d1ef097f96cfdc"></a>
+                <a class="addthis_button_twitter" href="http://api.addthis.com/oexchange/0.8/forward/twitter/offer?url=http://commonplacemagazine.org/#{{post.url | replace:'/',''}}&title=commonplace Magazine&description=a new online magazine exploring digital landscapes and real geographies on the ground.&pubid=xa-51d1ef097f96cfdc"></a>
+                <a class="addthis_button_google_plusone_share" href="http://api.addthis.com/oexchange/0.8/forward/google_plusone_share/offer?url=http://commonplacemagazine.org/#{{post.url | replace:'/',''}}&title=commonplace Magazine&description=a new online magazine exploring digital landscapes and real geographies on the ground.&pubid=xa-51d1ef097f96cfdc"></a>
+                <a class="addthis_button_email" href="http://api.addthis.com/oexchange/0.8/forward/email/offer?url=http://commonplacemagazine.org/#{{post.url | replace:'/',''}}&title=commonplace Magazine&description=a new online magazine exploring digital landscapes and real geographies on the ground.&pubid=xa-51d1ef097f96cfdc"></a>
+                </div> -->
+
+
+
+                  <div class="sidebar-header">
+                    <p class="title">{{ post.title }}</p>
+                    {% if post.author %}
+                    <p class="author">{{ post.author }}</p>
+                    {% endif %}
+                  </div>
+                  <div class="{{post.url | replace:'/',''}}-gallery-pagination general-pagination"></div>
+                </div>
+
+                {% if post.category == 'Gallery' %}
+                  <div class="swiper-container gallery" id="{{post.url | replace:'/','' }}-gallery">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide light gallery-slide">
+                          <div class="gallery-intro-slide-wrapper paper-bg">
+                            {{ post.content }}
+                          </div>
+                          {% for image in post.slideshow %}
+                            {% if forloop.first %}
+                              <img src="{{ ASSET_PATH }}skeena/img/{{ post.path }}/{{ image.img }}" />
+                            {% endif %}
+                           {% endfor %} 
+                        </div>
+                    {% for image in post.slideshow %}
+                        <div class="swiper-slide light gallery-slide">
+                          <img class="postload" data-img="{{ ASSET_PATH }}skeena/img/{{ post.path }}/{{ image.img }}" />
+                          {% if image.caption %}<span class="caption">{{ image.caption }}</span>{% endif %}
+                        </div>
+                    {% endfor %}
+                  </div>
+                </div>
+                {% else %}
+                {% if post_length < 750 %}
+                <div class="page-content short-post post">
+                {% else %}
+                <div class="page-content long-post post hidden">
+                {% endif %}
+                  {{ post.content }}
+                </div>
+                {% endif %}
               </div>
             </div>
           </div>
-        </div>
+
       {% endfor %}
+      
+
       </div>
-    </div>
-  </div>
+    </div> <!-- end swiper wrapper -->
+    <!-- Scrollbar: -->
 </div>
+<div class="swiper-scrollbar"></div>
+
+  </div> <!-- end swiper container -->
+<!-- </div>  it appears that this div is an orpahn, but i left it here just in case LB-->
 
