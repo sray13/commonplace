@@ -618,6 +618,11 @@ div[data-hash=welcome] .contentText div:last-child div.column>p:last-child:after
 .page-content hr {margin-left:28%;}
 .page-content strong {color:rgb(51,150,243); font-weight: bold;}
 
+.leaflet-tile-container {
+  height: 100%!important;
+  width: 100%!important;
+}
+
 .leaflet-container .page-content img {
   float: left;
 /*  padding-right: 25px;
