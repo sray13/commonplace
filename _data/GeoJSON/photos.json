@@ -1,0 +1,31 @@
+{
+	"type": "FeatureCollection",
+
+	"features": [{
+			"type": "Feature",
+			"properties": {
+				"Id": 0,
+				"Location": "Along the Northern Gateway Route\r\n",
+				"LAT": 54.393028706499997,
+				"LONG": -124.228379992
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-124.228379991550071, 54.393028706530764]
+			}
+		}, {
+			"type": "Feature",
+			"properties": {
+				"Id": 0,
+				"Location": "A Cannery's Revival\r\n",
+				"LAT": 54.1987473756,
+				"LONG": -130.24543573
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [-130.245435730400914, 54.198747375606338]
+			}
+		}
+
+	]
+}

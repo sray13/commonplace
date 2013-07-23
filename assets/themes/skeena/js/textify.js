@@ -20,7 +20,7 @@
             width: "screen",
             height: "screen",
             showNavigation: true,
-            textAlign: 'justify',
+            textAlign: 'left',
             isZoom: false
         }
         var myVar;
@@ -45,7 +45,7 @@
                         .remove();
                     myVar = setTimeout(function () {
                         initTextify($cache)
-                    }, 200);
+                        }, 200);
                 }
             });
 
@@ -111,7 +111,6 @@
                             .load(function () {
                             setImage(this, thisImg)
 
-
                             if ((i + 1) === $text.find('img')
                                 .length) {
                                 addPage()
@@ -125,7 +124,7 @@
                     })
                 } else {
                     addPage()
-                }
+                }                
             }
 
             function setImage(element, thisImg) {
@@ -133,26 +132,29 @@
                     thisImg.css({
                         'display': 'block',
                         'width': columnWidth,
-                        'margin': 0,
-                        'padding': 0
+                        'margin-right': '20px',
+                        'padding': 0,
+                        'margin-bottom':'6px'
                     })
                     thisNewHeight = element.height * thisImg.width() / element.width
                     if (thisNewHeight >= columnHeight) {
                         thisImg.css({
                             'display': 'block',
                             'width': 'auto',
-                            'margin': 0,
-                            'height': columnHeight,
-                            'padding': 0
+                            'margin-right': '20px',
+                            'height': columnHeight-100,
+                            'padding': 0,
+                            'padding-right':'15px'
                         })
                     }
                 } else {
-                    if (element.height >= columnHeight - 100) {
+                    if (element.height >= columnHeight - 150) {
                         thisImg.css({
                             'display': 'block',
-                            'height': columnHeight - 100,
-                            'margin': 0,
+                            'height': columnHeight - 150,
+                            'margin-right': '20px',
                             'padding': 0
+                            
                         })
                     } else {
 
@@ -408,10 +410,12 @@
                                         .attr('class', 'selected')
                                 }
                             }
+
                         })
                     }
                     columnHeight = pageheight - (options.padding * 2) - $('.textify_nav')
-                        .outerHeight()
+                        .outerHeight(false) //added the 'false' here from codecanyon discussion by <histerico> at
+                                            //http://codecanyon.net/item/textify-columnize-and-paginate-your-long-text/discussion/3109307?page=1
 
                 }
                 if ($page.children()
@@ -446,6 +450,7 @@
                                     .width()) / 2)
                             })
                         }
+                        $(document).trigger('textifyBuildDone',$textify);
                     }
                     $contentText.css('width', pagewidth * options.startPage)
                     $contentText.append('<div class="page' + options.startPage + '" />');
@@ -482,6 +487,7 @@
                 $contentText.animate({
                     marginLeft: [-marginLeft, 'easeOutExpo']
                 }, 600);
+                $(document).trigger('textifyNavDone',$textify)
             }
 
             function touch() {

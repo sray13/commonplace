@@ -1,0 +1,98 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "NAME": "Armstrong", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 2, "PRCDCSD": "5937028", "CSD_NAME": "Armstrong", "CSD_POP01": 4256.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -119.196166000001398, 50.448218000000615 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Burnaby", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "> 100,000", "PREC_CODE": 1, "PRCDCSD": "5915025", "CSD_NAME": "Burnaby", "CSD_POP01": 193954.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -122.979649000001217, 49.249391000000458 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Castlegar", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 2, "PRCDCSD": "5903045", "CSD_NAME": "Castlegar", "CSD_POP01": 7002.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -117.666211000001567, 49.32563900000072 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Chilliwack", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 2, "PRCDCSD": "5909020", "CSD_NAME": "Chilliwack", "CSD_POP01": 62927.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -121.95092200000127, 49.157735000000535 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Colwood", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 1, "PRCDCSD": "5917041", "CSD_NAME": "Colwood", "CSD_POP01": 13745.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -123.495700000001236, 48.423578000000468 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Coquitlam", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "> 100,000", "PREC_CODE": 2, "PRCDCSD": "5915034", "CSD_NAME": "Coquitlam", "CSD_POP01": 112890.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -122.79185500000122, 49.283861000000471 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Courtenay", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 2, "PRCDCSD": "5925010", "CSD_NAME": "Courtenay", "CSD_POP01": 18304.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -124.992679000001033, 49.686944000000373 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Cranbrook", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 2, "PRCDCSD": "5901022", "CSD_NAME": "Cranbrook", "CSD_POP01": 18476.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -115.769542000001678, 49.51298300000083 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Dawson Creek", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 1, "PRCDCSD": "5955014", "CSD_NAME": "Dawson Creek", "CSD_POP01": 10754.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -120.235657000001027, 55.76082800000038 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Duncan", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 2, "PRCDCSD": "5919012", "CSD_NAME": "Duncan", "CSD_POP01": 4699.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -123.707902000001184, 48.778682000000465 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Enderby", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 2, "PRCDCSD": "5937033", "CSD_NAME": "Enderby", "CSD_POP01": 2818.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -119.139664000001417, 50.550845000000606 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Fernie", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 2, "PRCDCSD": "5901012", "CSD_NAME": "Fernie", "CSD_POP01": 4611.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -115.062988000001681, 49.504073000000858 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Fort St. John", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 2, "PRCDCSD": "5955034", "CSD_NAME": "Fort St. John", "CSD_POP01": 16034.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -120.846406000000911, 56.252426000000305 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Grand Forks", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 1, "PRCDCSD": "5905032", "CSD_NAME": "Grand Forks", "CSD_POP01": 4054.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -118.437394000001532, 49.032293000000685 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Greenwood", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 2, "PRCDCSD": "5905042", "CSD_NAME": "Greenwood", "CSD_POP01": 666.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -118.677487000001506, 49.090109000000687 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Kamloops", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 1, "PRCDCSD": "5933042", "CSD_NAME": "Kamloops", "CSD_POP01": 77281.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -120.34073200000131, 50.676053000000564 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Kelowna", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 2, "PRCDCSD": "5935010", "CSD_NAME": "Kelowna", "CSD_POP01": 96288.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -119.495452000001421, 49.888022000000603 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Kimberley", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 1, "PRCDCSD": "5901028", "CSD_NAME": "Kimberley", "CSD_POP01": 6484.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -115.978333000001641, 49.676351000000793 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Langley", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 1, "PRCDCSD": "5915002", "CSD_NAME": "Langley", "CSD_POP01": 23643.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -122.656774000001235, 49.103942000000494 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Merritt", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 2, "PRCDCSD": "5933006", "CSD_NAME": "Merritt", "CSD_POP01": 7088.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -120.78965200000134, 50.112833000000542 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Nanaimo", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 1, "PRCDCSD": "5921007", "CSD_NAME": "Nanaimo", "CSD_POP01": 73000.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -123.937969000001132, 49.163756000000454 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Nelson", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 2, "PRCDCSD": "5903015", "CSD_NAME": "Nelson", "CSD_POP01": 9298.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -117.293728000001565, 49.492733000000733 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "New Westminster", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 1, "PRCDCSD": "5915029", "CSD_NAME": "New Westminster", "CSD_POP01": 54656.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -122.911231000001237, 49.206857000000497 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "North Vancouver", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 1, "PRCDCSD": "5915051", "CSD_NAME": "North Vancouver", "CSD_POP01": 44303.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -123.073906000001202, 49.320572000000467 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Parksville", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 2, "PRCDCSD": "5921018", "CSD_NAME": "Parksville", "CSD_POP01": 10323.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -124.315024000001088, 49.318736000000413 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Penticton", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 1, "PRCDCSD": "5907041", "CSD_NAME": "Penticton", "CSD_POP01": 30985.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -119.593750000001435, 49.500833000000625 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Port Alberni", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 2, "PRCDCSD": "5923008", "CSD_NAME": "Port Alberni", "CSD_POP01": 17743.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -124.805542000001097, 49.233866000000404 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Port Coquitlam", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 2, "PRCDCSD": "5915039", "CSD_NAME": "Port Coquitlam", "CSD_POP01": 51257.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -122.780974000001223, 49.26234200000048 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Port Moody", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 1, "PRCDCSD": "5915043", "CSD_NAME": "Port Moody", "CSD_POP01": 23816.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -122.831689000001219, 49.283069000000502 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Prince George", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 1, "PRCDCSD": "5953023", "CSD_NAME": "Prince George", "CSD_POP01": 72406.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -122.750221000000948, 53.913551000000325 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Prince Rupert", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 1, "PRCDCSD": "5947012", "CSD_NAME": "Prince Rupert", "CSD_POP01": 14643.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -130.327087000000233, 54.312188 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Quesnel", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 2, "PRCDCSD": "5941013", "CSD_NAME": "Quesnel", "CSD_POP01": 10044.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -122.492704000001041, 52.978433000000386 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Revelstoke", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 1, "PRCDCSD": "5939019", "CSD_NAME": "Revelstoke", "CSD_POP01": 7500.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -118.195672000001437, 50.998118000000638 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Richmond", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "> 100,000", "PREC_CODE": 1, "PRCDCSD": "5915015", "CSD_NAME": "Richmond", "CSD_POP01": 164345.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -123.137770000001211, 49.163468000000456 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Rossland", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 2, "PRCDCSD": "5905023", "CSD_NAME": "Rossland", "CSD_POP01": 3646.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -117.799150000001575, 49.078679000000726 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Surrey", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "> 100,000", "PREC_CODE": 1, "PRCDCSD": "5915004", "CSD_NAME": "Surrey", "CSD_POP01": 347825.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -122.827954000001242, 49.105895000000508 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Terrace", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 2, "PRCDCSD": "5949011", "CSD_NAME": "Terrace", "CSD_POP01": 12109.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -128.599753000000447, 54.516497000000122 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Trail", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 2, "PRCDCSD": "5905014", "CSD_NAME": "Trail", "CSD_POP01": 7575.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -117.710617000001577, 49.09715600000073 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Vancouver", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "> 100,000", "PREC_CODE": 1, "PRCDCSD": "5915022", "CSD_NAME": "Vancouver", "CSD_POP01": 545671.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -123.113353000001226, 49.261640000000462 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Vernon", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 1, "PRCDCSD": "5937014", "CSD_NAME": "Vernon", "CSD_POP01": 33494.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -119.271793000001395, 50.26679600000061 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Victoria", "PROV": "BC", "CAPITAL": "Y", "POP_RANK": "< 100,000", "PREC_CODE": 1, "PRCDCSD": "5917034", "CSD_NAME": "Victoria", "CSD_POP01": 74125.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -123.365641000001219, 48.428411000000473 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "White Rock", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 1, "PRCDCSD": "5915007", "CSD_NAME": "White Rock", "CSD_POP01": 18250.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -122.797804000001236, 49.023617000000492 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Williams Lake", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 2, "PRCDCSD": "5941009", "CSD_NAME": "Williams Lake", "CSD_POP01": 11153.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -122.138293000001099, 52.129562000000433 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Abbotsford", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "> 100,000", "PREC_CODE": 1, "PRCDCSD": "5909052", "CSD_NAME": "Abbotsford", "CSD_POP01": 115463.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -122.328022000001283, 49.054586000000519 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Mission", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 2, "PRCDCSD": "5909056", "CSD_NAME": "Mission", "CSD_POP01": 31272.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -122.311291000001262, 49.133714000000516 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Powell River", "PROV": "BC", "CAPITAL": "N", "POP_RANK": "< 100,000", "PREC_CODE": 1, "PRCDCSD": "5927008", "CSD_NAME": "Powell River", "CSD_POP01": 12983.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -124.522888000001046, 49.837370000000398 ] } }
+
+]
+}

@@ -1,0 +1,140 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "NAME": "Creston", "PROV": "BC", "PREC_CODE": 1, "PRCDCSD": "5903004", "CSD_NAME": "Creston", "CSD_POP01": 4795.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -116.513609000001622, 49.095291000000785 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Fort Nelson", "PROV": "BC", "PREC_CODE": 1, "PRCDCSD": "5959005", "CSD_NAME": "Fort Nelson", "CSD_POP01": 4188.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -122.69678000000053, 58.804986000000191 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Gibsons", "PROV": "BC", "PREC_CODE": 2, "PRCDCSD": "5929005", "CSD_NAME": "Gibsons", "CSD_POP01": 3906.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -123.50750000000113, 49.401156000000448 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Golden", "PROV": "BC", "PREC_CODE": 1, "PRCDCSD": "5939007", "CSD_NAME": "Golden", "CSD_POP01": 4020.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -116.962997000001494, 51.296232000000693 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Ladysmith", "PROV": "BC", "PREC_CODE": 1, "PRCDCSD": "5919021", "CSD_NAME": "Ladysmith", "CSD_POP01": 6587.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -123.816101000001126, 48.995337000000454 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Lake Cowichan", "PROV": "BC", "PREC_CODE": 1, "PRCDCSD": "5919016", "CSD_NAME": "Lake Cowichan", "CSD_POP01": 2827.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -124.052081000001124, 48.826515000000462 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Oliver", "PROV": "BC", "PREC_CODE": 2, "PRCDCSD": "5907014", "CSD_NAME": "Oliver", "CSD_POP01": 4224.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -119.551478000001438, 49.182726000000635 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Osoyoos", "PROV": "BC", "PREC_CODE": 2, "PRCDCSD": "5907005", "CSD_NAME": "Osoyoos", "CSD_POP01": 4295.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -119.468165000001449, 49.032300000000646 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Port McNeill", "PROV": "BC", "PREC_CODE": 2, "PRCDCSD": "5943012", "CSD_NAME": "Port McNeill", "CSD_POP01": 2821.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -127.084757000000806, 50.59014600000026 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Princeton", "PROV": "BC", "PREC_CODE": 1, "PRCDCSD": "5907024", "CSD_NAME": "Princeton", "CSD_POP01": 2610.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -120.507962000001342, 49.460439000000576 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Qualicum Beach", "PROV": "BC", "PREC_CODE": 2, "PRCDCSD": "5921023", "CSD_NAME": "Qualicum Beach", "CSD_POP01": 6921.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -124.443302000001069, 49.347660000000417 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Sidney", "PROV": "BC", "PREC_CODE": 2, "PRCDCSD": "5917010", "CSD_NAME": "Sidney", "CSD_POP01": 10929.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -123.398600000001181, 48.650628000000452 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Smithers", "PROV": "BC", "PREC_CODE": 2, "PRCDCSD": "5951043", "CSD_NAME": "Smithers", "CSD_POP01": 5414.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -127.16799800000048, 54.781824000000157 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "View Royal", "PROV": "BC", "PREC_CODE": 2, "PRCDCSD": "5917047", "CSD_NAME": "View Royal", "CSD_POP01": 7271.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -123.433862000001199, 48.451539000000487 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Comox", "PROV": "BC", "PREC_CODE": 2, "PRCDCSD": "5925005", "CSD_NAME": "Comox", "CSD_POP01": 11172.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -124.928330000001012, 49.672884000000387 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Chetwynd", "PROV": "BC", "PREC_CODE": 2, "PRCDCSD": "5955010", "CSD_NAME": "Chetwynd", "CSD_POP01": 2591.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -121.629632000000882, 55.697592000000299 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Hudson's Hope", "PROV": "BC", "PREC_CODE": 2, "PRCDCSD": "5955025", "CSD_NAME": "Hudson's Hope", "CSD_POP01": 1039.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -121.90507700000083, 56.03187000000031 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "New Hazelton", "PROV": "BC", "PREC_CODE": 2, "PRCDCSD": "5949024", "CSD_NAME": "New Hazelton", "CSD_POP01": 750.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -127.591574000000421, 55.247556000000131 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "100 Mile House", "PROV": "BC", "PREC_CODE": 1, "PRCDCSD": "5941005", "CSD_NAME": "One Hundred Mile House", "CSD_POP01": 1739.0, "LABEL_FLAG": 0 }, "geometry": { "type": "Point", "coordinates": [ -121.294121000001198, 51.643722000000459 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Peachland", "PROV": "BC", "PREC_CODE": 2, "PRCDCSD": "5935018", "CSD_NAME": "Peachland", "CSD_POP01": 4654.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -119.740442000001394, 49.770363000000579 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Port Edward", "PROV": "BC", "PREC_CODE": 2, "PRCDCSD": "5947007", "CSD_NAME": "Port Edward", "CSD_POP01": 659.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -130.291394000000253, 54.228351 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Port Hardy", "PROV": "BC", "PREC_CODE": 1, "PRCDCSD": "5943023", "CSD_NAME": "Port Hardy", "CSD_POP01": 4574.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -127.492790000000753, 50.722743000000257 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Salmon Arm", "PROV": "BC", "PREC_CODE": 2, "PRCDCSD": "5939032", "CSD_NAME": "Salmon Arm", "CSD_POP01": 15210.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -119.28004700000136, 50.700387000000603 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Sechelt", "PROV": "BC", "PREC_CODE": 2, "PRCDCSD": "5929011", "CSD_NAME": "Sechelt", "CSD_POP01": 7775.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -123.754712000001106, 49.474083000000427 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Summerland", "PROV": "BC", "PREC_CODE": 2, "PRCDCSD": "5907035", "CSD_NAME": "Summerland", "CSD_POP01": 10713.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -119.676884000001408, 49.607355000000638 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Taylor", "PROV": "BC", "PREC_CODE": 2, "PRCDCSD": "5955030", "CSD_NAME": "Taylor", "CSD_POP01": 1143.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -120.6877910000009, 56.158968000000357 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Aldergrove", "PROV": "BC", "PREC_CODE": 2, "PRCDCSD": "5915001", "CSD_NAME": "Langley", "CSD_POP01": 86896.0, "LABEL_FLAG": 0 }, "geometry": { "type": "Point", "coordinates": [ -122.470754000001236, 49.058049000000501 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Anmore", "PROV": "BC", "PREC_CODE": 2, "PRCDCSD": "5915038", "CSD_NAME": "Anmore", "CSD_POP01": 1344.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -122.856314000001191, 49.314531000000478 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Ashcroft", "PROV": "BC", "PREC_CODE": 2, "PRCDCSD": "5933019", "CSD_NAME": "Ashcroft", "CSD_POP01": 1788.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -121.27642700000122, 50.725821000000508 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Belcarra", "PROV": "BC", "PREC_CODE": 3, "PRCDCSD": "5915036", "CSD_NAME": "Belcarra", "CSD_POP01": 682.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -122.926577000001203, 49.318518000000473 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Burns Lake", "PROV": "BC", "PREC_CODE": 1, "PRCDCSD": "5951022", "CSD_NAME": "Burns Lake", "CSD_POP01": 1942.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -125.763683000000654, 54.233418000000221 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Cache Creek", "PROV": "BC", "PREC_CODE": 2, "PRCDCSD": "5933024", "CSD_NAME": "Cache Creek", "CSD_POP01": 1056.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -121.325864000001218, 50.815272000000505 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Chase", "PROV": "BC", "PREC_CODE": 1, "PRCDCSD": "5933054", "CSD_NAME": "Chase", "CSD_POP01": 2460.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -119.686910000001305, 50.820465000000581 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Clinton", "PROV": "BC", "PREC_CODE": 3, "PRCDCSD": "5933032", "CSD_NAME": "Thompson-Nicola E", "CSD_POP01": 1307.0, "LABEL_FLAG": 0 }, "geometry": { "type": "Point", "coordinates": [ -121.591364000001192, 51.089871000000485 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Cumberland", "PROV": "BC", "PREC_CODE": 3, "PRCDCSD": "5925014", "CSD_NAME": "Cumberland", "CSD_POP01": 2618.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -125.031272000001039, 49.618803000000376 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Fraser Lake", "PROV": "BC", "PREC_CODE": 1, "PRCDCSD": "5951009", "CSD_NAME": "Fraser Lake", "CSD_POP01": 1268.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -124.849553000000725, 54.055056000000263 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Fruitvale", "PROV": "BC", "PREC_CODE": 2, "PRCDCSD": "5905026", "CSD_NAME": "Kootenay Boundary A", "CSD_POP01": 1984.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -117.545351000001531, 49.115532000000741 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Gold River", "PROV": "BC", "PREC_CODE": 3, "PRCDCSD": "5925025", "CSD_NAME": "Gold River", "CSD_POP01": 1359.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -126.084470000000906, 49.734192000000334 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Granisle", "PROV": "BC", "PREC_CODE": 3, "PRCDCSD": "5951032", "CSD_NAME": "Granisle", "CSD_POP01": 353.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -126.207023000000547, 54.886818000000183 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Harrison Hot Springs", "PROV": "BC", "PREC_CODE": 3, "PRCDCSD": "5909027", "CSD_NAME": "Harrison Hot Springs", "CSD_POP01": 1343.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -121.78531400000125, 49.300140000000525 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Hazelton", "PROV": "BC", "PREC_CODE": 3, "PRCDCSD": "5949022", "CSD_NAME": "Hazelton", "CSD_POP01": 345.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -127.645502000000405, 55.25988600000013 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Kaslo", "PROV": "BC", "PREC_CODE": 3, "PRCDCSD": "5903023", "CSD_NAME": "Kaslo", "CSD_POP01": 1032.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -116.916539000001535, 49.914588000000734 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Keremeos", "PROV": "BC", "PREC_CODE": 3, "PRCDCSD": "5907009", "CSD_NAME": "Keremeos", "CSD_POP01": 1197.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -119.829560000001393, 49.20239100000061 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Lions Bay", "PROV": "BC", "PREC_CODE": 2, "PRCDCSD": "5915065", "CSD_NAME": "Lions Bay", "CSD_POP01": 1379.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -123.234143000001154, 49.459251000000478 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Lumby", "PROV": "BC", "PREC_CODE": 1, "PRCDCSD": "5937005", "CSD_NAME": "Lumby", "CSD_POP01": 1618.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -118.967828000001418, 50.250702000000629 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Lytton", "PROV": "BC", "PREC_CODE": 2, "PRCDCSD": "5933015", "CSD_NAME": "Lytton", "CSD_POP01": 319.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -121.577585000001235, 50.224413000000517 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Masset", "PROV": "BC", "PREC_CODE": 2, "PRCDCSD": "5947023", "CSD_NAME": "Masset", "CSD_POP01": 926.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -132.099017, 54.022773 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "McBride", "PROV": "BC", "PREC_CODE": 3, "PRCDCSD": "5953012", "CSD_NAME": "McBride", "CSD_POP01": 711.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -120.168464000001151, 53.30135100000048 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Midway", "PROV": "BC", "PREC_CODE": 3, "PRCDCSD": "5905037", "CSD_NAME": "Midway", "CSD_POP01": 638.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -118.771475000001445, 49.010187000000663 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Montrose", "PROV": "BC", "PREC_CODE": 2, "PRCDCSD": "5905009", "CSD_NAME": "Montrose", "CSD_POP01": 1067.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -117.592349000001562, 49.07898300000074 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Nakusp", "PROV": "BC", "PREC_CODE": 1, "PRCDCSD": "5903050", "CSD_NAME": "Nakusp", "CSD_POP01": 1698.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -117.797387000001478, 50.238390000000699 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "New Denver", "PROV": "BC", "PREC_CODE": 2, "PRCDCSD": "5903032", "CSD_NAME": "New Denver", "CSD_POP01": 538.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -117.372074000001504, 49.991286000000706 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Pemberton", "PROV": "BC", "PREC_CODE": 1, "PRCDCSD": "5931012", "CSD_NAME": "Pemberton", "CSD_POP01": 1637.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -122.808155000001122, 50.322639000000429 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Port Alice", "PROV": "BC", "PREC_CODE": 3, "PRCDCSD": "5943017", "CSD_NAME": "Port Alice", "CSD_POP01": 1126.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -127.477931000000751, 50.412351000000236 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Port Clements", "PROV": "BC", "PREC_CODE": 2, "PRCDCSD": "5947030", "CSD_NAME": "Port Clements", "CSD_POP01": 516.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -132.168911000000122, 53.687685 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Pouce Coupe", "PROV": "BC", "PREC_CODE": 2, "PRCDCSD": "5955005", "CSD_NAME": "Pouce Coupe", "CSD_POP01": 833.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -120.133949000000996, 55.715907000000378 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Radium Hot Springs", "PROV": "BC", "PREC_CODE": 3, "PRCDCSD": "5901040", "CSD_NAME": "Radium Hot Springs", "CSD_POP01": 583.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -116.072240000001557, 50.617461000000759 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Salmo", "PROV": "BC", "PREC_CODE": 1, "PRCDCSD": "5903011", "CSD_NAME": "Salmo", "CSD_POP01": 1120.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -117.279149000001553, 49.194741000000754 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Sayward", "PROV": "BC", "PREC_CODE": 3, "PRCDCSD": "5925039", "CSD_NAME": "Sayward", "CSD_POP01": 379.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -125.960216000000884, 50.38372200000034 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Silverton", "PROV": "BC", "PREC_CODE": 3, "PRCDCSD": "5903027", "CSD_NAME": "Silverton", "CSD_POP01": 222.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -117.358097000001479, 49.950849000000709 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Slocan", "PROV": "BC", "PREC_CODE": 3, "PRCDCSD": "5903019", "CSD_NAME": "Slocan", "CSD_POP01": 336.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -117.468464000001532, 49.766160000000724 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Tahsis", "PROV": "BC", "PREC_CODE": 3, "PRCDCSD": "5925030", "CSD_NAME": "Tahsis", "CSD_POP01": 600.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -126.656537000000839, 49.927863000000293 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Telkwa", "PROV": "BC", "PREC_CODE": 3, "PRCDCSD": "5951038", "CSD_NAME": "Telkwa", "CSD_POP01": 1371.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -127.047614000000522, 54.695019000000173 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Valemount", "PROV": "BC", "PREC_CODE": 3, "PRCDCSD": "5953007", "CSD_NAME": "Valemount", "CSD_POP01": 1195.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -119.264315000001218, 52.831218000000518 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Warfield", "PROV": "BC", "PREC_CODE": 2, "PRCDCSD": "5905018", "CSD_NAME": "Warfield", "CSD_POP01": 1739.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -117.751550000001529, 49.09191600000073 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Zeballos", "PROV": "BC", "PREC_CODE": 3, "PRCDCSD": "5925029", "CSD_NAME": "Zeballos", "CSD_POP01": 224.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -126.853961000000822, 49.984410000000302 ] } }
+,
+{ "type": "Feature", "properties": { "NAME": "Alert Bay", "PROV": "BC", "PREC_CODE": 3, "PRCDCSD": "5943008", "CSD_NAME": "Alert Bay", "CSD_POP01": 583.0, "LABEL_FLAG": 1 }, "geometry": { "type": "Point", "coordinates": [ -126.925313000000799, 50.582613000000279 ] } }
+
+]
+}

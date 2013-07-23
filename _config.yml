@@ -10,7 +10,7 @@ pygments: true
 # so be sure to set them if your theme uses them.
 #
 title : commonplace
-tagline: Issue 01
+tagline: <span class="schoolbook">Issue</span> <span class="intro">01</span>
 author :
   name : Name Lastname
   email : blah@email.test
